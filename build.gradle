@@ -50,7 +50,7 @@ task downloadVersionManifest(type: Download) {
 [VERSION_ONE, VERSION_TWO].each { ver ->
     Paths paths = new Paths(ver)
 
-    def json = task "downloadJson${ver}"(type: Download, dependsOn: downloadVersionManifest) {
+    def json = task "downloadJson.${ver}"(type: Download, dependsOn: downloadVersionManifest) {
         src Json.getJsonUrl(file(paths.VERSION_MANIFEST), ver).toString()
         dest paths.JSON
     }
@@ -91,21 +91,31 @@ task downloadVersionManifest(type: Download) {
         args('--input', paths.INJECT_JAR, '--output', paths.SRG_JAR, '--map', paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
     }
 
-    def cCsv = task "writeClassCsv.${ver}"(type: WriteClassCsv) {
+    def cCsv = task "writeClassCsv.${ver}"(type: WriteClassCsv, dependsOn: splitJar) {
         jarFile = file(paths.SLIM_JAR)
         classCsv = file("data/versions/${ver}/mappings/csv/classes.csv")
     }
 
-    def fCsv = task "writeFieldCsv.${ver}"(type: WriteFieldCsv) {
+    def fCsv = task "writeFieldCsv.${ver}"(type: WriteFieldCsv, dependsOn: splitJar) {
         jarFile = file(paths.SLIM_JAR)
         fieldCsv = file("data/versions/${ver}/mappings/csv/fields.csv")
     }
 
-    def mCsv = task "writeMethodsCsv.${ver}"(type: WriteMethodCsv) {
+    def mCsv = task "writeMethodCsv.${ver}"(type: WriteMethodCsv, dependsOn: splitJar) {
         jarFile = file(paths.SLIM_JAR)
         methodCsv = file("data/versions/${ver}/mappings/csv/methods.csv")
         paramCsv = file("data/versions/${ver}/mappings/csv/params.csv")
     }
+}
+
+task generateFreshMappings (type: GradleBuild) {
+    List<String> list = Arrays.asList(
+            "downloadVersionManifest", "downloadJson." + VERSION_ONE,
+            "downloadJar." + VERSION_ONE, "writeTsrg." + VERSION_ONE,
+            "split." + VERSION_ONE, "writeClassCsv." + VERSION_ONE,
+            "writeFieldCsv." + VERSION_ONE, "writeMethodCsv." + VERSION_ONE
+    )
+    setTasks(list)
 }
 
 
