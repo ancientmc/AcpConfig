@@ -1,0 +1,111 @@
+plugins {
+    id 'java-library'
+    id "de.undercouch.download" version "5.6.0"
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.neoforged.net' }
+    maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
+}
+
+configurations {
+    installertools
+    forgeart
+    mcinject
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'commons-io:commons-io:2.18.0'
+    implementation 'org.ow2.asm:asm:9.7.1'
+    implementation 'org.ow2.asm:asm-tree:9.7.1'
+
+    installertools 'net.neoforged.installertools:jarsplitter:3.0.2'
+    forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
+    mcinject 'de.oceanlabs.mcp:mcinjector:4.1-am'
+}
+
+import com.ancientmc.cuneiform.tasks.*
+import com.ancientmc.cuneiform.tasks.csv.*
+import com.ancientmc.cuneiform.util.*
+
+ext {
+    VERSION_ONE = 'a1.2.6' // The old version
+    VERSION_TWO = 'b1.0' // The new version
+
+    VERSION_MANIFEST = 'data/version_manifest.json'
+}
+
+
+
+task downloadVersionManifest(type: Download) {
+    src 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
+    dest VERSION_MANIFEST
+}
+
+[VERSION_ONE, VERSION_TWO].each { ver ->
+    Paths paths = new Paths(ver)
+
+    def json = task "downloadJson${ver}"(type: Download, dependsOn: downloadVersionManifest) {
+        src Json.getJsonUrl(file(paths.VERSION_MANIFEST), ver).toString()
+        dest paths.JSON
+    }
+
+    def mcJar = task "downloadJar.${ver}"(type: Download, dependsOn: json) {
+        src Json.getJarUrl(file(paths.JSON), "client").toString()
+        dest paths.BASE_JAR
+    }
+
+    def libraries = task "downloadLibraries.${ver}"(type: DownloadLibraries, dependsOn: json) {
+        def list = [file(paths.JSON), file(paths.JARDEP_JSON)].toList()
+        jsons = list
+        libs = file("data/versions/${ver}/game/lib/")
+    }
+
+    // Only generate version one, and only if we have a new version that's completely different from the one before it.
+    // Otherwise we'll just update the TSRG
+    def writeTsrg = task "writeTsrg.${ver}"(type: WriteTsrg, dependsOn: mcJar) {
+        jar = file(paths.BASE_JAR)
+        tsrg = file(paths.INTERMEDIATE_TSRG)
+    }
+
+    def splitJar = task "split.${ver}"(type: JavaExec, dependsOn: mcJar) {
+        mainClass = 'net.neoforged.jarsplitter.ConsoleTool'
+        classpath = files(project.configurations.getByName('installertools'))
+        args('--input', paths.BASE_JAR, '--slim', paths.SLIM_JAR, '--extra', paths.EXTRA_JAR, '--srg', paths.INTERMEDIATE_TSRG)
+    }
+
+    def mcinject = task "mcinject.${ver}"(type: JavaExec, dependsOn: splitJar) {
+        mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
+        classpath = files(project.configurations.getByName('mcinject'))
+        args('--in', paths.SLIM_JAR, '--out', paths.INJECT_JAR, '--lvt=LVT', '--exc', paths.EXC, '--blacklist', paths.BLACKLIST)
+    }
+
+    def deobf = task "deobf.${ver}"(type: JavaExec, dependsOn: mcinject) {
+        mainClass = 'net.neoforged.art.Main'
+        classpath = files(project.configurations.getByName('forgeart'))
+        args('--input', paths.INJECT_JAR, '--output', paths.SRG_JAR, '--map', paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
+    }
+
+    def cCsv = task "writeClassCsv.${ver}"(type: WriteClassCsv) {
+        jarFile = file(paths.SLIM_JAR)
+        classCsv = file("data/versions/${ver}/mappings/csv/classes.csv")
+    }
+
+    def fCsv = task "writeFieldCsv.${ver}"(type: WriteFieldCsv) {
+        jarFile = file(paths.SLIM_JAR)
+        fieldCsv = file("data/versions/${ver}/mappings/csv/fields.csv")
+    }
+
+    def mCsv = task "writeMethodsCsv.${ver}"(type: WriteMethodCsv) {
+        jarFile = file(paths.SLIM_JAR)
+        methodCsv = file("data/versions/${ver}/mappings/csv/methods.csv")
+        paramCsv = file("data/versions/${ver}/mappings/csv/params.csv")
+    }
+}
+
+
