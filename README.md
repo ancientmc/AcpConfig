@@ -1,0 +1,1 @@
+This is very work in progress, and the code is very messy! This is for future versions of ACP and supports TSRGv2 generation. Replacement for SrgConfig.
