@@ -23,6 +23,8 @@ dependencies {
     implementation 'commons-io:commons-io:2.18.0'
     implementation 'org.ow2.asm:asm:9.7.1'
     implementation 'org.ow2.asm:asm-tree:9.7.1'
+    implementation 'net.minecraftforge:mapping-verifier:2.0.8:fatjar'
+    implementation 'net.minecraftforge:srgutils:0.5.4'
 
     forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
     fernflower 'com.ancientmc:fernflower:1.0'

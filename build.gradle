@@ -24,6 +24,8 @@ dependencies {
     implementation 'commons-io:commons-io:2.18.0'
     implementation 'org.ow2.asm:asm:9.7.1'
     implementation 'org.ow2.asm:asm-tree:9.7.1'
+    implementation 'net.minecraftforge:mapping-verifier:2.0.8:fatjar'
+    implementation 'net.minecraftforge:srgutils:0.5.4'
 
     inheritance "net.neoforged.installertools:installertools:3.0.2"
     jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2'
@@ -86,6 +88,14 @@ task downloadVersionManifest(type: Download) {
         mainClass = 'net.neoforged.jarsplitter.ConsoleTool'
         classpath = files(project.configurations.getByName('jarsplitter'))
         args('--input', paths.BASE_JAR, '--slim', paths.SLIM_JAR, '--extra', paths.EXTRA_JAR, '--srg', paths.INTERMEDIATE_TSRG)
+    }
+
+    // Alpha 1.2.6 -> ERROR:     Override: ji/h ()V -- m_01158 -> m_00990 in task OverrideNames
+    // This method's parent is private and therefore has a different access level, so the inheritance extractor took them as different files.
+    // This is such a minor problem that we can just mark both methods with the same deobfuscated name in the CSV, to eliminate any inheritance issues.
+    def verify = task "verifyTsrg.${ver}"(type: VerifyMappings) {
+        jar = file(paths.SLIM_JAR)
+        tsrg = file(paths.INTERMEDIATE_TSRG)
     }
 
     def mcinject = task "mcinject.${ver}"(type: JavaExec, dependsOn: splitJar) {
