@@ -31,8 +31,7 @@ public abstract class ApplyCsv extends DefaultTask {
             // Add first line of old to new
             newLines.add(oldLines.get(0));
 
-            for (int i = 0; i < oldLines.size(); i++) {
-                String line = oldLines.get(i);
+            for (String line : oldLines) {
                 String replacedLine = getReplacedLine(line, map);
                 newLines.add(replacedLine);
             }

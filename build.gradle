@@ -13,7 +13,8 @@ repositories {
 }
 
 configurations {
-    installertools
+    inheritance
+    jarsplitter
     forgeart
     mcinject
 }
@@ -24,7 +25,8 @@ dependencies {
     implementation 'org.ow2.asm:asm:9.7.1'
     implementation 'org.ow2.asm:asm-tree:9.7.1'
 
-    installertools 'net.neoforged.installertools:jarsplitter:3.0.2'
+    inheritance "net.neoforged.installertools:installertools:3.0.2"
+    jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2'
     forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
     mcinject 'de.oceanlabs.mcp:mcinjector:4.1-am'
 }
@@ -66,16 +68,23 @@ task downloadVersionManifest(type: Download) {
         libs = file("data/versions/${ver}/game/lib/")
     }
 
+    def inheritance = task "extractInheritance.${ver}"(type: JavaExec, dependsOn: mcJar) {
+        mainClass = 'net.neoforged.installertools.ConsoleTool'
+        classpath = files(project.configurations.getByName('inheritance'))
+        args('--task', 'EXTRACT_INHERITANCE', '--input', paths.BASE_JAR, '--output', paths.INHERITANCE)
+    }
+
     // Only generate version one, and only if we have a new version that's completely different from the one before it.
     // Otherwise we'll just update the TSRG
-    def writeTsrg = task "writeTsrg.${ver}"(type: WriteTsrg, dependsOn: mcJar) {
+    def writeTsrg = task "writeTsrg.${ver}"(type: WriteTsrg, dependsOn: [mcJar, inheritance]) {
         jar = file(paths.BASE_JAR)
         tsrg = file(paths.INTERMEDIATE_TSRG)
+        inheritanceJson = file(paths.INHERITANCE)
     }
 
     def splitJar = task "split.${ver}"(type: JavaExec, dependsOn: mcJar) {
         mainClass = 'net.neoforged.jarsplitter.ConsoleTool'
-        classpath = files(project.configurations.getByName('installertools'))
+        classpath = files(project.configurations.getByName('jarsplitter'))
         args('--input', paths.BASE_JAR, '--slim', paths.SLIM_JAR, '--extra', paths.EXTRA_JAR, '--srg', paths.INTERMEDIATE_TSRG)
     }
 
@@ -101,8 +110,9 @@ task downloadVersionManifest(type: Download) {
         fieldCsv = file("data/versions/${ver}/mappings/csv/fields.csv")
     }
 
-    def mCsv = task "writeMethodCsv.${ver}"(type: WriteMethodCsv, dependsOn: splitJar) {
+    def mCsv = task "writeMethodCsv.${ver}"(type: WriteMethodCsv, dependsOn: [splitJar, inheritance]) {
         jarFile = file(paths.SLIM_JAR)
+        inheritanceJson = file(paths.INHERITANCE)
         methodCsv = file("data/versions/${ver}/mappings/csv/methods.csv")
         paramCsv = file("data/versions/${ver}/mappings/csv/params.csv")
     }

@@ -1,0 +1,12 @@
+Written by Mason
+
+Mappings
+- Abandoning the MCP mappings is a bold decision but the right one in my eyes. This is because a) the legality of the old mappings is sketchy
+and b) the mappings themselves are now over a decade old, and outdated. Fresh mappings akin to Yarn is the right thing in my eyes.
+    - I will still probably apply deobfuscated names directly as opposed to an intermediary system, though I'm less set on this than I was in the past
+
+- Updating TSRG files -- how the hell am I even going to do this? I could use Matcher/Stitch but they primarily support Tiny (why does Fabric have this strange aversion to TSRG
+but only in some parts of its toolchain?) Also Matcher being GUI-based makes it hard to automate via Gradle. Not sure why it's not CLI when that seems easy to set up.
+
+- Also how will I update the exceptions file? This is probably way easier. I'm guessing there is a library that sniffs out probable exceptions in code. Gotta look into it.
+Blacklist will be updated manually be me, depending on how the old mods for each version change in their class structures.

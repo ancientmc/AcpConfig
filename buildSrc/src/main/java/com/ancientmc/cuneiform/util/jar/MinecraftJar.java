@@ -1,5 +1,7 @@
 package com.ancientmc.cuneiform.util.jar;
 
+import com.ancientmc.cuneiform.util.Util;
+import com.google.gson.JsonObject;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
@@ -20,7 +22,17 @@ public class MinecraftJar {
     public List<Types.Field> fields;
     public List<Types.Method> methods;
 
+    /**
+     * The inheritance JSON, input via tasks using this JAR class.
+     */
+    public File json;
+
     public MinecraftJar(File file) {
+        this(file, null);
+    }
+
+    public MinecraftJar(File file, File json) {
+        this.json = json;
         classes = new ArrayList<>();
         fields = new ArrayList<>();
         methods = new ArrayList<>();
@@ -33,7 +45,8 @@ public class MinecraftJar {
                 ClassReader reader = new ClassReader(zip.getInputStream(entry));
                 ClassNode classNode = new ClassNode();
                 reader.accept(classNode, 0);
-                ClassNode superClass = getSuperClass(zip, classNode);
+
+                // Exclude non-Minecraft classes from the JAR object.
                 String[] exclude = {"com/jcraft", "paulscode/sound"};
 
                 if (!classNode.sourceFile.contains(Arrays.stream(exclude).findAny().get())) {
@@ -44,8 +57,8 @@ public class MinecraftJar {
                     }
 
                     for (MethodNode methodNode : classNode.methods) {
-                        boolean inherited = isInherited(superClass, methodNode);
-                        String superParent = inherited ? superClass.name : "";
+                        String superParent = getSuperParent(json, classNode.name, methodNode.name, methodNode.desc);
+                        boolean inherited = superParent != null;
                         methods.add(new Types.Method(classNode.name, superParent, methodNode.desc, methodNode.name, getParameters(methodNode), inherited));
                     }
                 }
@@ -59,29 +72,25 @@ public class MinecraftJar {
         return Type.getArgumentTypes(methodNode.desc).length;
     }
 
-    public ClassNode getSuperClass(ZipFile zip, ClassNode node) {
+    // TODO: This works but is slow, maybe preload the JSON and then add?
+    public static String getSuperParent(File file, String className, String methodName, String methodDesc) {
         try {
-            ClassNode superClass = new ClassNode();
-            ZipEntry entry = zip.getEntry(node.superName + ".class");
-            if (entry != null) {
-                ClassReader reader = new ClassReader(zip.getInputStream(entry));
-                reader.accept(superClass, 0);
-                if (!superClass.name.equals("java/lang/Object")) {
-                    return superClass;
+            JsonObject json = Util.getJsonAsObject(file);
+            JsonObject methods = json.getAsJsonObject(className).getAsJsonObject("methods");
+            if (methods != null) {
+                JsonObject method = methods.getAsJsonObject(methodName + " " + methodDesc);
+                if (method.get("override") != null) {
+
+                    // Some methods have overrides that are descendants of JDK classes. We want to treat these as having no parents.
+                    if (method.get("override").getAsString().contains("java")) {
+                        return null;
+                    }
+                    return method.get("override").getAsString();
                 }
             }
-            return null;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public boolean isInherited(ClassNode superClass, MethodNode methodNode) {
-        if (superClass != null) {
-            if (!methodNode.name.equals("<init>")) {
-                return superClass.methods.stream().anyMatch(m -> m.desc.equals(methodNode.desc) && m.name.equals(methodNode.name));
-            }
-        }
-        return false;
+        return null;
     }
 }

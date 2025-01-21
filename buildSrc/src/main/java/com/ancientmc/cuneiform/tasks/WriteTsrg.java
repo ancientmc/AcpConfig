@@ -29,8 +29,9 @@ public abstract class WriteTsrg extends DefaultTask {
     @TaskAction
     public void exec() {
         File file = getJar().getAsFile().get();
+        File json = getInheritanceJson().getAsFile().get();
         File tsrg = getTsrg().getAsFile().get();
-        MinecraftJar jar = new MinecraftJar(file);
+        MinecraftJar jar = new MinecraftJar(file, json);
 
         Map<Types.Clazz, String> classIds = Ids.getAllClassIds(jar.classes);
         Map<Types.Field, String> fieldIds = Ids.getAllFieldIds(jar.fields);
@@ -110,36 +111,23 @@ public abstract class WriteTsrg extends DefaultTask {
 
 
     public static Types.Method getSuperMethod(MinecraftJar jar, Types.Method method) {
-        Types.Method superMethod = getImmediateSuperMethod(jar, method);
-
-        // If the method has no parent, just return the method since it doesn't need to be iterated further.
-        if (superMethod.superParent.equals("")) {
-            return superMethod;
-        }
-
-        // Crawl through the class inheritance
-        // The while loop stops when the method's super parent class is blank, meaning the currently iterated method *has* no super parent.
-        // That means we've found the root parent, and that's what gets returned.
-        Types.Method superDuperMethod;
-        while (!superMethod.superParent.equals("")) {
-            superDuperMethod = getImmediateSuperMethod(jar, superMethod);
-            superMethod = superDuperMethod;
-        }
-        return superMethod;
-    }
-
-    public static Types.Method getImmediateSuperMethod(MinecraftJar jar, Types.Method method) {
-        Types.Clazz superParent = jar.classes.stream().filter(c -> c.name.equals(method.superParent)).findAny().get();
-        if (!superParent.name.equals("")) {
-            List<Types.Method> superMethods = jar.methods.stream().filter(m -> m.parent.equals(superParent.name)).toList();
-            return superMethods.stream().filter(m -> (m.desc.equals(method.desc) && m.name.equals(method.name))).findAny().get();
+        if (jar.classes.stream().anyMatch(c -> c.name.equals(method.superParent))) {
+            Types.Clazz superParent = jar.classes.stream().filter(c -> c.name.equals(method.superParent)).findAny().get();
+            if (!superParent.name.equals("")) {
+                List<Types.Method> superMethods = jar.methods.stream().filter(m -> m.parent.equals(superParent.name)).toList();
+                return superMethods.stream().filter(m -> (m.desc.equals(method.desc) && m.name.equals(method.name))).findAny().get();
+            }
         } else {
-            return null;
+            return method;
         }
+        return null;
     }
 
     @InputFile
     public abstract RegularFileProperty getJar();
+
+    @InputFile
+    public abstract RegularFileProperty getInheritanceJson();
 
     @OutputFile
     public abstract RegularFileProperty getTsrg();
