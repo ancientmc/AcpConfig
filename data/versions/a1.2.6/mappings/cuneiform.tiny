@@ -1,9 +1,12 @@
 tiny	2	0	intermediary	named
 c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	f	Z	f_02424	fullscreen
+	f	I	f_02425	width
+	f	I	f_02426	height
 	f	Lnet/minecraft/src/c_00080;	f_02429	world
 	f	Ljava/awt/Canvas;	f_02435	canvas
 	f	Lnet/minecraft/client/MinecraftApplet;	f_02455	applet
+	f	Lnet/minecraft/src/c_00440;	f_02456	soundManager
 	f	Ljava/io/File;	f_02467	directory
 	f	J	f_02475	time
 	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V	<init>	
@@ -13,10 +16,13 @@ c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 		p	4	p_02551_3	width
 		p	5	p_02551_4	height
 		p	6	p_02551_5	fullscreen
+	m	(Lnet/minecraft/src/c_00208;)V	m_02552	
+		p	1	var1	e
 	m	()Ljava/io/File;	m_02557	getDirectory
 	m	(Ljava/lang/String;)Ljava/io/File;	m_02558	getDirectory
 		p	0	p_02558_0	path
 	m	()Lnet/minecraft/src/c_00260;	m_02559	getOsName
+	m	()V	m_02564	saveScreenshot
 	m	()V	m_02572	toggleFullscreen
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_02590	launch
 		p	0	p_02590_0	username
@@ -47,16 +53,25 @@ c	net/minecraft/src/c_00004	net/minecraft/item/Pickaxe
 	f	[Lnet/minecraft/src/c_00369;	f_00004	preferredBlocks
 	m	(II)V	<init>	
 		p	1	p_00011_0	id
+c	net/minecraft/src/c_00005	net/minecraft/client/texture/animation/Animation
+c	net/minecraft/src/c_00006	net/minecraft/client/texture/animation/CompassAnimation
+	f	Lnet/minecraft/client/Minecraft;	f_00012	minecraft
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	p_00016_0	minecraft
+c	net/minecraft/src/c_00008	net/minecraft/item/Bucket
 c	net/minecraft/src/c_00009	net/minecraft/isom/IsomPreviewCanvas
+	f	Ljava/io/File;	f_00023	directory
 	m	(Ljava/awt/event/KeyEvent;)V	keyPressed	keyPressed
 		p	1	p_00045_0	e
 	m	(Ljava/awt/event/KeyEvent;)V	keyReleased	keyReleased
 		p	1	p_00046_0	e
 	m	(Ljava/awt/event/KeyEvent;)V	keyTyped	keyTyped
 		p	1	p_00047_0	e
+	m	()Ljava/io/File;	m_00024	getDirectory
 	m	(Ljava/lang/String;)Ljava/io/File;	m_00025	getDirectory
 		p	1	p_00025_0	path
 	m	()Lnet/minecraft/src/c_00159;	m_00026	getOsName
+	m	()V	m_00030	startThread
 	m	(Ljava/awt/event/MouseEvent;)V	mouseClicked	mouseClicked
 		p	1	p_00040_0	e
 	m	(Ljava/awt/event/MouseEvent;)V	mouseDragged	mouseDragged
@@ -75,6 +90,12 @@ c	net/minecraft/src/c_00009	net/minecraft/isom/IsomPreviewCanvas
 	m	()V	run	run
 	m	(Ljava/awt/Graphics;)V	update	update
 c	net/minecraft/src/c_00012	net/minecraft/entity/passive/Animal
+c	net/minecraft/src/c_00013	net/minecraft/client/sound/Sound
+	f	Ljava/lang/String;	f_00032	name
+	f	Ljava/net/URL;	f_00033	url
+	m	(Ljava/lang/String;Ljava/net/URL;)V	<init>	
+		p	1	p_00056_0	name
+		p	2	p_00056_1	url
 c	net/minecraft/src/c_00014	net/minecraft/entity/hostile/Ghast
 c	net/minecraft/src/c_00015	net/minecraft/block/RedstoneOre
 	f	Z	f_00042	lit
@@ -84,16 +105,32 @@ c	net/minecraft/src/c_00015	net/minecraft/block/RedstoneOre
 		p	3	p_00059_2	lit
 c	net/minecraft/src/c_00017	net/minecraft/block/partial/redstone/PressurePlate
 c	net/minecraft/src/c_00020	net/minecraft/entity/passive/Cow
+c	net/minecraft/src/c_00021	net/minecraft/entity/projectile/Snowball
 c	net/minecraft/src/c_00022	net/minecraft/item/MushroomStew
+c	net/minecraft/src/c_00023	net/minecraft/util/crash/CrashReport
+	m	(Lnet/minecraft/src/c_00208;)V	<init>	
+		p	1	p_00104_0	e
+c	net/minecraft/src/c_00027	net/minecraft/entity/projectile/Fireball
+	f	Lnet/minecraft/src/c_00196;	f_00081	shooter
+	m	(Lnet/minecraft/src/c_00080;Lnet/minecraft/src/c_00196;DDD)V	<init>	
+		p	1	p_00115_0	world
+		p	2	p_00115_1	shooter
 c	net/minecraft/src/c_00031	net/minecraft/item/BlockItem
 c	net/minecraft/src/c_00033	net/minecraft/entity/hostile/Spider
 c	net/minecraft/src/c_00037	net/minecraft/client/sound/block/WalkingSound
+	f	Ljava/lang/String;	f_00106	name
+	m	(Ljava/lang/String;FF)V	<init>	
+		p	1	p_00138_0	name
+c	net/minecraft/src/c_00038	net/minecraft/item/FishingRodItem
 c	net/minecraft/src/c_00040	net/minecraft/block/entity/MobSpawnerEntity
 c	net/minecraft/src/c_00043	net/minecraft/block/partial/redstone/RedstoneTorch
 c	net/minecraft/src/c_00046	net/minecraft/block/MobSpawner
 	m	(II)V	<init>	
 		p	1	p_00221_0	id
 		p	2	p_00221_1	texture
+c	net/minecraft/src/c_00052	net/minecraft/entity/passive/Sheep
+	f	Z	f_00174	sheared
+c	net/minecraft/src/c_00053	net/minecraft/item/SnowballItem
 c	net/minecraft/src/c_00055	net/minecraft/block/container/Chest
 	m	(I)V	<init>	
 		p	1	p_00253_0	id
@@ -129,6 +166,20 @@ c	net/minecraft/src/c_00070	net/minecraft/util/math/AABB
 	f	D	f_00224	xTwo
 	f	D	f_00225	yTwo
 	f	D	f_00226	zTwo
+	m	(DDDDDD)V	<init>	
+		p	1	p_00290_0	xOne
+		p	3	p_00290_1	yOne
+		p	5	p_00290_2	zOne
+		p	7	p_00290_3	xTwo
+		p	9	p_00290_4	yTwo
+		p	11	p_00290_5	zTwo
+	m	(DDDDDD)Lnet/minecraft/src/c_00070;	m_00291	setAABB
+		p	1	p_00291_0	xOne
+		p	3	p_00291_1	yOne
+		p	5	p_00291_2	zOne
+		p	7	p_00291_3	xTwo
+		p	9	p_00291_4	yTwo
+		p	11	p_00291_5	zTwo
 c	net/minecraft/src/c_00078	net/minecraft/block/Obsidian
 c	net/minecraft/src/c_00079	net/minecraft/block/Pumpkin
 	f	Z	f_00239	lit
@@ -158,19 +209,35 @@ c	net/minecraft/src/c_00080	net/minecraft/world/World
 	m	([Ljava/io/File;)V	m_00326	deleteSubDirectories
 		p	0	p_00326_0	files
 	m	()V	m_00338	writeWorldData
+	m	(Lnet/minecraft/src/c_00321;Ljava/lang/String;FF)V	m_00368	playEntitySound
+		p	1	p_00368_0	origin
+		p	2	p_00368_1	name
 c	net/minecraft/src/c_00081	net/minecraft/entity/hostile/MonsterInterface
 c	net/minecraft/src/c_00086	net/minecraft/block/CraftingTable
 	m	(I)V	<init>	
 		p	1	p_00453_0	id
 c	net/minecraft/src/c_00087	net/minecraft/block/Glass
 c	net/minecraft/src/c_00089	net/minecraft/block/Jukebox
+	m	(II)V	<init>	
+		p	1	p_00456_0	id
+		p	2	p_00456_1	texture
 c	net/minecraft/src/c_00090	net/minecraft/entity/hostile/Skeleton
+	f	Lnet/minecraft/src/c_00152;	f_00297	bow
 c	net/minecraft/src/c_00091	net/minecraft/world/biome/Desert
+c	net/minecraft/src/c_00097	net/minecraft/util/crash/MojangLogoCanvas
+	f	Ljava/awt/image/BufferedImage;	f_00318	image
+	m	(Ljava/awt/Graphics;)V	paint	paint
+		p	1	p_00482_0	g
+c	net/minecraft/src/c_00098	net/minecraft/entity/vehicle/Boat
 c	net/minecraft/src/c_00099	net/minecraft/entity/hostile/Creeper
 c	net/minecraft/src/c_00105	net/minecraft/block/Sand
 	m	(II)V	<init>	
 		p	1	p_01038_0	id
 		p	2	p_01038_1	texture
+	m	(Lnet/minecraft/src/c_00080;III)V	m_00502	
+		p	1	p_00502_0	world
+	m	(Lnet/minecraft/src/c_00080;III)Z	m_00503	
+		p	0	p_00503_0	world
 c	net/minecraft/src/c_00106	net/minecraft/item/Item
 	f	[Lnet/minecraft/src/c_00106;	f_00348	ITEM_REGISTRY
 	f	Lnet/minecraft/src/c_00106;	f_00349	IRON_SHOVEL
@@ -213,8 +280,61 @@ c	net/minecraft/src/c_00106	net/minecraft/item/Item
 	f	Lnet/minecraft/src/c_00106;	f_00386	DIAMOND_HOE
 	f	Lnet/minecraft/src/c_00106;	f_00387	GOLDEN_HOE
 	f	Lnet/minecraft/src/c_00106;	f_00388	WHEAT_SEEDS
+	f	Lnet/minecraft/src/c_00106;	f_00389	WHEAT
+	f	Lnet/minecraft/src/c_00106;	f_00390	BREAD
+	f	Lnet/minecraft/src/c_00106;	f_00391	LEATHER_HELMET
+	f	Lnet/minecraft/src/c_00106;	f_00392	LEATHER_TUNIC
+	f	Lnet/minecraft/src/c_00106;	f_00393	LEATHER_PANTS
+	f	Lnet/minecraft/src/c_00106;	f_00394	LEATHER_BOOTS
+	f	Lnet/minecraft/src/c_00106;	f_00395	CHAINMAIL_HELMET
+	f	Lnet/minecraft/src/c_00106;	f_00396	CHAINMAIL_CHESTPLATE
+	f	Lnet/minecraft/src/c_00106;	f_00397	CHAINMAIL_LEGGINGS
+	f	Lnet/minecraft/src/c_00106;	f_00398	CHAINMAIL_BOOTS
+	f	Lnet/minecraft/src/c_00106;	f_00399	IRON_HELMET
+	f	Lnet/minecraft/src/c_00106;	f_00400	IRON_CHESTPLATE
+	f	Lnet/minecraft/src/c_00106;	f_00401	IRON_LEGGINGS
+	f	Lnet/minecraft/src/c_00106;	f_00402	IRON_BOOTS
+	f	Lnet/minecraft/src/c_00106;	f_00403	DIAMOND_HELMET
+	f	Lnet/minecraft/src/c_00106;	f_00404	DIAMOND_CHESTPLATE
+	f	Lnet/minecraft/src/c_00106;	f_00405	DIAMOND_LEGGINGS
+	f	Lnet/minecraft/src/c_00106;	f_00406	DIAMOND_BOOTS
+	f	Lnet/minecraft/src/c_00106;	f_00407	GOLDEN_HELMET
+	f	Lnet/minecraft/src/c_00106;	f_00408	GOLDEN_CHESTPLATE
+	f	Lnet/minecraft/src/c_00106;	f_00409	GOLDEN_LEGGINGS
+	f	Lnet/minecraft/src/c_00106;	f_00410	GOLDEN_BOOTS
+	f	Lnet/minecraft/src/c_00106;	f_00411	FLINT
 	f	Lnet/minecraft/src/c_00106;	f_00412	PORKCHOP
+	f	Lnet/minecraft/src/c_00106;	f_00413	COOKED_PORKCHOP
+	f	Lnet/minecraft/src/c_00106;	f_00414	PAINTING
+	f	Lnet/minecraft/src/c_00106;	f_00415	GOLDEN_APPLE
+	f	Lnet/minecraft/src/c_00106;	f_00416	OAK_SIGN
+	f	Lnet/minecraft/src/c_00106;	f_00417	OAK_DOOR
+	f	Lnet/minecraft/src/c_00106;	f_00418	BUCKET
+	f	Lnet/minecraft/src/c_00106;	f_00419	WATER_BUCKET
+	f	Lnet/minecraft/src/c_00106;	f_00420	LAVA_BUCKET
+	f	Lnet/minecraft/src/c_00106;	f_00421	MINECART
+	f	Lnet/minecraft/src/c_00106;	f_00422	SADDLE
+	f	Lnet/minecraft/src/c_00106;	f_00423	IRON_DOOR
+	f	Lnet/minecraft/src/c_00106;	f_00424	REDSTONE
+	f	Lnet/minecraft/src/c_00106;	f_00425	SNOWBALL
+	f	Lnet/minecraft/src/c_00106;	f_00426	OAK_BOAT
 	f	Lnet/minecraft/src/c_00106;	f_00427	LEATHER
+	f	Lnet/minecraft/src/c_00106;	f_00428	MILK_BUCKET
+	f	Lnet/minecraft/src/c_00106;	f_00429	BRICK
+	f	Lnet/minecraft/src/c_00106;	f_00430	CLAY_BALL
+	f	Lnet/minecraft/src/c_00106;	f_00431	SUGAR_CANE
+	f	Lnet/minecraft/src/c_00106;	f_00432	PAPER
+	f	Lnet/minecraft/src/c_00106;	f_00433	BOOK
+	f	Lnet/minecraft/src/c_00106;	f_00434	SLIMEBALL
+	f	Lnet/minecraft/src/c_00106;	f_00435	CHEST_MINECART
+	f	Lnet/minecraft/src/c_00106;	f_00436	FURNACE_MINECART
+	f	Lnet/minecraft/src/c_00106;	f_00437	EGG
+	f	Lnet/minecraft/src/c_00106;	f_00438	COMPASS
+	f	Lnet/minecraft/src/c_00106;	f_00439	FISHING_ROD
+	f	Lnet/minecraft/src/c_00106;	f_00440	CLOCK
+	f	Lnet/minecraft/src/c_00106;	f_00441	GLOWSTONE_DUST
+	f	Lnet/minecraft/src/c_00106;	f_00442	FISH
+	f	Lnet/minecraft/src/c_00106;	f_00443	COOKED_FISH
 	f	Lnet/minecraft/src/c_00106;	f_00444	DISC_13
 	f	Lnet/minecraft/src/c_00106;	f_00445	DISC_CAT
 	f	I	f_00446	id
@@ -233,6 +353,7 @@ c	net/minecraft/src/c_00109	net/minecraft/block/MineralBlock
 		p	2	p_00532_1	texture
 c	net/minecraft/src/c_00111	net/minecraft/entity/player/Player
 	f	I	f_00466	dimension
+	f	Lnet/minecraft/src/c_00200;	f_00468	rod
 c	net/minecraft/src/c_00115	net/minecraft/entity/hostile/Monster
 c	net/minecraft/src/c_00116	net/minecraft/recipe/item/ToolRecipes
 	f	[[Ljava/lang/String;	f_00477	shapes
@@ -244,6 +365,10 @@ c	net/minecraft/src/c_00117	net/minecraft/block/Bookshelf
 		p	1	p_00570_0	id
 		p	2	p_00570_1	texture
 c	net/minecraft/src/c_00119	net/minecraft/block/partial/plant/Sapling
+c	net/minecraft/src/c_00122	net/minecraft/client/Screenshot
+	f	Ljava/text/DateFormat;	f_00486	dateFormat
+	m	(Ljava/io/File;II)Ljava/lang/String;	m_00576	save
+		p	0	p_00576_0	directory
 c	net/minecraft/src/c_00123	net/minecraft/recipe/RecipeRegistry
 	f	Lnet/minecraft/src/c_00123;	f_00490	RECIPE_REGISTRY
 	f	Ljava/util/List;	f_00491	recipeList
@@ -251,10 +376,13 @@ c	net/minecraft/src/c_00123	net/minecraft/recipe/RecipeRegistry
 	m	(Lnet/minecraft/src/c_00152;[Ljava/lang/Object;)V	m_00580	register
 		p	1	p_00580_0	stack
 		p	2	p_00580_1	data
+c	net/minecraft/src/c_00124	net/minecraft/entity/ItemEntity
 c	net/minecraft/src/c_00125	net/minecraft/nbt/ByteArrayTag
 	f	[B	f_00498	data
 	m	([B)V	<init>	
 		p	1	p_00587_0	data
+c	net/minecraft/src/c_00130	net/minecraft/item/DoorItem
+c	net/minecraft/src/c_00134	net/minecraft/item/RedstoneItem
 c	net/minecraft/src/c_00139	net/minecraft/entity/Mob
 c	net/minecraft/src/c_00140	net/minecraft/nbt/Tag
 	f	Ljava/lang/String;	f_00582	name
@@ -266,10 +394,17 @@ c	net/minecraft/src/c_00140	net/minecraft/nbt/Tag
 	m	()Ljava/lang/String;	m_00647	getName
 	m	(Ljava/lang/String;)Lnet/minecraft/src/c_00140;	m_00648	setName
 		p	1	p_00648_0	name
+	m	(Ljava/io/DataInput;)Lnet/minecraft/src/c_00140;	m_00649	readTag
+		p	0	p_00649_0	in
+	m	(Lnet/minecraft/src/c_00140;Ljava/io/DataOutput;)V	m_00650	writeTag
+		p	0	p_00650_0	tag
+		p	1	p_00650_1	out
 	m	(B)Lnet/minecraft/src/c_00140;	m_00651	getTypeById
 		p	0	p_00651_0	data
 	m	(B)Ljava/lang/String;	m_00652	getTypeByString
 		p	0	p_00652_0	data
+c	net/minecraft/src/c_00146	net/minecraft/client/sound/codec/CodecMus
+	m	()Ljava/io/InputStream;	openInputStream	openInputStream
 c	net/minecraft/src/c_00148	net/minecraft/entity/decoration/painting/PaintingTypes
 	f	Lnet/minecraft/src/c_00148;	f_00614	Kebab
 	f	Lnet/minecraft/src/c_00148;	f_00615	Aztec
@@ -326,6 +461,28 @@ c	net/minecraft/src/c_00152	net/minecraft/item/ItemStack
 	m	(Lnet/minecraft/src/c_00234;)V	m_00733	getStackData
 		p	1	p_00733_0	tag
 	m	()I	m_00735	getDurability
+c	net/minecraft/src/c_00153	net/minecraft/entity/EntityRegistry
+	f	Ljava/util/Map;	f_00657	entitiesByName
+	f	Ljava/util/Map;	f_00658	names
+	f	Ljava/util/Map;	f_00659	entitiesById
+	f	Ljava/util/Map;	f_00660	ids
+	m	(Ljava/lang/Class;Ljava/lang/String;I)V	m_00745	register
+		p	0	p_00745_0	entityClass
+		p	1	p_00745_1	name
+		p	2	p_00745_2	id
+	m	(Ljava/lang/String;Lnet/minecraft/src/c_00080;)Lnet/minecraft/src/c_00321;	m_00746	getEntity
+		p	0	p_00746_0	name
+		p	1	p_00746_1	world
+	m	(Lnet/minecraft/src/c_00234;Lnet/minecraft/src/c_00080;)Lnet/minecraft/src/c_00321;	m_00747	getEntity
+		p	0	p_00747_0	tag
+		p	1	p_00747_1	world
+	m	(ILnet/minecraft/src/c_00080;)Lnet/minecraft/src/c_00321;	m_00748	getEntity
+		p	0	p_00748_0	id
+		p	1	p_00748_1	world
+	m	(Lnet/minecraft/src/c_00321;)I	m_00749	getId
+		p	0	p_00749_0	entity
+	m	(Lnet/minecraft/src/c_00321;)Ljava/lang/String;	m_00750	getName
+		p	0	p_00750_0	entity
 c	net/minecraft/src/c_00159	net/minecraft/util/os/IsomOsNames
 	f	Lnet/minecraft/src/c_00159;	f_00683	linux
 	f	Lnet/minecraft/src/c_00159;	f_00684	solaris
@@ -341,6 +498,9 @@ c	net/minecraft/src/c_00162	net/minecraft/block/partial/SnowLayer
 		p	1	p_00788_0	id
 		p	2	p_00788_1	texture
 c	net/minecraft/src/c_00164	net/minecraft/block/entity/ChestEntity
+c	net/minecraft/src/c_00165	net/minecraft/entity/blockentity/FallingSand
+	m	(Lnet/minecraft/src/c_00080;FFFI)V	<init>	
+		p	1	p_00795_0	world
 c	net/minecraft/src/c_00167	net/minecraft/block/partial/Fence
 c	net/minecraft/src/c_00169	net/minecraft/recipe/item/WorkBlockRecipes
 	m	(Lnet/minecraft/src/c_00123;)V	m_00813	register
@@ -375,6 +535,46 @@ c	net/minecraft/src/c_00172	net/minecraft/client/TimerHackThread
 	m	()V	run	run
 c	net/minecraft/src/c_00178	net/minecraft/util/os/OsValues
 	f	[I	f_00741	values
+c	net/minecraft/src/c_00180	net/minecraft/client/Options
+	f	[Ljava/lang/String;	f_00747	RENDER_DISTANCES
+	f	[Ljava/lang/String;	f_00748	DIFFICULTIES
+	f	F	f_00749	musicVolume
+	f	F	f_00750	soundVolume
+	f	F	f_00751	sensitivity
+	f	Z	f_00752	mouseInverted
+	f	I	f_00753	renderDistance
+	f	Z	f_00754	viewBobbing
+	f	Z	f_00755	anaglyph3d
+	f	Z	f_00756	fpsLimited
+	f	Z	f_00757	fancyGraphics
+	f	Ljava/lang/String;	f_00758	skin
+	f	Lnet/minecraft/src/c_00276;	f_00759	forward
+	f	Lnet/minecraft/src/c_00276;	f_00760	left
+	f	Lnet/minecraft/src/c_00276;	f_00761	back
+	f	Lnet/minecraft/src/c_00276;	f_00762	right
+	f	Lnet/minecraft/src/c_00276;	f_00763	jump
+	f	Lnet/minecraft/src/c_00276;	f_00764	inventory
+	f	Lnet/minecraft/src/c_00276;	f_00765	drop
+	f	Lnet/minecraft/src/c_00276;	f_00766	chat
+	f	Lnet/minecraft/src/c_00276;	f_00767	toggleFog
+	f	Lnet/minecraft/src/c_00276;	f_00768	sneak
+	f	[Lnet/minecraft/src/c_00276;	f_00769	inputs
+	f	Lnet/minecraft/client/Minecraft;	f_00770	minecraft
+	f	Ljava/io/File;	f_00771	file
+	f	I	f_00773	difficulty
+	f	Ljava/lang/String;	f_00775	lastServer
+	m	(Lnet/minecraft/client/Minecraft;Ljava/io/File;)V	<init>	
+		p	1	p_00855_0	minecraft
+		p	2	p_00855_1	directory
+	m	(I)Ljava/lang/String;	m_00857	getKeyName
+		p	1	p_00857_0	id
+	m	(II)V	m_00858	changeInput
+		p	1	p_00858_0	id
+		p	2	p_00858_1	code
+	m	(I)Ljava/lang/String;	m_00863	getOptionsDisplay
+		p	1	p_00863_0	id
+	m	()V	m_00864	load
+	m	()V	m_00866	save
 c	net/minecraft/src/c_00181	net/minecraft/recipe/RecipeComparator
 	f	Lnet/minecraft/src/c_00123;	f_00776	registry
 	m	(Lnet/minecraft/src/c_00123;)V	<init>	
@@ -426,19 +626,32 @@ c	net/minecraft/src/c_00196	net/minecraft/entity/LivingEntity
 	m	()Ljava/lang/String;	m_00962	getHurtSound
 	m	()Ljava/lang/String;	m_00963	getDeathSound
 	m	()I	m_00966	getDrop
+	m	()V	m_00971	m_00971
+	m	()Lnet/minecraft/src/c_00152;	m_00981	getBow
 c	net/minecraft/src/c_00197	net/minecraft/block/material/NonSolid
-c	net/minecraft/src/c_00200	net/minecraft/src/c_00200
+c	net/minecraft/src/c_00198	net/minecraft/item/SugarCaneItem
+c	net/minecraft/src/c_00200	net/minecraft/entity/FishingRod
 	f	I	f_00913	xTile
 	f	I	f_00914	yTile
 	f	I	f_00915	zTile
 	f	I	f_00916	inTile
 	f	Z	f_00917	inGround
 	f	I	f_00918	shake
+	f	Lnet/minecraft/src/c_00111;	f_00919	player
+	m	(Lnet/minecraft/src/c_00080;Lnet/minecraft/src/c_00111;)V	<init>	
+		p	1	p_00993_0	world
+		p	2	p_00993_1	player
 c	net/minecraft/src/c_00201	net/minecraft/block/Glowstone
 c	net/minecraft/src/c_00207	net/minecraft/nbt/LongTag
 	f	J	f_00934	data
 	m	(J)V	<init>	
 		p	1	p_01007_0	data
+c	net/minecraft/src/c_00208	net/minecraft/util/MinecraftException
+	f	Ljava/lang/String;	f_00935	name
+	f	Ljava/lang/Throwable;	f_00936	throwable
+	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	<init>	
+		p	1	p_01009_0	name
+		p	2	p_01009_1	throwable
 c	net/minecraft/src/c_00216	net/minecraft/block/Ore
 	m	(II)V	<init>	
 		p	1	p_01030_0	id
@@ -454,6 +667,17 @@ c	net/minecraft/src/c_00229	net/minecraft/block/BaseLeaves
 		p	1	p_01052_0	id
 		p	2	p_01052_1	texture
 		p	3	p_01052_2	material
+c	net/minecraft/src/c_00231	net/minecraft/client/sound/MusInputStream
+	f	I	f_00997	hash
+	f	Ljava/io/InputStream;	f_00998	in
+	f	Lnet/minecraft/src/c_00146;	f_01000	codec
+	m	(Lnet/minecraft/src/c_00146;Ljava/net/URL;Ljava/io/InputStream;)V	<init>	
+		p	1	p_01054_0	codec
+		p	2	p_01054_1	url
+		p	3	p_01054_2	in
+	m	()I	read	read
+	m	([BII)I	read	read
+c	net/minecraft/src/c_00233	net/minecraft/entity/hostile/Giant
 c	net/minecraft/src/c_00234	net/minecraft/nbt/CompoundTag
 	f	Ljava/util/Map;	f_01003	entries
 	m	(Ljava/lang/String;Lnet/minecraft/src/c_00140;)V	m_01060	writeEndEntry
@@ -491,19 +715,19 @@ c	net/minecraft/src/c_00234	net/minecraft/nbt/CompoundTag
 		p	2	p_01070_1	data
 	m	(Ljava/lang/String;)Z	m_01071	hasEntry
 		p	1	p_01071_0	name
-	m	(Ljava/lang/String;)B	m_01072	getByteEntry
+	m	(Ljava/lang/String;)B	m_01072	readByteEntry
 		p	1	p_01072_0	name
-	m	(Ljava/lang/String;)S	m_01073	getShortEntry
+	m	(Ljava/lang/String;)S	m_01073	readShortEntry
 		p	1	p_01073_0	name
 	m	(Ljava/lang/String;)I	m_01074	readIntEntry
 		p	1	p_01074_0	name
 	m	(Ljava/lang/String;)J	m_01075	readLongEntry
 		p	1	p_01075_0	name
-	m	(Ljava/lang/String;)F	m_01076	getFloatEntry
+	m	(Ljava/lang/String;)F	m_01076	readFloatEntry
 		p	1	p_01076_0	name
-	m	(Ljava/lang/String;)D	m_01077	getDoubleEntry
+	m	(Ljava/lang/String;)D	m_01077	readDoubleEntry
 		p	1	p_01077_0	name
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_01078	getStringEntry
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_01078	readStringEntry
 		p	1	p_01078_0	name
 	m	(Ljava/lang/String;)[B	m_01079	readByteArrayEntry
 		p	1	p_01079_0	name
@@ -564,6 +788,12 @@ c	net/minecraft/src/c_00269	net/minecraft/nbt/IntTag
 	m	(I)V	<init>	
 		p	1	p_01210_0	data
 c	net/minecraft/src/c_00271	net/minecraft/world/biome/Hell
+c	net/minecraft/src/c_00276	net/minecraft/client/input/PlayerInput
+	f	Ljava/lang/String;	f_01144	name
+	f	I	f_01145	code
+	m	(Ljava/lang/String;I)V	<init>	
+		p	1	p_01241_0	name
+		p	2	p_01241_1	code
 c	net/minecraft/src/c_00278	net/minecraft/item/Sword
 	m	(II)V	<init>	
 		p	1	p_01243_0	id
@@ -576,7 +806,8 @@ c	net/minecraft/src/c_00284	net/minecraft/block/Leaves
 	m	(II)V	<init>	
 		p	1	p_01257_0	id
 		p	2	p_01257_1	texture
-c	net/minecraft/src/c_00289	net/minecraft/entity/block/TntEntity
+c	net/minecraft/src/c_00287	net/minecraft/entity/decoration/Painting
+c	net/minecraft/src/c_00289	net/minecraft/entity/blockentity/TntEntity
 	f	I	f_01193	fuse
 	m	(Lnet/minecraft/src/c_00080;DDD)V	<init>	
 		p	1	p_01278_0	world
@@ -590,6 +821,7 @@ c	net/minecraft/src/c_00299	net/minecraft/item/Seeds
 	m	(II)V	<init>	
 		p	1	p_01310_0	id
 		p	2	p_01310_1	crop
+c	net/minecraft/src/c_00300	net/minecraft/item/MinecartItem
 c	net/minecraft/src/c_00302	net/minecraft/block/liquid/LiquidBlock
 c	net/minecraft/src/c_00305	net/minecraft/entity/EntityTypes
 	f	Lnet/minecraft/src/c_00305;	f_01241	everything
@@ -601,9 +833,24 @@ c	net/minecraft/src/c_00308	net/minecraft/block/Clay
 	m	(II)V	<init>	
 		p	1	p_01337_0	id
 		p	2	p_01337_1	texture
+c	net/minecraft/src/c_00309	net/minecraft/item/SaddleItem
 c	net/minecraft/src/c_00313	net/minecraft/block/material/Fluid
+c	net/minecraft/src/c_00317	net/minecraft/client/FontManager
 c	net/minecraft/src/c_00318	net/minecraft/block/entity/FurnaceEntity
 c	net/minecraft/src/c_00319	net/minecraft/block/partial/redstone/RedstoneWire
+c	net/minecraft/src/c_00320	net/minecraft/entity/projectile/Arrow
+	f	I	f_01275	tileX
+	f	I	f_01276	tileY
+	f	I	f_01277	tileZ
+	f	I	f_01278	inTile
+	f	Z	f_01279	inGround
+	f	I	f_01280	shake
+	f	Lnet/minecraft/src/c_00196;	f_01281	shooter
+	m	(Lnet/minecraft/src/c_00080;DDD)V	<init>	
+		p	1	p_01366_0	world
+	m	(Lnet/minecraft/src/c_00080;Lnet/minecraft/src/c_00196;)V	<init>	
+		p	1	p_01367_0	world
+		p	2	p_01367_1	shooter
 c	net/minecraft/src/c_00321	net/minecraft/entity/Entity
 	f	Lnet/minecraft/src/c_00080;	f_01290	world
 	f	D	f_01294	x
@@ -617,6 +864,8 @@ c	net/minecraft/src/c_00321	net/minecraft/entity/Entity
 		p	1	p_01369_0	world
 	m	(Ljava/lang/Object;)Z	equals	
 		p	1	p_01370_0	obj
+	m	(Lnet/minecraft/src/c_00111;)V	m_01402	playerPickup
+		p	1	p_01402_0	player
 	m	(Lnet/minecraft/src/c_00234;)V	m_01414	writeEntityData
 		p	1	p_01414_0	tag
 	m	(Lnet/minecraft/src/c_00234;)V	m_01415	readEntityData
@@ -667,6 +916,15 @@ c	net/minecraft/src/c_00348	net/minecraft/item/MusicDisc
 	m	(ILjava/lang/String;)V	<init>	
 		p	1	p_01538_0	id
 		p	2	p_01538_1	name
+c	net/minecraft/src/c_00350	net/minecraft/isom/IsomPreviewThread
+	f	Lnet/minecraft/src/c_00009;	f_01444	canvas
+	m	(Lnet/minecraft/src/c_00009;)V	<init>	
+		p	1	p_01540_0	canvas
+	m	()V	run	run
+c	net/minecraft/src/c_00351	net/minecraft/world/IsomWorld
+	f	Lnet/minecraft/src/c_00009;	f_01445	canvas
+	m	(Lnet/minecraft/src/c_00009;Ljava/io/File;Ljava/lang/String;)V	<init>	
+		p	1	p_01542_0	canvas
 c	net/minecraft/src/c_00356	net/minecraft/util/os/IsomOsValues
 	f	[I	f_01456	values
 c	net/minecraft/src/c_00361	net/minecraft/block/container/Sign
@@ -824,6 +1082,8 @@ c	net/minecraft/src/c_00369	net/minecraft/block/Block
 c	net/minecraft/src/c_00371	net/minecraft/entity/hostile/Slime
 	f	I	f_01629	size
 c	net/minecraft/src/c_00372	net/minecraft/entity/hostile/Zombie
+c	net/minecraft/src/c_00374	net/minecraft/item/SignItem
+c	net/minecraft/src/c_00375	net/minecraft/item/BoatItem
 c	net/minecraft/src/c_00377	net/minecraft/block/Log
 	m	(I)V	<init>	
 		p	1	p_01667_0	id
@@ -840,6 +1100,11 @@ c	net/minecraft/src/c_00381	net/minecraft/block/partial/Torch
 		p	1	p_01675_0	id
 		p	2	p_01675_1	texture
 c	net/minecraft/src/c_00389	net/minecraft/item/Armor
+	f	I	f_01671	piece
+	m	(IIII)V	<init>	
+		p	1	p_01704_0	id
+		p	2	p_01704_1	tier
+		p	4	p_01704_3	piece
 c	net/minecraft/src/c_00390	net/minecraft/block/partial/plant/Flower
 	m	(II)V	<init>	
 		p	1	p_01529_0	id
@@ -854,7 +1119,11 @@ c	net/minecraft/src/c_00395	net/minecraft/entity/passive/Pig
 c	net/minecraft/src/c_00398	net/minecraft/block/GrassBlock
 	m	(I)V	<init>	
 		p	1	p_01728_0	id
+c	net/minecraft/src/c_00399	net/minecraft/entity/FlyingEntity
 c	net/minecraft/src/c_00400	net/minecraft/entity/passive/Chicken
+c	net/minecraft/src/c_00402	net/minecraft/util/crash/CrashReportCanvas
+	m	(I)V	<init>	
+		p	1	p_01732_0	size
 c	net/minecraft/src/c_00407	net/minecraft/recipe/item/SwordRecipes
 	f	[[Ljava/lang/String;	f_01712	shape
 	f	[[Ljava/lang/Object;	f_01713	materials
@@ -876,6 +1145,10 @@ c	net/minecraft/src/c_00435	net/minecraft/block/Netherrack
 		p	2	p_01814_1	texture
 c	net/minecraft/src/c_00436	net/minecraft/block/entity/SignEntity
 	f	[Ljava/lang/String;	f_01799	lines
+c	net/minecraft/src/c_00437	net/minecraft/entity/vehicle/Minecart
+c	net/minecraft/src/c_00438	net/minecraft/item/PaintingItem
+c	net/minecraft/src/c_00440	net/minecraft/client/sound/SoundManager
+	f	Lpaulscode/sound/SoundSystem;	f_01820	system
 c	net/minecraft/src/c_00441	net/minecraft/block/Fire
 	m	(II)V	<init>	
 		p	1	p_01838_0	id
@@ -885,6 +1158,8 @@ c	net/minecraft/src/c_00443	net/minecraft/block/partial/Slab
 		p	1	p_01847_0	id
 		p	2	p_01847_1	fullBlock
 c	net/minecraft/src/c_00444	net/minecraft/item/Food
+	m	(II)V	<init>	
+		p	1	p_01848_0	id
 c	net/minecraft/src/c_00448	net/minecraft/block/SnowBlock
 c	net/minecraft/src/c_00451	net/minecraft/block/Tnt
 	m	(II)V	<init>	
