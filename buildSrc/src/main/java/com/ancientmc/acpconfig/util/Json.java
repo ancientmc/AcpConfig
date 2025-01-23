@@ -1,4 +1,4 @@
-package com.ancientmc.cuneiform.util;
+package com.ancientmc.acpconfig.util;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

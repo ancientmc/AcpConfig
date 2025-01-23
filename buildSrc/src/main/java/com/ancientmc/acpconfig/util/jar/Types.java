@@ -1,4 +1,4 @@
-package com.ancientmc.cuneiform.util.jar;
+package com.ancientmc.acpconfig.util.jar;
 
 public class Types {
     public static class Clazz {

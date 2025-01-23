@@ -33,9 +33,9 @@ dependencies {
     mcinject 'de.oceanlabs.mcp:mcinjector:4.1-am'
 }
 
-import com.ancientmc.cuneiform.tasks.*
-import com.ancientmc.cuneiform.tasks.csv.*
-import com.ancientmc.cuneiform.util.*
+import com.ancientmc.acpconfig.tasks.*
+import com.ancientmc.acpconfig.tasks.csv.*
+import com.ancientmc.acpconfig.util.*
 
 ext {
     VERSION_ONE = 'a1.2.6' // The old version

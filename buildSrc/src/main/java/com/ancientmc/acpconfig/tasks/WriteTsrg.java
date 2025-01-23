@@ -1,8 +1,8 @@
-package com.ancientmc.cuneiform.tasks;
+package com.ancientmc.acpconfig.tasks;
 
-import com.ancientmc.cuneiform.util.jar.Ids;
-import com.ancientmc.cuneiform.util.jar.MinecraftJar;
-import com.ancientmc.cuneiform.util.jar.Types;
+import com.ancientmc.acpconfig.util.jar.Ids;
+import com.ancientmc.acpconfig.util.jar.MinecraftJar;
+import com.ancientmc.acpconfig.util.jar.Types;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.tasks.InputFile;
@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * TSRGv2 is the mapping format used by Forge and NeoForge. It is the format preferred for ACP.

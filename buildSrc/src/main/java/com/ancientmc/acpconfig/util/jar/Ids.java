@@ -1,4 +1,4 @@
-package com.ancientmc.cuneiform.util.jar;
+package com.ancientmc.acpconfig.util.jar;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

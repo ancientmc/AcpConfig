@@ -1,4 +1,4 @@
-package com.ancientmc.cuneiform.util;
+package com.ancientmc.acpconfig.util;
 
 public class Paths {
     public static String VERSION_MANIFEST;

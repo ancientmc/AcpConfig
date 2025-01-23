@@ -1,6 +1,6 @@
-package com.ancientmc.cuneiform.util.jar;
+package com.ancientmc.acpconfig.util.jar;
 
-import com.ancientmc.cuneiform.util.Util;
+import com.ancientmc.acpconfig.util.Util;
 import com.google.gson.JsonObject;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.Type;

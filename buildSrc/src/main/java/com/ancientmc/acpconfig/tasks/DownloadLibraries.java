@@ -1,4 +1,4 @@
-package com.ancientmc.cuneiform.tasks;
+package com.ancientmc.acpconfig.tasks;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,14 +6,12 @@ import java.net.URL;
 import java.util.Map;
 import java.util.List;
 
-import com.ancientmc.cuneiform.util.Json;
+import com.ancientmc.acpconfig.util.Json;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.ListProperty;
-import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
-import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
 

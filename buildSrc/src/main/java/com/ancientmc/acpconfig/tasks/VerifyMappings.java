@@ -1,4 +1,4 @@
-package com.ancientmc.cuneiform.tasks;
+package com.ancientmc.acpconfig.tasks;
 
 import net.minecraftforge.mappingverifier.IVerifier;
 import net.minecraftforge.mappingverifier.MappingVerifier;
