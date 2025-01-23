@@ -110,19 +110,10 @@ task downloadVersionManifest(type: Download) {
         args('--input', paths.INJECT_JAR, '--output', paths.SRG_JAR, '--map', paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
     }
 
-    def cCsv = task "writeClassCsv.${ver}"(type: WriteClassCsv, dependsOn: splitJar) {
-        jarFile = file(paths.SLIM_JAR)
+    def csv = task "writeCsvs.${ver}"(type: WriteCsvs, dependsOn: [splitJar, inheritance]) {
+        tsrg = file(paths.INTERMEDIATE_TSRG)
         classCsv = file("data/versions/${ver}/mappings/csv/classes.csv")
-    }
-
-    def fCsv = task "writeFieldCsv.${ver}"(type: WriteFieldCsv, dependsOn: splitJar) {
-        jarFile = file(paths.SLIM_JAR)
         fieldCsv = file("data/versions/${ver}/mappings/csv/fields.csv")
-    }
-
-    def mCsv = task "writeMethodCsv.${ver}"(type: WriteMethodCsv, dependsOn: [splitJar, inheritance]) {
-        jarFile = file(paths.SLIM_JAR)
-        inheritanceJson = file(paths.INHERITANCE)
         methodCsv = file("data/versions/${ver}/mappings/csv/methods.csv")
         paramCsv = file("data/versions/${ver}/mappings/csv/params.csv")
     }
@@ -132,8 +123,7 @@ task generateFreshMappings (type: GradleBuild) {
     List<String> list = Arrays.asList(
             "downloadVersionManifest", "downloadJson." + VERSION_ONE,
             "downloadJar." + VERSION_ONE, "writeTsrg." + VERSION_ONE,
-            "split." + VERSION_ONE, "writeClassCsv." + VERSION_ONE,
-            "writeFieldCsv." + VERSION_ONE, "writeMethodCsv." + VERSION_ONE
+            "split." + VERSION_ONE, "writeCsvs." + VERSION_ONE
     )
     setTasks(list)
 }
