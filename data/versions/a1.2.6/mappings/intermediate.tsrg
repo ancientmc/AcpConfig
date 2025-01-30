@@ -192,12 +192,12 @@ aj net/minecraft/src/c_00011
 	a f_00031
 	<init> (I)V <init>
 		0 o p_00054_0
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 ak net/minecraft/src/c_00012
 	<init> (Lcy;)V <init>
 		0 o p_00055_0
@@ -205,10 +205,10 @@ ak net/minecraft/src/c_00012
 		0 o p_00641_0
 		1 o p_00641_1
 		2 o p_00641_2
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	a ()Z m_00975
 	b ()I m_00956
 al net/minecraft/src/c_00013
@@ -247,47 +247,47 @@ an net/minecraft/src/c_00015
 		0 o p_00059_0
 		1 o p_00059_1
 		2 o p_00059_2
-	d ()I m_01623
-	b (Lcy;IIILeb;)V m_01642
-		0 o p_01642_0
-		1 o p_01642_1
-		2 o p_01642_2
-		3 o p_01642_3
-		4 o p_01642_4
-	b (Lcy;IIILlw;)V m_01640
-		0 o p_01640_0
-		1 o p_01640_1
-		2 o p_01640_2
-		3 o p_01640_3
-		4 o p_01640_4
-	a (Lcy;IIILeb;)Z m_01639
+	d ()I m_01622
+	b (Lcy;IIILeb;)V m_01641
+		0 o p_01641_0
+		1 o p_01641_1
+		2 o p_01641_2
+		3 o p_01641_3
+		4 o p_01641_4
+	b (Lcy;IIILlw;)V m_01639
 		0 o p_01639_0
 		1 o p_01639_1
 		2 o p_01639_2
 		3 o p_01639_3
 		4 o p_01639_4
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
 	h (Lcy;III)V m_00060
 		0 o p_00060_0
 		1 o p_00060_1
 		2 o p_00060_2
 		3 o p_00060_3
-	a (Lcy;IIILjava/util/Random;)V m_01619
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
 	i (Lcy;III)V m_00061
 		0 o p_00061_0
 		1 o p_00061_1
@@ -355,71 +355,71 @@ ap net/minecraft/src/c_00017
 		0 o p_00082_0
 		1 o p_00082_1
 		2 o p_00082_2
-	d ()I m_01623
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	a (Lcy;IIILlw;)V m_01648
-		0 o p_01648_0
-		1 o p_01648_1
-		2 o p_01648_2
-		3 o p_01648_3
-		4 o p_01648_4
+	d ()I m_01622
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (Lcy;IIILlw;)V m_01647
+		0 o p_01647_0
+		1 o p_01647_1
+		2 o p_01647_2
+		3 o p_01647_3
+		4 o p_01647_4
 	h (Lcy;III)V m_00083
 		0 o p_00083_0
 		1 o p_00083_1
 		2 o p_00083_2
 		3 o p_00083_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	c (Lpk;IIII)Z m_01646
-		0 o p_01646_0
-		1 o p_01646_1
-		2 o p_01646_2
-		3 o p_01646_3
-		4 o p_01646_4
-	c (Lcy;IIII)Z m_01649
-		0 o p_01649_0
-		1 o p_01649_1
-		2 o p_01649_2
-		3 o p_01649_3
-		4 o p_01649_4
-	e ()Z m_01647
-	f ()V m_01650
+	b (Lcy;III)V m_01624
+		0 o p_01624_0
+		1 o p_01624_1
+		2 o p_01624_2
+		3 o p_01624_3
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
+	c (Lpk;IIII)Z m_01645
+		0 o p_01645_0
+		1 o p_01645_1
+		2 o p_01645_2
+		3 o p_01645_3
+		4 o p_01645_4
+	c (Lcy;IIII)Z m_01648
+		0 o p_01648_0
+		1 o p_01648_1
+		2 o p_01648_2
+		3 o p_01648_3
+		4 o p_01648_4
+	e ()Z m_01646
+	f ()V m_01649
 aq net/minecraft/src/c_00018
 	b f_00049
 	a f_00050
@@ -499,17 +499,17 @@ as net/minecraft/src/c_00020
 	a f_00055
 	<init> (Lcy;)V <init>
 		0 o p_00098_0
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
 	h ()F m_00960
 	g_ ()I m_00966
-	a (Leb;)Z m_01426
-		0 o p_01426_0
+	a (Leb;)Z m_01425
+		0 o p_01425_0
 at net/minecraft/src/c_00021
 	b f_00056
 	c f_00057
@@ -522,8 +522,8 @@ at net/minecraft/src/c_00021
 	i f_00064
 	<init> (Lcy;)V <init>
 		0 o p_00099_0
-	a (D)Z m_01411
-		0 o p_01411_0
+	a (D)Z m_01410
+		0 o p_01410_0
 	<init> (Lcy;Lhf;)V <init>
 		0 o p_00100_0
 		1 o p_00100_1
@@ -538,18 +538,18 @@ at net/minecraft/src/c_00021
 		2 o p_00102_2
 		3 o p_00102_3
 		4 o p_00102_4
-	a (DDD)V m_01437
-		0 o p_01437_0
-		1 o p_01437_1
-		2 o p_01437_2
-	e_ ()V m_01378
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (DDD)V m_01436
+		0 o p_01436_0
+		1 o p_01436_1
+		2 o p_01436_2
+	e_ ()V m_01377
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	b (Leb;)V m_01402
-		0 o p_01402_0
-	i_ ()F m_01421
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	b (Leb;)V m_01401
+		0 o p_01401_0
+	i_ ()F m_01420
 au net/minecraft/src/c_00022
 	<init> (II)V <init>
 		0 o p_00103_0
@@ -621,25 +621,25 @@ az net/minecraft/src/c_00027
 	d f_00086
 	<init> (Lcy;)V <init>
 		0 o p_00114_0
-	a (D)Z m_01411
-		0 o p_01411_0
+	a (D)Z m_01410
+		0 o p_01410_0
 	<init> (Lcy;Lhf;DDD)V <init>
 		0 o p_00115_0
 		1 o p_00115_1
 		2 o p_00115_2
 		3 o p_00115_3
 		4 o p_00115_4
-	e_ ()V m_01378
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	e_ ()V m_01377
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	n_ ()Z m_01407
-	k_ ()F m_01434
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	i_ ()F m_01421
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	n_ ()Z m_01406
+	k_ ()F m_01433
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	i_ ()F m_01420
 b net/minecraft/src/c_00028
 	a f_00087
 	b f_00088
@@ -713,7 +713,7 @@ bd net/minecraft/src/c_00032
 be net/minecraft/src/c_00033
 	<init> (Lcy;)V <init>
 		0 o p_00131_0
-	j ()D m_01431
+	j ()D m_01430
 	c_ ()Llw; m_00642
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
@@ -721,10 +721,10 @@ be net/minecraft/src/c_00033
 	a (Llw;F)V m_00640
 		0 o p_00640_0
 		1 o p_00640_1
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	g_ ()I m_00966
 bf net/minecraft/src/c_00034
 	h f_00102
@@ -759,7 +759,7 @@ bh net/minecraft/src/c_00036
 		4 o p_00137_4
 		5 o p_00137_5
 		6 o p_00137_6
-	e_ ()V m_01378
+	e_ ()V m_01377
 bi net/minecraft/src/c_00037
 	a f_00106
 	b f_00107
@@ -1002,9 +1002,9 @@ bn net/minecraft/src/c_00042
 bo net/minecraft/src/c_00043
 	a f_00121
 	b f_00122
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
 	a (Lcy;IIIZ)Z m_00191
 		0 o p_00191_0
 		1 o p_00191_1
@@ -1015,56 +1015,56 @@ bo net/minecraft/src/c_00043
 		0 o p_00192_0
 		1 o p_00192_1
 		2 o p_00192_2
-	d ()I m_01623
-	e (Lcy;III)V m_01624
+	d ()I m_01622
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;III)V m_01624
 		0 o p_01624_0
 		1 o p_01624_1
 		2 o p_01624_2
 		3 o p_01624_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	c (Lpk;IIII)Z m_01646
-		0 o p_01646_0
-		1 o p_01646_1
-		2 o p_01646_2
-		3 o p_01646_3
-		4 o p_01646_4
+	c (Lpk;IIII)Z m_01645
+		0 o p_01645_0
+		1 o p_01645_1
+		2 o p_01645_2
+		3 o p_01645_3
+		4 o p_01645_4
 	h (Lcy;III)Z m_00193
 		0 o p_00193_0
 		1 o p_00193_1
 		2 o p_00193_2
 		3 o p_00193_3
-	a (Lcy;IIILjava/util/Random;)V m_01619
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	c (Lcy;IIII)Z m_01648
+		0 o p_01648_0
+		1 o p_01648_1
+		2 o p_01648_2
+		3 o p_01648_3
+		4 o p_01648_4
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	e ()Z m_01646
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	c (Lcy;IIII)Z m_01649
-		0 o p_01649_0
-		1 o p_01649_1
-		2 o p_01649_2
-		3 o p_01649_3
-		4 o p_01649_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	e ()Z m_01647
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
 	<clinit> ()V <clinit>
 bp net/minecraft/src/c_00044
 	b f_00123
@@ -1130,10 +1130,10 @@ bq net/minecraft/src/c_00045
 	a (IZ)V m_00216
 		0 o p_00216_0
 		1 o p_00216_1
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	a (Lhi;)V m_00543
 		0 o p_00543_0
 	a (Lqc;)V m_00547
@@ -1150,8 +1150,8 @@ bq net/minecraft/src/c_00045
 	a (Ljava/lang/String;)V m_00218
 		0 o p_00218_0
 	o ()V m_00219
-	p ()Z m_01385
-	q ()V m_01436
+	p ()Z m_01384
+	q ()V m_01435
 	a_ (I)V m_00220
 		0 o p_00220_0
 	r ()V m_00553
@@ -1159,13 +1159,13 @@ br net/minecraft/src/c_00046
 	<init> (II)V <init>
 		0 o p_00221_0
 		1 o p_00221_1
-	a_ ()Lji; m_01335
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
+	a_ ()Lji; m_01334
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a ()Z m_01616
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a ()Z m_01615
 bs net/minecraft/src/c_00047
 	<init> ()V <init>
 bt net/minecraft/src/c_00048
@@ -1193,12 +1193,12 @@ bv net/minecraft/src/c_00050
 	a f_00141
 	<init> (I)V <init>
 		0 o p_00228_0
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 bw net/minecraft/src/c_00051
 	a f_00142
 	C f_00143
@@ -1262,13 +1262,13 @@ bx net/minecraft/src/c_00052
 	a f_00174
 	<init> (Lcy;)V <init>
 		0 o p_00242_0
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
@@ -1312,72 +1312,72 @@ c net/minecraft/src/c_00055
 	a f_00179
 	<init> (I)V <init>
 		0 o p_00253_0
-	a (Lpk;IIII)I m_01610
-		0 o p_01610_0
-		1 o p_01610_1
-		2 o p_01610_2
-		3 o p_01610_3
-		4 o p_01610_4
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
+	a (Lpk;IIII)I m_01609
+		0 o p_01609_0
+		1 o p_01609_1
+		2 o p_01609_2
+		3 o p_01609_3
+		4 o p_01609_4
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
 	h (Lcy;III)Z m_00254
 		0 o p_00254_0
 		1 o p_00254_1
 		2 o p_00254_2
 		3 o p_00254_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
-	a_ ()Lji; m_01335
-ca net/minecraft/src/c_00056
-	<init> (II)V <init>
-		0 o p_00255_0
-		1 o p_00255_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	f (Lcy;III)Lco; m_01613
-		0 o p_01613_0
-		1 o p_01613_1
-		2 o p_01613_2
-		3 o p_01613_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	a (Lcy;III)Z m_01638
+	b (Lcy;III)V m_01624
+		0 o p_01624_0
+		1 o p_01624_1
+		2 o p_01624_2
+		3 o p_01624_3
+	a (Lcy;IIILeb;)Z m_01638
 		0 o p_01638_0
 		1 o p_01638_1
 		2 o p_01638_2
 		3 o p_01638_3
-	d (Lcy;IIII)V m_01641
-		0 o p_01641_0
-		1 o p_01641_1
-		2 o p_01641_2
-		3 o p_01641_3
-		4 o p_01641_4
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
+		4 o p_01638_4
+	a_ ()Lji; m_01334
+ca net/minecraft/src/c_00056
+	<init> (II)V <init>
+		0 o p_00255_0
+		1 o p_00255_1
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	f (Lcy;III)Lco; m_01612
+		0 o p_01612_0
+		1 o p_01612_1
+		2 o p_01612_2
+		3 o p_01612_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	d (Lcy;IIII)V m_01640
+		0 o p_01640_0
+		1 o p_01640_1
+		2 o p_01640_2
+		3 o p_01640_3
+		4 o p_01640_4
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
 cb net/minecraft/src/c_00057
 	bb f_00180
 	bc f_00181
@@ -1575,23 +1575,23 @@ cm net/minecraft/src/c_00068
 		1 o p_00285_1
 		2 o p_00285_2
 		3 o p_00285_3
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	e_ ()V m_01378
-	l_ ()I m_01791
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	e_ ()V m_01377
+	l_ ()I m_01790
 cn net/minecraft/src/c_00069
 	<init> (II)V <init>
 		0 o p_00286_0
 		1 o p_00286_1
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
 co net/minecraft/src/c_00070
 	g f_00219
 	h f_00220
@@ -1675,12 +1675,12 @@ co net/minecraft/src/c_00070
 	<clinit> ()V <clinit>
 cp net/minecraft/src/c_00071
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 	a (Ljava/util/Random;)Lfp; m_00310
 		0 o p_00310_0
 	b (Ljava/util/Random;)Ljava/lang/String; m_00311
@@ -1723,18 +1723,18 @@ cs net/minecraft/src/c_00074
 		4 o p_00315_4
 		5 o p_00315_5
 		6 o p_00315_6
-	a (III)I m_01768
+	a (III)I m_01767
+		0 o p_01767_0
+		1 o p_01767_1
+		2 o p_01767_2
+	b (III)Lji; m_01768
 		0 o p_01768_0
 		1 o p_01768_1
 		2 o p_01768_2
-	b (III)Lji; m_01769
+	c (III)F m_01769
 		0 o p_01769_0
 		1 o p_01769_1
 		2 o p_01769_2
-	c (III)F m_01770
-		0 o p_01770_0
-		1 o p_01770_1
-		2 o p_01770_2
 	d (III)I m_00316
 		0 o p_00316_0
 		1 o p_00316_1
@@ -1744,19 +1744,19 @@ cs net/minecraft/src/c_00074
 		1 o p_00317_1
 		2 o p_00317_2
 		3 o p_00317_3
-	e (III)I m_01771
+	e (III)I m_01770
+		0 o p_01770_0
+		1 o p_01770_1
+		2 o p_01770_2
+	f (III)Lhb; m_01771
 		0 o p_01771_0
 		1 o p_01771_1
 		2 o p_01771_2
-	f (III)Lhb; m_01772
+	g (III)Z m_01772
 		0 o p_01772_0
 		1 o p_01772_1
 		2 o p_01772_2
-	g (III)Z m_01773
-		0 o p_01773_0
-		1 o p_01773_1
-		2 o p_01773_2
-	a ()Lpo; m_01774
+	a ()Lpo; m_01773
 ct net/minecraft/src/c_00075
 	a f_00232
 	h f_00233
@@ -1821,38 +1821,38 @@ cw net/minecraft/src/c_00078
 	<init> (II)V <init>
 		0 o p_00322_0
 		1 o p_00322_1
-	a (Ljava/util/Random;)I m_01626
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
+		1 o p_01626_1
 cx net/minecraft/src/c_00079
 	a f_00239
 	<init> (IIZ)V <init>
 		0 o p_00323_0
 		1 o p_00323_1
 		2 o p_00323_2
-	a (II)I m_01611
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	a (I)I m_01611
 		0 o p_01611_0
-		1 o p_01611_1
-	a (I)I m_01612
-		0 o p_01612_0
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	a (Lcy;IIILhf;)V m_01653
-		0 o p_01653_0
-		1 o p_01653_1
-		2 o p_01653_2
-		3 o p_01653_3
-		4 o p_01653_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a (Lcy;IIILhf;)V m_01652
+		0 o p_01652_0
+		1 o p_01652_1
+		2 o p_01652_2
+		3 o p_01652_3
+		4 o p_01652_4
 cy net/minecraft/src/c_00080
 	a f_00240
 	A f_00241
@@ -1901,7 +1901,7 @@ cy net/minecraft/src/c_00080
 		1 o p_00325_1
 	a ([Ljava/io/File;)V m_00326
 		0 o p_00326_0
-	a ()Lpo; m_01774
+	a ()Lpo; m_01773
 	<init> (Ljava/io/File;Ljava/lang/String;)V <init>
 		0 o p_00327_0
 		1 o p_00327_1
@@ -1936,10 +1936,10 @@ cy net/minecraft/src/c_00080
 	p ()V m_00338
 	a (I)Z m_00339
 		0 o p_00339_0
-	a (III)I m_01768
-		0 o p_01768_0
-		1 o p_01768_1
-		2 o p_01768_2
+	a (III)I m_01767
+		0 o p_01767_0
+		1 o p_01767_1
+		2 o p_01767_2
 	d (III)Z m_00340
 		0 o p_00340_0
 		1 o p_00340_1
@@ -1971,14 +1971,14 @@ cy net/minecraft/src/c_00080
 		1 o p_00346_1
 		2 o p_00346_2
 		3 o p_00346_3
-	f (III)Lhb; m_01772
-		0 o p_01772_0
-		1 o p_01772_1
-		2 o p_01772_2
-	e (III)I m_01771
+	f (III)Lhb; m_01771
 		0 o p_01771_0
 		1 o p_01771_1
 		2 o p_01771_2
+	e (III)I m_01770
+		0 o p_01770_0
+		1 o p_01770_1
+		2 o p_01770_2
 	b (IIII)V m_00347
 		0 o p_00347_0
 		1 o p_00347_1
@@ -2068,10 +2068,10 @@ cy net/minecraft/src/c_00080
 		2 o p_00364_2
 		3 o p_00364_3
 		4 o p_00364_4
-	c (III)F m_01770
-		0 o p_01770_0
-		1 o p_01770_1
-		2 o p_01770_2
+	c (III)F m_01769
+		0 o p_01769_0
+		1 o p_01769_1
+		2 o p_01769_2
 	d ()Z m_00365
 	a (Lao;Lao;)Lnx; m_00366
 		0 o p_00366_0
@@ -2190,10 +2190,10 @@ cy net/minecraft/src/c_00080
 	a (Ljava/lang/Class;)Llw; m_00401
 		0 o p_00401_0
 	f ()Ljava/lang/String; m_00402
-	b (III)Lji; m_01769
-		0 o p_01769_0
-		1 o p_01769_1
-		2 o p_01769_2
+	b (III)Lji; m_01768
+		0 o p_01768_0
+		1 o p_01768_1
+		2 o p_01768_2
 	a (IIILji;)V m_00403
 		0 o p_00403_0
 		1 o p_00403_1
@@ -2203,10 +2203,10 @@ cy net/minecraft/src/c_00080
 		0 o p_00404_0
 		1 o p_00404_1
 		2 o p_00404_2
-	g (III)Z m_01773
-		0 o p_01773_0
-		1 o p_01773_1
-		2 o p_01773_2
+	g (III)Z m_01772
+		0 o p_01772_0
+		1 o p_01772_1
+		2 o p_01772_2
 	a (Lpu;)V m_00405
 		0 o p_00405_0
 	g ()Z m_00406
@@ -2362,17 +2362,17 @@ db net/minecraft/src/c_00084
 		1 o p_00449_1
 		2 o p_00449_2
 		3 o p_00449_3
-	a (F)F m_01394
-		0 o p_01394_0
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	e_ ()V m_01378
+	a (F)F m_01393
+		0 o p_01393_0
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	e_ ()V m_01377
 dc net/minecraft/src/c_00085
 	a f_00285
 	b f_00286
@@ -2407,59 +2407,59 @@ dc net/minecraft/src/c_00085
 dd net/minecraft/src/c_00086
 	<init> (I)V <init>
 		0 o p_00453_0
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
 de net/minecraft/src/c_00087
 	<init> (IILhb;Z)V <init>
 		0 o p_00454_0
 		1 o p_00454_1
 		2 o p_00454_2
 		3 o p_00454_3
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
 df net/minecraft/src/c_00088
 	a f_00295
 	b f_00296
 	<init> (II)V <init>
 		0 o p_00455_0
 		1 o p_00455_1
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 dg net/minecraft/src/c_00089
 	<init> (II)V <init>
 		0 o p_00456_0
 		1 o p_00456_1
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
 	e (Lcy;IIII)V m_00457
 		0 o p_00457_0
 		1 o p_00457_1
 		2 o p_00457_2
 		3 o p_00457_3
 		4 o p_00457_4
-	a (Lcy;IIIIF)V m_01630
-		0 o p_01630_0
-		1 o p_01630_1
-		2 o p_01630_2
-		3 o p_01630_3
-		4 o p_01630_4
-		5 o p_01630_5
+	a (Lcy;IIIIF)V m_01629
+		0 o p_01629_0
+		1 o p_01629_1
+		2 o p_01629_2
+		3 o p_01629_3
+		4 o p_01629_4
+		5 o p_01629_5
 dh net/minecraft/src/c_00090
 	a f_00297
 	<init> (Lcy;)V <init>
@@ -2471,10 +2471,10 @@ dh net/minecraft/src/c_00090
 	a (Llw;F)V m_00640
 		0 o p_00640_0
 		1 o p_00640_1
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	g_ ()I m_00966
 	l ()Lfp; m_00981
 	<clinit> ()V <clinit>
@@ -2609,12 +2609,12 @@ dm net/minecraft/src/c_00095
 		1 o p_00479_1
 dn net/minecraft/src/c_00096
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 do net/minecraft/src/c_00097
 	a f_00318
 	<init> ()V <init>
@@ -2635,41 +2635,41 @@ dp net/minecraft/src/c_00098
 	l f_00330
 	<init> (Lcy;)V <init>
 		0 o p_00483_0
-	a (Llw;)Lco; m_01427
-		0 o p_01427_0
-	e ()Lco; m_01386
-	d_ ()Z m_01408
+	a (Llw;)Lco; m_01426
+		0 o p_01426_0
+	e ()Lco; m_01385
+	d_ ()Z m_01407
 	<init> (Lcy;DDD)V <init>
 		0 o p_00484_0
 		1 o p_00484_1
 		2 o p_00484_2
 		3 o p_00484_3
-	j ()D m_01431
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	g ()V m_01439
-	n_ ()Z m_01407
-	a (DDDFFI)V m_01433
-		0 o p_01433_0
-		1 o p_01433_1
-		2 o p_01433_2
-		3 o p_01433_3
-		4 o p_01433_4
-		5 o p_01433_5
-	a (DDD)V m_01437
-		0 o p_01437_0
-		1 o p_01437_1
-		2 o p_01437_2
-	e_ ()V m_01378
-	j_ ()V m_01429
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	j ()D m_01430
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	g ()V m_01438
+	n_ ()Z m_01406
+	a (DDDFFI)V m_01432
+		0 o p_01432_0
+		1 o p_01432_1
+		2 o p_01432_2
+		3 o p_01432_3
+		4 o p_01432_4
+		5 o p_01432_5
+	a (DDD)V m_01436
+		0 o p_01436_0
+		1 o p_01436_1
+		2 o p_01436_2
+	e_ ()V m_01377
+	j_ ()V m_01428
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	i_ ()F m_01421
-	a (Leb;)Z m_01426
-		0 o p_01426_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	i_ ()F m_01420
+	a (Leb;)Z m_01425
+		0 o p_01425_0
 dq net/minecraft/src/c_00099
 	a f_00331
 	b f_00332
@@ -2678,13 +2678,13 @@ dq net/minecraft/src/c_00099
 	e f_00335
 	<init> (Lcy;)V <init>
 		0 o p_00485_0
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	a (B)V m_01438
-		0 o p_01438_0
-	e_ ()V m_01378
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	a (B)V m_01437
+		0 o p_01437_0
+	e_ ()V m_01377
 	b_ ()V m_00971
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
@@ -2732,12 +2732,12 @@ ds net/minecraft/src/c_00101
 	<clinit> ()V <clinit>
 dt net/minecraft/src/c_00102
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 du net/minecraft/src/c_00103
 	a f_00340
 	h f_00341
@@ -2779,29 +2779,29 @@ dw net/minecraft/src/c_00105
 	<init> (II)V <init>
 		0 o p_00501_0
 		1 o p_00501_1
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 	h (Lcy;III)V m_00502
 		0 o p_00502_0
 		1 o p_00502_1
 		2 o p_00502_2
 		3 o p_00502_3
-	d ()I m_01623
+	d ()I m_01622
 	b_ (Lcy;III)Z m_00503
 		0 o p_00503_0
 		1 o p_00503_1
@@ -2992,8 +2992,8 @@ e net/minecraft/src/c_00109
 	<init> (II)V <init>
 		0 o p_00532_0
 		1 o p_00532_1
-	a (I)I m_01612
-		0 o p_01612_0
+	a (I)I m_01611
+		0 o p_01611_0
 ea net/minecraft/src/c_00110
 	a f_00454
 	b f_00455
@@ -3017,8 +3017,8 @@ eb net/minecraft/src/c_00111
 	n f_00468
 	<init> (Lcy;)V <init>
 		0 o p_00535_0
-	s ()V m_01428
-	t ()V m_01372
+	s ()V m_01427
+	t ()V m_01371
 	b_ ()V m_00971
 	k ()V m_00969
 	i (Llw;)V m_00536
@@ -3026,9 +3026,9 @@ eb net/minecraft/src/c_00111
 	u ()I m_00537
 	b (Llw;)V m_00965
 		0 o p_00965_0
-	c (Llw;I)V m_01409
-		0 o p_01409_0
-		1 o p_01409_1
+	c (Llw;I)V m_01408
+		0 o p_01408_0
+		1 o p_01408_1
 	a (Lfp;)V m_00538
 		0 o p_00538_0
 	a (Lfp;Z)V m_00539
@@ -3040,20 +3040,20 @@ eb net/minecraft/src/c_00111
 		0 o p_00541_0
 	b (Lnq;)Z m_00542
 		0 o p_00542_0
-	b (Liq;)V m_01417
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	a (Liq;)V m_01418
-		0 o p_01418_0
 	a (Lhi;)V m_00543
 		0 o p_00543_0
 	m ()V m_00544
 	b (Llw;I)V m_00545
 		0 o p_00545_0
 		1 o p_00545_1
-	v ()F m_01391
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
+	v ()F m_01390
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
 	b (I)V m_00959
 		0 o p_00959_0
 	a (Llt;)V m_00546
@@ -3064,7 +3064,7 @@ eb net/minecraft/src/c_00111
 		0 o p_00548_0
 	w ()Lfp; m_00549
 	x ()V m_00550
-	y ()D m_01430
+	y ()D m_01429
 	z ()V m_00551
 	c (Llw;)V m_00552
 		0 o p_00552_0
@@ -3141,25 +3141,25 @@ ee net/minecraft/src/c_00114
 		4 o p_00566_4
 		5 o p_00566_5
 		6 o p_00566_6
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	e_ ()V m_01378
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	e_ ()V m_01377
 ef net/minecraft/src/c_00115
 	f f_00476
 	<init> (Lcy;)V <init>
 		0 o p_00567_0
 	k ()V m_00969
-	e_ ()V m_01378
+	e_ ()V m_01377
 	c_ ()Llw; m_00642
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
 	a (Llw;F)V m_00640
 		0 o p_00640_0
 		1 o p_00640_1
@@ -3167,10 +3167,10 @@ ef net/minecraft/src/c_00115
 		0 o p_00641_0
 		1 o p_00641_1
 		2 o p_00641_2
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	a ()Z m_00975
 eg net/minecraft/src/c_00116
 	a f_00477
@@ -3182,10 +3182,10 @@ eh net/minecraft/src/c_00117
 	<init> (II)V <init>
 		0 o p_00570_0
 		1 o p_00570_1
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
 ei net/minecraft/src/c_00118
 	e f_00479
 	f f_00480
@@ -3194,41 +3194,41 @@ ei net/minecraft/src/c_00118
 		0 o p_00571_0
 		1 o p_00571_1
 		2 o p_00571_2
-	a (Lqm;)Lgg; m_01781
+	a (Lqm;)Lgg; m_01780
+		0 o p_01780_0
+	a (II)Lgg; m_01781
 		0 o p_01781_0
-	a (II)Lgg; m_01782
+		1 o p_01781_1
+	b (II)D m_01782
 		0 o p_01782_0
 		1 o p_01782_1
-	b (II)D m_01783
+	a (IIII)[Lgg; m_01783
 		0 o p_01783_0
 		1 o p_01783_1
-	a (IIII)[Lgg; m_01784
+		2 o p_01783_2
+		3 o p_01783_3
+	a ([DIIII)[D m_01784
 		0 o p_01784_0
 		1 o p_01784_1
 		2 o p_01784_2
 		3 o p_01784_3
-	a ([DIIII)[D m_01785
+		4 o p_01784_4
+	a ([Lgg;IIII)[Lgg; m_01785
 		0 o p_01785_0
 		1 o p_01785_1
 		2 o p_01785_2
 		3 o p_01785_3
 		4 o p_01785_4
-	a ([Lgg;IIII)[Lgg; m_01786
-		0 o p_01786_0
-		1 o p_01786_1
-		2 o p_01786_2
-		3 o p_01786_3
-		4 o p_01786_4
 ej net/minecraft/src/c_00119
 	<init> (II)V <init>
 		0 o p_00572_0
 		1 o p_00572_1
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 ek net/minecraft/src/c_00120
 	a f_00482
 	<init> ()V <init>
@@ -3295,23 +3295,23 @@ eo net/minecraft/src/c_00124
 		4 o p_00583_4
 	<init> (Lcy;)V <init>
 		0 o p_00584_0
-	e_ ()V m_01378
-	h_ ()Z m_01389
+	e_ ()V m_01377
+	h_ ()Z m_01388
 	h (DDD)Z m_00585
 		0 o p_00585_0
 		1 o p_00585_1
 		2 o p_00585_2
-	a (I)V m_01387
-		0 o p_01387_0
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (I)V m_01386
+		0 o p_01386_0
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	b (Leb;)V m_01402
-		0 o p_01402_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	b (Leb;)V m_01401
+		0 o p_01401_0
 ep net/minecraft/src/c_00125
 	a f_00498
 	<init> ()V <init>
@@ -3566,50 +3566,50 @@ f net/minecraft/src/c_00136
 		3 o p_00633_3
 		4 o p_00633_4
 		5 o p_00633_5
-	a (III)V m_01196
+	a (III)V m_01195
+		0 o p_01195_0
+		1 o p_01195_1
+		2 o p_01195_2
+	b (IIIIII)V m_01196
 		0 o p_01196_0
 		1 o p_01196_1
 		2 o p_01196_2
-	b (IIIIII)V m_01197
+		3 o p_01196_3
+		4 o p_01196_4
+		5 o p_01196_5
+	a (Lqf;F)V m_00634
+		0 o p_00634_0
+		1 o p_00634_1
+	a (Ljava/lang/String;III)V m_01202
+		0 o p_01202_0
+		1 o p_01202_1
+		2 o p_01202_2
+		3 o p_01202_3
+	a (Ljava/lang/String;DDDFF)V m_01197
 		0 o p_01197_0
 		1 o p_01197_1
 		2 o p_01197_2
 		3 o p_01197_3
 		4 o p_01197_4
 		5 o p_01197_5
-	a (Lqf;F)V m_00634
-		0 o p_00634_0
-		1 o p_00634_1
-	a (Ljava/lang/String;III)V m_01203
-		0 o p_01203_0
-		1 o p_01203_1
-		2 o p_01203_2
-		3 o p_01203_3
-	a (Ljava/lang/String;DDDFF)V m_01198
+	a (Ljava/lang/String;DDDDDD)V m_01198
 		0 o p_01198_0
 		1 o p_01198_1
 		2 o p_01198_2
 		3 o p_01198_3
 		4 o p_01198_4
 		5 o p_01198_5
-	a (Ljava/lang/String;DDDDDD)V m_01199
+		6 o p_01198_6
+	a (Llw;)V m_01199
 		0 o p_01199_0
-		1 o p_01199_1
-		2 o p_01199_2
-		3 o p_01199_3
-		4 o p_01199_4
-		5 o p_01199_5
-		6 o p_01199_6
-	a (Llw;)V m_01200
+	b (Llw;)V m_01200
 		0 o p_01200_0
-	b (Llw;)V m_01201
-		0 o p_01201_0
-	e ()V m_01202
-	a (IIILji;)V m_01204
-		0 o p_01204_0
-		1 o p_01204_1
-		2 o p_01204_2
-		3 o p_01204_3
+	e ()V m_01201
+	a (IIILji;)V m_01203
+		0 o p_01203_0
+		1 o p_01203_1
+		2 o p_01203_2
+		3 o p_01203_3
 fa net/minecraft/src/c_00137
 	a f_00570
 	b f_00571
@@ -3728,16 +3728,16 @@ fe net/minecraft/src/c_00141
 		0 o p_00664_0
 		1 o p_00664_1
 	e ()Z m_00665
-	a (DDD)V m_01191
-		0 o p_01191_0
-		1 o p_01191_1
-		2 o p_01191_2
-	a (Lcy;Ljava/util/Random;III)Z m_01190
+	a (DDD)V m_01190
 		0 o p_01190_0
 		1 o p_01190_1
 		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 	<clinit> ()V <clinit>
 ff net/minecraft/src/c_00142
 	b f_00598
@@ -3790,15 +3790,15 @@ fh net/minecraft/src/c_00144
 		2 o p_00673_2
 		3 o p_00673_3
 		4 o p_00673_4
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	e_ ()V m_01378
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	e_ ()V m_01377
 fi net/minecraft/src/c_00145
 	a f_00613
 	<init> ()V <init>
@@ -3902,12 +3902,12 @@ fl net/minecraft/src/c_00148
 	<clinit> ()V <clinit>
 fm net/minecraft/src/c_00149
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 fn net/minecraft/src/c_00150
 	a f_00644
 	b f_00645
@@ -4199,63 +4199,63 @@ fy net/minecraft/src/c_00161
 		1 o p_00787_1
 		2 o p_00787_2
 		3 o p_00787_3
-	a ()Z m_01616
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
+	a ()Z m_01615
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
 fz net/minecraft/src/c_00162
 	<init> (II)V <init>
 		0 o p_00788_0
 		1 o p_00788_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
 	h (Lcy;III)Z m_00789
 		0 o p_00789_0
 		1 o p_00789_1
 		2 o p_00789_2
 		3 o p_00789_3
-	a_ (Lcy;IIII)V m_01651
-		0 o p_01651_0
-		1 o p_01651_1
-		2 o p_01651_2
-		3 o p_01651_3
-		4 o p_01651_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
+	a_ (Lcy;IIII)V m_01650
+		0 o p_01650_0
+		1 o p_01650_1
+		2 o p_01650_2
+		3 o p_01650_3
+		4 o p_01650_4
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
 g net/minecraft/src/c_00163
 	<init> ()V <init>
 	a (Ldq;F)V m_00791
@@ -4301,13 +4301,13 @@ gb net/minecraft/src/c_00165
 		2 o p_00795_2
 		3 o p_00795_3
 		4 o p_00795_4
-	n_ ()Z m_01407
-	e_ ()V m_01378
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	n_ ()Z m_01406
+	e_ ()V m_01377
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	i_ ()F m_01421
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	i_ ()F m_01420
 	k ()Lcy; m_00796
 gc net/minecraft/src/c_00166
 	a f_00694
@@ -4333,21 +4333,21 @@ gd net/minecraft/src/c_00167
 	<init> (II)V <init>
 		0 o p_00799_0
 		1 o p_00799_1
-	a (Lcy;IIILco;Ljava/util/ArrayList;)V m_01614
-		0 o p_01614_0
-		1 o p_01614_1
-		2 o p_01614_2
-		3 o p_01614_3
-		4 o p_01614_4
-		5 o p_01614_5
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
+	a (Lcy;IIILco;Ljava/util/ArrayList;)V m_01613
+		0 o p_01613_0
+		1 o p_01613_1
+		2 o p_01613_2
+		3 o p_01613_3
+		4 o p_01613_4
+		5 o p_01613_5
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
 ge net/minecraft/src/c_00168
 	a f_00699
 	b f_00700
@@ -4480,8 +4480,8 @@ gj net/minecraft/src/c_00173
 		4 o p_00834_4
 		5 o p_00834_5
 		6 o p_00834_6
-	a (Lhr;)V m_02552
-		0 o p_02552_0
+	a (Lhr;)V m_02551
+		0 o p_02551_0
 gk net/minecraft/src/c_00174
 	a f_00734
 	b f_00735
@@ -4680,70 +4680,70 @@ gv net/minecraft/src/c_00185
 	<init> (ILhb;)V <init>
 		0 o p_00877_0
 		1 o p_00877_1
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	f (Lcy;III)Lco; m_01613
-		0 o p_01613_0
-		1 o p_01613_1
-		2 o p_01613_2
-		3 o p_01613_3
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	f (Lcy;III)Lco; m_01612
+		0 o p_01612_0
+		1 o p_01612_1
+		2 o p_01612_2
+		3 o p_01612_3
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
 	b (I)V m_00878
 		0 o p_00878_0
-	b (Lcy;IIILeb;)V m_01642
-		0 o p_01642_0
-		1 o p_01642_1
-		2 o p_01642_2
-		3 o p_01642_3
-		4 o p_01642_4
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
+	b (Lcy;IIILeb;)V m_01641
+		0 o p_01641_0
+		1 o p_01641_1
+		2 o p_01641_2
+		3 o p_01641_3
+		4 o p_01641_4
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
 	a (Lcy;IIIZ)V m_00879
 		0 o p_00879_0
 		1 o p_00879_1
 		2 o p_00879_2
 		3 o p_00879_3
 		4 o p_00879_4
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Lcy;IIILao;Lao;)Lnx; m_01632
-		0 o p_01632_0
-		1 o p_01632_1
-		2 o p_01632_2
-		3 o p_01632_3
-		4 o p_01632_4
-		5 o p_01632_5
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	a (Lcy;IIILao;Lao;)Lnx; m_01631
+		0 o p_01631_0
+		1 o p_01631_1
+		2 o p_01631_2
+		3 o p_01631_3
+		4 o p_01631_4
+		5 o p_01631_5
 	c (I)I m_00880
 		0 o p_00880_0
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
 gw net/minecraft/src/c_00186
 	a f_00785
 	b f_00786
@@ -5050,12 +5050,12 @@ he net/minecraft/src/c_00195
 	g f_00857
 	<init> (Lgq;)V <init>
 		0 o p_00953_0
-	a (IZ)V m_01590
-		0 o p_01590_0
-		1 o p_01590_1
-	a ()V m_01589
-	a (Leb;)V m_01588
-		0 o p_01588_0
+	a (IZ)V m_01589
+		0 o p_01589_0
+		1 o p_01589_1
+	a ()V m_01588
+	a (Leb;)V m_01587
+		0 o p_01587_0
 hf net/minecraft/src/c_00196
 	o f_00858
 	p f_00859
@@ -5115,31 +5115,31 @@ hf net/minecraft/src/c_00196
 		0 o p_00954_0
 	d (Llw;)Z m_00955
 		0 o p_00955_0
-	A ()Ljava/lang/String; m_01412
-	n_ ()Z m_01407
-	d_ ()Z m_01408
-	v ()F m_01391
+	A ()Ljava/lang/String; m_01411
+	n_ ()Z m_01406
+	d_ ()Z m_01407
+	v ()F m_01390
 	b ()I m_00956
-	B ()V m_01379
+	B ()V m_01378
 	C ()V m_00957
-	s ()V m_01428
-	a (DDDFFI)V m_01433
-		0 o p_01433_0
-		1 o p_01433_1
-		2 o p_01433_2
-		3 o p_01433_3
-		4 o p_01433_4
-		5 o p_01433_5
-	e_ ()V m_01378
-	a (FF)V m_01374
-		0 o p_01374_0
-		1 o p_01374_1
+	s ()V m_01427
+	a (DDDFFI)V m_01432
+		0 o p_01432_0
+		1 o p_01432_1
+		2 o p_01432_2
+		3 o p_01432_3
+		4 o p_01432_4
+		5 o p_01432_5
+	e_ ()V m_01377
+	a (FF)V m_01373
+		0 o p_01373_0
+		1 o p_01373_1
 	c (I)V m_00958
 		0 o p_00958_0
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	g ()V m_01439
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	g ()V m_01438
 	b (I)V m_00959
 		0 o p_00959_0
 	h ()F m_00960
@@ -5154,17 +5154,17 @@ hf net/minecraft/src/c_00196
 	b (Llw;)V m_00965
 		0 o p_00965_0
 	g_ ()I m_00966
-	c (F)V m_01388
-		0 o p_01388_0
+	c (F)V m_01387
+		0 o p_01387_0
 	b (FF)V m_00967
 		0 o p_00967_0
 		1 o p_00967_1
 	D ()Z m_00968
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	E ()Z m_01424
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	E ()Z m_01423
 	k ()V m_00969
 	F ()V m_00970
 	b_ ()V m_00971
@@ -5177,12 +5177,12 @@ hf net/minecraft/src/c_00196
 		2 o p_00973_2
 	G ()V m_00974
 	a ()Z m_00975
-	H ()V m_01381
+	H ()V m_01380
 	d (F)F m_00976
 		0 o p_00976_0
 	e (F)Lao; m_00977
 		0 o p_00977_0
-	I ()Lao; m_01435
+	I ()Lao; m_01434
 	f (F)Lao; m_00978
 		0 o p_00978_0
 	a (DF)Lnx; m_00979
@@ -5190,8 +5190,8 @@ hf net/minecraft/src/c_00196
 		1 o p_00979_1
 	i ()I m_00980
 	l ()Lfp; m_00981
-	a (B)V m_01438
-		0 o p_01438_0
+	a (B)V m_01437
+		0 o p_01437_0
 hg net/minecraft/src/c_00197
 	<init> ()V <init>
 	a ()Z m_00944
@@ -5246,8 +5246,8 @@ hj net/minecraft/src/c_00200
 	t f_00932
 	<init> (Lcy;)V <init>
 		0 o p_00991_0
-	a (D)Z m_01411
-		0 o p_01411_0
+	a (D)Z m_01410
+		0 o p_01410_0
 	<init> (Lcy;DDD)V <init>
 		0 o p_00992_0
 		1 o p_00992_1
@@ -5262,32 +5262,32 @@ hj net/minecraft/src/c_00200
 		2 o p_00994_2
 		3 o p_00994_3
 		4 o p_00994_4
-	a (DDDFFI)V m_01433
-		0 o p_01433_0
-		1 o p_01433_1
-		2 o p_01433_2
-		3 o p_01433_3
-		4 o p_01433_4
-		5 o p_01433_5
-	a (DDD)V m_01437
-		0 o p_01437_0
-		1 o p_01437_1
-		2 o p_01437_2
-	e_ ()V m_01378
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (DDDFFI)V m_01432
+		0 o p_01432_0
+		1 o p_01432_1
+		2 o p_01432_2
+		3 o p_01432_3
+		4 o p_01432_4
+		5 o p_01432_5
+	a (DDD)V m_01436
+		0 o p_01436_0
+		1 o p_01436_1
+		2 o p_01436_2
+	e_ ()V m_01377
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	i_ ()F m_01421
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	i_ ()F m_01420
 	k ()I m_00995
 hk net/minecraft/src/c_00201
 	<init> (IILhb;)V <init>
 		0 o p_00996_0
 		1 o p_00996_1
 		2 o p_00996_2
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
 hl net/minecraft/src/c_00202
 	<init> ()V <init>
 	a (Lmo;)V m_00843
@@ -5407,14 +5407,14 @@ hu net/minecraft/src/c_00211
 		0 o p_01015_0
 	a (Ljava/lang/String;)V m_01016
 		0 o p_01016_0
-	b (Ljava/lang/String;)V m_01799
-		0 o p_01799_0
+	b (Ljava/lang/String;)V m_01798
+		0 o p_01798_0
 	c (Ljava/lang/String;)V m_01017
 		0 o p_01017_0
-	d (Ljava/lang/String;)V m_01800
+	d (Ljava/lang/String;)V m_01799
+		0 o p_01799_0
+	a (I)V m_01800
 		0 o p_01800_0
-	a (I)V m_01801
-		0 o p_01801_0
 hv net/minecraft/src/c_00212
 	A f_00951
 	B f_00952
@@ -5533,21 +5533,21 @@ hy net/minecraft/src/c_00215
 	b f_00963
 	<init> (I)V <init>
 		0 o p_01029_0
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 hz net/minecraft/src/c_00216
 	<init> (II)V <init>
 		0 o p_01030_0
 		1 o p_01030_1
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
 i net/minecraft/src/c_00217
 	a f_00964
 	<init> (Lnet/minecraft/client/MinecraftApplet;Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V <init>
@@ -5558,8 +5558,8 @@ i net/minecraft/src/c_00217
 		4 o p_01031_4
 		5 o p_01031_5
 		6 o p_01031_6
-	a (Lhr;)V m_02552
-		0 o p_02552_0
+	a (Lhr;)V m_02551
+		0 o p_02551_0
 ia net/minecraft/src/c_00218
 	<init> ()V <init>
 ib net/minecraft/src/c_00219
@@ -5575,80 +5575,80 @@ ib net/minecraft/src/c_00219
 		1 o p_01033_1
 		2 o p_01033_2
 	a ()V m_01034
-	a (Liu;)V m_01493
-		0 o p_01493_0
-	a (Lid;)V m_01505
-		0 o p_01505_0
-	a (Llz;)V m_01509
-		0 o p_01509_0
-	a (Ldv;)V m_01517
-		0 o p_01517_0
-	a (Lhs;)V m_01499
-		0 o p_01499_0
-	a (Lky;)V m_01501
-		0 o p_01501_0
-	a (Lnh;)V m_01500
-		0 o p_01500_0
-	a (Lli;)V m_01504
-		0 o p_01504_0
-	a (Lfa;)V m_01494
-		0 o p_01494_0
-	a (Llq;)V m_01498
-		0 o p_01498_0
-	a (Lov;)V m_01495
-		0 o p_01495_0
-	a (Lci;)V m_01489
-		0 o p_01489_0
-	a (Lmx;)V m_01497
-		0 o p_01497_0
-	a (Lqi;)V m_01492
+	a (Liu;)V m_01492
 		0 o p_01492_0
-	a (Ljava/lang/String;)V m_01491
+	a (Lid;)V m_01504
+		0 o p_01504_0
+	a (Llz;)V m_01508
+		0 o p_01508_0
+	a (Ldv;)V m_01516
+		0 o p_01516_0
+	a (Lhs;)V m_01498
+		0 o p_01498_0
+	a (Lky;)V m_01500
+		0 o p_01500_0
+	a (Lnh;)V m_01499
+		0 o p_01499_0
+	a (Lli;)V m_01503
+		0 o p_01503_0
+	a (Lfa;)V m_01493
+		0 o p_01493_0
+	a (Llq;)V m_01497
+		0 o p_01497_0
+	a (Lov;)V m_01494
+		0 o p_01494_0
+	a (Lci;)V m_01488
+		0 o p_01488_0
+	a (Lmx;)V m_01496
+		0 o p_01496_0
+	a (Lqi;)V m_01491
 		0 o p_01491_0
+	a (Ljava/lang/String;)V m_01490
+		0 o p_01490_0
 	a (Lgk;)V m_01035
 		0 o p_01035_0
-	a (Lbu;)V m_01506
+	a (Lbu;)V m_01505
+		0 o p_01505_0
+	a (Leq;)V m_01502
+		0 o p_01502_0
+	a (Ljr;)V m_01506
 		0 o p_01506_0
-	a (Leq;)V m_01503
-		0 o p_01503_0
-	a (Ljr;)V m_01507
+	a (Lii;)V m_01509
+		0 o p_01509_0
+	a (Lmt;)V m_01507
 		0 o p_01507_0
-	a (Lii;)V m_01510
+	a (Lhw;)V m_01510
 		0 o p_01510_0
-	a (Lmt;)V m_01508
-		0 o p_01508_0
-	a (Lhw;)V m_01511
-		0 o p_01511_0
 	b ()V m_01036
-	a (Lfv;)V m_01512
+	a (Lfv;)V m_01511
+		0 o p_01511_0
+	a (Lek;)V m_01512
 		0 o p_01512_0
-	a (Lek;)V m_01513
+	a (Lp;)V m_01513
 		0 o p_01513_0
-	a (Lp;)V m_01514
+	a (Lpy;)V m_01514
 		0 o p_01514_0
-	a (Lpy;)V m_01515
+	a (Lkv;)V m_01515
 		0 o p_01515_0
-	a (Lkv;)V m_01516
-		0 o p_01516_0
-	a (Lio;)V m_01518
-		0 o p_01518_0
-	a (Lfs;)V m_01520
-		0 o p_01520_0
+	a (Lio;)V m_01517
+		0 o p_01517_0
+	a (Lfs;)V m_01519
+		0 o p_01519_0
 	a (I)Llw; m_01037
 		0 o p_01037_0
-	a (Lcq;)V m_01521
+	a (Lcq;)V m_01520
+		0 o p_01520_0
+	a (Ljk;)V m_01521
 		0 o p_01521_0
-	a (Ljk;)V m_01522
+	a (Llc;)V m_01522
 		0 o p_01522_0
-	a (Llc;)V m_01523
-		0 o p_01523_0
 ic net/minecraft/src/c_00220
 	<init> (II)V <init>
 		0 o p_01038_0
 		1 o p_01038_1
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
 id net/minecraft/src/c_00221
 	a f_00972
 	b f_00973
@@ -5685,58 +5685,58 @@ ig net/minecraft/src/c_00224
 	<init> (II)V <init>
 		0 o p_01045_0
 		1 o p_01045_1
-	b (I)Z m_01707
-		0 o p_01707_0
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+	b (I)Z m_01706
+		0 o p_01706_0
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 	i (Lcy;III)F m_01046
 		0 o p_01046_0
 		1 o p_01046_1
 		2 o p_01046_2
 		3 o p_01046_3
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
-	g ()I m_01604
-	b (Lcy;IIII)V m_01621
-		0 o p_01621_0
-		1 o p_01621_1
-		2 o p_01621_2
-		3 o p_01621_3
-		4 o p_01621_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	g ()I m_01603
+	b (Lcy;IIII)V m_01620
+		0 o p_01620_0
+		1 o p_01620_1
+		2 o p_01620_2
+		3 o p_01620_3
+		4 o p_01620_4
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
 ih net/minecraft/src/c_00225
 	<init> (II)V <init>
 		0 o p_01047_0
 		1 o p_01047_1
-	c ()I m_01637
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
-	b (Lcy;III)V m_01625
+	c ()I m_01636
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
+	b (Lcy;III)V m_01624
+		0 o p_01624_0
+		1 o p_01624_1
+		2 o p_01624_2
+		3 o p_01624_3
+	a (Ljava/util/Random;)I m_01625
 		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 ii net/minecraft/src/c_00226
 	a f_00983
 	b f_00984
@@ -5803,13 +5803,13 @@ il net/minecraft/src/c_00229
 		1 o p_01052_1
 		2 o p_01052_2
 		3 o p_01052_3
-	a ()Z m_01616
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
+	a ()Z m_01615
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
 im net/minecraft/src/c_00230
 	a f_00996
 	<init> ()V <init>
@@ -5929,23 +5929,23 @@ ir net/minecraft/src/c_00235
 	<init> (ILhb;)V <init>
 		0 o p_01084_0
 		1 o p_01084_1
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
 	j (Lcy;III)V m_01085
 		0 o p_01085_0
 		1 o p_01085_1
 		2 o p_01085_2
 		3 o p_01085_3
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 	k (Lcy;III)Z m_01086
 		0 o p_01086_0
 		1 o p_01086_1
@@ -6041,17 +6041,17 @@ it net/minecraft/src/c_00237
 	<init> (II)V <init>
 		0 o p_01106_0
 		1 o p_01106_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a (Lcy;IIILlw;)V m_01648
-		0 o p_01648_0
-		1 o p_01648_1
-		2 o p_01648_2
-		3 o p_01648_3
-		4 o p_01648_4
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a (Lcy;IIILlw;)V m_01647
+		0 o p_01647_0
+		1 o p_01647_1
+		2 o p_01647_2
+		3 o p_01647_3
+		4 o p_01647_4
 iu net/minecraft/src/c_00238
 	a f_01032
 	b f_01033
@@ -6150,83 +6150,83 @@ iy net/minecraft/src/c_00242
 	<init> (II)V <init>
 		0 o p_01129_0
 		1 o p_01129_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	d ()I m_01623
-	a ()Z m_01616
-	b ()Z m_01603
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	d (Lcy;IIII)V m_01641
-		0 o p_01641_0
-		1 o p_01641_1
-		2 o p_01641_2
-		3 o p_01641_3
-		4 o p_01641_4
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	d ()I m_01622
+	a ()Z m_01615
+	b ()Z m_01602
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	d (Lcy;IIII)V m_01640
+		0 o p_01640_0
+		1 o p_01640_1
+		2 o p_01640_2
+		3 o p_01640_3
+		4 o p_01640_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
 	h (Lcy;III)Z m_01130
 		0 o p_01130_0
 		1 o p_01130_1
 		2 o p_01130_2
 		3 o p_01130_3
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	b (Lcy;IIILeb;)V m_01642
-		0 o p_01642_0
-		1 o p_01642_1
-		2 o p_01642_2
-		3 o p_01642_3
-		4 o p_01642_4
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	c (Lpk;IIII)Z m_01646
-		0 o p_01646_0
-		1 o p_01646_1
-		2 o p_01646_2
-		3 o p_01646_3
-		4 o p_01646_4
-	c (Lcy;IIII)Z m_01649
-		0 o p_01649_0
-		1 o p_01649_1
-		2 o p_01649_2
-		3 o p_01649_3
-		4 o p_01649_4
-	e ()Z m_01647
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	f ()V m_01650
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
+	b (Lcy;IIILeb;)V m_01641
+		0 o p_01641_0
+		1 o p_01641_1
+		2 o p_01641_2
+		3 o p_01641_3
+		4 o p_01641_4
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
+	b (Lcy;III)V m_01624
+		0 o p_01624_0
+		1 o p_01624_1
+		2 o p_01624_2
+		3 o p_01624_3
+	c (Lpk;IIII)Z m_01645
+		0 o p_01645_0
+		1 o p_01645_1
+		2 o p_01645_2
+		3 o p_01645_3
+		4 o p_01645_4
+	c (Lcy;IIII)Z m_01648
+		0 o p_01648_0
+		1 o p_01648_1
+		2 o p_01648_2
+		3 o p_01648_3
+		4 o p_01648_4
+	e ()Z m_01646
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	f ()V m_01649
 iz net/minecraft/src/c_00243
 	g f_01042
 	h f_01043
@@ -6253,12 +6253,12 @@ ja net/minecraft/src/c_00245
 		1 o p_01136_1
 		2 o p_01136_2
 		3 o p_01136_3
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 	g (Lcy;IIII)V m_01137
 		0 o p_01137_0
 		1 o p_01137_1
@@ -6293,11 +6293,11 @@ ja net/minecraft/src/c_00245
 		1 o p_01142_1
 		2 o p_01142_2
 		3 o p_01142_3
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
 jb net/minecraft/src/c_00246
 	a f_01051
 	<init> ()V <init>
@@ -6336,64 +6336,64 @@ jd net/minecraft/src/c_00248
 		4 o p_01146_4
 		5 o p_01146_5
 		6 o p_01146_6
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	a (F)F m_01394
-		0 o p_01394_0
-	e_ ()V m_01378
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	a (F)F m_01393
+		0 o p_01393_0
+	e_ ()V m_01377
 je net/minecraft/src/c_00249
 	<init> (II)V <init>
 		0 o p_01147_0
 		1 o p_01147_1
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	f (Lcy;III)Lco; m_01613
-		0 o p_01613_0
-		1 o p_01613_1
-		2 o p_01613_2
-		3 o p_01613_3
-	a (I)I m_01612
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	f (Lcy;III)Lco; m_01612
 		0 o p_01612_0
-	b ()Z m_01603
-	a ()Z m_01616
-	g ()I m_01604
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	g (Lcy;III)Z m_01652
-		0 o p_01652_0
-		1 o p_01652_1
-		2 o p_01652_2
-		3 o p_01652_3
-	a (Lcy;IIILlw;)V m_01648
-		0 o p_01648_0
-		1 o p_01648_1
-		2 o p_01648_2
-		3 o p_01648_3
-		4 o p_01648_4
+		1 o p_01612_1
+		2 o p_01612_2
+		3 o p_01612_3
+	a (I)I m_01611
+		0 o p_01611_0
+	b ()Z m_01602
+	a ()Z m_01615
+	g ()I m_01603
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	g (Lcy;III)Z m_01651
+		0 o p_01651_0
+		1 o p_01651_1
+		2 o p_01651_2
+		3 o p_01651_3
+	a (Lcy;IIILlw;)V m_01647
+		0 o p_01647_0
+		1 o p_01647_1
+		2 o p_01647_2
+		3 o p_01647_3
+		4 o p_01647_4
 jf net/minecraft/src/c_00250
 	<init> (II)V <init>
 		0 o p_01148_0
@@ -6435,9 +6435,9 @@ jg net/minecraft/src/c_00251
 jh net/minecraft/src/c_00252
 	<init> (Lbp;)V <init>
 		0 o p_01150_0
-	j ()V m_01323
-	c (I)V m_01324
-		0 o p_01324_0
+	j ()V m_01322
+	c (I)V m_01323
+		0 o p_01323_0
 	a (ZI)V m_00213
 		0 o p_00213_0
 		1 o p_00213_1
@@ -6460,18 +6460,18 @@ ji net/minecraft/src/c_00253
 	c (Liq;)Lji; m_01156
 		0 o p_01156_0
 	f ()I m_01157
-	h ()V m_01158
-	a (DDD)D m_01159
-		0 o p_01159_0
-		1 o p_01159_1
-		2 o p_01159_2
-	g ()Lnq; m_01160
+	h ()V m_00990
+	a (DDD)D m_01158
+		0 o p_01158_0
+		1 o p_01158_1
+		2 o p_01158_2
+	g ()Lnq; m_01159
 	<clinit> ()V <clinit>
 jj net/minecraft/src/c_00254
 	j f_01070
 	<init> (Lfo;Llt;)V <init>
-		0 o p_01162_0
-		1 o p_01162_1
+		0 o p_01161_0
+		1 o p_01161_1
 	j ()V m_00606
 	a (F)V m_00607
 		0 o p_00607_0
@@ -6506,70 +6506,70 @@ jm net/minecraft/src/c_00257
 		0 o p_00445_0
 jn net/minecraft/src/c_00258
 	<init> (II)V <init>
+		0 o p_01165_0
+		1 o p_01165_1
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	a (Lcy;IIILao;Lao;)Lnx; m_01631
+		0 o p_01631_0
+		1 o p_01631_1
+		2 o p_01631_2
+		3 o p_01631_3
+		4 o p_01631_4
+		5 o p_01631_5
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	b ()Z m_01602
+	g ()I m_01603
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	h (Lcy;III)V m_01166
 		0 o p_01166_0
 		1 o p_01166_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	a (Lcy;IIILao;Lao;)Lnx; m_01632
-		0 o p_01632_0
-		1 o p_01632_1
-		2 o p_01632_2
-		3 o p_01632_3
-		4 o p_01632_4
-		5 o p_01632_5
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
-	b ()Z m_01603
-	g ()I m_01604
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	h (Lcy;III)V m_01167
+		2 o p_01166_2
+		3 o p_01166_3
+jo net/minecraft/src/c_00259
+	<init> (Lcy;DDDLdx;)V <init>
 		0 o p_01167_0
 		1 o p_01167_1
 		2 o p_01167_2
 		3 o p_01167_3
-jo net/minecraft/src/c_00259
-	<init> (Lcy;DDDLdx;)V <init>
-		0 o p_01168_0
-		1 o p_01168_1
-		2 o p_01168_2
-		3 o p_01168_3
-		4 o p_01168_4
-	l_ ()I m_01791
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
+		4 o p_01167_4
+	l_ ()I m_01790
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
 jp net/minecraft/src/c_00260
 	a f_01075
 	b f_01076
@@ -6579,10 +6579,10 @@ jp net/minecraft/src/c_00260
 	f f_01080
 	values ()[Ljp; values
 	valueOf (Ljava/lang/String;)Ljp; valueOf
-		0 o p_01170_0
+		0 o p_01169_0
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_01171_0
-		1 o p_01171_1
+		0 o p_01170_0
+		1 o p_01170_1
 	<clinit> ()V <clinit>
 jq net/minecraft/src/c_00261
 	a f_01081
@@ -6607,36 +6607,36 @@ jq net/minecraft/src/c_00261
 	t f_01100
 	u f_01101
 	<init> (Ljava/net/Socket;Ljava/lang/String;Lmo;)V <init>
+		0 o p_01172_0
+		1 o p_01172_1
+		2 o p_01172_2
+	a (Lgk;)V m_01173
 		0 o p_01173_0
-		1 o p_01173_1
-		2 o p_01173_2
-	a (Lgk;)V m_01174
-		0 o p_01174_0
-	b ()V m_01175
-	c ()V m_01176
-	a (Ljava/lang/Exception;)V m_01177
+	b ()V m_01174
+	c ()V m_01175
+	a (Ljava/lang/Exception;)V m_01176
+		0 o p_01176_0
+	a (Ljava/lang/String;)V m_01177
 		0 o p_01177_0
-	a (Ljava/lang/String;)V m_01178
-		0 o p_01178_0
-	a ()V m_01179
-	a (Ljq;)Z m_01180
+	a ()V m_01178
+	a (Ljq;)Z m_01179
+		0 o p_01179_0
+	b (Ljq;)Z m_01180
 		0 o p_01180_0
-	b (Ljq;)Z m_01181
+	c (Ljq;)V m_01181
 		0 o p_01181_0
-	c (Ljq;)V m_01182
+	d (Ljq;)V m_01182
 		0 o p_01182_0
-	d (Ljq;)V m_01183
+	e (Ljq;)Ljava/lang/Thread; m_01183
 		0 o p_01183_0
-	e (Ljq;)Ljava/lang/Thread; m_01184
+	f (Ljq;)Ljava/lang/Thread; m_01184
 		0 o p_01184_0
-	f (Ljq;)Ljava/lang/Thread; m_01185
-		0 o p_01185_0
 	<clinit> ()V <clinit>
 jr net/minecraft/src/c_00262
 	a f_01102
 	<init> ()V <init>
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_01188_0
+		0 o p_01187_0
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -6646,19 +6646,19 @@ jr net/minecraft/src/c_00262
 	a ()I m_00844
 js net/minecraft/src/c_00263
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
+	a (DDD)V m_01190
 		0 o p_01190_0
 		1 o p_01190_1
 		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
-	a (DDD)V m_01191
-		0 o p_01191_0
-		1 o p_01191_1
-		2 o p_01191_2
 jt net/minecraft/src/c_00264
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_01192_0
+		0 o p_01191_0
 	b (Leb;)V m_01121
 		0 o p_01121_0
 	d ()Z m_01120
@@ -6667,26 +6667,26 @@ jt net/minecraft/src/c_00264
 	c ()V m_01119
 ju net/minecraft/src/c_00265
 	<init> ()V <init>
-	a (II[BDDD)V m_01194
+	a (II[BDDD)V m_01193
+		0 o p_01193_0
+		1 o p_01193_1
+		2 o p_01193_2
+		3 o p_01193_3
+		4 o p_01193_4
+		5 o p_01193_5
+	a (II[BDDDFFFIID)V m_01194
 		0 o p_01194_0
 		1 o p_01194_1
 		2 o p_01194_2
 		3 o p_01194_3
 		4 o p_01194_4
 		5 o p_01194_5
-	a (II[BDDDFFFIID)V m_01195
-		0 o p_01195_0
-		1 o p_01195_1
-		2 o p_01195_2
-		3 o p_01195_3
-		4 o p_01195_4
-		5 o p_01195_5
-		6 o p_01195_6
-		7 o p_01195_7
-		8 o p_01195_8
-		9 o p_01195_9
-		10 o p_01195_10
-		11 o p_01195_11
+		6 o p_01194_6
+		7 o p_01194_7
+		8 o p_01194_8
+		9 o p_01194_9
+		10 o p_01194_10
+		11 o p_01194_11
 	a (Lcy;IIII[B)V m_00469
 		0 o p_00469_0
 		1 o p_00469_1
@@ -6695,56 +6695,56 @@ ju net/minecraft/src/c_00265
 		4 o p_00469_4
 		5 o p_00469_5
 jv net/minecraft/src/c_00266
-	a (III)V m_01196
+	a (III)V m_01195
+		0 o p_01195_0
+		1 o p_01195_1
+		2 o p_01195_2
+	b (IIIIII)V m_01196
 		0 o p_01196_0
 		1 o p_01196_1
 		2 o p_01196_2
-	b (IIIIII)V m_01197
+		3 o p_01196_3
+		4 o p_01196_4
+		5 o p_01196_5
+	a (Ljava/lang/String;DDDFF)V m_01197
 		0 o p_01197_0
 		1 o p_01197_1
 		2 o p_01197_2
 		3 o p_01197_3
 		4 o p_01197_4
 		5 o p_01197_5
-	a (Ljava/lang/String;DDDFF)V m_01198
+	a (Ljava/lang/String;DDDDDD)V m_01198
 		0 o p_01198_0
 		1 o p_01198_1
 		2 o p_01198_2
 		3 o p_01198_3
 		4 o p_01198_4
 		5 o p_01198_5
-	a (Ljava/lang/String;DDDDDD)V m_01199
+		6 o p_01198_6
+	a (Llw;)V m_01199
 		0 o p_01199_0
-		1 o p_01199_1
-		2 o p_01199_2
-		3 o p_01199_3
-		4 o p_01199_4
-		5 o p_01199_5
-		6 o p_01199_6
-	a (Llw;)V m_01200
+	b (Llw;)V m_01200
 		0 o p_01200_0
-	b (Llw;)V m_01201
-		0 o p_01201_0
-	e ()V m_01202
-	a (Ljava/lang/String;III)V m_01203
+	e ()V m_01201
+	a (Ljava/lang/String;III)V m_01202
+		0 o p_01202_0
+		1 o p_01202_1
+		2 o p_01202_2
+		3 o p_01202_3
+	a (IIILji;)V m_01203
 		0 o p_01203_0
 		1 o p_01203_1
 		2 o p_01203_2
 		3 o p_01203_3
-	a (IIILji;)V m_01204
-		0 o p_01204_0
-		1 o p_01204_1
-		2 o p_01204_2
-		3 o p_01204_3
 jw net/minecraft/src/c_00267
 	<init> ()V <init>
-	a (Lhj;DDDFF)V m_01206
-		0 o p_01206_0
-		1 o p_01206_1
-		2 o p_01206_2
-		3 o p_01206_3
-		4 o p_01206_4
-		5 o p_01206_5
+	a (Lhj;DDDFF)V m_01205
+		0 o p_01205_0
+		1 o p_01205_1
+		2 o p_01205_2
+		3 o p_01205_3
+		4 o p_01205_4
+		5 o p_01205_5
 	a (Llw;DDDFF)V m_00085
 		0 o p_00085_0
 		1 o p_00085_1
@@ -6755,12 +6755,12 @@ jw net/minecraft/src/c_00267
 jx net/minecraft/src/c_00268
 	b f_01103
 	<init> ()V <init>
-	a (Lqc;DDDF)V m_01208
-		0 o p_01208_0
-		1 o p_01208_1
-		2 o p_01208_2
-		3 o p_01208_3
-		4 o p_01208_4
+	a (Lqc;DDDF)V m_01207
+		0 o p_01207_0
+		1 o p_01207_1
+		2 o p_01207_2
+		3 o p_01207_3
+		4 o p_01207_4
 	a (Lji;DDDF)V m_00753
 		0 o p_00753_0
 		1 o p_00753_1
@@ -6771,7 +6771,7 @@ jy net/minecraft/src/c_00269
 	a f_01104
 	<init> ()V <init>
 	<init> (I)V <init>
-		0 o p_01210_0
+		0 o p_01209_0
 	a (Ljava/io/DataOutput;)V m_00644
 		0 o p_00644_0
 	a (Ljava/io/DataInput;)V m_00645
@@ -6780,9 +6780,9 @@ jy net/minecraft/src/c_00269
 	toString ()Ljava/lang/String; toString
 jz net/minecraft/src/c_00270
 	<init> ()V <init>
-	a (Lam;F)V m_01213
-		0 o p_01213_0
-		1 o p_01213_1
+	a (Lam;F)V m_01212
+		0 o p_01212_0
+		1 o p_01212_1
 	a (Lhf;F)V m_00563
 		0 o p_00563_0
 		1 o p_00563_1
@@ -6805,33 +6805,33 @@ ka net/minecraft/src/c_00272
 	h f_01118
 	i f_01119
 	<init> (II)V <init>
+		0 o p_01214_0
+		1 o p_01214_1
+	a (FFFIII)V m_01215
 		0 o p_01215_0
 		1 o p_01215_1
-	a (FFFIII)V m_01216
+		2 o p_01215_2
+		3 o p_01215_3
+		4 o p_01215_4
+		5 o p_01215_5
+	a (FFFIIIF)V m_01216
 		0 o p_01216_0
 		1 o p_01216_1
 		2 o p_01216_2
 		3 o p_01216_3
 		4 o p_01216_4
 		5 o p_01216_5
-	a (FFFIIIF)V m_01217
+		6 o p_01216_6
+	a (FFF)V m_01217
 		0 o p_01217_0
 		1 o p_01217_1
 		2 o p_01217_2
-		3 o p_01217_3
-		4 o p_01217_4
-		5 o p_01217_5
-		6 o p_01217_6
-	a (FFF)V m_01218
+	a (F)V m_01218
 		0 o p_01218_0
-		1 o p_01218_1
-		2 o p_01218_2
-	a (F)V m_01219
+	b (F)V m_01219
 		0 o p_01219_0
-	b (F)V m_01220
+	c (F)V m_01220
 		0 o p_01220_0
-	c (F)V m_01221
-		0 o p_01221_0
 kb net/minecraft/src/c_00273
 	h f_01120
 	i f_01121
@@ -6849,39 +6849,39 @@ kb net/minecraft/src/c_00273
 	n f_01133
 	o f_01134
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_01222_0
-	a ()V m_01223
-	a (F)V m_01224
+		0 o p_01221_0
+	a ()V m_01222
+	a (F)V m_01223
+		0 o p_01223_0
+	d (F)F m_01224
 		0 o p_01224_0
-	d (F)F m_01225
+	e (F)V m_01225
 		0 o p_01225_0
-	e (F)V m_01226
+	f (F)V m_01226
 		0 o p_01226_0
-	f (F)V m_01227
+	g (F)V m_01227
 		0 o p_01227_0
-	g (F)V m_01228
+	a (FI)V m_01228
 		0 o p_01228_0
-	a (FI)V m_01229
+		1 o p_01228_1
+	b (FI)V m_01229
 		0 o p_01229_0
 		1 o p_01229_1
-	b (FI)V m_01230
+	b (F)V m_01230
 		0 o p_01230_0
-		1 o p_01230_1
-	b (F)V m_01231
+	c (F)V m_01231
 		0 o p_01231_0
-	c (F)V m_01232
-		0 o p_01232_0
-	c ()V m_01233
-	b ()V m_01234
-	h (F)V m_01235
+	c ()V m_01232
+	b ()V m_01233
+	h (F)V m_01234
+		0 o p_01234_0
+	a (I)V m_01235
 		0 o p_01235_0
-	a (I)V m_01236
+	a (FFFF)Ljava/nio/FloatBuffer; m_01236
 		0 o p_01236_0
-	a (FFFF)Ljava/nio/FloatBuffer; m_01237
-		0 o p_01237_0
-		1 o p_01237_1
-		2 o p_01237_2
-		3 o p_01237_3
+		1 o p_01236_1
+		2 o p_01236_2
+		3 o p_01236_3
 kc net/minecraft/src/c_00274
 	a f_01135
 	f f_01136
@@ -6893,8 +6893,8 @@ kc net/minecraft/src/c_00274
 	h f_01142
 	i f_01143
 	<init> (F)V <init>
-		0 o p_01238_0
-	a ()V m_01239
+		0 o p_01237_0
+	a ()V m_01238
 kd net/minecraft/src/c_00275
 	<init> ()V <init>
 	a (Ljava/io/DataInputStream;)V m_00841
@@ -6906,23 +6906,23 @@ ke net/minecraft/src/c_00276
 	a f_01144
 	b f_01145
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_01241_0
-		1 o p_01241_1
+		0 o p_01240_0
+		1 o p_01240_1
 kf net/minecraft/src/c_00277
 	a f_01146
 	<init> (I)V <init>
-		0 o p_01242_0
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+		0 o p_01241_0
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 kg net/minecraft/src/c_00278
 	a f_01147
 	<init> (II)V <init>
-		0 o p_01243_0
-		1 o p_01243_1
+		0 o p_01242_0
+		1 o p_01242_1
 	a (Lfp;Lnq;)F m_00509
 		0 o p_00509_0
 		1 o p_00509_1
@@ -6952,27 +6952,27 @@ kh net/minecraft/src/c_00279
 ki net/minecraft/src/c_00280
 	a f_01149
 	<init> (Lcy;DDDDDDLnq;)V <init>
+		0 o p_01244_0
+		1 o p_01244_1
+		2 o p_01244_2
+		3 o p_01244_3
+		4 o p_01244_4
+		5 o p_01244_5
+		6 o p_01244_6
+		7 o p_01244_7
+	a (III)Lki; m_01245
 		0 o p_01245_0
 		1 o p_01245_1
 		2 o p_01245_2
-		3 o p_01245_3
-		4 o p_01245_4
-		5 o p_01245_5
-		6 o p_01245_6
-		7 o p_01245_7
-	a (III)Lki; m_01246
-		0 o p_01246_0
-		1 o p_01246_1
-		2 o p_01246_2
-	l_ ()I m_01791
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
+	l_ ()I m_01790
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
 kj net/minecraft/src/c_00281
 	h f_01150
 	i f_01151
@@ -6994,27 +6994,27 @@ kj net/minecraft/src/c_00281
 	f f_01167
 	g f_01168
 	<init> (Lcy;J)V <init>
+		0 o p_01246_0
+		1 o p_01246_1
+	a (II[B)V m_01247
 		0 o p_01247_0
 		1 o p_01247_1
-	a (II[B)V m_01248
+		2 o p_01247_2
+	b (II[B)V m_01248
 		0 o p_01248_0
 		1 o p_01248_1
 		2 o p_01248_2
-	b (II[B)V m_01249
-		0 o p_01249_0
-		1 o p_01249_1
-		2 o p_01249_2
 	b (II)Lha; m_00126
 		0 o p_00126_0
 		1 o p_00126_1
-	a ([DIIIIII)[D m_01250
-		0 o p_01250_0
-		1 o p_01250_1
-		2 o p_01250_2
-		3 o p_01250_3
-		4 o p_01250_4
-		5 o p_01250_5
-		6 o p_01250_6
+	a ([DIIIIII)[D m_01249
+		0 o p_01249_0
+		1 o p_01249_1
+		2 o p_01249_2
+		3 o p_01249_3
+		4 o p_01249_4
+		5 o p_01249_5
+		6 o p_01249_6
 	a (II)Z m_00125
 		0 o p_00125_0
 		1 o p_00125_1
@@ -7031,7 +7031,7 @@ kk net/minecraft/src/c_00282
 	a f_01169
 	<init> ()V <init>
 	<init> (B)V <init>
-		0 o p_01252_0
+		0 o p_01251_0
 	a (Ljava/io/DataOutput;)V m_00644
 		0 o p_00644_0
 	a (Ljava/io/DataInput;)V m_00645
@@ -7043,79 +7043,79 @@ kl net/minecraft/src/c_00283
 	c f_01171
 	a f_01172
 	<init> (II)V <init>
-		0 o p_01254_0
-		1 o p_01254_1
-	a ()I m_01255
-	b ()I m_01256
+		0 o p_01253_0
+		1 o p_01253_1
+	a ()I m_01254
+	b ()I m_01255
 km net/minecraft/src/c_00284
 	b f_01173
 	c f_01174
 	<init> (II)V <init>
+		0 o p_01256_0
+		1 o p_01256_1
+	b (Lpk;III)I m_01644
+		0 o p_01644_0
+		1 o p_01644_1
+		2 o p_01644_2
+		3 o p_01644_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	f (Lcy;IIII)V m_01257
 		0 o p_01257_0
 		1 o p_01257_1
-	b (Lpk;III)I m_01645
-		0 o p_01645_0
-		1 o p_01645_1
-		2 o p_01645_2
-		3 o p_01645_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	f (Lcy;IIII)V m_01258
+		2 o p_01257_2
+		3 o p_01257_3
+		4 o p_01257_4
+	h (Lcy;III)V m_01258
 		0 o p_01258_0
 		1 o p_01258_1
 		2 o p_01258_2
 		3 o p_01258_3
-		4 o p_01258_4
-	h (Lcy;III)V m_01259
+	g (Lcy;IIII)I m_01259
 		0 o p_01259_0
 		1 o p_01259_1
 		2 o p_01259_2
 		3 o p_01259_3
-	g (Lcy;IIII)I m_01260
+		4 o p_01259_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	i (Lcy;III)V m_01260
 		0 o p_01260_0
 		1 o p_01260_1
 		2 o p_01260_2
 		3 o p_01260_3
-		4 o p_01260_4
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	i (Lcy;III)V m_01261
-		0 o p_01261_0
-		1 o p_01261_1
-		2 o p_01261_2
-		3 o p_01261_3
-	a (Ljava/util/Random;)I m_01626
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a ()Z m_01616
-	a (Z)V m_01262
-		0 o p_01262_0
-	b (Lcy;IIILlw;)V m_01640
-		0 o p_01640_0
-		1 o p_01640_1
-		2 o p_01640_2
-		3 o p_01640_3
-		4 o p_01640_4
+		1 o p_01626_1
+	a ()Z m_01615
+	a (Z)V m_01261
+		0 o p_01261_0
+	b (Lcy;IIILlw;)V m_01639
+		0 o p_01639_0
+		1 o p_01639_1
+		2 o p_01639_2
+		3 o p_01639_3
+		4 o p_01639_4
 kn net/minecraft/src/c_00285
 	a f_01175
 	h f_01176
 	i f_01177
 	j f_01178
 	<init> (Lbp;Ljava/lang/String;Ljava/lang/String;I)V <init>
-		0 o p_01263_0
-		1 o p_01263_1
-		2 o p_01263_2
-		3 o p_01263_3
+		0 o p_01262_0
+		1 o p_01262_1
+		2 o p_01262_2
+		3 o p_01262_3
 	a ()V m_00203
 	a (Lgh;)V m_00201
 		0 o p_00201_0
@@ -7126,24 +7126,24 @@ kn net/minecraft/src/c_00285
 ko net/minecraft/src/c_00286
 	a f_01179
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_01264_0
-		1 o p_01264_1
-		2 o p_01264_2
-		3 o p_01264_3
-		4 o p_01264_4
-		5 o p_01264_5
-		6 o p_01264_6
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	a (F)F m_01394
-		0 o p_01394_0
-	e_ ()V m_01378
+		0 o p_01263_0
+		1 o p_01263_1
+		2 o p_01263_2
+		3 o p_01263_3
+		4 o p_01263_4
+		5 o p_01263_5
+		6 o p_01263_6
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	a (F)F m_01393
+		0 o p_01393_0
+	e_ ()V m_01377
 kp net/minecraft/src/c_00287
 	c f_01180
 	a f_01181
@@ -7152,27 +7152,27 @@ kp net/minecraft/src/c_00287
 	f f_01184
 	b f_01185
 	<init> (Lcy;)V <init>
-		0 o p_01265_0
+		0 o p_01264_0
 	<init> (Lcy;IIII)V <init>
+		0 o p_01265_0
+		1 o p_01265_1
+		2 o p_01265_2
+		3 o p_01265_3
+		4 o p_01265_4
+	b (I)V m_01266
 		0 o p_01266_0
-		1 o p_01266_1
-		2 o p_01266_2
-		3 o p_01266_3
-		4 o p_01266_4
-	b (I)V m_01267
+	c (I)F m_01267
 		0 o p_01267_0
-	c (I)F m_01268
-		0 o p_01268_0
-	e_ ()V m_01378
-	k ()Z m_01269
-	n_ ()Z m_01407
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	e_ ()V m_01377
+	k ()Z m_01268
+	n_ ()Z m_01406
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 kq net/minecraft/src/c_00288
 	f f_01186
 	a f_01187
@@ -7182,37 +7182,37 @@ kq net/minecraft/src/c_00288
 	e f_01191
 	g f_01192
 	<init> (IIII)V <init>
-		0 o p_01270_0
-		1 o p_01270_1
-		2 o p_01270_2
-		3 o p_01270_3
+		0 o p_01269_0
+		1 o p_01269_1
+		2 o p_01269_2
+		3 o p_01269_3
 	equals (Ljava/lang/Object;)Z equals
-		0 o p_01271_0
+		0 o p_01270_0
 	hashCode ()I hashCode
-	a (J)Lkq; m_01273
+	a (J)Lkq; m_01272
+		0 o p_01272_0
+	a (Lkq;)I m_01273
 		0 o p_01273_0
-	a (Lkq;)I m_01274
-		0 o p_01274_0
 	compareTo (Ljava/lang/Object;)I compareTo
-		0 o p_01275_0
+		0 o p_01274_0
 	<clinit> ()V <clinit>
 kr net/minecraft/src/c_00289
 	a f_01193
 	<init> (Lcy;)V <init>
-		0 o p_01277_0
+		0 o p_01276_0
 	<init> (Lcy;DDD)V <init>
-		0 o p_01278_0
-		1 o p_01278_1
-		2 o p_01278_2
-		3 o p_01278_3
-	n_ ()Z m_01407
-	e_ ()V m_01378
-	k ()V m_01279
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+		0 o p_01277_0
+		1 o p_01277_1
+		2 o p_01277_2
+		3 o p_01277_3
+	n_ ()Z m_01406
+	e_ ()V m_01377
+	k ()V m_01278
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	i_ ()F m_01421
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	i_ ()F m_01420
 ks net/minecraft/src/c_00290
 	a f_01194
 	h f_01195
@@ -7224,17 +7224,17 @@ ks net/minecraft/src/c_00290
 	f f_01201
 	g f_01202
 	<init> (Lcy;Llw;DDDF)V <init>
-		0 o p_01280_0
-		1 o p_01280_1
-		2 o p_01280_2
-		3 o p_01280_3
-		4 o p_01280_4
-		5 o p_01280_5
-	a ()V m_01281
-	b ()V m_01282
+		0 o p_01279_0
+		1 o p_01279_1
+		2 o p_01279_2
+		3 o p_01279_3
+		4 o p_01279_4
+		5 o p_01279_5
+	a ()V m_01280
+	b ()V m_01281
 kt net/minecraft/src/c_00291
 	<init> (I)V <init>
-		0 o p_01283_0
+		0 o p_01282_0
 	a (Lfp;Lcy;Leb;)Lfp; m_00510
 		0 o p_00510_0
 		1 o p_00510_1
@@ -7246,23 +7246,23 @@ ku net/minecraft/src/c_00292
 	d f_01206
 	e f_01207
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
+		0 o p_01283_0
+	a (Lfp;)V m_01284
 		0 o p_01284_0
-	a (Lfp;)V m_01285
+	a (F)V m_01285
 		0 o p_01285_0
-	a (F)V m_01286
+	b (F)V m_01286
 		0 o p_01286_0
-	b (F)V m_01287
+	a (FI)V m_01287
 		0 o p_01287_0
-	a (FI)V m_01288
+		1 o p_01287_1
+	c (F)V m_01288
 		0 o p_01288_0
-		1 o p_01288_1
-	c (F)V m_01289
+	d (F)V m_01289
 		0 o p_01289_0
-	d (F)V m_01290
-		0 o p_01290_0
-	a ()V m_01291
-	b ()V m_01292
-	c ()V m_01293
+	a ()V m_01290
+	b ()V m_01291
+	c ()V m_01292
 kv net/minecraft/src/c_00293
 	a f_01208
 	b f_01209
@@ -7285,21 +7285,21 @@ kw net/minecraft/src/c_00294
 	g f_01217
 	h f_01218
 	<init> (Lcy;II)V <init>
+		0 o p_01294_0
+		1 o p_01294_1
+		2 o p_01294_2
+	a (II)V m_01295
 		0 o p_01295_0
 		1 o p_01295_1
-		2 o p_01295_2
-	a (II)V m_01296
+	a (Lcy;II)V m_01296
 		0 o p_01296_0
 		1 o p_01296_1
-	a (Lcy;II)V m_01297
-		0 o p_01297_0
-		1 o p_01297_1
-		2 o p_01297_2
+		2 o p_01296_2
 kx net/minecraft/src/c_00295
 	a f_01219
 	b f_01220
 	<init> ()V <init>
-	a ()V m_01299
+	a ()V m_01298
 ky net/minecraft/src/c_00296
 	a f_01221
 	b f_01222
@@ -7309,7 +7309,7 @@ ky net/minecraft/src/c_00296
 	f f_01226
 	<init> ()V <init>
 	<init> (Llw;)V <init>
-		0 o p_01301_0
+		0 o p_01300_0
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -7319,67 +7319,67 @@ ky net/minecraft/src/c_00296
 	a ()I m_00844
 kz net/minecraft/src/c_00297
 	<init> (II)V <init>
+		0 o p_01301_0
+		1 o p_01301_1
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	h (Lcy;III)V m_01302
 		0 o p_01302_0
 		1 o p_01302_1
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	h (Lcy;III)V m_01303
-		0 o p_01303_0
-		1 o p_01303_1
-		2 o p_01303_2
-		3 o p_01303_3
-	g (Lcy;III)Z m_01652
-		0 o p_01652_0
-		1 o p_01652_1
-		2 o p_01652_2
-		3 o p_01652_3
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
+		2 o p_01302_2
+		3 o p_01302_3
+	g (Lcy;III)Z m_01651
+		0 o p_01651_0
+		1 o p_01651_1
+		2 o p_01651_2
+		3 o p_01651_3
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
 l net/minecraft/src/c_00298
 	a f_01227
 	<init> ()V <init>
-	a ()V m_01305
-	b ()V m_01306
-	a (DDDD)Ljava/nio/FloatBuffer; m_01307
+	a ()V m_01304
+	b ()V m_01305
+	a (DDDD)Ljava/nio/FloatBuffer; m_01306
+		0 o p_01306_0
+		1 o p_01306_1
+		2 o p_01306_2
+		3 o p_01306_3
+	a (FFFF)Ljava/nio/FloatBuffer; m_01307
 		0 o p_01307_0
 		1 o p_01307_1
 		2 o p_01307_2
 		3 o p_01307_3
-	a (FFFF)Ljava/nio/FloatBuffer; m_01308
-		0 o p_01308_0
-		1 o p_01308_1
-		2 o p_01308_2
-		3 o p_01308_3
 	<clinit> ()V <clinit>
 la net/minecraft/src/c_00299
 	a f_01228
 	<init> (II)V <init>
-		0 o p_01310_0
-		1 o p_01310_1
+		0 o p_01309_0
+		1 o p_01309_1
 	a (Lfp;Leb;Lcy;IIII)Z m_00508
 		0 o p_00508_0
 		1 o p_00508_1
@@ -7391,8 +7391,8 @@ la net/minecraft/src/c_00299
 lb net/minecraft/src/c_00300
 	a f_01229
 	<init> (II)V <init>
-		0 o p_01311_0
-		1 o p_01311_1
+		0 o p_01310_0
+		1 o p_01310_1
 	a (Lfp;Leb;Lcy;IIII)Z m_00508
 		0 o p_00508_0
 		1 o p_00508_1
@@ -7417,116 +7417,116 @@ lc net/minecraft/src/c_00301
 	a ()I m_00844
 ld net/minecraft/src/c_00302
 	<init> (ILhb;)V <init>
+		0 o p_01312_0
+		1 o p_01312_1
+	b (I)F m_01313
 		0 o p_01313_0
-		1 o p_01313_1
-	b (I)F m_01314
+	a (I)I m_01611
+		0 o p_01611_0
+	h (Lcy;III)I m_01314
 		0 o p_01314_0
-	a (I)I m_01612
-		0 o p_01612_0
-	h (Lcy;III)I m_01315
+		1 o p_01314_1
+		2 o p_01314_2
+		3 o p_01314_3
+	c (Lpk;III)I m_01315
 		0 o p_01315_0
 		1 o p_01315_1
 		2 o p_01315_2
 		3 o p_01315_3
-	c (Lpk;III)I m_01316
-		0 o p_01316_0
-		1 o p_01316_1
-		2 o p_01316_2
-		3 o p_01316_3
-	b ()Z m_01603
-	a ()Z m_01616
-	a (IZ)Z m_01617
-		0 o p_01617_0
-		1 o p_01617_1
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	g ()I m_01604
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	e (Lpk;III)Lao; m_01317
-		0 o p_01317_0
-		1 o p_01317_1
-		2 o p_01317_2
-		3 o p_01317_3
-	a (Lcy;IIILlw;Lao;)V m_01643
-		0 o p_01643_0
-		1 o p_01643_1
-		2 o p_01643_2
-		3 o p_01643_3
-		4 o p_01643_4
-		5 o p_01643_5
-	d ()I m_01623
-	d (Lpk;III)F m_01608
+	b ()Z m_01602
+	a ()Z m_01615
+	a (IZ)Z m_01616
+		0 o p_01616_0
+		1 o p_01616_1
+	b (Lpk;IIII)Z m_01608
 		0 o p_01608_0
 		1 o p_01608_1
 		2 o p_01608_2
 		3 o p_01608_3
-	a (Lcy;IIILjava/util/Random;)V m_01619
+		4 o p_01608_4
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	g ()I m_01603
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	e (Lpk;III)Lao; m_01316
+		0 o p_01316_0
+		1 o p_01316_1
+		2 o p_01316_2
+		3 o p_01316_3
+	a (Lcy;IIILlw;Lao;)V m_01642
+		0 o p_01642_0
+		1 o p_01642_1
+		2 o p_01642_2
+		3 o p_01642_3
+		4 o p_01642_4
+		5 o p_01642_5
+	d ()I m_01622
+	d (Lpk;III)F m_01607
+		0 o p_01607_0
+		1 o p_01607_1
+		2 o p_01607_2
+		3 o p_01607_3
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	c ()I m_01636
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	c ()I m_01637
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
-	a (Lpk;IIILhb;)D m_01318
+	a (Lpk;IIILhb;)D m_01317
+		0 o p_01317_0
+		1 o p_01317_1
+		2 o p_01317_2
+		3 o p_01317_3
+		4 o p_01317_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	j (Lcy;III)V m_01318
 		0 o p_01318_0
 		1 o p_01318_1
 		2 o p_01318_2
 		3 o p_01318_3
-		4 o p_01318_4
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	j (Lcy;III)V m_01319
+	i (Lcy;III)V m_01319
 		0 o p_01319_0
 		1 o p_01319_1
 		2 o p_01319_2
 		3 o p_01319_3
-	i (Lcy;III)V m_01320
-		0 o p_01320_0
-		1 o p_01320_1
-		2 o p_01320_2
-		3 o p_01320_3
 le net/minecraft/src/c_00303
 	a f_01235
 	h f_01236
 	i f_01237
 	<init> (Lbp;)V <init>
-		0 o p_01321_0
+		0 o p_01320_0
 	a ()V m_00203
-	d (I)Ljava/lang/String; m_01322
-		0 o p_01322_0
-	j ()V m_01323
+	d (I)Ljava/lang/String; m_01321
+		0 o p_01321_0
+	j ()V m_01322
 	a (Lgh;)V m_00201
 		0 o p_00201_0
-	c (I)V m_01324
-		0 o p_01324_0
+	c (I)V m_01323
+		0 o p_01323_0
 	a (IIF)V m_00196
 		0 o p_00196_0
 		1 o p_00196_1
@@ -7538,21 +7538,21 @@ lf net/minecraft/src/c_00304
 	<init> ()V <init>
 	a (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; m_01041
 		0 o p_01041_0
-	a (IIII)V m_01326
+	a (IIII)V m_01325
+		0 o p_01325_0
+		1 o p_01325_1
+		2 o p_01325_2
+		3 o p_01325_3
+	b (IIII)V m_01326
 		0 o p_01326_0
 		1 o p_01326_1
 		2 o p_01326_2
 		3 o p_01326_3
-	b (IIII)V m_01327
+	c (IIII)Z m_01327
 		0 o p_01327_0
 		1 o p_01327_1
 		2 o p_01327_2
 		3 o p_01327_3
-	c (IIII)Z m_01328
-		0 o p_01328_0
-		1 o p_01328_1
-		2 o p_01328_2
-		3 o p_01328_3
 lg net/minecraft/src/c_00305
 	a f_01241
 	b f_01242
@@ -7560,30 +7560,30 @@ lg net/minecraft/src/c_00305
 	d f_01244
 	values ()[Llg; values
 	valueOf (Ljava/lang/String;)Llg; valueOf
-		0 o p_01330_0
+		0 o p_01329_0
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_01331_0
-		1 o p_01331_1
+		0 o p_01330_0
+		1 o p_01330_1
 	<clinit> ()V <clinit>
 lh net/minecraft/src/c_00306
 	<init> (ILhb;)V <init>
+		0 o p_01332_0
+		1 o p_01332_1
+	<init> (IILhb;)V <init>
 		0 o p_01333_0
 		1 o p_01333_1
-	<init> (IILhb;)V <init>
-		0 o p_01334_0
-		1 o p_01334_1
-		2 o p_01334_2
-	e (Lcy;III)V m_01624
+		2 o p_01333_2
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;III)V m_01624
 		0 o p_01624_0
 		1 o p_01624_1
 		2 o p_01624_2
 		3 o p_01624_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	a_ ()Lji; m_01335
+	a_ ()Lji; m_01334
 li net/minecraft/src/c_00307
 	a f_01245
 	<init> ()V <init>
@@ -7596,16 +7596,16 @@ li net/minecraft/src/c_00307
 	a ()I m_00844
 lj net/minecraft/src/c_00308
 	<init> (II)V <init>
-		0 o p_01337_0
-		1 o p_01337_1
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
+		0 o p_01336_0
+		1 o p_01336_1
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
 lk net/minecraft/src/c_00309
 	<init> (I)V <init>
-		0 o p_01338_0
+		0 o p_01337_0
 	b (Lfp;Lhf;)V m_00517
 		0 o p_00517_0
 		1 o p_00517_1
@@ -7650,7 +7650,7 @@ ln net/minecraft/src/c_00312
 	g f_01257
 	h f_01258
 	<init> (I)V <init>
-		0 o p_01341_0
+		0 o p_01340_0
 	a ()V m_00014
 lo net/minecraft/src/c_00313
 	<init> ()V <init>
@@ -7659,12 +7659,12 @@ lo net/minecraft/src/c_00313
 	a ()Z m_00944
 lp net/minecraft/src/c_00314
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 lq net/minecraft/src/c_00315
 	a f_01259
 	b f_01260
@@ -7683,37 +7683,37 @@ lr net/minecraft/src/c_00316
 	c f_01264
 	d f_01265
 	<init> (Ldj;II)V <init>
-		0 o p_01345_0
-		1 o p_01345_1
-		2 o p_01345_2
-	a ()V m_01346
+		0 o p_01344_0
+		1 o p_01344_1
+		2 o p_01344_2
+	a ()V m_01345
 ls net/minecraft/src/c_00317
 	b f_01266
 	a f_01267
 	c f_01268
 	d f_01269
 	<init> (Lgq;Ljava/lang/String;Lfu;)V <init>
+		0 o p_01346_0
+		1 o p_01346_1
+		2 o p_01346_2
+	a (Ljava/lang/String;III)V m_01347
 		0 o p_01347_0
 		1 o p_01347_1
 		2 o p_01347_2
-	a (Ljava/lang/String;III)V m_01348
+		3 o p_01347_3
+	b (Ljava/lang/String;III)V m_01348
 		0 o p_01348_0
 		1 o p_01348_1
 		2 o p_01348_2
 		3 o p_01348_3
-	b (Ljava/lang/String;III)V m_01349
+	a (Ljava/lang/String;IIIZ)V m_01349
 		0 o p_01349_0
 		1 o p_01349_1
 		2 o p_01349_2
 		3 o p_01349_3
-	a (Ljava/lang/String;IIIZ)V m_01350
+		4 o p_01349_4
+	a (Ljava/lang/String;)I m_01350
 		0 o p_01350_0
-		1 o p_01350_1
-		2 o p_01350_2
-		3 o p_01350_3
-		4 o p_01350_4
-	a (Ljava/lang/String;)I m_01351
-		0 o p_01351_0
 lt net/minecraft/src/c_00318
 	a f_01270
 	b f_01271
@@ -7735,98 +7735,98 @@ lt net/minecraft/src/c_00318
 	b (Liq;)V m_01154
 		0 o p_01154_0
 	o_ ()I m_00989
-	a (I)I m_01353
+	a (I)I m_01352
+		0 o p_01352_0
+	b (I)I m_01353
 		0 o p_01353_0
-	b (I)I m_01354
-		0 o p_01354_0
-	a ()Z m_01355
+	a ()Z m_01354
 	b ()V m_01155
-	j ()Z m_01356
-	i ()V m_01357
-	d (I)I m_01358
+	j ()Z m_01355
+	i ()V m_01356
+	d (I)I m_01357
+		0 o p_01357_0
+	a (Lfp;)I m_01358
 		0 o p_01358_0
-	a (Lfp;)I m_01359
-		0 o p_01359_0
 lu net/minecraft/src/c_00319
 	a f_01274
 	<init> (II)V <init>
+		0 o p_01359_0
+		1 o p_01359_1
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	h (Lcy;III)V m_01360
 		0 o p_01360_0
 		1 o p_01360_1
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	h (Lcy;III)V m_01361
+		2 o p_01360_2
+		3 o p_01360_3
+	i (Lcy;III)V m_01361
 		0 o p_01361_0
 		1 o p_01361_1
 		2 o p_01361_2
 		3 o p_01361_3
-	i (Lcy;III)V m_01362
-		0 o p_01362_0
-		1 o p_01362_1
-		2 o p_01362_2
-		3 o p_01362_3
-	e (Lcy;III)V m_01624
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;III)V m_01624
 		0 o p_01624_0
 		1 o p_01624_1
 		2 o p_01624_2
 		3 o p_01624_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	g (Lcy;IIII)I m_01363
+	g (Lcy;IIII)I m_01362
+		0 o p_01362_0
+		1 o p_01362_1
+		2 o p_01362_2
+		3 o p_01362_3
+		4 o p_01362_4
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	c (Lcy;IIII)Z m_01648
+		0 o p_01648_0
+		1 o p_01648_1
+		2 o p_01648_2
+		3 o p_01648_3
+		4 o p_01648_4
+	c (Lpk;IIII)Z m_01645
+		0 o p_01645_0
+		1 o p_01645_1
+		2 o p_01645_2
+		3 o p_01645_3
+		4 o p_01645_4
+	e ()Z m_01646
+	b (Lcy;IIILjava/util/Random;)V m_01619
+		0 o p_01619_0
+		1 o p_01619_1
+		2 o p_01619_2
+		3 o p_01619_3
+		4 o p_01619_4
+	c (Lpk;III)Z m_01363
 		0 o p_01363_0
 		1 o p_01363_1
 		2 o p_01363_2
 		3 o p_01363_3
-		4 o p_01363_4
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	c (Lcy;IIII)Z m_01649
-		0 o p_01649_0
-		1 o p_01649_1
-		2 o p_01649_2
-		3 o p_01649_3
-		4 o p_01649_4
-	c (Lpk;IIII)Z m_01646
-		0 o p_01646_0
-		1 o p_01646_1
-		2 o p_01646_2
-		3 o p_01646_3
-		4 o p_01646_4
-	e ()Z m_01647
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
-	c (Lpk;III)Z m_01364
-		0 o p_01364_0
-		1 o p_01364_1
-		2 o p_01364_2
-		3 o p_01364_3
 lv net/minecraft/src/c_00320
 	c f_01275
 	d f_01276
@@ -7838,33 +7838,33 @@ lv net/minecraft/src/c_00320
 	h f_01282
 	i f_01283
 	<init> (Lcy;)V <init>
-		0 o p_01365_0
+		0 o p_01364_0
 	<init> (Lcy;DDD)V <init>
+		0 o p_01365_0
+		1 o p_01365_1
+		2 o p_01365_2
+		3 o p_01365_3
+	<init> (Lcy;Lhf;)V <init>
 		0 o p_01366_0
 		1 o p_01366_1
-		2 o p_01366_2
-		3 o p_01366_3
-	<init> (Lcy;Lhf;)V <init>
+	a (DDDFF)V m_01367
 		0 o p_01367_0
 		1 o p_01367_1
-	a (DDDFF)V m_01368
-		0 o p_01368_0
-		1 o p_01368_1
-		2 o p_01368_2
-		3 o p_01368_3
-		4 o p_01368_4
-	a (DDD)V m_01437
-		0 o p_01437_0
-		1 o p_01437_1
-		2 o p_01437_2
-	e_ ()V m_01378
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+		2 o p_01367_2
+		3 o p_01367_3
+		4 o p_01367_4
+	a (DDD)V m_01436
+		0 o p_01436_0
+		1 o p_01436_1
+		2 o p_01436_2
+	e_ ()V m_01377
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	b (Leb;)V m_01402
-		0 o p_01402_0
-	i_ ()F m_01421
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	b (Leb;)V m_01401
+		0 o p_01401_0
+	i_ ()F m_01420
 lw net/minecraft/src/c_00321
 	a f_01284
 	an f_01285
@@ -7934,180 +7934,180 @@ lw net/minecraft/src/c_00321
 	bv f_01349
 	bw f_01350
 	<init> (Lcy;)V <init>
-		0 o p_01369_0
+		0 o p_01368_0
 	equals (Ljava/lang/Object;)Z equals
-		0 o p_01370_0
+		0 o p_01369_0
 	hashCode ()I hashCode
-	t ()V m_01372
-	J ()V m_01373
-	a (FF)V m_01374
+	t ()V m_01371
+	J ()V m_01372
+	a (FF)V m_01373
+		0 o p_01373_0
+		1 o p_01373_1
+	c (FF)V m_01374
 		0 o p_01374_0
 		1 o p_01374_1
-	c (FF)V m_01375
+	b (DDD)V m_01375
 		0 o p_01375_0
 		1 o p_01375_1
-	b (DDD)V m_01376
+		2 o p_01375_2
+	d (FF)V m_01376
 		0 o p_01376_0
 		1 o p_01376_1
-		2 o p_01376_2
-	d (FF)V m_01377
-		0 o p_01377_0
-		1 o p_01377_1
-	e_ ()V m_01378
-	B ()V m_01379
-	K ()V m_01380
-	H ()V m_01381
-	c (DDD)Z m_01382
+	e_ ()V m_01377
+	B ()V m_01378
+	K ()V m_01379
+	H ()V m_01380
+	c (DDD)Z m_01381
+		0 o p_01381_0
+		1 o p_01381_1
+		2 o p_01381_2
+	d (DDD)V m_01382
 		0 o p_01382_0
 		1 o p_01382_1
 		2 o p_01382_2
-	d (DDD)V m_01383
+	a (DZ)V m_01383
 		0 o p_01383_0
 		1 o p_01383_1
-		2 o p_01383_2
-	a (DZ)V m_01384
-		0 o p_01384_0
-		1 o p_01384_1
-	p ()Z m_01385
-	e ()Lco; m_01386
-	a (I)V m_01387
+	p ()Z m_01384
+	e ()Lco; m_01385
+	a (I)V m_01386
+		0 o p_01386_0
+	c (F)V m_01387
 		0 o p_01387_0
-	c (F)V m_01388
-		0 o p_01388_0
-	h_ ()Z m_01389
-	a (Lhb;)Z m_01390
-		0 o p_01390_0
-	v ()F m_01391
-	L ()Z m_01392
-	a (FFF)V m_01393
+	h_ ()Z m_01388
+	a (Lhb;)Z m_01389
+		0 o p_01389_0
+	v ()F m_01390
+	L ()Z m_01391
+	a (FFF)V m_01392
+		0 o p_01392_0
+		1 o p_01392_1
+		2 o p_01392_2
+	a (F)F m_01393
 		0 o p_01393_0
-		1 o p_01393_1
-		2 o p_01393_2
-	a (F)F m_01394
+	a (Lcy;)V m_01394
 		0 o p_01394_0
-	a (Lcy;)V m_01395
+	b (DDDFF)V m_01395
 		0 o p_01395_0
-	b (DDDFF)V m_01396
+		1 o p_01395_1
+		2 o p_01395_2
+		3 o p_01395_3
+		4 o p_01395_4
+	c (DDDFF)V m_01396
 		0 o p_01396_0
 		1 o p_01396_1
 		2 o p_01396_2
 		3 o p_01396_3
 		4 o p_01396_4
-	c (DDDFF)V m_01397
+	e (Llw;)F m_01397
 		0 o p_01397_0
-		1 o p_01397_1
-		2 o p_01397_2
-		3 o p_01397_3
-		4 o p_01397_4
-	e (Llw;)F m_01398
+	e (DDD)D m_01398
 		0 o p_01398_0
-	e (DDD)D m_01399
+		1 o p_01398_1
+		2 o p_01398_2
+	f (DDD)D m_01399
 		0 o p_01399_0
 		1 o p_01399_1
 		2 o p_01399_2
-	f (DDD)D m_01400
+	f (Llw;)D m_01400
 		0 o p_01400_0
-		1 o p_01400_1
-		2 o p_01400_2
-	f (Llw;)D m_01401
+	b (Leb;)V m_01401
 		0 o p_01401_0
-	b (Leb;)V m_01402
+	g (Llw;)V m_01402
 		0 o p_01402_0
-	g (Llw;)V m_01403
+	g (DDD)V m_01403
 		0 o p_01403_0
-	g (DDD)V m_01404
-		0 o p_01404_0
-		1 o p_01404_1
-		2 o p_01404_2
-	M ()V m_01405
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	n_ ()Z m_01407
-	d_ ()Z m_01408
-	c (Llw;I)V m_01409
+		1 o p_01403_1
+		2 o p_01403_2
+	M ()V m_01404
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	n_ ()Z m_01406
+	d_ ()Z m_01407
+	c (Llw;I)V m_01408
+		0 o p_01408_0
+		1 o p_01408_1
+	a (Lao;)Z m_01409
 		0 o p_01409_0
-		1 o p_01409_1
-	a (Lao;)Z m_01410
+	a (D)Z m_01410
 		0 o p_01410_0
-	a (D)Z m_01411
-		0 o p_01411_0
-	A ()Ljava/lang/String; m_01412
-	c (Liq;)Z m_01413
+	A ()Ljava/lang/String; m_01411
+	c (Liq;)Z m_01412
+		0 o p_01412_0
+	d (Liq;)V m_01413
 		0 o p_01413_0
-	d (Liq;)V m_01414
+	e (Liq;)V m_01414
 		0 o p_01414_0
-	e (Liq;)V m_01415
-		0 o p_01415_0
-	N ()Ljava/lang/String; m_01416
-	b (Liq;)V m_01417
+	N ()Ljava/lang/String; m_01415
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	a (Liq;)V m_01418
+	a ([D)Lly; m_01418
 		0 o p_01418_0
-	a ([D)Lly; m_01419
+	a ([F)Lly; m_01419
 		0 o p_01419_0
-	a ([F)Lly; m_01420
-		0 o p_01420_0
-	i_ ()F m_01421
-	b (II)Leo; m_01422
+	i_ ()F m_01420
+	b (II)Leo; m_01421
+		0 o p_01421_0
+		1 o p_01421_1
+	a (IIF)Leo; m_01422
 		0 o p_01422_0
 		1 o p_01422_1
-	a (IIF)Leo; m_01423
-		0 o p_01423_0
-		1 o p_01423_1
-		2 o p_01423_2
-	E ()Z m_01424
-	O ()Z m_01425
-	a (Leb;)Z m_01426
+		2 o p_01422_2
+	E ()Z m_01423
+	O ()Z m_01424
+	a (Leb;)Z m_01425
+		0 o p_01425_0
+	a (Llw;)Lco; m_01426
 		0 o p_01426_0
-	a (Llw;)Lco; m_01427
-		0 o p_01427_0
-	s ()V m_01428
-	j_ ()V m_01429
-	y ()D m_01430
-	j ()D m_01431
-	h (Llw;)V m_01432
+	s ()V m_01427
+	j_ ()V m_01428
+	y ()D m_01429
+	j ()D m_01430
+	h (Llw;)V m_01431
+		0 o p_01431_0
+	a (DDDFFI)V m_01432
 		0 o p_01432_0
-	a (DDDFFI)V m_01433
-		0 o p_01433_0
-		1 o p_01433_1
-		2 o p_01433_2
-		3 o p_01433_3
-		4 o p_01433_4
-		5 o p_01433_5
-	k_ ()F m_01434
-	I ()Lao; m_01435
-	q ()V m_01436
-	a (DDD)V m_01437
+		1 o p_01432_1
+		2 o p_01432_2
+		3 o p_01432_3
+		4 o p_01432_4
+		5 o p_01432_5
+	k_ ()F m_01433
+	I ()Lao; m_01434
+	q ()V m_01435
+	a (DDD)V m_01436
+		0 o p_01436_0
+		1 o p_01436_1
+		2 o p_01436_2
+	a (B)V m_01437
 		0 o p_01437_0
-		1 o p_01437_1
-		2 o p_01437_2
-	a (B)V m_01438
-		0 o p_01438_0
-	g ()V m_01439
+	g ()V m_01438
 	<clinit> ()V <clinit>
 lx net/minecraft/src/c_00322
 	<init> ()V <init>
-	a (II[BDDD)V m_01442
+	a (II[BDDD)V m_01441
+		0 o p_01441_0
+		1 o p_01441_1
+		2 o p_01441_2
+		3 o p_01441_3
+		4 o p_01441_4
+		5 o p_01441_5
+	a (II[BDDDFFFIID)V m_01442
 		0 o p_01442_0
 		1 o p_01442_1
 		2 o p_01442_2
 		3 o p_01442_3
 		4 o p_01442_4
 		5 o p_01442_5
-	a (II[BDDDFFFIID)V m_01443
-		0 o p_01443_0
-		1 o p_01443_1
-		2 o p_01443_2
-		3 o p_01443_3
-		4 o p_01443_4
-		5 o p_01443_5
-		6 o p_01443_6
-		7 o p_01443_7
-		8 o p_01443_8
-		9 o p_01443_9
-		10 o p_01443_10
-		11 o p_01443_11
+		6 o p_01442_6
+		7 o p_01442_7
+		8 o p_01442_8
+		9 o p_01442_9
+		10 o p_01442_10
+		11 o p_01442_11
 	a (Lcy;IIII[B)V m_00469
 		0 o p_00469_0
 		1 o p_00469_1
@@ -8125,11 +8125,11 @@ ly net/minecraft/src/c_00323
 		0 o p_00645_0
 	a ()B m_00646
 	toString ()Ljava/lang/String; toString
-	a (Lfd;)V m_01446
+	a (Lfd;)V m_01445
+		0 o p_01445_0
+	a (I)Lfd; m_01446
 		0 o p_01446_0
-	a (I)Lfd; m_01447
-		0 o p_01447_0
-	c ()I m_01448
+	c ()I m_01447
 lz net/minecraft/src/c_00324
 	a f_01353
 	b f_01354
@@ -8147,8 +8147,8 @@ lz net/minecraft/src/c_00324
 m net/minecraft/src/c_00325
 	a f_01358
 	<init> (Ldc;F)V <init>
-		0 o p_01450_0
-		1 o p_01450_1
+		0 o p_01449_0
+		1 o p_01449_1
 	b (Lhf;F)V m_00559
 		0 o p_00559_0
 		1 o p_00559_1
@@ -8158,166 +8158,166 @@ ma net/minecraft/src/c_00326
 	c f_01361
 	d f_01362
 	<init> ()V <init>
-	a (DDD)V m_01823
-		0 o p_01823_0
-		1 o p_01823_1
-		2 o p_01823_2
-	a (DDDDDD)Z m_01452
-		0 o p_01452_0
-		1 o p_01452_1
-		2 o p_01452_2
-		3 o p_01452_3
-		4 o p_01452_4
-		5 o p_01452_5
-	a (Lco;)Z m_01822
+	a (DDD)V m_01822
 		0 o p_01822_0
+		1 o p_01822_1
+		2 o p_01822_2
+	a (DDDDDD)Z m_01451
+		0 o p_01451_0
+		1 o p_01451_1
+		2 o p_01451_2
+		3 o p_01451_3
+		4 o p_01451_4
+		5 o p_01451_5
+	a (Lco;)Z m_01821
+		0 o p_01821_0
 mb net/minecraft/src/c_00327
 	a f_01363
 	<init> (ILnq;)V <init>
-		0 o p_01453_0
-		1 o p_01453_1
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
-	a (Lcy;IIILco;Ljava/util/ArrayList;)V m_01614
-		0 o p_01614_0
-		1 o p_01614_1
-		2 o p_01614_2
-		3 o p_01614_3
-		4 o p_01614_4
-		5 o p_01614_5
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
-	b (Lcy;IIILeb;)V m_01642
-		0 o p_01642_0
-		1 o p_01642_1
-		2 o p_01642_2
-		3 o p_01642_3
-		4 o p_01642_4
-	b (Lcy;IIII)V m_01621
-		0 o p_01621_0
-		1 o p_01621_1
-		2 o p_01621_2
-		3 o p_01621_3
-		4 o p_01621_4
-	d (Lpk;III)F m_01608
-		0 o p_01608_0
-		1 o p_01608_1
-		2 o p_01608_2
-		3 o p_01608_3
-	a (Llw;)F m_01631
-		0 o p_01631_0
-	c ()I m_01637
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Lpk;IIII)I m_01610
-		0 o p_01610_0
-		1 o p_01610_1
-		2 o p_01610_2
-		3 o p_01610_3
-		4 o p_01610_4
-	d ()I m_01623
-	f (Lcy;III)Lco; m_01613
-		0 o p_01613_0
-		1 o p_01613_1
-		2 o p_01613_2
-		3 o p_01613_3
-	a (Lcy;IIILlw;Lao;)V m_01643
+		0 o p_01452_0
+		1 o p_01452_1
+	a (Lpk;III)V m_01643
 		0 o p_01643_0
 		1 o p_01643_1
 		2 o p_01643_2
 		3 o p_01643_3
-		4 o p_01643_4
-		5 o p_01643_5
-	h ()Z m_01618
-	a (IZ)Z m_01617
-		0 o p_01617_0
-		1 o p_01617_1
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	a (Lcy;IIIIF)V m_01630
-		0 o p_01630_0
-		1 o p_01630_1
-		2 o p_01630_2
-		3 o p_01630_3
-		4 o p_01630_4
-		5 o p_01630_5
-	b_ (Lcy;IIII)V m_01629
-		0 o p_01629_0
-		1 o p_01629_1
-		2 o p_01629_2
-		3 o p_01629_3
-		4 o p_01629_4
-	b (Lcy;IIILlw;)V m_01640
-		0 o p_01640_0
-		1 o p_01640_1
-		2 o p_01640_2
-		3 o p_01640_3
-		4 o p_01640_4
-	a (Lcy;IIILjava/util/Random;)V m_01619
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
+	a (Lcy;IIILco;Ljava/util/ArrayList;)V m_01613
+		0 o p_01613_0
+		1 o p_01613_1
+		2 o p_01613_2
+		3 o p_01613_3
+		4 o p_01613_4
+		5 o p_01613_5
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	a (Lcy;IIILeb;)Z m_01639
+	b (Lcy;IIILeb;)V m_01641
+		0 o p_01641_0
+		1 o p_01641_1
+		2 o p_01641_2
+		3 o p_01641_3
+		4 o p_01641_4
+	b (Lcy;IIII)V m_01620
+		0 o p_01620_0
+		1 o p_01620_1
+		2 o p_01620_2
+		3 o p_01620_3
+		4 o p_01620_4
+	d (Lpk;III)F m_01607
+		0 o p_01607_0
+		1 o p_01607_1
+		2 o p_01607_2
+		3 o p_01607_3
+	a (Llw;)F m_01630
+		0 o p_01630_0
+	c ()I m_01636
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Lpk;IIII)I m_01609
+		0 o p_01609_0
+		1 o p_01609_1
+		2 o p_01609_2
+		3 o p_01609_3
+		4 o p_01609_4
+	d ()I m_01622
+	f (Lcy;III)Lco; m_01612
+		0 o p_01612_0
+		1 o p_01612_1
+		2 o p_01612_2
+		3 o p_01612_3
+	a (Lcy;IIILlw;Lao;)V m_01642
+		0 o p_01642_0
+		1 o p_01642_1
+		2 o p_01642_2
+		3 o p_01642_3
+		4 o p_01642_4
+		5 o p_01642_5
+	h ()Z m_01617
+	a (IZ)Z m_01616
+		0 o p_01616_0
+		1 o p_01616_1
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;III)V m_01624
+		0 o p_01624_0
+		1 o p_01624_1
+		2 o p_01624_2
+		3 o p_01624_3
+	a (Lcy;IIIIF)V m_01629
+		0 o p_01629_0
+		1 o p_01629_1
+		2 o p_01629_2
+		3 o p_01629_3
+		4 o p_01629_4
+		5 o p_01629_5
+	b_ (Lcy;IIII)V m_01628
+		0 o p_01628_0
+		1 o p_01628_1
+		2 o p_01628_2
+		3 o p_01628_3
+		4 o p_01628_4
+	b (Lcy;IIILlw;)V m_01639
 		0 o p_01639_0
 		1 o p_01639_1
 		2 o p_01639_2
 		3 o p_01639_3
 		4 o p_01639_4
-	c (Lcy;III)V m_01636
-		0 o p_01636_0
-		1 o p_01636_1
-		2 o p_01636_2
-		3 o p_01636_3
-	a (Lcy;IIILhf;)V m_01653
-		0 o p_01653_0
-		1 o p_01653_1
-		2 o p_01653_2
-		3 o p_01653_3
-		4 o p_01653_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
+	c (Lcy;III)V m_01635
+		0 o p_01635_0
+		1 o p_01635_1
+		2 o p_01635_2
+		3 o p_01635_3
+	a (Lcy;IIILhf;)V m_01652
+		0 o p_01652_0
+		1 o p_01652_1
+		2 o p_01652_2
+		3 o p_01652_3
+		4 o p_01652_4
 mc net/minecraft/src/c_00328
 	a f_01364
 	b f_01365
@@ -8327,22 +8327,22 @@ mc net/minecraft/src/c_00328
 	f f_01369
 	g f_01370
 	<init> (Lch;IIIIII)V <init>
+		0 o p_01453_0
+		1 o p_01453_1
+		2 o p_01453_2
+		3 o p_01453_3
+		4 o p_01453_4
+		5 o p_01453_5
+		6 o p_01453_6
+	a (Lcy;)V m_01454
 		0 o p_01454_0
-		1 o p_01454_1
-		2 o p_01454_2
-		3 o p_01454_3
-		4 o p_01454_4
-		5 o p_01454_5
-		6 o p_01454_6
-	a (Lcy;)V m_01455
+	a (IIIIII)Z m_01455
 		0 o p_01455_0
-	a (IIIIII)Z m_01456
-		0 o p_01456_0
-		1 o p_01456_1
-		2 o p_01456_2
-		3 o p_01456_3
-		4 o p_01456_4
-		5 o p_01456_5
+		1 o p_01455_1
+		2 o p_01455_2
+		3 o p_01455_3
+		4 o p_01455_4
+		5 o p_01455_5
 md net/minecraft/src/c_00329
 	<init> ()V <init>
 	a (Ljava/io/DataInputStream;)V m_00841
@@ -8354,27 +8354,27 @@ me net/minecraft/src/c_00330
 	a f_01371
 	b f_01372
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_01458_0
+		0 o p_01457_0
 mf net/minecraft/src/c_00331
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_01459_0
-		1 o p_01459_1
-		2 o p_01459_2
-		3 o p_01459_3
-		4 o p_01459_4
-		5 o p_01459_5
-		6 o p_01459_6
+		0 o p_01458_0
+		1 o p_01458_1
+		2 o p_01458_2
+		3 o p_01458_3
+		4 o p_01458_4
+		5 o p_01458_5
+		6 o p_01458_6
 mg net/minecraft/src/c_00332
 	bb f_01373
 	<init> (II)V <init>
-		0 o p_01460_0
-		1 o p_01460_1
+		0 o p_01459_0
+		1 o p_01459_1
 	<clinit> ()V <clinit>
 mh net/minecraft/src/c_00333
 	a f_01374
 	<init> ()V <init>
 	<init> (D)V <init>
-		0 o p_01463_0
+		0 o p_01462_0
 	a (Ljava/io/DataOutput;)V m_00644
 		0 o p_00644_0
 	a (Ljava/io/DataInput;)V m_00645
@@ -8384,13 +8384,13 @@ mh net/minecraft/src/c_00333
 mi net/minecraft/src/c_00334
 	a f_01375
 	<init> ()V <init>
-	a (Lqd;DDDFF)V m_01466
-		0 o p_01466_0
-		1 o p_01466_1
-		2 o p_01466_2
-		3 o p_01466_3
-		4 o p_01466_4
-		5 o p_01466_5
+	a (Lqd;DDDFF)V m_01465
+		0 o p_01465_0
+		1 o p_01465_1
+		2 o p_01465_2
+		3 o p_01465_3
+		4 o p_01465_4
+		5 o p_01465_5
 	a (Llw;DDDFF)V m_00085
 		0 o p_00085_0
 		1 o p_00085_1
@@ -8401,54 +8401,54 @@ mi net/minecraft/src/c_00334
 mj net/minecraft/src/c_00335
 	a f_01376
 	<init> (IZ)V <init>
+		0 o p_01466_0
+		1 o p_01466_1
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	h (Lcy;III)V m_01467
 		0 o p_01467_0
 		1 o p_01467_1
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	h (Lcy;III)V m_01468
+		2 o p_01467_2
+		3 o p_01467_3
+	a (Lpk;IIII)I m_01609
+		0 o p_01609_0
+		1 o p_01609_1
+		2 o p_01609_2
+		3 o p_01609_3
+		4 o p_01609_4
+	b (Lcy;IIILjava/util/Random;)V m_01619
+		0 o p_01619_0
+		1 o p_01619_1
+		2 o p_01619_2
+		3 o p_01619_3
+		4 o p_01619_4
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
+	a (ZLcy;III)V m_01468
 		0 o p_01468_0
 		1 o p_01468_1
 		2 o p_01468_2
 		3 o p_01468_3
-	a (Lpk;IIII)I m_01610
-		0 o p_01610_0
-		1 o p_01610_1
-		2 o p_01610_2
-		3 o p_01610_3
-		4 o p_01610_4
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
-	a (ZLcy;III)V m_01469
-		0 o p_01469_0
-		1 o p_01469_1
-		2 o p_01469_2
-		3 o p_01469_3
-		4 o p_01469_4
-	a_ ()Lji; m_01335
-	a (Lcy;IIILhf;)V m_01653
-		0 o p_01653_0
-		1 o p_01653_1
-		2 o p_01653_2
-		3 o p_01653_3
-		4 o p_01653_4
+		4 o p_01468_4
+	a_ ()Lji; m_01334
+	a (Lcy;IIILhf;)V m_01652
+		0 o p_01652_0
+		1 o p_01652_1
+		2 o p_01652_2
+		3 o p_01652_3
+		4 o p_01652_4
 mk net/minecraft/src/c_00336
 	a f_01377
 	b f_01378
@@ -8486,21 +8486,21 @@ mm net/minecraft/src/c_00338
 	h f_01392
 	i f_01393
 	<init> ()V <init>
-	a (IIIDDD)V m_01473
+	a (IIIDDD)V m_01472
+		0 o p_01472_0
+		1 o p_01472_1
+		2 o p_01472_2
+		3 o p_01472_3
+		4 o p_01472_4
+		5 o p_01472_5
+	a (III)Z m_01473
 		0 o p_01473_0
 		1 o p_01473_1
 		2 o p_01473_2
-		3 o p_01473_3
-		4 o p_01473_4
-		5 o p_01473_5
-	a (III)Z m_01474
+	a (I)V m_01474
 		0 o p_01474_0
-		1 o p_01474_1
-		2 o p_01474_2
-	a (I)V m_01475
-		0 o p_01475_0
-	a ()V m_01476
-	b ()V m_01477
+	a ()V m_01475
+	b ()V m_01476
 mn net/minecraft/src/c_00339
 	o f_01394
 	a f_01395
@@ -8519,107 +8519,107 @@ mn net/minecraft/src/c_00339
 	m f_01408
 	n f_01409
 	<init> ()V <init>
-	a (Ljava/lang/Class;)Laq; m_01479
+	a (Ljava/lang/Class;)Laq; m_01478
+		0 o p_01478_0
+	a (Llw;)Laq; m_01479
 		0 o p_01479_0
-	a (Llw;)Laq; m_01480
+	a (Lcy;Lfu;Lls;Leb;Lgq;F)V m_01480
 		0 o p_01480_0
-	a (Lcy;Lfu;Lls;Leb;Lgq;F)V m_01481
+		1 o p_01480_1
+		2 o p_01480_2
+		3 o p_01480_3
+		4 o p_01480_4
+		5 o p_01480_5
+	a (Llw;F)V m_01481
 		0 o p_01481_0
 		1 o p_01481_1
-		2 o p_01481_2
-		3 o p_01481_3
-		4 o p_01481_4
-		5 o p_01481_5
-	a (Llw;F)V m_01482
+	a (Llw;DDDFF)V m_01482
 		0 o p_01482_0
 		1 o p_01482_1
-	a (Llw;DDDFF)V m_01483
+		2 o p_01482_2
+		3 o p_01482_3
+		4 o p_01482_4
+		5 o p_01482_5
+	a (Lcy;)V m_01483
 		0 o p_01483_0
-		1 o p_01483_1
-		2 o p_01483_2
-		3 o p_01483_3
-		4 o p_01483_4
-		5 o p_01483_5
-	a (Lcy;)V m_01484
+	a (DDD)D m_01484
 		0 o p_01484_0
-	a (DDD)D m_01485
-		0 o p_01485_0
-		1 o p_01485_1
-		2 o p_01485_2
-	a ()Lls; m_01486
+		1 o p_01484_1
+		2 o p_01484_2
+	a ()Lls; m_01485
 	<clinit> ()V <clinit>
 mo net/minecraft/src/c_00340
 	<init> ()V <init>
-	a (Lci;)V m_01489
+	a (Lci;)V m_01488
+		0 o p_01488_0
+	b (Lgk;)V m_01489
 		0 o p_01489_0
-	b (Lgk;)V m_01490
+	a (Ljava/lang/String;)V m_01490
 		0 o p_01490_0
-	a (Ljava/lang/String;)V m_01491
+	a (Lqi;)V m_01491
 		0 o p_01491_0
-	a (Lqi;)V m_01492
+	a (Liu;)V m_01492
 		0 o p_01492_0
-	a (Liu;)V m_01493
+	a (Lfa;)V m_01493
 		0 o p_01493_0
-	a (Lfa;)V m_01494
+	a (Lov;)V m_01494
 		0 o p_01494_0
-	a (Lov;)V m_01495
+	a (Lgc;)V m_01495
 		0 o p_01495_0
-	a (Lgc;)V m_01496
+	a (Lmx;)V m_01496
 		0 o p_01496_0
-	a (Lmx;)V m_01497
+	a (Llq;)V m_01497
 		0 o p_01497_0
-	a (Llq;)V m_01498
+	a (Lhs;)V m_01498
 		0 o p_01498_0
-	a (Lhs;)V m_01499
+	a (Lnh;)V m_01499
 		0 o p_01499_0
-	a (Lnh;)V m_01500
+	a (Lky;)V m_01500
 		0 o p_01500_0
-	a (Lky;)V m_01501
+	a (Led;)V m_01501
 		0 o p_01501_0
-	a (Led;)V m_01502
+	a (Leq;)V m_01502
 		0 o p_01502_0
-	a (Leq;)V m_01503
+	a (Lli;)V m_01503
 		0 o p_01503_0
-	a (Lli;)V m_01504
+	a (Lid;)V m_01504
 		0 o p_01504_0
-	a (Lid;)V m_01505
+	a (Lbu;)V m_01505
 		0 o p_01505_0
-	a (Lbu;)V m_01506
+	a (Ljr;)V m_01506
 		0 o p_01506_0
-	a (Ljr;)V m_01507
+	a (Lmt;)V m_01507
 		0 o p_01507_0
-	a (Lmt;)V m_01508
+	a (Llz;)V m_01508
 		0 o p_01508_0
-	a (Llz;)V m_01509
+	a (Lii;)V m_01509
 		0 o p_01509_0
-	a (Lii;)V m_01510
+	a (Lhw;)V m_01510
 		0 o p_01510_0
-	a (Lhw;)V m_01511
+	a (Lfv;)V m_01511
 		0 o p_01511_0
-	a (Lfv;)V m_01512
+	a (Lek;)V m_01512
 		0 o p_01512_0
-	a (Lek;)V m_01513
+	a (Lp;)V m_01513
 		0 o p_01513_0
-	a (Lp;)V m_01514
+	a (Lpy;)V m_01514
 		0 o p_01514_0
-	a (Lpy;)V m_01515
+	a (Lkv;)V m_01515
 		0 o p_01515_0
-	a (Lkv;)V m_01516
+	a (Ldv;)V m_01516
 		0 o p_01516_0
-	a (Ldv;)V m_01517
+	a (Lio;)V m_01517
 		0 o p_01517_0
-	a (Lio;)V m_01518
+	a (La;)V m_01518
 		0 o p_01518_0
-	a (La;)V m_01519
+	a (Lfs;)V m_01519
 		0 o p_01519_0
-	a (Lfs;)V m_01520
+	a (Lcq;)V m_01520
 		0 o p_01520_0
-	a (Lcq;)V m_01521
+	a (Ljk;)V m_01521
 		0 o p_01521_0
-	a (Ljk;)V m_01522
+	a (Llc;)V m_01522
 		0 o p_01522_0
-	a (Llc;)V m_01523
-		0 o p_01523_0
 mp net/minecraft/src/c_00341
 	bx f_01410
 	by f_01411
@@ -8634,19 +8634,19 @@ mp net/minecraft/src/c_00341
 	bH f_01420
 	bI f_01421
 	<init> (Lnet/minecraft/client/Minecraft;Lcy;Lea;Lib;)V <init>
-		0 o p_01524_0
-		1 o p_01524_1
-		2 o p_01524_2
-		3 o p_01524_3
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
+		0 o p_01523_0
+		1 o p_01523_1
+		2 o p_01523_2
+		3 o p_01523_3
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
 	c (I)V m_00958
 		0 o p_00958_0
-	e_ ()V m_01378
+	e_ ()V m_01377
 	o ()V m_00219
-	P ()V m_01525
-	Q ()V m_01526
+	P ()V m_01524
+	Q ()V m_01525
 	a (Leo;)V m_00540
 		0 o p_00540_0
 	a (Ljava/lang/String;)V m_00218
@@ -8660,21 +8660,21 @@ mq net/minecraft/src/c_00342
 	b f_01423
 	c f_01424
 	<init> (Lcl;Ljava/lang/String;Lie;)V <init>
-		0 o p_01527_0
-		1 o p_01527_1
-		2 o p_01527_2
+		0 o p_01526_0
+		1 o p_01526_1
+		2 o p_01526_2
 	run ()V run
 mr net/minecraft/src/c_00343
 	<init> (II)V <init>
-		0 o p_01529_0
-		1 o p_01529_1
-	b (I)Z m_01707
-		0 o p_01707_0
-	g (Lcy;III)Z m_01652
-		0 o p_01652_0
-		1 o p_01652_1
-		2 o p_01652_2
-		3 o p_01652_3
+		0 o p_01528_0
+		1 o p_01528_1
+	b (I)Z m_01706
+		0 o p_01706_0
+	g (Lcy;III)Z m_01651
+		0 o p_01651_0
+		1 o p_01651_1
+		2 o p_01651_2
+		3 o p_01651_3
 ms net/minecraft/src/c_00344
 	a f_01425
 	b f_01426
@@ -8684,12 +8684,12 @@ ms net/minecraft/src/c_00344
 	f f_01430
 	g f_01431
 	<init> (Lhv;IIIII)V <init>
-		0 o p_01530_0
-		1 o p_01530_1
-		2 o p_01530_2
-		3 o p_01530_3
-		4 o p_01530_4
-		5 o p_01530_5
+		0 o p_01529_0
+		1 o p_01529_1
+		2 o p_01529_2
+		3 o p_01529_3
+		4 o p_01529_4
+		5 o p_01529_5
 mt net/minecraft/src/c_00345
 	a f_01432
 	b f_01433
@@ -8706,11 +8706,11 @@ mu net/minecraft/src/c_00346
 	a f_01435
 	b f_01436
 	<init> (Ljava/io/File;Z)V <init>
+		0 o p_01531_0
+		1 o p_01531_1
+	a (II)Ljava/io/File; m_01532
 		0 o p_01532_0
 		1 o p_01532_1
-	a (II)Ljava/io/File; m_01533
-		0 o p_01533_0
-		1 o p_01533_1
 	a (Lcy;II)Lha; m_00049
 		0 o p_00049_0
 		1 o p_00049_1
@@ -8718,13 +8718,13 @@ mu net/minecraft/src/c_00346
 	a (Lcy;Lha;)V m_00050
 		0 o p_00050_0
 		1 o p_00050_1
-	a (Lha;Lcy;Liq;)V m_01534
+	a (Lha;Lcy;Liq;)V m_01533
+		0 o p_01533_0
+		1 o p_01533_1
+		2 o p_01533_2
+	a (Lcy;Liq;)Lha; m_01534
 		0 o p_01534_0
 		1 o p_01534_1
-		2 o p_01534_2
-	a (Lcy;Liq;)Lha; m_01535
-		0 o p_01535_0
-		1 o p_01535_1
 	a ()V m_00052
 	b ()V m_00053
 	b (Lcy;Lha;)V m_00051
@@ -8733,13 +8733,13 @@ mu net/minecraft/src/c_00346
 mv net/minecraft/src/c_00347
 	a f_01437
 	<init> ()V <init>
-	a (Len;)V m_01537
-		0 o p_01537_0
+	a (Len;)V m_01536
+		0 o p_01536_0
 mw net/minecraft/src/c_00348
 	a f_01438
 	<init> (ILjava/lang/String;)V <init>
-		0 o p_01538_0
-		1 o p_01538_1
+		0 o p_01537_0
+		1 o p_01537_1
 	a (Lfp;Leb;Lcy;IIII)Z m_00508
 		0 o p_00508_0
 		1 o p_00508_1
@@ -8765,14 +8765,14 @@ mx net/minecraft/src/c_00349
 my net/minecraft/src/c_00350
 	a f_01444
 	<init> (Lah;)V <init>
-		0 o p_01540_0
+		0 o p_01539_0
 	run ()V run
 mz net/minecraft/src/c_00351
 	A f_01445
 	<init> (Lah;Ljava/io/File;Ljava/lang/String;)V <init>
-		0 o p_01542_0
-		1 o p_01542_1
-		2 o p_01542_2
+		0 o p_01541_0
+		1 o p_01541_1
+		2 o p_01541_2
 	a (Ljava/io/File;)Lbd; m_00332
 		0 o p_00332_0
 n net/minecraft/src/c_00352
@@ -8781,23 +8781,23 @@ n net/minecraft/src/c_00352
 	g f_01448
 	h f_01449
 	<init> ()V <init>
-	a ()Lcc; m_01544
-	a ([[FI)V m_01545
-		0 o p_01545_0
-		1 o p_01545_1
-	b ()V m_01546
+	a ()Lcc; m_01543
+	a ([[FI)V m_01544
+		0 o p_01544_0
+		1 o p_01544_1
+	b ()V m_01545
 	<clinit> ()V <clinit>
 na net/minecraft/src/c_00353
 	c f_01450
 	d f_01451
 	<init> (Lne;Lex;Lhi;IIII)V <init>
-		0 o p_01548_0
-		1 o p_01548_1
-		2 o p_01548_2
-		3 o p_01548_3
-		4 o p_01548_4
-		5 o p_01548_5
-		6 o p_01548_6
+		0 o p_01547_0
+		1 o p_01547_1
+		2 o p_01547_2
+		3 o p_01547_3
+		4 o p_01547_4
+		5 o p_01547_5
+		6 o p_01547_6
 	e ()I m_00531
 	a (Lfp;)Z m_00526
 		0 o p_00526_0
@@ -8805,54 +8805,54 @@ na net/minecraft/src/c_00353
 nb net/minecraft/src/c_00354
 	k f_01452
 	<init> ()V <init>
-	a (IIIII)V m_01550
+	a (IIIII)V m_01549
+		0 o p_01549_0
+		1 o p_01549_1
+		2 o p_01549_2
+		3 o p_01549_3
+		4 o p_01549_4
+	a (IIIIII)V m_01550
 		0 o p_01550_0
 		1 o p_01550_1
 		2 o p_01550_2
 		3 o p_01550_3
 		4 o p_01550_4
-	a (IIIIII)V m_01551
+		5 o p_01550_5
+	a (Lls;Ljava/lang/String;III)V m_01551
 		0 o p_01551_0
 		1 o p_01551_1
 		2 o p_01551_2
 		3 o p_01551_3
 		4 o p_01551_4
-		5 o p_01551_5
-	a (Lls;Ljava/lang/String;III)V m_01552
+	b (Lls;Ljava/lang/String;III)V m_01552
 		0 o p_01552_0
 		1 o p_01552_1
 		2 o p_01552_2
 		3 o p_01552_3
 		4 o p_01552_4
-	b (Lls;Ljava/lang/String;III)V m_01553
+	b (IIIIII)V m_01553
 		0 o p_01553_0
 		1 o p_01553_1
 		2 o p_01553_2
 		3 o p_01553_3
 		4 o p_01553_4
-	b (IIIIII)V m_01554
-		0 o p_01554_0
-		1 o p_01554_1
-		2 o p_01554_2
-		3 o p_01554_3
-		4 o p_01554_4
-		5 o p_01554_5
+		5 o p_01553_5
 nc net/minecraft/src/c_00355
 	a f_01453
 	b f_01454
 	c f_01455
 	<init> ([Lew;)V <init>
-		0 o p_01555_0
+		0 o p_01554_0
 	<init> ([Lew;IIII)V <init>
-		0 o p_01556_0
-		1 o p_01556_1
-		2 o p_01556_2
-		3 o p_01556_3
-		4 o p_01556_4
-	a ()V m_01557
-	a (Lis;F)V m_01558
-		0 o p_01558_0
-		1 o p_01558_1
+		0 o p_01555_0
+		1 o p_01555_1
+		2 o p_01555_2
+		3 o p_01555_3
+		4 o p_01555_4
+	a ()V m_01556
+	a (Lis;F)V m_01557
+		0 o p_01557_0
+		1 o p_01557_1
 nd net/minecraft/src/c_00356
 	a f_01456
 	<clinit> ()V <clinit>
@@ -8861,8 +8861,8 @@ ne net/minecraft/src/c_00357
 	l f_01458
 	m f_01459
 	<init> (Lhi;[Lfp;)V <init>
-		0 o p_01560_0
-		1 o p_01560_1
+		0 o p_01559_0
+		1 o p_01559_1
 	j ()V m_00606
 	a (IIF)V m_00196
 		0 o p_00196_0
@@ -8874,12 +8874,23 @@ nf net/minecraft/src/c_00358
 	a f_01460
 	b f_01461
 	<init> (Ljava/util/Random;I)V <init>
+		0 o p_01560_0
+		1 o p_01560_1
+	a (DD)D m_01561
 		0 o p_01561_0
 		1 o p_01561_1
-	a (DD)D m_01562
+	a ([DDDDIIIDDD)[D m_01562
 		0 o p_01562_0
 		1 o p_01562_1
-	a ([DDDDIIIDDD)[D m_01563
+		2 o p_01562_2
+		3 o p_01562_3
+		4 o p_01562_4
+		5 o p_01562_5
+		6 o p_01562_6
+		7 o p_01562_7
+		8 o p_01562_8
+		9 o p_01562_9
+	a ([DIIIIDDD)[D m_01563
 		0 o p_01563_0
 		1 o p_01563_1
 		2 o p_01563_2
@@ -8888,24 +8899,22 @@ nf net/minecraft/src/c_00358
 		5 o p_01563_5
 		6 o p_01563_6
 		7 o p_01563_7
-		8 o p_01563_8
-		9 o p_01563_9
-	a ([DIIIIDDD)[D m_01564
-		0 o p_01564_0
-		1 o p_01564_1
-		2 o p_01564_2
-		3 o p_01564_3
-		4 o p_01564_4
-		5 o p_01564_5
-		6 o p_01564_6
-		7 o p_01564_7
 ng net/minecraft/src/c_00359
 	a f_01462
 	b f_01463
 	<init> (Ljava/util/Random;I)V <init>
+		0 o p_01564_0
+		1 o p_01564_1
+	a ([DDDIIDDD)[D m_01565
 		0 o p_01565_0
 		1 o p_01565_1
-	a ([DDDIIDDD)[D m_01566
+		2 o p_01565_2
+		3 o p_01565_3
+		4 o p_01565_4
+		5 o p_01565_5
+		6 o p_01565_6
+		7 o p_01565_7
+	a ([DDDIIDDDD)[D m_01566
 		0 o p_01566_0
 		1 o p_01566_1
 		2 o p_01566_2
@@ -8914,16 +8923,7 @@ ng net/minecraft/src/c_00359
 		5 o p_01566_5
 		6 o p_01566_6
 		7 o p_01566_7
-	a ([DDDIIDDDD)[D m_01567
-		0 o p_01567_0
-		1 o p_01567_1
-		2 o p_01567_2
-		3 o p_01567_3
-		4 o p_01567_4
-		5 o p_01567_5
-		6 o p_01567_6
-		7 o p_01567_7
-		8 o p_01567_8
+		8 o p_01566_8
 nh net/minecraft/src/c_00360
 	a f_01464
 	b f_01465
@@ -8944,42 +8944,42 @@ ni net/minecraft/src/c_00361
 	a f_01471
 	b f_01472
 	<init> (ILjava/lang/Class;Z)V <init>
-		0 o p_01569_0
-		1 o p_01569_1
-		2 o p_01569_2
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	f (Lcy;III)Lco; m_01613
-		0 o p_01613_0
-		1 o p_01613_1
-		2 o p_01613_2
-		3 o p_01613_3
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	g ()I m_01604
-	b ()Z m_01603
-	a ()Z m_01616
-	a_ ()Lji; m_01335
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
+		0 o p_01568_0
+		1 o p_01568_1
+		2 o p_01568_2
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	f (Lcy;III)Lco; m_01612
+		0 o p_01612_0
+		1 o p_01612_1
+		2 o p_01612_2
+		3 o p_01612_3
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
+	g ()I m_01603
+	b ()Z m_01602
+	a ()Z m_01615
+	a_ ()Lji; m_01334
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
 nj net/minecraft/src/c_00362
 	a f_01473
 	<init> ()V <init>
 	<init> (S)V <init>
-		0 o p_01571_0
+		0 o p_01570_0
 	a (Ljava/io/DataOutput;)V m_00644
 		0 o p_00644_0
 	a (Ljava/io/DataInput;)V m_00645
@@ -8995,9 +8995,9 @@ nk net/minecraft/src/c_00363
 	f f_01479
 	g f_01480
 	<init> ()V <init>
-	a (Lkw;)V m_01574
-		0 o p_01574_0
-	a ()V m_01575
+	a (Lkw;)V m_01573
+		0 o p_01573_0
+	a ()V m_01574
 nl net/minecraft/src/c_00364
 	d f_01481
 	e f_01482
@@ -9010,33 +9010,33 @@ nl net/minecraft/src/c_00364
 	b f_01489
 	c f_01490
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
+		0 o p_01575_0
+	a (FZII)V m_01576
 		0 o p_01576_0
-	a (FZII)V m_01577
+		1 o p_01576_1
+		2 o p_01576_2
+		3 o p_01576_3
+	a (II)V m_01577
 		0 o p_01577_0
 		1 o p_01577_1
-		2 o p_01577_2
-		3 o p_01577_3
-	a (II)V m_01578
+	a (FII)V m_01578
 		0 o p_01578_0
 		1 o p_01578_1
-	a (FII)V m_01579
+		2 o p_01578_2
+	b (FII)V m_01579
 		0 o p_01579_0
 		1 o p_01579_1
 		2 o p_01579_2
-	b (FII)V m_01580
+	a (IIIF)V m_01580
 		0 o p_01580_0
 		1 o p_01580_1
 		2 o p_01580_2
-	a (IIIF)V m_01581
-		0 o p_01581_0
-		1 o p_01581_1
-		2 o p_01581_2
-		3 o p_01581_3
-	a ()V m_01582
-	a (Ljava/lang/String;)V m_01583
+		3 o p_01580_3
+	a ()V m_01581
+	a (Ljava/lang/String;)V m_01582
+		0 o p_01582_0
+	b (Ljava/lang/String;)V m_01583
 		0 o p_01583_0
-	b (Ljava/lang/String;)V m_01584
-		0 o p_01584_0
 	<clinit> ()V <clinit>
 nm net/minecraft/src/c_00365
 	h f_01491
@@ -9044,8 +9044,8 @@ nm net/minecraft/src/c_00365
 	i f_01493
 	j f_01494
 	<init> (Lbp;Lgq;)V <init>
-		0 o p_01586_0
-		1 o p_01586_1
+		0 o p_01585_0
+		1 o p_01585_1
 	a ()V m_00203
 	a (Lgh;)V m_00201
 		0 o p_00201_0
@@ -9063,27 +9063,27 @@ nn net/minecraft/src/c_00366
 	d f_01498
 	e f_01499
 	<init> ()V <init>
-	a (Leb;)V m_01588
-		0 o p_01588_0
-	a ()V m_01589
-	a (IZ)V m_01590
-		0 o p_01590_0
-		1 o p_01590_1
+	a (Leb;)V m_01587
+		0 o p_01587_0
+	a ()V m_01588
+	a (IZ)V m_01589
+		0 o p_01589_0
+		1 o p_01589_1
 no net/minecraft/src/c_00367
 	a f_01500
 	<init> ()V <init>
-	a (Lcy;Llw;)V m_01592
+	a (Lcy;Llw;)V m_01591
+		0 o p_01591_0
+		1 o p_01591_1
+	b (Lcy;Llw;)Z m_01592
 		0 o p_01592_0
 		1 o p_01592_1
-	b (Lcy;Llw;)Z m_01593
+	c (Lcy;Llw;)Z m_01593
 		0 o p_01593_0
 		1 o p_01593_1
-	c (Lcy;Llw;)Z m_01594
-		0 o p_01594_0
-		1 o p_01594_1
 np net/minecraft/src/c_00368
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_01595_0
+		0 o p_01594_0
 nq net/minecraft/src/c_00369
 	d f_01501
 	e f_01502
@@ -9207,237 +9207,237 @@ nq net/minecraft/src/c_00369
 	bs f_01620
 	bt f_01621
 	<init> (ILhb;)V <init>
+		0 o p_01595_0
+		1 o p_01595_1
+	<init> (IILhb;)V <init>
 		0 o p_01596_0
 		1 o p_01596_1
-	<init> (IILhb;)V <init>
+		2 o p_01596_2
+	a (Lbi;)Lnq; m_01597
 		0 o p_01597_0
-		1 o p_01597_1
-		2 o p_01597_2
-	a (Lbi;)Lnq; m_01598
+	d (I)Lnq; m_01598
 		0 o p_01598_0
-	d (I)Lnq; m_01599
+	a (F)Lnq; m_01599
 		0 o p_01599_0
-	a (F)Lnq; m_01600
+	b (F)Lnq; m_01600
 		0 o p_01600_0
-	b (F)Lnq; m_01601
-		0 o p_01601_0
-	i ()Z m_01602
-	b ()Z m_01603
-	g ()I m_01604
-	c (F)Lnq; m_01605
+	i ()Z m_01601
+	b ()Z m_01602
+	g ()I m_01603
+	c (F)Lnq; m_01604
+		0 o p_01604_0
+	b (Z)V m_01605
 		0 o p_01605_0
-	b (Z)V m_01606
+	a (FFFFFF)V m_01606
 		0 o p_01606_0
-	a (FFFFFF)V m_01607
+		1 o p_01606_1
+		2 o p_01606_2
+		3 o p_01606_3
+		4 o p_01606_4
+		5 o p_01606_5
+	d (Lpk;III)F m_01607
 		0 o p_01607_0
 		1 o p_01607_1
 		2 o p_01607_2
 		3 o p_01607_3
-		4 o p_01607_4
-		5 o p_01607_5
-	d (Lpk;III)F m_01608
+	b (Lpk;IIII)Z m_01608
 		0 o p_01608_0
 		1 o p_01608_1
 		2 o p_01608_2
 		3 o p_01608_3
-	b (Lpk;IIII)Z m_01609
+		4 o p_01608_4
+	a (Lpk;IIII)I m_01609
 		0 o p_01609_0
 		1 o p_01609_1
 		2 o p_01609_2
 		3 o p_01609_3
 		4 o p_01609_4
-	a (Lpk;IIII)I m_01610
+	a (II)I m_01610
 		0 o p_01610_0
 		1 o p_01610_1
-		2 o p_01610_2
-		3 o p_01610_3
-		4 o p_01610_4
-	a (II)I m_01611
+	a (I)I m_01611
 		0 o p_01611_0
-		1 o p_01611_1
-	a (I)I m_01612
+	f (Lcy;III)Lco; m_01612
 		0 o p_01612_0
-	f (Lcy;III)Lco; m_01613
+		1 o p_01612_1
+		2 o p_01612_2
+		3 o p_01612_3
+	a (Lcy;IIILco;Ljava/util/ArrayList;)V m_01613
 		0 o p_01613_0
 		1 o p_01613_1
 		2 o p_01613_2
 		3 o p_01613_3
-	a (Lcy;IIILco;Ljava/util/ArrayList;)V m_01614
+		4 o p_01613_4
+		5 o p_01613_5
+	d (Lcy;III)Lco; m_01614
 		0 o p_01614_0
 		1 o p_01614_1
 		2 o p_01614_2
 		3 o p_01614_3
-		4 o p_01614_4
-		5 o p_01614_5
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	a (IZ)Z m_01617
-		0 o p_01617_0
-		1 o p_01617_1
-	h ()Z m_01618
-	a (Lcy;IIILjava/util/Random;)V m_01619
+	a ()Z m_01615
+	a (IZ)Z m_01616
+		0 o p_01616_0
+		1 o p_01616_1
+	h ()Z m_01617
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	b (Lcy;IIILjava/util/Random;)V m_01620
+	b (Lcy;IIII)V m_01620
 		0 o p_01620_0
 		1 o p_01620_1
 		2 o p_01620_2
 		3 o p_01620_3
 		4 o p_01620_4
-	b (Lcy;IIII)V m_01621
+	a (Lcy;IIII)V m_01621
 		0 o p_01621_0
 		1 o p_01621_1
 		2 o p_01621_2
 		3 o p_01621_3
 		4 o p_01621_4
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	d ()I m_01623
-	e (Lcy;III)V m_01624
+	d ()I m_01622
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;III)V m_01624
 		0 o p_01624_0
 		1 o p_01624_1
 		2 o p_01624_2
 		3 o p_01624_3
-	b (Lcy;III)V m_01625
+	a (Ljava/util/Random;)I m_01625
 		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	a (Ljava/util/Random;)I m_01626
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a (ILjava/util/Random;)I m_01627
+		1 o p_01626_1
+	a (Leb;)F m_01627
 		0 o p_01627_0
-		1 o p_01627_1
-	a (Leb;)F m_01628
+	b_ (Lcy;IIII)V m_01628
 		0 o p_01628_0
-	b_ (Lcy;IIII)V m_01629
+		1 o p_01628_1
+		2 o p_01628_2
+		3 o p_01628_3
+		4 o p_01628_4
+	a (Lcy;IIIIF)V m_01629
 		0 o p_01629_0
 		1 o p_01629_1
 		2 o p_01629_2
 		3 o p_01629_3
 		4 o p_01629_4
-	a (Lcy;IIIIF)V m_01630
+		5 o p_01629_5
+	a (Llw;)F m_01630
 		0 o p_01630_0
-		1 o p_01630_1
-		2 o p_01630_2
-		3 o p_01630_3
-		4 o p_01630_4
-		5 o p_01630_5
-	a (Llw;)F m_01631
+	a (Lcy;IIILao;Lao;)Lnx; m_01631
 		0 o p_01631_0
-	a (Lcy;IIILao;Lao;)Lnx; m_01632
+		1 o p_01631_1
+		2 o p_01631_2
+		3 o p_01631_3
+		4 o p_01631_4
+		5 o p_01631_5
+	a (Lao;)Z m_01632
 		0 o p_01632_0
-		1 o p_01632_1
-		2 o p_01632_2
-		3 o p_01632_3
-		4 o p_01632_4
-		5 o p_01632_5
-	a (Lao;)Z m_01633
+	b (Lao;)Z m_01633
 		0 o p_01633_0
-	b (Lao;)Z m_01634
+	c (Lao;)Z m_01634
 		0 o p_01634_0
-	c (Lao;)Z m_01635
+	c (Lcy;III)V m_01635
 		0 o p_01635_0
-	c (Lcy;III)V m_01636
-		0 o p_01636_0
-		1 o p_01636_1
-		2 o p_01636_2
-		3 o p_01636_3
-	c ()I m_01637
-	a (Lcy;III)Z m_01638
+		1 o p_01635_1
+		2 o p_01635_2
+		3 o p_01635_3
+	c ()I m_01636
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a (Lcy;IIILeb;)Z m_01638
 		0 o p_01638_0
 		1 o p_01638_1
 		2 o p_01638_2
 		3 o p_01638_3
-	a (Lcy;IIILeb;)Z m_01639
+		4 o p_01638_4
+	b (Lcy;IIILlw;)V m_01639
 		0 o p_01639_0
 		1 o p_01639_1
 		2 o p_01639_2
 		3 o p_01639_3
 		4 o p_01639_4
-	b (Lcy;IIILlw;)V m_01640
+	d (Lcy;IIII)V m_01640
 		0 o p_01640_0
 		1 o p_01640_1
 		2 o p_01640_2
 		3 o p_01640_3
 		4 o p_01640_4
-	d (Lcy;IIII)V m_01641
+	b (Lcy;IIILeb;)V m_01641
 		0 o p_01641_0
 		1 o p_01641_1
 		2 o p_01641_2
 		3 o p_01641_3
 		4 o p_01641_4
-	b (Lcy;IIILeb;)V m_01642
+	a (Lcy;IIILlw;Lao;)V m_01642
 		0 o p_01642_0
 		1 o p_01642_1
 		2 o p_01642_2
 		3 o p_01642_3
 		4 o p_01642_4
-	a (Lcy;IIILlw;Lao;)V m_01643
+		5 o p_01642_5
+	a (Lpk;III)V m_01643
 		0 o p_01643_0
 		1 o p_01643_1
 		2 o p_01643_2
 		3 o p_01643_3
-		4 o p_01643_4
-		5 o p_01643_5
-	a (Lpk;III)V m_01644
+	b (Lpk;III)I m_01644
 		0 o p_01644_0
 		1 o p_01644_1
 		2 o p_01644_2
 		3 o p_01644_3
-	b (Lpk;III)I m_01645
+	c (Lpk;IIII)Z m_01645
 		0 o p_01645_0
 		1 o p_01645_1
 		2 o p_01645_2
 		3 o p_01645_3
-	c (Lpk;IIII)Z m_01646
-		0 o p_01646_0
-		1 o p_01646_1
-		2 o p_01646_2
-		3 o p_01646_3
-		4 o p_01646_4
-	e ()Z m_01647
-	a (Lcy;IIILlw;)V m_01648
+		4 o p_01645_4
+	e ()Z m_01646
+	a (Lcy;IIILlw;)V m_01647
+		0 o p_01647_0
+		1 o p_01647_1
+		2 o p_01647_2
+		3 o p_01647_3
+		4 o p_01647_4
+	c (Lcy;IIII)Z m_01648
 		0 o p_01648_0
 		1 o p_01648_1
 		2 o p_01648_2
 		3 o p_01648_3
 		4 o p_01648_4
-	c (Lcy;IIII)Z m_01649
-		0 o p_01649_0
-		1 o p_01649_1
-		2 o p_01649_2
-		3 o p_01649_3
-		4 o p_01649_4
-	f ()V m_01650
-	a_ (Lcy;IIII)V m_01651
+	f ()V m_01649
+	a_ (Lcy;IIII)V m_01650
+		0 o p_01650_0
+		1 o p_01650_1
+		2 o p_01650_2
+		3 o p_01650_3
+		4 o p_01650_4
+	g (Lcy;III)Z m_01651
 		0 o p_01651_0
 		1 o p_01651_1
 		2 o p_01651_2
 		3 o p_01651_3
-		4 o p_01651_4
-	g (Lcy;III)Z m_01652
+	a (Lcy;IIILhf;)V m_01652
 		0 o p_01652_0
 		1 o p_01652_1
 		2 o p_01652_2
 		3 o p_01652_3
-	a (Lcy;IIILhf;)V m_01653
-		0 o p_01653_0
-		1 o p_01653_1
-		2 o p_01653_2
-		3 o p_01653_3
-		4 o p_01653_4
+		4 o p_01652_4
 	<clinit> ()V <clinit>
 nr net/minecraft/src/c_00370
 	a f_01622
@@ -9445,16 +9445,16 @@ nr net/minecraft/src/c_00370
 	c f_01624
 	d f_01625
 	<init> (Lcy;)V <init>
-		0 o p_01655_0
+		0 o p_01654_0
 	a (II)Z m_00125
 		0 o p_00125_0
 		1 o p_00125_1
-	c (II)V m_01656
+	c (II)V m_01655
+		0 o p_01655_0
+		1 o p_01655_1
+	d (II)Lha; m_01656
 		0 o p_01656_0
 		1 o p_01656_1
-	d (II)Lha; m_01657
-		0 o p_01657_0
-		1 o p_01657_1
 	b (II)Lha; m_00126
 		0 o p_00126_0
 		1 o p_00126_1
@@ -9473,18 +9473,18 @@ ns net/minecraft/src/c_00371
 	d f_01628
 	c f_01629
 	<init> (Lcy;)V <init>
+		0 o p_01657_0
+	d (I)V m_01658
 		0 o p_01658_0
-	d (I)V m_01659
-		0 o p_01659_0
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	e_ ()V m_01378
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	e_ ()V m_01377
 	b_ ()V m_00971
-	J ()V m_01373
-	b (Leb;)V m_01402
-		0 o p_01402_0
+	J ()V m_01372
+	b (Leb;)V m_01401
+		0 o p_01401_0
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
 	g_ ()I m_00966
@@ -9492,7 +9492,7 @@ ns net/minecraft/src/c_00371
 	h ()F m_00960
 nt net/minecraft/src/c_00372
 	<init> (Lcy;)V <init>
-		0 o p_01660_0
+		0 o p_01659_0
 	k ()V m_00969
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
@@ -9500,15 +9500,15 @@ nt net/minecraft/src/c_00372
 	g_ ()I m_00966
 nu net/minecraft/src/c_00373
 	<init> (Lgm;F)V <init>
+		0 o p_01660_0
+		1 o p_01660_1
+	a (Las;DDDFF)V m_01661
 		0 o p_01661_0
 		1 o p_01661_1
-	a (Las;DDDFF)V m_01662
-		0 o p_01662_0
-		1 o p_01662_1
-		2 o p_01662_2
-		3 o p_01662_3
-		4 o p_01662_4
-		5 o p_01662_5
+		2 o p_01661_2
+		3 o p_01661_3
+		4 o p_01661_4
+		5 o p_01661_5
 	a (Lhf;DDDFF)V m_00556
 		0 o p_00556_0
 		1 o p_00556_1
@@ -9525,7 +9525,7 @@ nu net/minecraft/src/c_00373
 		5 o p_00085_5
 nv net/minecraft/src/c_00374
 	<init> (I)V <init>
-		0 o p_01663_0
+		0 o p_01662_0
 	a (Lfp;Leb;Lcy;IIII)Z m_00508
 		0 o p_00508_0
 		1 o p_00508_1
@@ -9536,7 +9536,7 @@ nv net/minecraft/src/c_00374
 		6 o p_00508_6
 nw net/minecraft/src/c_00375
 	<init> (I)V <init>
-		0 o p_01664_0
+		0 o p_01663_0
 	a (Lfp;Lcy;Leb;)Lfp; m_00510
 		0 o p_00510_0
 		1 o p_00510_1
@@ -9550,29 +9550,29 @@ nx net/minecraft/src/c_00376
 	f f_01635
 	g f_01636
 	<init> (IIIILao;)V <init>
-		0 o p_01665_0
-		1 o p_01665_1
-		2 o p_01665_2
-		3 o p_01665_3
-		4 o p_01665_4
+		0 o p_01664_0
+		1 o p_01664_1
+		2 o p_01664_2
+		3 o p_01664_3
+		4 o p_01664_4
 	<init> (Llw;)V <init>
-		0 o p_01666_0
+		0 o p_01665_0
 ny net/minecraft/src/c_00377
 	<init> (I)V <init>
-		0 o p_01667_0
-	a (Ljava/util/Random;)I m_01626
+		0 o p_01666_0
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (I)I m_01612
-		0 o p_01612_0
+		1 o p_01626_1
+	a (I)I m_01611
+		0 o p_01611_0
 nz net/minecraft/src/c_00378
 	<init> ()V <init>
 	<init> (FFZ)V <init>
-		0 o p_01669_0
-		1 o p_01669_1
-		2 o p_01669_2
+		0 o p_01668_0
+		1 o p_01668_1
+		2 o p_01668_2
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -9582,110 +9582,110 @@ o net/minecraft/src/c_00379
 	a f_01637
 	b f_01638
 	<init> ()V <init>
-	a (Len;)V m_01671
-		0 o p_01671_0
+	a (Len;)V m_01670
+		0 o p_01670_0
 oa net/minecraft/src/c_00380
 	<init> (I)V <init>
+		0 o p_01671_0
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	a (II)I m_01610
+		0 o p_01610_0
+		1 o p_01610_1
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	b (Lcy;IIILlw;)V m_01639
+		0 o p_01639_0
+		1 o p_01639_1
+		2 o p_01639_2
+		3 o p_01639_3
+		4 o p_01639_4
+	h (Lcy;III)Z m_01672
 		0 o p_01672_0
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	a (II)I m_01611
-		0 o p_01611_0
-		1 o p_01611_1
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	b (Lcy;IIILlw;)V m_01640
+		1 o p_01672_1
+		2 o p_01672_2
+		3 o p_01672_3
+	i (Lcy;III)Z m_01673
+		0 o p_01673_0
+		1 o p_01673_1
+		2 o p_01673_2
+		3 o p_01673_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+ob net/minecraft/src/c_00381
+	<init> (II)V <init>
+		0 o p_01674_0
+		1 o p_01674_1
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	d (Lcy;IIII)V m_01640
 		0 o p_01640_0
 		1 o p_01640_1
 		2 o p_01640_2
 		3 o p_01640_3
 		4 o p_01640_4
-	h (Lcy;III)Z m_01673
-		0 o p_01673_0
-		1 o p_01673_1
-		2 o p_01673_2
-		3 o p_01673_3
-	i (Lcy;III)Z m_01674
-		0 o p_01674_0
-		1 o p_01674_1
-		2 o p_01674_2
-		3 o p_01674_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-ob net/minecraft/src/c_00381
-	<init> (II)V <init>
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	h (Lcy;III)Z m_01675
 		0 o p_01675_0
 		1 o p_01675_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	d (Lcy;IIII)V m_01641
-		0 o p_01641_0
-		1 o p_01641_1
-		2 o p_01641_2
-		3 o p_01641_3
-		4 o p_01641_4
-	a (Lcy;IIILjava/util/Random;)V m_01619
+		2 o p_01675_2
+		3 o p_01675_3
+	a (Lcy;IIILao;Lao;)Lnx; m_01631
+		0 o p_01631_0
+		1 o p_01631_1
+		2 o p_01631_2
+		3 o p_01631_3
+		4 o p_01631_4
+		5 o p_01631_5
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	h (Lcy;III)Z m_01676
-		0 o p_01676_0
-		1 o p_01676_1
-		2 o p_01676_2
-		3 o p_01676_3
-	a (Lcy;IIILao;Lao;)Lnx; m_01632
-		0 o p_01632_0
-		1 o p_01632_1
-		2 o p_01632_2
-		3 o p_01632_3
-		4 o p_01632_4
-		5 o p_01632_5
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
 oc net/minecraft/src/c_00382
 	b f_01639
 	c f_01640
@@ -9695,47 +9695,47 @@ oc net/minecraft/src/c_00382
 	g f_01644
 	a f_01645
 	<init> (Ljn;Lcy;III)V <init>
-		0 o p_01677_0
-		1 o p_01677_1
-		2 o p_01677_2
-		3 o p_01677_3
-		4 o p_01677_4
-	a ()V m_01678
-	b ()V m_01679
-	a (III)Z m_01680
+		0 o p_01676_0
+		1 o p_01676_1
+		2 o p_01676_2
+		3 o p_01676_3
+		4 o p_01676_4
+	a ()V m_01677
+	b ()V m_01678
+	a (III)Z m_01679
+		0 o p_01679_0
+		1 o p_01679_1
+		2 o p_01679_2
+	a (Lon;)Loc; m_01680
 		0 o p_01680_0
-		1 o p_01680_1
-		2 o p_01680_2
-	a (Lon;)Loc; m_01681
+	b (Loc;)Z m_01681
 		0 o p_01681_0
-	b (Loc;)Z m_01682
+	b (III)Z m_01682
 		0 o p_01682_0
-	b (III)Z m_01683
-		0 o p_01683_0
-		1 o p_01683_1
-		2 o p_01683_2
-	c ()I m_01684
-	c (Loc;)Z m_01685
+		1 o p_01682_1
+		2 o p_01682_2
+	c ()I m_01683
+	c (Loc;)Z m_01684
+		0 o p_01684_0
+	d (Loc;)V m_01685
 		0 o p_01685_0
-	d (Loc;)V m_01686
+	c (III)Z m_01686
 		0 o p_01686_0
-	c (III)Z m_01687
+		1 o p_01686_1
+		2 o p_01686_2
+	a (Z)V m_01687
 		0 o p_01687_0
-		1 o p_01687_1
-		2 o p_01687_2
-	a (Z)V m_01688
+	a (Loc;)I m_01688
 		0 o p_01688_0
-	a (Loc;)I m_01689
-		0 o p_01689_0
 od net/minecraft/src/c_00383
 	e f_01646
 	f f_01647
 	g f_01648
 	h f_01649
 	<init> (Ljava/io/File;)V <init>
+		0 o p_01689_0
+	b (Ljava/lang/String;)Ljava/lang/String; m_01690
 		0 o p_01690_0
-	b (Ljava/lang/String;)Ljava/lang/String; m_01691
-		0 o p_01691_0
 	a (Lnet/minecraft/client/Minecraft;)V m_00443
 		0 o p_00443_0
 	b (Lnet/minecraft/client/Minecraft;)V m_00444
@@ -9759,21 +9759,21 @@ of net/minecraft/src/c_00385
 	e f_01656
 	f f_01657
 	<init> (Lex;Lhi;III)V <init>
+		0 o p_01692_0
+		1 o p_01692_1
+		2 o p_01692_2
+		3 o p_01692_3
+		4 o p_01692_4
+	a (II)Z m_01693
 		0 o p_01693_0
 		1 o p_01693_1
-		2 o p_01693_2
-		3 o p_01693_3
-		4 o p_01693_4
-	a (II)Z m_01694
-		0 o p_01694_0
-		1 o p_01694_1
 og net/minecraft/src/c_00386
 	a f_01658
 	h f_01659
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V <init>
-		0 o p_01695_0
-		1 o p_01695_1
-		2 o p_01695_2
+		0 o p_01694_0
+		1 o p_01694_1
+		2 o p_01694_2
 	g ()V m_00207
 	a (CI)V m_00197
 		0 o p_00197_0
@@ -9785,24 +9785,24 @@ og net/minecraft/src/c_00386
 		0 o p_00196_0
 		1 o p_00196_1
 		2 o p_00196_2
-	a (Log;Lib;)Lib; m_01696
+	a (Log;Lib;)Lib; m_01695
+		0 o p_01695_0
+		1 o p_01695_1
+	a (Log;)Z m_01696
 		0 o p_01696_0
-		1 o p_01696_1
-	a (Log;)Z m_01697
+	b (Log;)Lib; m_01697
 		0 o p_01697_0
-	b (Log;)Lib; m_01698
-		0 o p_01698_0
 oh net/minecraft/src/c_00387
 	i f_01660
 	j f_01661
 	l f_01662
 	<init> (IIIILjava/lang/String;F)V <init>
-		0 o p_01699_0
-		1 o p_01699_1
-		2 o p_01699_2
-		3 o p_01699_3
-		4 o p_01699_4
-		5 o p_01699_5
+		0 o p_01698_0
+		1 o p_01698_1
+		2 o p_01698_2
+		3 o p_01698_3
+		4 o p_01698_4
+		5 o p_01698_5
 	a (Z)I m_00827
 		0 o p_00827_0
 	b (Lnet/minecraft/client/Minecraft;II)V m_00829
@@ -9823,10 +9823,10 @@ oi net/minecraft/src/c_00388
 	b f_01666
 	e f_01667
 	<init> (Ljava/awt/Component;)V <init>
-		0 o p_01700_0
-	a ()V m_01701
-	b ()V m_01702
-	c ()V m_01703
+		0 o p_01699_0
+	a ()V m_01700
+	b ()V m_01701
+	c ()V m_01702
 oj net/minecraft/src/c_00389
 	be f_01668
 	bf f_01669
@@ -9835,117 +9835,117 @@ oj net/minecraft/src/c_00389
 	bc f_01672
 	bd f_01673
 	<init> (IIII)V <init>
-		0 o p_01704_0
-		1 o p_01704_1
-		2 o p_01704_2
-		3 o p_01704_3
+		0 o p_01703_0
+		1 o p_01703_1
+		2 o p_01703_2
+		3 o p_01703_3
 	<clinit> ()V <clinit>
 ok net/minecraft/src/c_00390
 	<init> (II)V <init>
+		0 o p_01705_0
+		1 o p_01705_1
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	b (I)Z m_01706
 		0 o p_01706_0
-		1 o p_01706_1
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	b (I)Z m_01707
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	h (Lcy;III)V m_01707
 		0 o p_01707_0
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	h (Lcy;III)V m_01708
-		0 o p_01708_0
-		1 o p_01708_1
-		2 o p_01708_2
-		3 o p_01708_3
-	g (Lcy;III)Z m_01652
-		0 o p_01652_0
-		1 o p_01652_1
-		2 o p_01652_2
-		3 o p_01652_3
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
+		1 o p_01707_1
+		2 o p_01707_2
+		3 o p_01707_3
+	g (Lcy;III)Z m_01651
+		0 o p_01651_0
+		1 o p_01651_1
+		2 o p_01651_2
+		3 o p_01651_3
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
 ol net/minecraft/src/c_00391
 	bb f_01674
 	<init> (II)V <init>
-		0 o p_01709_0
-		1 o p_01709_1
+		0 o p_01708_0
+		1 o p_01708_1
 	a (Lnq;)Z m_00516
 		0 o p_00516_0
 	<clinit> ()V <clinit>
 om net/minecraft/src/c_00392
 	<init> ()V <init>
-	a ()V m_01739
-	a (FF)Lao; m_01745
-		0 o p_01745_0
-		1 o p_01745_1
-	b ()V m_01738
-	c ()Lbd; m_01740
-	a (Ljava/io/File;)Lai; m_01741
+	a ()V m_01738
+	a (FF)Lao; m_01744
+		0 o p_01744_0
+		1 o p_01744_1
+	b ()V m_01737
+	c ()Lbd; m_01739
+	a (Ljava/io/File;)Lai; m_01740
+		0 o p_01740_0
+	a (II)Z m_01741
 		0 o p_01741_0
-	a (II)Z m_01742
+		1 o p_01741_1
+	a (JF)F m_01742
 		0 o p_01742_0
 		1 o p_01742_1
-	a (JF)F m_01743
-		0 o p_01743_0
-		1 o p_01743_1
-	d ()Z m_01746
+	d ()Z m_01745
 on net/minecraft/src/c_00393
 	a f_01675
 	b f_01676
 	c f_01677
 	<init> (III)V <init>
-		0 o p_01712_0
-		1 o p_01712_1
-		2 o p_01712_2
+		0 o p_01711_0
+		1 o p_01711_1
+		2 o p_01711_2
 	equals (Ljava/lang/Object;)Z equals
-		0 o p_01713_0
+		0 o p_01712_0
 	hashCode ()I hashCode
 oo net/minecraft/src/c_00394
 	a f_01678
 	<init> (I)V <init>
-		0 o p_01715_0
+		0 o p_01714_0
 	<init> ([B)V <init>
+		0 o p_01715_0
+	a (III)I m_01716
 		0 o p_01716_0
-	a (III)I m_01717
+		1 o p_01716_1
+		2 o p_01716_2
+	a (IIII)V m_01717
 		0 o p_01717_0
 		1 o p_01717_1
 		2 o p_01717_2
-	a (IIII)V m_01718
-		0 o p_01718_0
-		1 o p_01718_1
-		2 o p_01718_2
-		3 o p_01718_3
-	a ()Z m_01719
+		3 o p_01717_3
+	a ()Z m_01718
 op net/minecraft/src/c_00395
 	a f_01679
 	<init> (Lcy;)V <init>
-		0 o p_01720_0
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+		0 o p_01719_0
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
-	a (Leb;)Z m_01426
-		0 o p_01426_0
+	a (Leb;)Z m_01425
+		0 o p_01425_0
 	g_ ()I m_00966
 oq net/minecraft/src/c_00396
 	a f_01680
@@ -9968,44 +9968,44 @@ or net/minecraft/src/c_00397
 	c f_01683
 	d f_01684
 	<init> (IILjava/lang/Object;Lor;)V <init>
-		0 o p_01722_0
-		1 o p_01722_1
-		2 o p_01722_2
-		3 o p_01722_3
-	a ()I m_01723
-	b ()Ljava/lang/Object; m_01724
+		0 o p_01721_0
+		1 o p_01721_1
+		2 o p_01721_2
+		3 o p_01721_3
+	a ()I m_01722
+	b ()Ljava/lang/Object; m_01723
 	equals (Ljava/lang/Object;)Z equals
-		0 o p_01725_0
+		0 o p_01724_0
 	hashCode ()I hashCode
 	toString ()Ljava/lang/String; toString
 os net/minecraft/src/c_00398
 	<init> (I)V <init>
-		0 o p_01728_0
-	a (Lpk;IIII)I m_01610
-		0 o p_01610_0
-		1 o p_01610_1
-		2 o p_01610_2
-		3 o p_01610_3
-		4 o p_01610_4
-	b (Lpk;III)I m_01645
-		0 o p_01645_0
-		1 o p_01645_1
-		2 o p_01645_2
-		3 o p_01645_3
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
+		0 o p_01727_0
+	a (Lpk;IIII)I m_01609
+		0 o p_01609_0
+		1 o p_01609_1
+		2 o p_01609_2
+		3 o p_01609_3
+		4 o p_01609_4
+	b (Lpk;III)I m_01644
+		0 o p_01644_0
+		1 o p_01644_1
+		2 o p_01644_2
+		3 o p_01644_3
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
 ot net/minecraft/src/c_00399
 	<init> (Lcy;)V <init>
-		0 o p_01729_0
-	c (F)V m_01388
-		0 o p_01388_0
+		0 o p_01728_0
+	c (F)V m_01387
+		0 o p_01387_0
 	b (FF)V m_00967
 		0 o p_00967_0
 		1 o p_00967_1
@@ -10019,14 +10019,14 @@ ou net/minecraft/src/c_00400
 	f f_01690
 	i f_01691
 	<init> (Lcy;)V <init>
-		0 o p_01730_0
+		0 o p_01729_0
 	k ()V m_00969
-	c (F)V m_01388
-		0 o p_01388_0
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	c (F)V m_01387
+		0 o p_01387_0
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
@@ -10048,25 +10048,25 @@ ov net/minecraft/src/c_00401
 	a ()I m_00844
 ow net/minecraft/src/c_00402
 	<init> (I)V <init>
-		0 o p_01732_0
+		0 o p_01731_0
 ox net/minecraft/src/c_00403
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 oy net/minecraft/src/c_00404
 	a f_01698
 	b f_01699
 	c f_01700
 	d f_01701
 	<init> (Log;Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V <init>
-		0 o p_01734_0
-		1 o p_01734_1
-		2 o p_01734_2
-		3 o p_01734_3
+		0 o p_01733_0
+		1 o p_01733_1
+		2 o p_01733_2
+		3 o p_01733_3
 	run ()V run
 oz net/minecraft/src/c_00405
 	a f_01702
@@ -10078,35 +10078,35 @@ oz net/minecraft/src/c_00405
 	g f_01708
 	h f_01709
 	<init> ()V <init>
-	a (Lcy;)V m_01737
-		0 o p_01737_0
-	b ()V m_01738
-	a ()V m_01739
-	c ()Lbd; m_01740
-	a (Ljava/io/File;)Lai; m_01741
+	a (Lcy;)V m_01736
+		0 o p_01736_0
+	b ()V m_01737
+	a ()V m_01738
+	c ()Lbd; m_01739
+	a (Ljava/io/File;)Lai; m_01740
+		0 o p_01740_0
+	a (II)Z m_01741
 		0 o p_01741_0
-	a (II)Z m_01742
+		1 o p_01741_1
+	a (JF)F m_01742
 		0 o p_01742_0
 		1 o p_01742_1
-	a (JF)F m_01743
+	b (FF)[F m_01743
 		0 o p_01743_0
 		1 o p_01743_1
-	b (FF)[F m_01744
+	a (FF)Lao; m_01744
 		0 o p_01744_0
 		1 o p_01744_1
-	a (FF)Lao; m_01745
-		0 o p_01745_0
-		1 o p_01745_1
-	d ()Z m_01746
-	a (I)Loz; m_01747
-		0 o p_01747_0
+	d ()Z m_01745
+	a (I)Loz; m_01746
+		0 o p_01746_0
 p net/minecraft/src/c_00406
 	a f_01710
 	b f_01711
 	<init> ()V <init>
 	<init> (I[Lfp;)V <init>
-		0 o p_01749_0
-		1 o p_01749_1
+		0 o p_01748_0
+		1 o p_01748_1
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -10118,13 +10118,13 @@ pa net/minecraft/src/c_00407
 	a f_01712
 	b f_01713
 	<init> ()V <init>
-	a (Len;)V m_01751
-		0 o p_01751_0
+	a (Len;)V m_01750
+		0 o p_01750_0
 pb net/minecraft/src/c_00408
 	a f_01714
 	<init> ()V <init>
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_01753_0
+		0 o p_01752_0
 	a (Ljava/io/DataOutput;)V m_00644
 		0 o p_00644_0
 	a (Ljava/io/DataInput;)V m_00645
@@ -10133,42 +10133,42 @@ pb net/minecraft/src/c_00408
 	toString ()Ljava/lang/String; toString
 pc net/minecraft/src/c_00409
 	<init> (Lcy;DDD)V <init>
-		0 o p_01755_0
-		1 o p_01755_1
-		2 o p_01755_2
-		3 o p_01755_3
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	e_ ()V m_01378
+		0 o p_01754_0
+		1 o p_01754_1
+		2 o p_01754_2
+		3 o p_01754_3
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	e_ ()V m_01377
 pd net/minecraft/src/c_00410
 	<init> (I)V <init>
-		0 o p_01756_0
-	e (Lcy;III)V m_01624
+		0 o p_01755_0
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;III)V m_01624
 		0 o p_01624_0
 		1 o p_01624_1
 		2 o p_01624_2
 		3 o p_01624_3
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
 pe net/minecraft/src/c_00411
 	a f_01715
 	<init> (Ljq;)V <init>
-		0 o p_01757_0
+		0 o p_01756_0
 	run ()V run
 pf net/minecraft/src/c_00412
 	a f_01716
 	<init> (Ljq;Ljava/lang/String;)V <init>
-		0 o p_01759_0
-		1 o p_01759_1
+		0 o p_01758_0
+		1 o p_01758_1
 	run ()V run
 pg net/minecraft/src/c_00413
 	c f_01717
@@ -10182,8 +10182,8 @@ pg net/minecraft/src/c_00413
 	k f_01725
 	l f_01726
 	<init> (Lnet/minecraft/client/Minecraft;Lib;)V <init>
-		0 o p_01761_0
-		1 o p_01761_1
+		0 o p_01760_0
+		1 o p_01760_1
 	a (Leb;)V m_01118
 		0 o p_01118_0
 	b (IIII)Z m_01112
@@ -10208,7 +10208,7 @@ pg net/minecraft/src/c_00413
 	a (Lcy;)V m_01110
 		0 o p_01110_0
 	c ()V m_01119
-	e ()V m_01762
+	e ()V m_01761
 	a (Leb;Lcy;Lfp;IIII)Z m_01122
 		0 o p_01122_0
 		1 o p_01122_1
@@ -10232,159 +10232,159 @@ pg net/minecraft/src/c_00413
 ph net/minecraft/src/c_00414
 	a f_01727
 	<init> (Ljq;Ljava/lang/String;)V <init>
-		0 o p_01763_0
-		1 o p_01763_1
+		0 o p_01762_0
+		1 o p_01762_1
 	run ()V run
 pi net/minecraft/src/c_00415
 	a f_01728
 	<init> (Lcy;DDD)V <init>
+		0 o p_01764_0
+		1 o p_01764_1
+		2 o p_01764_2
+		3 o p_01764_3
+	<init> (Lcy;DDDF)V <init>
 		0 o p_01765_0
 		1 o p_01765_1
 		2 o p_01765_2
 		3 o p_01765_3
-	<init> (Lcy;DDDF)V <init>
-		0 o p_01766_0
-		1 o p_01766_1
-		2 o p_01766_2
-		3 o p_01766_3
-		4 o p_01766_4
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	e_ ()V m_01378
+		4 o p_01765_4
+	a (Lis;FFFFFF)V m_01789
+		0 o p_01789_0
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	e_ ()V m_01377
 pj net/minecraft/src/c_00416
 	a f_01729
 	<init> (I)V <init>
-		0 o p_01767_0
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+		0 o p_01766_0
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 pk net/minecraft/src/c_00417
-	a (III)I m_01768
+	a (III)I m_01767
+		0 o p_01767_0
+		1 o p_01767_1
+		2 o p_01767_2
+	b (III)Lji; m_01768
 		0 o p_01768_0
 		1 o p_01768_1
 		2 o p_01768_2
-	b (III)Lji; m_01769
+	c (III)F m_01769
 		0 o p_01769_0
 		1 o p_01769_1
 		2 o p_01769_2
-	c (III)F m_01770
+	e (III)I m_01770
 		0 o p_01770_0
 		1 o p_01770_1
 		2 o p_01770_2
-	e (III)I m_01771
+	f (III)Lhb; m_01771
 		0 o p_01771_0
 		1 o p_01771_1
 		2 o p_01771_2
-	f (III)Lhb; m_01772
+	g (III)Z m_01772
 		0 o p_01772_0
 		1 o p_01772_1
 		2 o p_01772_2
-	g (III)Z m_01773
-		0 o p_01773_0
-		1 o p_01773_1
-		2 o p_01773_2
-	a ()Lpo; m_01774
+	a ()Lpo; m_01773
 pl net/minecraft/src/c_00418
 	<init> (II)V <init>
+		0 o p_01774_0
+		1 o p_01774_1
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	d (Lcy;IIII)V m_01640
+		0 o p_01640_0
+		1 o p_01640_1
+		2 o p_01640_2
+		3 o p_01640_3
+		4 o p_01640_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	h (Lcy;III)Z m_01775
 		0 o p_01775_0
 		1 o p_01775_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	d (Lcy;IIII)V m_01641
+		2 o p_01775_2
+		3 o p_01775_3
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
+	b (Lcy;IIILeb;)V m_01641
 		0 o p_01641_0
 		1 o p_01641_1
 		2 o p_01641_2
 		3 o p_01641_3
 		4 o p_01641_4
-	e (Lcy;III)V m_01624
+	a (Lcy;IIILeb;)Z m_01638
+		0 o p_01638_0
+		1 o p_01638_1
+		2 o p_01638_2
+		3 o p_01638_3
+		4 o p_01638_4
+	b (Lcy;III)V m_01624
 		0 o p_01624_0
 		1 o p_01624_1
 		2 o p_01624_2
 		3 o p_01624_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	h (Lcy;III)Z m_01776
-		0 o p_01776_0
-		1 o p_01776_1
-		2 o p_01776_2
-		3 o p_01776_3
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	b (Lcy;IIILeb;)V m_01642
-		0 o p_01642_0
-		1 o p_01642_1
-		2 o p_01642_2
-		3 o p_01642_3
-		4 o p_01642_4
-	a (Lcy;IIILeb;)Z m_01639
-		0 o p_01639_0
-		1 o p_01639_1
-		2 o p_01639_2
-		3 o p_01639_3
-		4 o p_01639_4
-	b (Lcy;III)V m_01625
-		0 o p_01625_0
-		1 o p_01625_1
-		2 o p_01625_2
-		3 o p_01625_3
-	c (Lpk;IIII)Z m_01646
-		0 o p_01646_0
-		1 o p_01646_1
-		2 o p_01646_2
-		3 o p_01646_3
-		4 o p_01646_4
-	c (Lcy;IIII)Z m_01649
-		0 o p_01649_0
-		1 o p_01649_1
-		2 o p_01649_2
-		3 o p_01649_3
-		4 o p_01649_4
-	e ()Z m_01647
+	c (Lpk;IIII)Z m_01645
+		0 o p_01645_0
+		1 o p_01645_1
+		2 o p_01645_2
+		3 o p_01645_3
+		4 o p_01645_4
+	c (Lcy;IIII)Z m_01648
+		0 o p_01648_0
+		1 o p_01648_1
+		2 o p_01648_2
+		3 o p_01648_3
+		4 o p_01648_4
+	e ()Z m_01646
 pm net/minecraft/src/c_00419
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 pn net/minecraft/src/c_00420
 	a f_01730
 	b f_01731
 	c f_01732
 	d f_01733
 	<init> (IIIJ)V <init>
-		0 o p_01778_0
-		1 o p_01778_1
-		2 o p_01778_2
-		3 o p_01778_3
+		0 o p_01777_0
+		1 o p_01777_1
+		2 o p_01777_2
+		3 o p_01777_3
 po net/minecraft/src/c_00421
 	e f_01734
 	f f_01735
@@ -10395,32 +10395,32 @@ po net/minecraft/src/c_00421
 	d f_01740
 	<init> ()V <init>
 	<init> (Lcy;)V <init>
+		0 o p_01779_0
+	a (Lqm;)Lgg; m_01780
 		0 o p_01780_0
-	a (Lqm;)Lgg; m_01781
+	a (II)Lgg; m_01781
 		0 o p_01781_0
-	a (II)Lgg; m_01782
+		1 o p_01781_1
+	b (II)D m_01782
 		0 o p_01782_0
 		1 o p_01782_1
-	b (II)D m_01783
+	a (IIII)[Lgg; m_01783
 		0 o p_01783_0
 		1 o p_01783_1
-	a (IIII)[Lgg; m_01784
+		2 o p_01783_2
+		3 o p_01783_3
+	a ([DIIII)[D m_01784
 		0 o p_01784_0
 		1 o p_01784_1
 		2 o p_01784_2
 		3 o p_01784_3
-	a ([DIIII)[D m_01785
+		4 o p_01784_4
+	a ([Lgg;IIII)[Lgg; m_01785
 		0 o p_01785_0
 		1 o p_01785_1
 		2 o p_01785_2
 		3 o p_01785_3
 		4 o p_01785_4
-	a ([Lgg;IIII)[Lgg; m_01786
-		0 o p_01786_0
-		1 o p_01786_1
-		2 o p_01786_2
-		3 o p_01786_3
-		4 o p_01786_4
 pp net/minecraft/src/c_00422
 	b f_01741
 	c f_01742
@@ -10436,41 +10436,41 @@ pp net/minecraft/src/c_00422
 	m f_01752
 	n f_01753
 	<init> (Lcy;DDDDDD)V <init>
+		0 o p_01786_0
+		1 o p_01786_1
+		2 o p_01786_2
+		3 o p_01786_3
+		4 o p_01786_4
+		5 o p_01786_5
+		6 o p_01786_6
+	b (F)Lpp; m_01787
 		0 o p_01787_0
-		1 o p_01787_1
-		2 o p_01787_2
-		3 o p_01787_3
-		4 o p_01787_4
-		5 o p_01787_5
-		6 o p_01787_6
-	b (F)Lpp; m_01788
+	d (F)Lpp; m_01788
 		0 o p_01788_0
-	d (F)Lpp; m_01789
+	e_ ()V m_01377
+	a (Lis;FFFFFF)V m_01789
 		0 o p_01789_0
-	e_ ()V m_01378
-	a (Lis;FFFFFF)V m_01790
-		0 o p_01790_0
-		1 o p_01790_1
-		2 o p_01790_2
-		3 o p_01790_3
-		4 o p_01790_4
-		5 o p_01790_5
-		6 o p_01790_6
-	l_ ()I m_01791
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+		1 o p_01789_1
+		2 o p_01789_2
+		3 o p_01789_3
+		4 o p_01789_4
+		5 o p_01789_5
+		6 o p_01789_6
+	l_ ()I m_01790
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 pq net/minecraft/src/c_00423
 	<init> ()V <init>
 pr net/minecraft/src/c_00424
 	<init> (Lgm;Lgm;F)V <init>
+		0 o p_01792_0
+		1 o p_01792_1
+		2 o p_01792_2
+	a (Lbx;I)Z m_01793
 		0 o p_01793_0
 		1 o p_01793_1
-		2 o p_01793_2
-	a (Lbx;I)Z m_01794
-		0 o p_01794_0
-		1 o p_01794_1
 	a (Lhf;I)Z m_00560
 		0 o p_00560_0
 		1 o p_00560_1
@@ -10483,41 +10483,41 @@ ps net/minecraft/src/c_00425
 	bz f_01759
 	a f_01760
 	<init> (Lcy;Ljava/lang/String;)V <init>
-		0 o p_01795_0
-		1 o p_01795_1
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	a (DDDFFI)V m_01433
-		0 o p_01433_0
-		1 o p_01433_1
-		2 o p_01433_2
-		3 o p_01433_3
-		4 o p_01433_4
-		5 o p_01433_5
-	e_ ()V m_01378
-	i_ ()F m_01421
+		0 o p_01794_0
+		1 o p_01794_1
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	a (DDDFFI)V m_01432
+		0 o p_01432_0
+		1 o p_01432_1
+		2 o p_01432_2
+		3 o p_01432_3
+		4 o p_01432_4
+		5 o p_01432_5
+	e_ ()V m_01377
+	i_ ()F m_01420
 	k ()V m_00969
-	p ()Z m_01385
+	p ()Z m_01384
 pt net/minecraft/src/c_00426
 	a f_01761
 	b f_01762
 	c f_01763
 	<init> (Lcy;)V <init>
-		0 o p_01796_0
-	e_ ()V m_01378
+		0 o p_01795_0
+	e_ ()V m_01377
 	a ()Z m_00975
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
 	c_ ()Llw; m_00642
 	k ()V m_00969
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	c (Llw;)V m_01797
-		0 o p_01797_0
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	c (Llw;)V m_01796
+		0 o p_01796_0
 	d ()Ljava/lang/String; m_00961
 	f_ ()Ljava/lang/String; m_00962
 	f ()Ljava/lang/String; m_00963
@@ -10525,19 +10525,19 @@ pt net/minecraft/src/c_00426
 	l ()Lfp; m_00981
 	<clinit> ()V <clinit>
 pu net/minecraft/src/c_00427
-	b (Ljava/lang/String;)V m_01799
+	b (Ljava/lang/String;)V m_01798
+		0 o p_01798_0
+	d (Ljava/lang/String;)V m_01799
 		0 o p_01799_0
-	d (Ljava/lang/String;)V m_01800
+	a (I)V m_01800
 		0 o p_01800_0
-	a (I)V m_01801
-		0 o p_01801_0
 pv net/minecraft/src/c_00428
 	a f_01764
 	h f_01765
 	i f_01766
 	j f_01767
 	<init> (Lqc;)V <init>
-		0 o p_01802_0
+		0 o p_01801_0
 	a ()V m_00203
 	h ()V m_00208
 	g ()V m_00207
@@ -10552,7 +10552,7 @@ pv net/minecraft/src/c_00428
 		2 o p_00196_2
 pw net/minecraft/src/c_00429
 	<init> (I)V <init>
-		0 o p_01803_0
+		0 o p_01802_0
 	a (Lfp;Leb;Lcy;IIII)Z m_00508
 		0 o p_00508_0
 		1 o p_00508_1
@@ -10586,30 +10586,30 @@ px net/minecraft/src/c_00430
 	i f_01789
 	w f_01790
 	<init> (Lcy;J)V <init>
+		0 o p_01803_0
+		1 o p_01803_1
+	a (II[B[Lgg;[D)V m_01804
 		0 o p_01804_0
 		1 o p_01804_1
-	a (II[B[Lgg;[D)V m_01805
+		2 o p_01804_2
+		3 o p_01804_3
+		4 o p_01804_4
+	a (II[B[Lgg;)V m_01805
 		0 o p_01805_0
 		1 o p_01805_1
 		2 o p_01805_2
 		3 o p_01805_3
-		4 o p_01805_4
-	a (II[B[Lgg;)V m_01806
+	b (II)Lha; m_00126
+		0 o p_00126_0
+		1 o p_00126_1
+	a ([DIIIIII)[D m_01806
 		0 o p_01806_0
 		1 o p_01806_1
 		2 o p_01806_2
 		3 o p_01806_3
-	b (II)Lha; m_00126
-		0 o p_00126_0
-		1 o p_00126_1
-	a ([DIIIIII)[D m_01807
-		0 o p_01807_0
-		1 o p_01807_1
-		2 o p_01807_2
-		3 o p_01807_3
-		4 o p_01807_4
-		5 o p_01807_5
-		6 o p_01807_6
+		4 o p_01806_4
+		5 o p_01806_5
+		6 o p_01806_6
 	a (II)Z m_00125
 		0 o p_00125_0
 		1 o p_00125_1
@@ -10630,10 +10630,10 @@ py net/minecraft/src/c_00431
 	e f_01795
 	<init> ()V <init>
 	<init> (IIILji;)V <init>
-		0 o p_01809_0
-		1 o p_01809_1
-		2 o p_01809_2
-		3 o p_01809_3
+		0 o p_01808_0
+		1 o p_01808_1
+		2 o p_01808_2
+		3 o p_01808_3
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -10644,12 +10644,12 @@ py net/minecraft/src/c_00431
 pz net/minecraft/src/c_00432
 	a f_01796
 	<init> (Lgm;FF)V <init>
+		0 o p_01809_0
+		1 o p_01809_1
+		2 o p_01809_2
+	a (Lip;F)V m_01810
 		0 o p_01810_0
 		1 o p_01810_1
-		2 o p_01810_2
-	a (Lip;F)V m_01811
-		0 o p_01811_0
-		1 o p_01811_1
 	a (Lhf;F)V m_00563
 		0 o p_00563_0
 		1 o p_00563_1
@@ -10657,23 +10657,23 @@ q net/minecraft/src/c_00433
 	a f_01797
 	b f_01798
 	<init> ([Lfp;)V <init>
-		0 o p_01812_0
+		0 o p_01811_0
 	a (Lhi;)V m_00113
 		0 o p_00113_0
 	a (Leb;)V m_00112
 		0 o p_00112_0
 qa net/minecraft/src/c_00434
 	<init> ()V <init>
-	a (Lcy;Ljava/util/Random;III)Z m_01190
-		0 o p_01190_0
-		1 o p_01190_1
-		2 o p_01190_2
-		3 o p_01190_3
-		4 o p_01190_4
+	a (Lcy;Ljava/util/Random;III)Z m_01189
+		0 o p_01189_0
+		1 o p_01189_1
+		2 o p_01189_2
+		3 o p_01189_3
+		4 o p_01189_4
 qb net/minecraft/src/c_00435
 	<init> (II)V <init>
-		0 o p_01814_0
-		1 o p_01814_1
+		0 o p_01813_0
+		1 o p_01813_1
 qc net/minecraft/src/c_00436
 	a f_01799
 	b f_01800
@@ -10703,41 +10703,41 @@ qd net/minecraft/src/c_00437
 	r f_01818
 	s f_01819
 	<init> (Lcy;)V <init>
-		0 o p_01816_0
-	a (Llw;)Lco; m_01427
-		0 o p_01427_0
-	e ()Lco; m_01386
-	d_ ()Z m_01408
+		0 o p_01815_0
+	a (Llw;)Lco; m_01426
+		0 o p_01426_0
+	e ()Lco; m_01385
+	d_ ()Z m_01407
 	<init> (Lcy;DDDI)V <init>
+		0 o p_01816_0
+		1 o p_01816_1
+		2 o p_01816_2
+		3 o p_01816_3
+		4 o p_01816_4
+	j ()D m_01430
+	a (Llw;I)Z m_01405
+		0 o p_01405_0
+		1 o p_01405_1
+	g ()V m_01438
+	n_ ()Z m_01406
+	J ()V m_01372
+	e_ ()V m_01377
+	a (DDDD)Lao; m_01817
 		0 o p_01817_0
 		1 o p_01817_1
 		2 o p_01817_2
 		3 o p_01817_3
-		4 o p_01817_4
-	j ()D m_01431
-	a (Llw;I)Z m_01406
-		0 o p_01406_0
-		1 o p_01406_1
-	g ()V m_01439
-	n_ ()Z m_01407
-	J ()V m_01373
-	e_ ()V m_01378
-	a (DDDD)Lao; m_01818
+	h (DDD)Lao; m_01818
 		0 o p_01818_0
 		1 o p_01818_1
 		2 o p_01818_2
-		3 o p_01818_3
-	h (DDD)Lao; m_01819
-		0 o p_01819_0
-		1 o p_01819_1
-		2 o p_01819_2
-	a (Liq;)V m_01418
-		0 o p_01418_0
-	b (Liq;)V m_01417
+	a (Liq;)V m_01417
 		0 o p_01417_0
-	i_ ()F m_01421
-	g (Llw;)V m_01403
-		0 o p_01403_0
+	b (Liq;)V m_01416
+		0 o p_01416_0
+	i_ ()F m_01420
+	g (Llw;)V m_01402
+		0 o p_01402_0
 	c ()I m_00984
 	c (I)Lfp; m_00985
 		0 o p_00985_0
@@ -10750,23 +10750,23 @@ qd net/minecraft/src/c_00437
 	d ()Ljava/lang/String; m_00988
 	o_ ()I m_00989
 	h ()V m_00990
-	a (Leb;)Z m_01426
-		0 o p_01426_0
-	a (DDDFFI)V m_01433
-		0 o p_01433_0
-		1 o p_01433_1
-		2 o p_01433_2
-		3 o p_01433_3
-		4 o p_01433_4
-		5 o p_01433_5
-	a (DDD)V m_01437
-		0 o p_01437_0
-		1 o p_01437_1
-		2 o p_01437_2
+	a (Leb;)Z m_01425
+		0 o p_01425_0
+	a (DDDFFI)V m_01432
+		0 o p_01432_0
+		1 o p_01432_1
+		2 o p_01432_2
+		3 o p_01432_3
+		4 o p_01432_4
+		5 o p_01432_5
+	a (DDD)V m_01436
+		0 o p_01436_0
+		1 o p_01436_1
+		2 o p_01436_2
 	<clinit> ()V <clinit>
 qe net/minecraft/src/c_00438
 	<init> (I)V <init>
-		0 o p_01821_0
+		0 o p_01820_0
 	a (Lfp;Leb;Lcy;IIII)Z m_00508
 		0 o p_00508_0
 		1 o p_00508_1
@@ -10776,12 +10776,12 @@ qe net/minecraft/src/c_00438
 		5 o p_00508_5
 		6 o p_00508_6
 qf net/minecraft/src/c_00439
-	a (Lco;)Z m_01822
+	a (Lco;)Z m_01821
+		0 o p_01821_0
+	a (DDD)V m_01822
 		0 o p_01822_0
-	a (DDD)V m_01823
-		0 o p_01823_0
-		1 o p_01823_1
-		2 o p_01823_2
+		1 o p_01822_1
+		2 o p_01822_2
 qg net/minecraft/src/c_00440
 	a f_01820
 	b f_01821
@@ -10793,126 +10793,126 @@ qg net/minecraft/src/c_00440
 	h f_01827
 	i f_01828
 	<init> ()V <init>
-	a (Lgq;)V m_01825
-		0 o p_01825_0
-	d ()V m_01826
-	a ()V m_01827
-	b ()V m_01828
-	a (Ljava/lang/String;Ljava/io/File;)V m_01829
+	a (Lgq;)V m_01824
+		0 o p_01824_0
+	d ()V m_01825
+	a ()V m_01826
+	b ()V m_01827
+	a (Ljava/lang/String;Ljava/io/File;)V m_01828
+		0 o p_01828_0
+		1 o p_01828_1
+	b (Ljava/lang/String;Ljava/io/File;)V m_01829
 		0 o p_01829_0
 		1 o p_01829_1
-	b (Ljava/lang/String;Ljava/io/File;)V m_01830
+	c (Ljava/lang/String;Ljava/io/File;)V m_01830
 		0 o p_01830_0
 		1 o p_01830_1
-	c (Ljava/lang/String;Ljava/io/File;)V m_01831
-		0 o p_01831_0
-		1 o p_01831_1
-	c ()V m_01832
-	a (Lhf;F)V m_01833
+	c ()V m_01831
+	a (Lhf;F)V m_01832
+		0 o p_01832_0
+		1 o p_01832_1
+	a (Ljava/lang/String;FFFFF)V m_01833
 		0 o p_01833_0
 		1 o p_01833_1
-	a (Ljava/lang/String;FFFFF)V m_01834
+		2 o p_01833_2
+		3 o p_01833_3
+		4 o p_01833_4
+		5 o p_01833_5
+	b (Ljava/lang/String;FFFFF)V m_01834
 		0 o p_01834_0
 		1 o p_01834_1
 		2 o p_01834_2
 		3 o p_01834_3
 		4 o p_01834_4
 		5 o p_01834_5
-	b (Ljava/lang/String;FFFFF)V m_01835
+	a (Ljava/lang/String;FF)V m_01835
 		0 o p_01835_0
 		1 o p_01835_1
 		2 o p_01835_2
-		3 o p_01835_3
-		4 o p_01835_4
-		5 o p_01835_5
-	a (Ljava/lang/String;FF)V m_01836
-		0 o p_01836_0
-		1 o p_01836_1
-		2 o p_01836_2
 	<clinit> ()V <clinit>
 qh net/minecraft/src/c_00441
 	a f_01829
 	b f_01830
 	<init> (II)V <init>
+		0 o p_01837_0
+		1 o p_01837_1
+	a (III)V m_01838
 		0 o p_01838_0
 		1 o p_01838_1
-	a (III)V m_01839
+		2 o p_01838_2
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a ()Z m_01615
+	b ()Z m_01602
+	g ()I m_01603
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	d ()I m_01622
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
+	a (Lcy;IIIILjava/util/Random;)V m_01839
 		0 o p_01839_0
 		1 o p_01839_1
 		2 o p_01839_2
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a ()Z m_01616
-	b ()Z m_01603
-	g ()I m_01604
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	d ()I m_01623
-	a (Lcy;IIILjava/util/Random;)V m_01619
+		3 o p_01839_3
+		4 o p_01839_4
+		5 o p_01839_5
+	h (Lcy;III)Z m_01840
+		0 o p_01840_0
+		1 o p_01840_1
+		2 o p_01840_2
+		3 o p_01840_3
+	i (Lcy;III)I m_01841
+		0 o p_01841_0
+		1 o p_01841_1
+		2 o p_01841_2
+		3 o p_01841_3
+	h ()Z m_01617
+	c (Lpk;III)Z m_01842
+		0 o p_01842_0
+		1 o p_01842_1
+		2 o p_01842_2
+		3 o p_01842_3
+	g (Lcy;IIII)I m_01843
+		0 o p_01843_0
+		1 o p_01843_1
+		2 o p_01843_2
+		3 o p_01843_3
+		4 o p_01843_4
+	a (Lcy;III)Z m_01637
+		0 o p_01637_0
+		1 o p_01637_1
+		2 o p_01637_2
+		3 o p_01637_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	b (Lcy;IIILjava/util/Random;)V m_01619
 		0 o p_01619_0
 		1 o p_01619_1
 		2 o p_01619_2
 		3 o p_01619_3
 		4 o p_01619_4
-	a (Lcy;IIIILjava/util/Random;)V m_01840
-		0 o p_01840_0
-		1 o p_01840_1
-		2 o p_01840_2
-		3 o p_01840_3
-		4 o p_01840_4
-		5 o p_01840_5
-	h (Lcy;III)Z m_01841
-		0 o p_01841_0
-		1 o p_01841_1
-		2 o p_01841_2
-		3 o p_01841_3
-	i (Lcy;III)I m_01842
-		0 o p_01842_0
-		1 o p_01842_1
-		2 o p_01842_2
-		3 o p_01842_3
-	h ()Z m_01618
-	c (Lpk;III)Z m_01843
-		0 o p_01843_0
-		1 o p_01843_1
-		2 o p_01843_2
-		3 o p_01843_3
-	g (Lcy;IIII)I m_01844
-		0 o p_01844_0
-		1 o p_01844_1
-		2 o p_01844_2
-		3 o p_01844_3
-		4 o p_01844_4
-	a (Lcy;III)Z m_01638
-		0 o p_01638_0
-		1 o p_01638_1
-		2 o p_01638_2
-		3 o p_01638_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	b (Lcy;IIILjava/util/Random;)V m_01620
-		0 o p_01620_0
-		1 o p_01620_1
-		2 o p_01620_2
-		3 o p_01620_3
-		4 o p_01620_4
 qi net/minecraft/src/c_00442
 	a f_01831
 	<init> ()V <init>
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_01846_0
+		0 o p_01845_0
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -10923,48 +10923,48 @@ qi net/minecraft/src/c_00442
 qj net/minecraft/src/c_00443
 	a f_01832
 	<init> (IZ)V <init>
-		0 o p_01847_0
-		1 o p_01847_1
-	a (I)I m_01612
-		0 o p_01612_0
-	a ()Z m_01616
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	e (Lcy;III)V m_01624
-		0 o p_01624_0
-		1 o p_01624_1
-		2 o p_01624_2
-		3 o p_01624_3
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	b ()Z m_01603
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
+		0 o p_01846_0
+		1 o p_01846_1
+	a (I)I m_01611
+		0 o p_01611_0
+	a ()Z m_01615
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	e (Lcy;III)V m_01623
+		0 o p_01623_0
+		1 o p_01623_1
+		2 o p_01623_2
+		3 o p_01623_3
+	a (ILjava/util/Random;)I m_01626
+		0 o p_01626_0
+		1 o p_01626_1
+	b ()Z m_01602
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
 qk net/minecraft/src/c_00444
 	a f_01833
 	<init> (II)V <init>
-		0 o p_01848_0
-		1 o p_01848_1
+		0 o p_01847_0
+		1 o p_01847_1
 	a (Lfp;Lcy;Leb;)Lfp; m_00510
 		0 o p_00510_0
 		1 o p_00510_1
 		2 o p_00510_2
 ql net/minecraft/src/c_00445
 	<init> ()V <init>
-	a (Lbe;)F m_01850
+	a (Lbe;)F m_01849
+		0 o p_01849_0
+	a (Lbe;I)Z m_01850
 		0 o p_01850_0
-	a (Lbe;I)Z m_01851
-		0 o p_01851_0
-		1 o p_01851_1
+		1 o p_01850_1
 	a (Lhf;)F m_00561
 		0 o p_00561_0
 	a (Lhf;I)Z m_00560
@@ -10974,40 +10974,40 @@ qm net/minecraft/src/c_00446
 	a f_01834
 	b f_01835
 	<init> (II)V <init>
-		0 o p_01852_0
-		1 o p_01852_1
+		0 o p_01851_0
+		1 o p_01851_1
 	hashCode ()I hashCode
 	equals (Ljava/lang/Object;)Z equals
-		0 o p_01854_0
+		0 o p_01853_0
 r net/minecraft/src/c_00447
 	<init> (IIILjava/lang/String;)V <init>
-		0 o p_01855_0
-		1 o p_01855_1
-		2 o p_01855_2
-		3 o p_01855_3
+		0 o p_01854_0
+		1 o p_01854_1
+		2 o p_01854_2
+		3 o p_01854_3
 s net/minecraft/src/c_00448
 	<init> (II)V <init>
-		0 o p_01856_0
-		1 o p_01856_1
-	a (ILjava/util/Random;)I m_01627
-		0 o p_01627_0
-		1 o p_01627_1
-	a (Ljava/util/Random;)I m_01626
+		0 o p_01855_0
+		1 o p_01855_1
+	a (ILjava/util/Random;)I m_01626
 		0 o p_01626_0
-	a (Lcy;IIILjava/util/Random;)V m_01619
-		0 o p_01619_0
-		1 o p_01619_1
-		2 o p_01619_2
-		3 o p_01619_3
-		4 o p_01619_4
+		1 o p_01626_1
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	a (Lcy;IIILjava/util/Random;)V m_01618
+		0 o p_01618_0
+		1 o p_01618_1
+		2 o p_01618_2
+		3 o p_01618_3
+		4 o p_01618_4
 t net/minecraft/src/c_00449
 	<init> ()V <init>
 	<init> (DDDDZ)V <init>
-		0 o p_01858_0
-		1 o p_01858_1
-		2 o p_01858_2
-		3 o p_01858_3
-		4 o p_01858_4
+		0 o p_01857_0
+		1 o p_01857_1
+		2 o p_01857_2
+		3 o p_01857_3
+		4 o p_01857_4
 	a (Ljava/io/DataInputStream;)V m_00841
 		0 o p_00841_0
 	a (Ljava/io/DataOutputStream;)V m_00842
@@ -11016,12 +11016,12 @@ t net/minecraft/src/c_00449
 u net/minecraft/src/c_00450
 	b f_01836
 	<init> ()V <init>
-	a (Lbl;DDDF)V m_01860
-		0 o p_01860_0
-		1 o p_01860_1
-		2 o p_01860_2
-		3 o p_01860_3
-		4 o p_01860_4
+	a (Lbl;DDDF)V m_01859
+		0 o p_01859_0
+		1 o p_01859_1
+		2 o p_01859_2
+		3 o p_01859_3
+		4 o p_01859_4
 	a (Lji;DDDF)V m_00753
 		0 o p_00753_0
 		1 o p_00753_1
@@ -11030,88 +11030,88 @@ u net/minecraft/src/c_00450
 		4 o p_00753_4
 v net/minecraft/src/c_00451
 	<init> (II)V <init>
-		0 o p_01861_0
-		1 o p_01861_1
-	a (I)I m_01612
-		0 o p_01612_0
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	c (Lcy;III)V m_01636
-		0 o p_01636_0
-		1 o p_01636_1
-		2 o p_01636_2
-		3 o p_01636_3
-	b (Lcy;IIII)V m_01621
+		0 o p_01860_0
+		1 o p_01860_1
+	a (I)I m_01611
+		0 o p_01611_0
+	a (Lcy;IIII)V m_01621
 		0 o p_01621_0
 		1 o p_01621_1
 		2 o p_01621_2
 		3 o p_01621_3
 		4 o p_01621_4
-w net/minecraft/src/c_00452
-	<init> (Ljava/lang/String;FF)V <init>
-		0 o p_01862_0
-		1 o p_01862_1
-		2 o p_01862_2
-	a ()Ljava/lang/String; m_00141
-x net/minecraft/src/c_00453
-	<init> (II)V <init>
-		0 o p_01863_0
-		1 o p_01863_1
-	d (Lcy;III)Lco; m_01615
-		0 o p_01615_0
-		1 o p_01615_1
-		2 o p_01615_2
-		3 o p_01615_3
-	a (Lpk;III)V m_01644
-		0 o p_01644_0
-		1 o p_01644_1
-		2 o p_01644_2
-		3 o p_01644_3
-	a ()Z m_01616
-	b ()Z m_01603
-	a_ (Lcy;III)Z m_01864
-		0 o p_01864_0
-		1 o p_01864_1
-		2 o p_01864_2
-		3 o p_01864_3
-	a (Lcy;IIII)V m_01622
-		0 o p_01622_0
-		1 o p_01622_1
-		2 o p_01622_2
-		3 o p_01622_3
-		4 o p_01622_4
-	b (Lpk;IIII)Z m_01609
-		0 o p_01609_0
-		1 o p_01609_1
-		2 o p_01609_2
-		3 o p_01609_3
-		4 o p_01609_4
-	a (Ljava/util/Random;)I m_01626
-		0 o p_01626_0
-	c ()I m_01637
-	a (Lcy;IIILlw;)V m_01648
-		0 o p_01648_0
-		1 o p_01648_1
-		2 o p_01648_2
-		3 o p_01648_3
-		4 o p_01648_4
-	b (Lcy;IIILjava/util/Random;)V m_01620
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	c (Lcy;III)V m_01635
+		0 o p_01635_0
+		1 o p_01635_1
+		2 o p_01635_2
+		3 o p_01635_3
+	b (Lcy;IIII)V m_01620
 		0 o p_01620_0
 		1 o p_01620_1
 		2 o p_01620_2
 		3 o p_01620_3
 		4 o p_01620_4
+w net/minecraft/src/c_00452
+	<init> (Ljava/lang/String;FF)V <init>
+		0 o p_01861_0
+		1 o p_01861_1
+		2 o p_01861_2
+	a ()Ljava/lang/String; m_00141
+x net/minecraft/src/c_00453
+	<init> (II)V <init>
+		0 o p_01862_0
+		1 o p_01862_1
+	d (Lcy;III)Lco; m_01614
+		0 o p_01614_0
+		1 o p_01614_1
+		2 o p_01614_2
+		3 o p_01614_3
+	a (Lpk;III)V m_01643
+		0 o p_01643_0
+		1 o p_01643_1
+		2 o p_01643_2
+		3 o p_01643_3
+	a ()Z m_01615
+	b ()Z m_01602
+	a_ (Lcy;III)Z m_01863
+		0 o p_01863_0
+		1 o p_01863_1
+		2 o p_01863_2
+		3 o p_01863_3
+	a (Lcy;IIII)V m_01621
+		0 o p_01621_0
+		1 o p_01621_1
+		2 o p_01621_2
+		3 o p_01621_3
+		4 o p_01621_4
+	b (Lpk;IIII)Z m_01608
+		0 o p_01608_0
+		1 o p_01608_1
+		2 o p_01608_2
+		3 o p_01608_3
+		4 o p_01608_4
+	a (Ljava/util/Random;)I m_01625
+		0 o p_01625_0
+	c ()I m_01636
+	a (Lcy;IIILlw;)V m_01647
+		0 o p_01647_0
+		1 o p_01647_1
+		2 o p_01647_2
+		3 o p_01647_3
+		4 o p_01647_4
+	b (Lcy;IIILjava/util/Random;)V m_01619
+		0 o p_01619_0
+		1 o p_01619_1
+		2 o p_01619_2
+		3 o p_01619_3
+		4 o p_01619_4
 y net/minecraft/src/c_00454
 	<init> (Ljava/lang/String;FF)V <init>
-		0 o p_01865_0
-		1 o p_01865_1
-		2 o p_01865_2
+		0 o p_01864_0
+		1 o p_01864_1
+		2 o p_01864_2
 	a ()Ljava/lang/String; m_00141
 z net/minecraft/src/c_00455
 	d f_01837
@@ -11120,39 +11120,39 @@ z net/minecraft/src/c_00455
 	c f_01840
 	<init> ()V <init>
 	<init> (Ljava/util/Random;)V <init>
+		0 o p_01866_0
+	a (DDD)D m_01867
 		0 o p_01867_0
-	a (DDD)D m_01868
+		1 o p_01867_1
+		2 o p_01867_2
+	b (DDD)D m_01868
 		0 o p_01868_0
 		1 o p_01868_1
 		2 o p_01868_2
-	b (DDD)D m_01869
+	a (IDD)D m_01869
 		0 o p_01869_0
 		1 o p_01869_1
 		2 o p_01869_2
-	a (IDD)D m_01870
+	a (IDDD)D m_01870
 		0 o p_01870_0
 		1 o p_01870_1
 		2 o p_01870_2
-	a (IDDD)D m_01871
+		3 o p_01870_3
+	a (DD)D m_01871
 		0 o p_01871_0
 		1 o p_01871_1
-		2 o p_01871_2
-		3 o p_01871_3
-	a (DD)D m_01872
+	a ([DDDDIIIDDDD)V m_01872
 		0 o p_01872_0
 		1 o p_01872_1
-	a ([DDDDIIIDDDD)V m_01873
-		0 o p_01873_0
-		1 o p_01873_1
-		2 o p_01873_2
-		3 o p_01873_3
-		4 o p_01873_4
-		5 o p_01873_5
-		6 o p_01873_6
-		7 o p_01873_7
-		8 o p_01873_8
-		9 o p_01873_9
-		10 o p_01873_10
+		2 o p_01872_2
+		3 o p_01872_3
+		4 o p_01872_4
+		5 o p_01872_5
+		6 o p_01872_6
+		7 o p_01872_7
+		8 o p_01872_8
+		9 o p_01872_9
+		10 o p_01872_10
 net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	b f_02423
 	a f_02424
@@ -11209,87 +11209,87 @@ net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	N f_02475
 	ab f_02476
 	<init> (Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V <init>
+		0 o p_02550_0
+		1 o p_02550_1
+		2 o p_02550_2
+		3 o p_02550_3
+		4 o p_02550_4
+		5 o p_02550_5
+	a (Lhr;)V m_02551
 		0 o p_02551_0
-		1 o p_02551_1
-		2 o p_02551_2
-		3 o p_02551_3
-		4 o p_02551_4
-		5 o p_02551_5
-	a (Lhr;)V m_02552
+	a (Ljava/lang/String;I)V m_02552
 		0 o p_02552_0
-	a (Ljava/lang/String;I)V m_02553
-		0 o p_02553_0
-		1 o p_02553_1
-	a ()V m_02554
-	q ()V m_02555
-	a (IIIIII)V m_02556
-		0 o p_02556_0
-		1 o p_02556_1
-		2 o p_02556_2
-		3 o p_02556_3
-		4 o p_02556_4
-		5 o p_02556_5
-	b ()Ljava/io/File; m_02557
-	a (Ljava/lang/String;)Ljava/io/File; m_02558
-		0 o p_02558_0
-	r ()Ljp; m_02559
-	a (Lbp;)V m_02560
+		1 o p_02552_1
+	a ()V m_02553
+	q ()V m_02554
+	a (IIIIII)V m_02555
+		0 o p_02555_0
+		1 o p_02555_1
+		2 o p_02555_2
+		3 o p_02555_3
+		4 o p_02555_4
+		5 o p_02555_5
+	b ()Ljava/io/File; m_02556
+	a (Ljava/lang/String;)Ljava/io/File; m_02557
+		0 o p_02557_0
+	r ()Ljp; m_02558
+	a (Lbp;)V m_02559
+		0 o p_02559_0
+	c (Ljava/lang/String;)V m_02560
 		0 o p_02560_0
-	c (Ljava/lang/String;)V m_02561
-		0 o p_02561_0
-	c ()V m_02562
+	c ()V m_02561
 	run ()V run
-	s ()V m_02564
-	a (J)V m_02565
-		0 o p_02565_0
-	d ()V m_02566
-	e ()V m_02567
-	f ()V m_02568
-	g ()V m_02569
-	a (IZ)V m_02570
+	s ()V m_02563
+	a (J)V m_02564
+		0 o p_02564_0
+	d ()V m_02565
+	e ()V m_02566
+	f ()V m_02567
+	g ()V m_02568
+	a (IZ)V m_02569
+		0 o p_02569_0
+		1 o p_02569_1
+	a (I)V m_02570
 		0 o p_02570_0
-		1 o p_02570_1
-	a (I)V m_02571
-		0 o p_02571_0
-	h ()V m_02572
-	a (II)V m_02573
-		0 o p_02573_0
-		1 o p_02573_1
-	t ()V m_02574
-	i ()V m_02575
-	u ()V m_02576
-	j ()Z m_02577
-	b (Ljava/lang/String;)V m_02578
-		0 o p_02578_0
-	k ()V m_02579
-	a (Lcy;)V m_02580
+	h ()V m_02571
+	a (II)V m_02572
+		0 o p_02572_0
+		1 o p_02572_1
+	t ()V m_02573
+	i ()V m_02574
+	u ()V m_02575
+	j ()Z m_02576
+	b (Ljava/lang/String;)V m_02577
+		0 o p_02577_0
+	k ()V m_02578
+	a (Lcy;)V m_02579
+		0 o p_02579_0
+	a (Lcy;Ljava/lang/String;)V m_02580
 		0 o p_02580_0
-	a (Lcy;Ljava/lang/String;)V m_02581
+		1 o p_02580_1
+	a (Lcy;Ljava/lang/String;Leb;)V m_02581
 		0 o p_02581_0
 		1 o p_02581_1
-	a (Lcy;Ljava/lang/String;Leb;)V m_02582
+		2 o p_02581_2
+	d (Ljava/lang/String;)V m_02582
 		0 o p_02582_0
-		1 o p_02582_1
-		2 o p_02582_2
-	d (Ljava/lang/String;)V m_02583
+	a (Ljava/lang/String;Ljava/io/File;)V m_02583
 		0 o p_02583_0
-	a (Ljava/lang/String;Ljava/io/File;)V m_02584
-		0 o p_02584_0
-		1 o p_02584_1
-	l ()Lbm; m_02585
-	m ()Ljava/lang/String; m_02586
-	n ()Ljava/lang/String; m_02587
-	o ()Ljava/lang/String; m_02588
-	p ()V m_02589
-	a (Ljava/lang/String;Ljava/lang/String;)V m_02590
+		1 o p_02583_1
+	l ()Lbm; m_02584
+	m ()Ljava/lang/String; m_02585
+	n ()Ljava/lang/String; m_02586
+	o ()Ljava/lang/String; m_02587
+	p ()V m_02588
+	a (Ljava/lang/String;Ljava/lang/String;)V m_02589
+		0 o p_02589_0
+		1 o p_02589_1
+	a (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V m_02590
 		0 o p_02590_0
 		1 o p_02590_1
-	a (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V m_02591
-		0 o p_02591_0
-		1 o p_02591_1
-		2 o p_02591_2
+		2 o p_02590_2
 	main ([Ljava/lang/String;)V main
-		0 o p_02592_0
+		0 o p_02591_0
 	<clinit> ()V <clinit>
 net/minecraft/client/MinecraftApplet net/minecraft/client/MinecraftApplet
 	a f_02477
@@ -11297,12 +11297,12 @@ net/minecraft/client/MinecraftApplet net/minecraft/client/MinecraftApplet
 	c f_02479
 	<init> ()V <init>
 	init ()V init
-	a ()V m_02596
+	a ()V m_02595
 	start ()V start
 	stop ()V stop
 	destroy ()V destroy
-	b ()V m_02600
-	c ()V m_02601
+	b ()V m_02599
+	c ()V m_02600
 net/minecraft/isom/IsomPreviewApplet net/minecraft/isom/IsomPreviewApplet
 	a f_02480
 	<init> ()V <init>

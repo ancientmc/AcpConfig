@@ -39,28 +39,27 @@ public class MinecraftJar {
 
         try (ZipFile zip = new ZipFile(file)) {
             for (ZipEntry entry : Collections.list(zip.entries())) {
-                if(!entry.getName().endsWith(".class")) {
+                String[] exclude = {"com/jcraft", "paulscode/sound"};
+
+                // Only include Minecraft classes in the JAR object.
+                if(!entry.getName().endsWith(".class") && !entry.getName().contains(Arrays.stream(exclude).findAny().get())) {
                     continue;
                 }
                 ClassReader reader = new ClassReader(zip.getInputStream(entry));
                 ClassNode classNode = new ClassNode();
                 reader.accept(classNode, 0);
 
-                // Exclude non-Minecraft classes from the JAR object.
-                String[] exclude = {"com/jcraft", "paulscode/sound"};
 
-                if (!classNode.sourceFile.contains(Arrays.stream(exclude).findAny().get())) {
-                    classes.add(new Types.Clazz(classNode.name, classNode.superName));
+                classes.add(new Types.Clazz(classNode.name, classNode.superName));
 
-                    for (FieldNode fieldNode : classNode.fields) {
-                        fields.add(new Types.Field(classNode.name, fieldNode.desc, fieldNode.name));
-                    }
+                for (FieldNode fieldNode : classNode.fields) {
+                    fields.add(new Types.Field(classNode.name, fieldNode.desc, fieldNode.name));
+                }
 
-                    for (MethodNode methodNode : classNode.methods) {
-                        String superParent = getSuperParent(json, classNode.name, methodNode.name, methodNode.desc);
-                        boolean inherited = superParent != null;
-                        methods.add(new Types.Method(classNode.name, superParent, methodNode.desc, methodNode.name, getParameters(methodNode), inherited));
-                    }
+                for (MethodNode methodNode : classNode.methods) {
+                    String superParent = getSuperParent(json, classNode.name, methodNode.name, methodNode.desc);
+                    boolean inherited = superParent != null;
+                    methods.add(new Types.Method(classNode.name, superParent, methodNode.desc, methodNode.name, getParameters(methodNode), inherited));
                 }
             }
         } catch (IOException e) {
