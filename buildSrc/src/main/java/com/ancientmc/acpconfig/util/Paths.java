@@ -28,6 +28,6 @@ public class Paths {
         INTERMEDIATE_TSRG = "data/versions/" + version + "/mappings/intermediate.tsrg";
         EXC = "data/versions/" + version + "/inject/exceptions.txt";
         BLACKLIST = "data/versions/" + version + "/inject/blacklist.txt";
-        INHERITANCE = "data/versions/inheritance_map.json";
+        INHERITANCE = "data/versions/" + version + "/inheritance_map.json";
     }
 }
