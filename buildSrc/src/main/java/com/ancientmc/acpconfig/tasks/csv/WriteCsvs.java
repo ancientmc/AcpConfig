@@ -33,7 +33,7 @@ public abstract class WriteCsvs extends DefaultTask {
             List<String> lines = Files.readAllLines(tsrg.toPath());
             for(String line : lines) {
                 if (line.contains("/src/c_")) {
-                    classes.add(line.substring(line.lastIndexOf("net/minecraft/src/c_")));
+                    classes.add(line.substring(line.lastIndexOf("com/mojang/minecraft/src/c_")));
                 } else if (line.contains(" f_")) {
                     fields.add(line.substring(line.lastIndexOf("f_")));
                 } else if (line.contains(" m_")) {

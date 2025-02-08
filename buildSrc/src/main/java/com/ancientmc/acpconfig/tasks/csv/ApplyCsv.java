@@ -3,6 +3,7 @@ package com.ancientmc.acpconfig.tasks.csv;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.tasks.InputFile;
+import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
 
 import java.io.BufferedWriter;
@@ -19,23 +20,26 @@ public abstract class ApplyCsv extends DefaultTask {
 
     @TaskAction
     public void exec() {
-        File tsrg = getTsrg().getAsFile().get();
+        File inTsrg = getInTsrg().getAsFile().get();
         File csv = getCsv().getAsFile().get();
+        File outTsrg = getOutTsrg().getAsFile().get();
+
 
         try {
-            List<String> oldLines = Files.readAllLines(tsrg.toPath());
+            List<String> oldLines = Files.readAllLines(inTsrg.toPath());
             List<String> newLines = new ArrayList<>();
             Map<String, String> map = getMap(csv);
 
             // Add first line of old to new
             newLines.add(oldLines.get(0));
 
-            for (String line : oldLines) {
+            for (int i = 1; i < oldLines.size(); i++) {
+                String line = oldLines.get(i);
                 String replacedLine = getReplacedLine(line, map);
                 newLines.add(replacedLine);
             }
 
-            write(tsrg, newLines);
+            write(outTsrg, newLines);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -84,5 +88,8 @@ public abstract class ApplyCsv extends DefaultTask {
     public abstract RegularFileProperty getCsv();
 
     @InputFile
-    public abstract RegularFileProperty getTsrg();
+    public abstract RegularFileProperty getInTsrg();
+
+    @OutputFile
+    public abstract RegularFileProperty getOutTsrg();
 }

@@ -38,8 +38,8 @@ import com.ancientmc.acpconfig.tasks.csv.*
 import com.ancientmc.acpconfig.util.*
 
 ext {
-    VERSION_ONE = 'a1.2.6' // The old version
-    VERSION_TWO = 'b1.0' // The new version
+    VERSION_ONE = 'c0.0.13a_03' // The old version
+    VERSION_TWO = 'c0.0.14a_08' // The new version
 
     VERSION_MANIFEST = 'data/version_manifest.json'
 }
@@ -107,12 +107,37 @@ task downloadVersionManifest(type: Download) {
         args('--input', paths.INJECT_JAR, '--output', paths.SRG_JAR, '--map', paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
     }
 
-    def csv = task "writeCsvs.${ver}"(type: WriteCsvs, dependsOn: [splitJar, inheritance]) {
+    def writeCsv = task "writeCsvs.${ver}"(type: WriteCsvs, dependsOn: [splitJar, inheritance]) {
         tsrg = file(paths.INTERMEDIATE_TSRG)
-        classCsv = file("data/versions/${ver}/mappings/csv/classes.csv")
-        fieldCsv = file("data/versions/${ver}/mappings/csv/fields.csv")
-        methodCsv = file("data/versions/${ver}/mappings/csv/methods.csv")
-        paramCsv = file("data/versions/${ver}/mappings/csv/params.csv")
+        classCsv = file("${Paths.DIR_VERSION}/mappings/csv/classes.csv")
+        fieldCsv = file("${Paths.DIR_VERSION}/mappings/csv/fields.csv")
+        methodCsv = file("${Paths.DIR_VERSION}/mappings/csv/methods.csv")
+        paramCsv = file("${Paths.DIR_VERSION}/mappings/csv/params.csv")
+    }
+
+    def csvs = [Paths.CLASS_CSV, Paths.FIELD_CSV, Paths.METHOD_CSV, Paths.PARAM_CSV]
+    csvs.each { table ->
+        int i = csvs.indexOf(table)
+        def name = table.substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()
+        def temp = "${Paths.DIR_VERSION}/mappings/temp/temp-" + i + ".tsrg";
+
+        def applyCsv = task "apply${name}.${ver}"(type: ApplyCsv) {
+            csv = file(table)
+            inTsrg = i == 0 ? file(Paths.INTERMEDIATE_TSRG) : file(temp)
+            outTsrg = i == 3 ? file(Paths.CUNEIFORM_TSRG) : file("${Paths.DIR_VERSION}/mappings/temp/temp-" + (i + 1) + ".tsrg")
+            mustRunAfter i != 0 ? "apply${csvs.get(i - 1).substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()}.${ver}" : [:]
+        }
+    }
+
+    def csvTasks = Arrays.asList("applyClasses." + ver, "applyFields." + ver, "applyMethods." + ver, "applyParams." + ver)
+    def applyAllCsv = task "applyAllCsv.${ver}" (type: GradleBuild) {
+        setTasks(csvTasks)
+    }
+
+    def deobfMapped = task "deobfMapped.${ver}"(type: JavaExec) {
+        mainClass = 'net.neoforged.art.Main'
+        classpath = files(project.configurations.getByName('forgeart'))
+        args('--input', paths.INJECT_JAR, '--output', paths.CNF_JAR, '--map', paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
     }
 }
 

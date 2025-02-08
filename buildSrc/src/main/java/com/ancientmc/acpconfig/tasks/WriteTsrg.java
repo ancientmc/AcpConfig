@@ -97,7 +97,7 @@ public abstract class WriteTsrg extends DefaultTask {
 
     // get the name if it's a prenamed class file, otherwise get the intermediary with an id
     public static String getDeobfClass(Types.Clazz clazz, Map<Types.Clazz, String> classIds) {
-        return clazz.name.contains("net/minecraft") ? clazz.name : "net/minecraft/src/c_" + classIds.get(clazz);
+        return clazz.name.contains("com/mojang/minecraft/Minecraft") ? clazz.name : "com/mojang/minecraft/src/c_" + classIds.get(clazz);
     }
 
     public static String getDeobfMethod(Types.Method method, String id) {
