@@ -26,13 +26,8 @@ import com.ancientmc.acpconfig.tasks.csv.*
 import com.ancientmc.acpconfig.util.*
 
 ext {
-    VERSION_ONE = 'c0.0.13a_03' // The old version // TODO: replace this dual-version thing with a more complex (but better) subproject hierarchy.
-    VERSION_TWO = 'c0.0.14a_08' // The new version
-
-    VERSION_MANIFEST = 'data/version_manifest.json' // TODO: replace with custom manifest for versions not in launcher
+    VERSION_MANIFEST = 'data/version_manifest.json' // TODO: replace with custom manifest that includes versions not in launcher
 }
-
-
 
 task downloadVersionManifest(type: Download) {
     src 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
