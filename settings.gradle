@@ -1,3 +1,16 @@
 rootProject.name = 'AcpConfig'
 
-include(':test_data')
+def root = new File(rootDir, '/data/versions/')
+
+// Dev phases
+def phases = ['classic', 'indev', 'infdev', 'alpha', 'beta', 'release', 'snapshot']
+phases.each { phase ->
+    def sub = new File(root, '/' + phase + '/')
+    if (sub.exists()) {
+        sub.eachDir() { dir ->
+            def proj = rootDir.toPath().relativize(dir.toPath()).toFile()
+            include proj.path
+            project(':' + proj.path).name = dir.name
+        }
+    }
+}

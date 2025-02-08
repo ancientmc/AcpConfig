@@ -2,6 +2,7 @@ package com.ancientmc.acpconfig.util;
 
 public class Paths {
     public static String DIR_VERSION;
+    public static String DIR_LIBRARIES;
     public static String VERSION_MANIFEST;
     public static String JSON;
     public static String BASE_JAR;
@@ -24,6 +25,7 @@ public class Paths {
 
     public Paths(String version) {
         DIR_VERSION = String.join("/", "data/versions", getPhase(version), version); // data/versions/${phase}/${version}
+        DIR_LIBRARIES = DIR_VERSION + "/game/lib/";
         VERSION_MANIFEST = "data/version_manifest.json";
         JSON = DIR_VERSION + "/game/" + version + ".json";
         BASE_JAR = DIR_VERSION + "/game/jars/" + version + ".jar";

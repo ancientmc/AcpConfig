@@ -12,13 +12,6 @@ repositories {
     maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
 }
 
-configurations {
-    inheritance
-    jarsplitter
-    forgeart
-    mcinject
-}
-
 dependencies {
     implementation 'com.google.code.gson:gson:2.11.0'
     implementation 'commons-io:commons-io:2.18.0'
@@ -26,11 +19,6 @@ dependencies {
     implementation 'org.ow2.asm:asm-tree:9.7.1'
     implementation 'net.minecraftforge:mapping-verifier:2.0.8:fatjar'
     implementation 'net.minecraftforge:srgutils:0.5.4'
-
-    inheritance "net.neoforged.installertools:installertools:3.0.2"
-    jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2'
-    forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
-    mcinject 'de.oceanlabs.mcp:mcinjector:4.1-am'
 }
 
 import com.ancientmc.acpconfig.tasks.*
@@ -38,10 +26,10 @@ import com.ancientmc.acpconfig.tasks.csv.*
 import com.ancientmc.acpconfig.util.*
 
 ext {
-    VERSION_ONE = 'c0.0.13a_03' // The old version
+    VERSION_ONE = 'c0.0.13a_03' // The old version // TODO: replace this dual-version thing with a more complex (but better) subproject hierarchy.
     VERSION_TWO = 'c0.0.14a_08' // The new version
 
-    VERSION_MANIFEST = 'data/version_manifest.json'
+    VERSION_MANIFEST = 'data/version_manifest.json' // TODO: replace with custom manifest for versions not in launcher
 }
 
 
@@ -51,63 +39,88 @@ task downloadVersionManifest(type: Download) {
     dest VERSION_MANIFEST
 }
 
-[VERSION_ONE, VERSION_TWO].each { ver ->
-    Paths paths = new Paths(ver)
+subprojects {
+    repositories {
+        mavenCentral()
+        maven { url = 'https://maven.neoforged.net' }
+        maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
+    }
 
-    def json = task "downloadJson.${ver}"(type: Download, dependsOn: downloadVersionManifest) {
-        src Json.getJsonUrl(file(paths.VERSION_MANIFEST), ver).toString()
+    configurations {
+        inheritance
+        jarsplitter
+        forgeart
+        mcinject
+    }
+
+    dependencies {
+        inheritance "net.neoforged.installertools:installertools:3.0.2"
+        jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2'
+        forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
+        mcinject 'de.oceanlabs.mcp:mcinjector:4.1-am'
+    }
+
+    ext {
+        VERSION = project.name
+    }
+
+    // Init paths
+    Paths paths = new Paths(VERSION)
+
+    task downloadJson(type: Download, dependsOn: rootProject.downloadVersionManifest) {
+        src Json.getJarUrl(file(paths.VERSION_MANIFEST), VERSION).toString()
         dest paths.JSON
     }
 
-    def mcJar = task "downloadJar.${ver}"(type: Download, dependsOn: json) {
+    task downloadClient(type: Download, dependsOn: downloadJson) {
         src Json.getJarUrl(file(paths.JSON), "client").toString()
         dest paths.BASE_JAR
     }
 
-    def libraries = task "downloadLibraries.${ver}"(type: DownloadLibraries, dependsOn: json) {
-        def list = [file(paths.JSON), file(paths.JARDEP_JSON)].toList()
+    task downloadLibraries(type: DownloadLibraries, dependsOn: downloadJson){
+        def list = Collections.singletonList(file(Paths.JSON))
         jsons = list
-        libs = file("data/versions/${ver}/game/lib/")
+        libs = file(paths.DIR_LIBRARIES)
     }
 
-    def inheritance = task "extractInheritance.${ver}"(type: JavaExec, dependsOn: mcJar) {
+    task extractInheritance(type: JavaExec, dependsOn: downloadClient) {
         mainClass = 'net.neoforged.installertools.ConsoleTool'
-        classpath = files(project.configurations.getByName('inheritance'))
+        classpath = files(project.configurations.named('inheritance'))
         args('--task', 'EXTRACT_INHERITANCE', '--input', paths.BASE_JAR, '--output', paths.INHERITANCE)
     }
 
-    // Only generate version one, and only if we have a new version that's completely different from the one before it.
-    // Otherwise we'll just update the TSRG
-    def writeTsrg = task "writeTsrg.${ver}"(type: WriteTsrg, dependsOn: mcJar) {
+    // Only generate if the version to update is radically different than the previous one.
+    // Otherwise we'll just match and update. Also, make sure to check the inheritance map first for any access errors so inheritance is intact.
+    task writeTsrg(type: WriteTsrg, dependsOn: downloadClient) {
         jar = file(paths.BASE_JAR)
         tsrg = file(paths.INTERMEDIATE_TSRG)
         inheritanceJson = file(paths.INHERITANCE)
     }
 
-    def splitJar = task "split.${ver}"(type: JavaExec, dependsOn: mcJar) {
+    task split(type: JavaExec, dependsOn: [downloadClient, writeTsrg]) {
         mainClass = 'net.neoforged.jarsplitter.ConsoleTool'
         classpath = files(project.configurations.getByName('jarsplitter'))
         args('--input', paths.BASE_JAR, '--slim', paths.SLIM_JAR, '--extra', paths.EXTRA_JAR, '--srg', paths.INTERMEDIATE_TSRG)
     }
 
-    def verify = task "verifyTsrg.${ver}"(type: VerifyMappings) {
+    task verify(type: VerifyMappings, dependsOn: [split, writeTsrg]) {
         jar = file(paths.SLIM_JAR)
         tsrg = file(paths.INTERMEDIATE_TSRG)
     }
 
-    def mcinject = task "mcinject.${ver}"(type: JavaExec, dependsOn: splitJar) {
+    task mcinject(type: JavaExec, dependsOn: split) {
         mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
-        classpath = files(project.configurations.getByName('mcinject'))
+        classpath = files(project.configurations.named('mcinject'))
         args('--in', paths.SLIM_JAR, '--out', paths.INJECT_JAR, '--lvt=LVT', '--exc', paths.EXC, '--blacklist', paths.BLACKLIST)
     }
 
-    def deobf = task "deobf.${ver}"(type: JavaExec, dependsOn: mcinject) {
+    task deobfIntermediate(type: JavaExec, dependsOn: mcinject) {
         mainClass = 'net.neoforged.art.Main'
         classpath = files(project.configurations.getByName('forgeart'))
         args('--input', paths.INJECT_JAR, '--output', paths.SRG_JAR, '--map', paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
     }
 
-    def writeCsv = task "writeCsvs.${ver}"(type: WriteCsvs, dependsOn: [splitJar, inheritance]) {
+    task writeCsvs(type: WriteCsvs, dependsOn: [split, extractInheritance]) {
         tsrg = file(paths.INTERMEDIATE_TSRG)
         classCsv = file("${Paths.DIR_VERSION}/mappings/csv/classes.csv")
         fieldCsv = file("${Paths.DIR_VERSION}/mappings/csv/fields.csv")
@@ -121,33 +134,23 @@ task downloadVersionManifest(type: Download) {
         def name = table.substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()
         def temp = "${Paths.DIR_VERSION}/mappings/temp/temp-" + i + ".tsrg";
 
-        def applyCsv = task "apply${name}.${ver}"(type: ApplyCsv) {
+        // This is garbage and needs to be refactored
+        def applyCsv = task "apply${name}"(type: ApplyCsv) {
             csv = file(table)
             inTsrg = i == 0 ? file(Paths.INTERMEDIATE_TSRG) : file(temp)
             outTsrg = i == 3 ? file(Paths.CUNEIFORM_TSRG) : file("${Paths.DIR_VERSION}/mappings/temp/temp-" + (i + 1) + ".tsrg")
-            mustRunAfter i != 0 ? "apply${csvs.get(i - 1).substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()}.${ver}" : [:]
+            mustRunAfter i != 0 ? "apply${csvs.get(i - 1).substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()}" : [:]
         }
     }
 
-    def csvTasks = Arrays.asList("applyClasses." + ver, "applyFields." + ver, "applyMethods." + ver, "applyParams." + ver)
-    def applyAllCsv = task "applyAllCsv.${ver}" (type: GradleBuild) {
+    def csvTasks = ["applyClasses", "applyFields", "applyMethods", "applyParams"]
+    task applyAllCsv (type: GradleBuild) {
         setTasks(csvTasks)
     }
 
-    def deobfMapped = task "deobfMapped.${ver}"(type: JavaExec) {
+    task deobfMapped (type: JavaExec, dependsOn: applyAllCsv) {
         mainClass = 'net.neoforged.art.Main'
         classpath = files(project.configurations.getByName('forgeart'))
         args('--input', paths.INJECT_JAR, '--output', paths.CNF_JAR, '--map', paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
     }
 }
-
-task generateFreshMappings (type: GradleBuild) {
-    List<String> list = Arrays.asList(
-            "downloadVersionManifest", "downloadJson." + VERSION_ONE,
-            "downloadJar." + VERSION_ONE, "writeTsrg." + VERSION_ONE,
-            "split." + VERSION_ONE, "writeCsvs." + VERSION_ONE
-    )
-    setTasks(list)
-}
-
-
