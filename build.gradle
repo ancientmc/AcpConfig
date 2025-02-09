@@ -29,7 +29,7 @@ ext {
     VERSION_MANIFEST = 'data/version_manifest.json' // TODO: replace with custom manifest that includes versions not in launcher
 }
 
-task downloadVersionManifest(type: Download) {
+tasks.register('downloadVersionManifest', Download) {
     src 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
     dest VERSION_MANIFEST
 }
@@ -45,14 +45,14 @@ subprojects {
         inheritance
         jarsplitter
         forgeart
-        mcinject
+        mcinjector
     }
 
     dependencies {
-        inheritance "net.neoforged.installertools:installertools:3.0.2"
-        jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2'
-        forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
-        mcinject 'de.oceanlabs.mcp:mcinjector:4.1-am'
+        inheritance "net.neoforged.installertools:installertools:3.0.2:fatjar"
+        jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
+        forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
+        mcinjector 'de.oceanlabs.mcp:mcinjector:4.1-am'
     }
 
     ext {
@@ -62,23 +62,27 @@ subprojects {
     // Init paths
     Paths paths = new Paths(VERSION)
 
-    task downloadJson(type: Download, dependsOn: rootProject.downloadVersionManifest) {
-        src Json.getJarUrl(file(paths.VERSION_MANIFEST), VERSION).toString()
+    tasks.register('downloadJson', Download) {
+        dependsOn rootProject.downloadVersionManifest
+        src Json.getJsonUrl(downloadVersionManifest.dest, VERSION).toString()
         dest paths.JSON
     }
 
-    task downloadClient(type: Download, dependsOn: downloadJson) {
+    tasks.register('downloadClient', Download) {
+        dependsOn downloadJson
         src Json.getJarUrl(file(paths.JSON), "client").toString()
         dest paths.BASE_JAR
     }
 
-    task downloadLibraries(type: DownloadLibraries, dependsOn: downloadJson){
+    tasks.register('downloadLibraries', DownloadLibraries) {
+        dependsOn downloadJson
         def list = Collections.singletonList(file(Paths.JSON))
         jsons = list
         libs = file(paths.DIR_LIBRARIES)
     }
 
-    task extractInheritance(type: JavaExec, dependsOn: downloadClient) {
+    tasks.register('extractInheritance', JavaExec) {
+        dependsOn downloadClient
         mainClass = 'net.neoforged.installertools.ConsoleTool'
         classpath = files(project.configurations.named('inheritance'))
         args('--task', 'EXTRACT_INHERITANCE', '--input', paths.BASE_JAR, '--output', paths.INHERITANCE)
@@ -86,66 +90,71 @@ subprojects {
 
     // Only generate if the version to update is radically different than the previous one.
     // Otherwise we'll just match and update. Also, make sure to check the inheritance map first for any access errors so inheritance is intact.
-    task writeTsrg(type: WriteTsrg, dependsOn: downloadClient) {
+    tasks.register('writeTsrg', WriteTsrg) {
+        dependsOn downloadClient
         jar = file(paths.BASE_JAR)
         tsrg = file(paths.INTERMEDIATE_TSRG)
         inheritanceJson = file(paths.INHERITANCE)
     }
 
-    task split(type: JavaExec, dependsOn: [downloadClient, writeTsrg]) {
+    tasks.register('split', JavaExec) {
+        dependsOn(downloadClient, writeTsrg)
         mainClass = 'net.neoforged.jarsplitter.ConsoleTool'
-        classpath = files(project.configurations.getByName('jarsplitter'))
+        classpath = files(project.configurations.named('jarsplitter'))
         args('--input', paths.BASE_JAR, '--slim', paths.SLIM_JAR, '--extra', paths.EXTRA_JAR, '--srg', paths.INTERMEDIATE_TSRG)
     }
 
-    task verify(type: VerifyMappings, dependsOn: [split, writeTsrg]) {
+    tasks.register('verify', VerifyMappings) {
+        dependsOn(split, writeTsrg)
         jar = file(paths.SLIM_JAR)
         tsrg = file(paths.INTERMEDIATE_TSRG)
     }
 
-    task mcinject(type: JavaExec, dependsOn: split) {
+    tasks.register('mcinject', JavaExec) {
+        dependsOn split
         mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
-        classpath = files(project.configurations.named('mcinject'))
+        classpath = files(project.configurations.named('mcinjector'))
         args('--in', paths.SLIM_JAR, '--out', paths.INJECT_JAR, '--lvt=LVT', '--exc', paths.EXC, '--blacklist', paths.BLACKLIST)
     }
 
-    task deobfIntermediate(type: JavaExec, dependsOn: mcinject) {
+    tasks.register('deobfIntermediate', JavaExec) {
+        dependsOn mcinject
         mainClass = 'net.neoforged.art.Main'
-        classpath = files(project.configurations.getByName('forgeart'))
+        classpath = files(project.configurations.named('forgeart'))
         args('--input', paths.INJECT_JAR, '--output', paths.SRG_JAR, '--map', paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
     }
 
-    task writeCsvs(type: WriteCsvs, dependsOn: [split, extractInheritance]) {
+    tasks.register('writeCsvs', WriteCsvs) {
+        dependsOn(split, extractInheritance)
         tsrg = file(paths.INTERMEDIATE_TSRG)
-        classCsv = file("${Paths.DIR_VERSION}/mappings/csv/classes.csv")
-        fieldCsv = file("${Paths.DIR_VERSION}/mappings/csv/fields.csv")
-        methodCsv = file("${Paths.DIR_VERSION}/mappings/csv/methods.csv")
-        paramCsv = file("${Paths.DIR_VERSION}/mappings/csv/params.csv")
+        classCsv = file("mappings/csv/classes.csv")
+        fieldCsv = file("mappings/csv/fields.csv")
+        methodCsv = file("mappings/csv/methods.csv")
+        paramCsv = file("mappings/csv/params.csv")
     }
 
-    def csvs = [Paths.CLASS_CSV, Paths.FIELD_CSV, Paths.METHOD_CSV, Paths.PARAM_CSV]
+    def csvs = ['classes', 'fields', 'methods', 'params']
     csvs.each { table ->
         int i = csvs.indexOf(table)
-        def name = table.substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()
-        def temp = "${Paths.DIR_VERSION}/mappings/temp/temp-" + i + ".tsrg";
+        def name = table.capitalize()
+        def temp = projectDir.path + "/mappings/temp/temp-" + i + ".tsrg"
 
         // This is garbage and needs to be refactored
-        def applyCsv = task "apply${name}"(type: ApplyCsv) {
-            csv = file(table)
-            inTsrg = i == 0 ? file(Paths.INTERMEDIATE_TSRG) : file(temp)
-            outTsrg = i == 3 ? file(Paths.CUNEIFORM_TSRG) : file("${Paths.DIR_VERSION}/mappings/temp/temp-" + (i + 1) + ".tsrg")
-            mustRunAfter i != 0 ? "apply${csvs.get(i - 1).substring(table.lastIndexOf('/') + 1).replace('.csv', "").capitalize()}" : [:]
+        // I don't know why but the projectDir.path is needed here for it to run.
+        def applyCsv = tasks.register("apply${name}", ApplyCsv) {
+            csv = file(projectDir.path + "/mappings/csv/" + table + ".csv")
+            inTsrg = i == 0 ? file(projectDir.path + '/' + paths.INTERMEDIATE_TSRG) : file(temp)
+            outTsrg = i == 3 ? file(projectDir.path + '/' + paths.CUNEIFORM_TSRG) : file(projectDir.path + "/mappings/temp/temp-" + (i + 1) + ".tsrg")
+            mustRunAfter i != 0 ? "apply${csvs.get(i - 1).capitalize()}" : [:]
         }
     }
 
-    def csvTasks = ["applyClasses", "applyFields", "applyMethods", "applyParams"]
-    task applyAllCsv (type: GradleBuild) {
-        setTasks(csvTasks)
-    }
+    tasks.register('applyAllCsv') { dependsOn(applyClasses, applyFields, applyMethods, applyParams) }
 
-    task deobfMapped (type: JavaExec, dependsOn: applyAllCsv) {
+    tasks.register('deobfMapped', JavaExec) {
+        dependsOn applyAllCsv
         mainClass = 'net.neoforged.art.Main'
-        classpath = files(project.configurations.getByName('forgeart'))
+        classpath = files(project.configurations.named('forgeart'))
         args('--input', paths.INJECT_JAR, '--output', paths.CNF_JAR, '--map', paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
     }
 }

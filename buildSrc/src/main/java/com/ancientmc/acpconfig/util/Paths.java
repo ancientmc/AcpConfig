@@ -1,7 +1,6 @@
 package com.ancientmc.acpconfig.util;
 
 public class Paths {
-    public static String DIR_VERSION;
     public static String DIR_LIBRARIES;
     public static String VERSION_MANIFEST;
     public static String JSON;
@@ -24,27 +23,26 @@ public class Paths {
 
 
     public Paths(String version) {
-        DIR_VERSION = String.join("/", "data/versions", getPhase(version), version); // data/versions/${phase}/${version}
-        DIR_LIBRARIES = DIR_VERSION + "/game/lib/";
-        VERSION_MANIFEST = "data/version_manifest.json";
-        JSON = DIR_VERSION + "/game/" + version + ".json";
-        BASE_JAR = DIR_VERSION + "/game/jars/" + version + ".jar";
-        SLIM_JAR = DIR_VERSION + "/game/jars/" + version + "-slim.jar";
-        EXTRA_JAR = DIR_VERSION + "/game/jars/" + version + "-extra.jar";
-        INJECT_JAR = DIR_VERSION + "/game/jars/" + version + "-inject.jar";
-        SRG_JAR = DIR_VERSION + "/game/jars/" + version + "-srg.jar";
-        CNF_JAR = DIR_VERSION + "/game/jars/" + version + "-cnf.jar";
+        DIR_LIBRARIES = "game/lib/";
+        VERSION_MANIFEST = "../../../version_manifest.json";
+        JSON = "game/" + version + ".json";
+        BASE_JAR = "game/jars/" + version + ".jar";
+        SLIM_JAR = "game/jars/" + version + "-slim.jar";
+        EXTRA_JAR = "game/jars/" + version + "-extra.jar";
+        INJECT_JAR = "game/jars/" + version + "-inject.jar";
+        SRG_JAR = "game/jars/" + version + "-srg.jar";
+        CNF_JAR = "game/jars/" + version + "-cnf.jar";
 
         JARDEP_JSON = "data/jardep.json";
-        INTERMEDIATE_TSRG = DIR_VERSION + "/mappings/intermediate.tsrg";
-        CUNEIFORM_TSRG = DIR_VERSION + "/mappings/cuneiform.tsrg";
-        EXC = DIR_VERSION + "/inject/exceptions.txt";
-        BLACKLIST = DIR_VERSION + "/inject/blacklist.txt";
-        INHERITANCE = DIR_VERSION + "/inheritance_map.json";
-        CLASS_CSV = DIR_VERSION + "/mappings/csv/classes.csv";
-        FIELD_CSV = DIR_VERSION + "/mappings/csv/fields.csv";
-        METHOD_CSV = DIR_VERSION + "/mappings/csv/methods.csv";
-        PARAM_CSV = DIR_VERSION + "/mappings/csv/params.csv";
+        INTERMEDIATE_TSRG = "mappings/intermediate.tsrg";
+        CUNEIFORM_TSRG = "mappings/cuneiform.tsrg";
+        EXC = "inject/exceptions.txt";
+        BLACKLIST = "inject/blacklist.txt";
+        INHERITANCE = "inheritance_map.json";
+        CLASS_CSV = "mappings/csv/classes.csv";
+        FIELD_CSV = "mappings/csv/fields.csv";
+        METHOD_CSV = "mappings/csv/methods.csv";
+        PARAM_CSV = "mappings/csv/params.csv";
     }
 
     public static String getPhase(String version) {
