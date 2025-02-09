@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Very similar to WriteTsrg, but also
+ * Very similar to WriteTsrg, but also parses the match file for the new JAR version, and assigns new IDs to everything else.
  */
 public abstract class UpdateTsrg extends DefaultTask {
 
@@ -52,7 +52,7 @@ public abstract class UpdateTsrg extends DefaultTask {
     }
 
     public static String getDeobfClass(Types.Clazz clazz, File match) {
-        String old = MatchParser.getOld(clazz.name, match, "c ", 1);
+        String old = MatchParser.getOld(clazz.name, match, "c", 1);
         return old != null ? old : clazz.name; // TODO: finish. Make sure new classes get new IDs.
     }
 
