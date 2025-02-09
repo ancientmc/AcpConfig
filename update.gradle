@@ -1,0 +1,30 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+ext {
+    OLD = 'c0.0.13a_03'
+    NEW = 'c0.0.14a_08'
+    OLD_DIR = String.join('/', 'data/versions', phase(OLD as String), OLD)
+    NEW_DIR = String.join('/', 'data/versions', phase(NEW as String), NEW)
+    MATCH = 'data/matches/' + OLD + '-' + NEW + '.match'
+}
+
+tasks.register('updateTsrg') {
+
+}
+
+static def phase(String ver) {
+    if (ver.startsWith('c')) return 'classic'
+    if (ver.startsWith('in-')) return 'indev'
+    if (ver.startsWith('inf-')) return 'infdev'
+    if (ver.startsWith('a')) return 'alpha'
+    if (ver.startsWith('b')) return 'beta'
+    if (ver.matches('[0-9]+w[0-9]+[a-z]+')) return 'snapshot'
+    return 'release'
+}
+

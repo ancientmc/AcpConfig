@@ -27,6 +27,7 @@ public class Json {
      * @return The URL for the JSON file on Minecraft's website.
      */
     public static String getJsonUrl(File manifest, String version) {
+        System.out.println("Version is: " + version);
         try {
             if (manifest.exists()) {
                 JsonObject manifestObj = Util.getJsonAsObject(manifest);

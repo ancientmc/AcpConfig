@@ -25,15 +25,6 @@ import com.ancientmc.acpconfig.tasks.*
 import com.ancientmc.acpconfig.tasks.csv.*
 import com.ancientmc.acpconfig.util.*
 
-ext {
-    VERSION_MANIFEST = 'data/version_manifest.json' // TODO: replace with custom manifest that includes versions not in launcher
-}
-
-tasks.register('downloadVersionManifest', Download) {
-    src 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
-    dest VERSION_MANIFEST
-}
-
 subprojects {
     repositories {
         mavenCentral()
@@ -57,20 +48,20 @@ subprojects {
 
     ext {
         VERSION = project.name
+        VERSION_MANIFEST = '../../version_manifest.json'
     }
 
     // Init paths
     Paths paths = new Paths(VERSION)
 
     tasks.register('downloadJson', Download) {
-        dependsOn rootProject.downloadVersionManifest
-        src Json.getJsonUrl(downloadVersionManifest.dest, VERSION).toString()
+        src Json.getJsonUrl(file(VERSION_MANIFEST), VERSION).toString()
         dest paths.JSON
     }
 
     tasks.register('downloadClient', Download) {
         dependsOn downloadJson
-        src Json.getJarUrl(file(paths.JSON), "client").toString()
+        src Json.getJarUrl(file(paths.JSON), 'client').toString()
         dest paths.BASE_JAR
     }
 
@@ -127,22 +118,22 @@ subprojects {
     tasks.register('writeCsvs', WriteCsvs) {
         dependsOn(split, extractInheritance)
         tsrg = file(paths.INTERMEDIATE_TSRG)
-        classCsv = file("mappings/csv/classes.csv")
-        fieldCsv = file("mappings/csv/fields.csv")
-        methodCsv = file("mappings/csv/methods.csv")
-        paramCsv = file("mappings/csv/params.csv")
+        classCsv = file('mappings/csv/classes.csv')
+        fieldCsv = file('mappings/csv/fields.csv')
+        methodCsv = file('mappings/csv/methods.csv')
+        paramCsv = file('mappings/csv/params.csv')
     }
 
     def csvs = ['classes', 'fields', 'methods', 'params']
     csvs.each { table ->
         int i = csvs.indexOf(table)
         def name = table.capitalize()
-        def temp = projectDir.path + "/mappings/temp/temp-" + i + ".tsrg"
+        def temp = projectDir.path + '/mappings/temp/temp-' + i + '.tsrg'
 
         // This is garbage and needs to be refactored
         // I don't know why but the projectDir.path is needed here for it to run.
         def applyCsv = tasks.register("apply${name}", ApplyCsv) {
-            csv = file(projectDir.path + "/mappings/csv/" + table + ".csv")
+            csv = file(projectDir.path + '/mappings/csv/' + table + ".csv")
             inTsrg = i == 0 ? file(projectDir.path + '/' + paths.INTERMEDIATE_TSRG) : file(temp)
             outTsrg = i == 3 ? file(projectDir.path + '/' + paths.CUNEIFORM_TSRG) : file(projectDir.path + "/mappings/temp/temp-" + (i + 1) + ".tsrg")
             mustRunAfter i != 0 ? "apply${csvs.get(i - 1).capitalize()}" : [:]
