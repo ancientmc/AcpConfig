@@ -2,22 +2,13 @@ plugins {
     id 'java-library'
 }
 
-group = 'org.example'
+group = 'com.ancientmc'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
     maven { url = 'https://maven.neoforged.net' }
     maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
-}
-
-dependencies {
-    implementation 'com.google.code.gson:gson:2.11.0'
-    implementation 'commons-io:commons-io:2.18.0'
-    implementation 'org.ow2.asm:asm:9.7.1'
-    implementation 'org.ow2.asm:asm-tree:9.7.1'
-    implementation 'net.minecraftforge:mapping-verifier:2.0.8:fatjar'
-    implementation 'net.minecraftforge:srgutils:0.5.4'
 }
 
 import com.ancientmc.acpconfig.tasks.*
@@ -43,10 +34,6 @@ subprojects {
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
         forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
         mcinjector 'de.oceanlabs.mcp:mcinjector:4.1-am'
-    }
-
-    tasks.register('showName') {
-        logger.lifecycle(project.name)
     }
 
     version = project.name

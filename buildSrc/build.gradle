@@ -8,15 +8,6 @@ repositories {
     maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
 }
 
-configurations {
-    forgeart
-    fernflower
-}
-
-sourceSets {
-    main
-}
-
 dependencies {
     implementation gradleApi()
     implementation 'com.google.code.gson:gson:2.11.0'
@@ -25,7 +16,4 @@ dependencies {
     implementation 'org.ow2.asm:asm-tree:9.7.1'
     implementation 'net.minecraftforge:mapping-verifier:2.0.8:fatjar'
     implementation 'net.minecraftforge:srgutils:0.5.4'
-
-    forgeart 'net.neoforged:AutoRenamingTool:2.0.8'
-    fernflower 'com.ancientmc:fernflower:1.0'
 }

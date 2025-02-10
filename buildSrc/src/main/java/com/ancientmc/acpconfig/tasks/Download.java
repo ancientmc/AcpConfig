@@ -23,7 +23,6 @@ public abstract class Download extends DefaultTask {
         }
     }
 
-
     @Input
     public abstract Property<String> getSrc();
 
