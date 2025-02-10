@@ -102,13 +102,13 @@ com/mojang/minecraft/f com/mojang/minecraft/util/HitResult
 	a x
 	b y
 	c z
-	d face
+	d side
 	<init> (IIIII)V <init>
 		0 o type
 		1 o x
 		2 o y
 		3 o z
-		4 o face
+		4 o side
 	a (Lcom/mojang/minecraft/e;I)F distanceToBlock
 		0 o player
 		1 o blockId

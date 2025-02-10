@@ -43,7 +43,7 @@ public class Json {
                 return null;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return null;
     }
@@ -54,7 +54,7 @@ public class Json {
      * @param jsons The JSON files that the libraries are parsed from. Two JSONS are parsed: Minecraft's Version JSON created by
      *              Mojang, and a jar dependencies JSON file for libraries that are stored in the Minecraft JAR file (usually sound libraries).
      * @return The list of libraries.
-     * @throws IOException
+     * @throws IOException exception.
      */
     public static Map<String, String> getLibraryMap(List<File> jsons) throws IOException {
         Map<String, String> map = new HashMap<>();
