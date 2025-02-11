@@ -1,0 +1,2552 @@
+{
+  "com/mojang/minecraft/level/b/a": {
+    "name": "com/mojang/minecraft/level/b/a",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/c;)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 2
+      },
+      "a (I)V": {
+        "access": 2
+      },
+      "a (IIII)V": {
+        "access": 2
+      },
+      "a (IIIII)J": {
+        "access": 2
+      },
+      "a (Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;": {
+        "access": 17
+      },
+      "a ([I)V": {
+        "access": 2
+      },
+      "b ([I)V": {
+        "access": 2
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/c;",
+        "access": 2
+      },
+      "b": {
+        "desc": "I",
+        "access": 2
+      },
+      "c": {
+        "desc": "I",
+        "access": 2
+      },
+      "d": {
+        "desc": "I",
+        "access": 2
+      },
+      "e": {
+        "desc": "Ljava/util/Random;",
+        "access": 2
+      },
+      "f": {
+        "desc": "[B",
+        "access": 2
+      },
+      "g": {
+        "desc": "[I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/b/a": {
+    "name": "com/mojang/minecraft/b/a",
+    "access": 49,
+    "superName": "com/mojang/minecraft/b/c",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/b/c;Ljava/lang/String;I)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (CI)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (II)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (Lcom/mojang/minecraft/b/d;)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "b ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "c ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      }
+    },
+    "fields": {
+      "e": {
+        "desc": "Lcom/mojang/minecraft/b/c;",
+        "access": 2
+      },
+      "f": {
+        "desc": "Ljava/lang/String;",
+        "access": 2
+      },
+      "g": {
+        "desc": "I",
+        "access": 2
+      },
+      "h": {
+        "desc": "Ljava/lang/String;",
+        "access": 2
+      },
+      "i": {
+        "desc": "I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/b/c": {
+    "name": "com/mojang/minecraft/b/c",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 1
+      },
+      "a (CI)V": {
+        "access": 4
+      },
+      "a (II)V": {
+        "access": 1
+      },
+      "a (IIIII)V": {
+        "access": 12
+      },
+      "a (IIIIII)V": {
+        "access": 12
+      },
+      "a (Lcom/mojang/minecraft/b/d;)V": {
+        "access": 4
+      },
+      "a (Lcom/mojang/minecraft/c;II)V": {
+        "access": 17
+      },
+      "a (Ljava/lang/String;III)V": {
+        "access": 17
+      },
+      "b ()V": {
+        "access": 1
+      },
+      "b (Ljava/lang/String;III)V": {
+        "access": 17
+      },
+      "c ()V": {
+        "access": 1
+      },
+      "d ()V": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/c;",
+        "access": 4
+      },
+      "b": {
+        "desc": "I",
+        "access": 4
+      },
+      "c": {
+        "desc": "I",
+        "access": 4
+      },
+      "d": {
+        "desc": "Ljava/util/List;",
+        "access": 4
+      }
+    }
+  },
+  "com/mojang/minecraft/b/b": {
+    "name": "com/mojang/minecraft/b/b",
+    "access": 49,
+    "superName": "com/mojang/minecraft/b/c",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (II)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (Lcom/mojang/minecraft/b/d;)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/c"
+      }
+    }
+  },
+  "com/mojang/minecraft/b/e": {
+    "name": "com/mojang/minecraft/b/e",
+    "access": 49,
+    "superName": "com/mojang/minecraft/b/c",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/b/c;)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (II)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (Lcom/mojang/minecraft/b/d;)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/c"
+      }
+    },
+    "fields": {
+      "e": {
+        "desc": "Lcom/mojang/minecraft/b/c;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/b/d": {
+    "name": "com/mojang/minecraft/b/d",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (IIIIILjava/lang/String;)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "I",
+        "access": 1
+      },
+      "b": {
+        "desc": "I",
+        "access": 1
+      },
+      "c": {
+        "desc": "I",
+        "access": 1
+      },
+      "d": {
+        "desc": "I",
+        "access": 1
+      },
+      "e": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      },
+      "f": {
+        "desc": "I",
+        "access": 1
+      },
+      "g": {
+        "desc": "Z",
+        "access": 1
+      },
+      "h": {
+        "desc": "Z",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/b/g": {
+    "name": "com/mojang/minecraft/b/g",
+    "access": 49,
+    "superName": "com/mojang/minecraft/b/f",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/b/c;)V": {
+        "access": 1
+      },
+      "a (I)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/f"
+      },
+      "a ([Ljava/lang/String;)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/f"
+      }
+    }
+  },
+  "com/mojang/minecraft/b/f": {
+    "name": "com/mojang/minecraft/b/f",
+    "access": 33,
+    "superName": "com/mojang/minecraft/b/c",
+    "interfaces": [
+      "java/lang/Runnable"
+    ],
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/b/c;)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (I)V": {
+        "access": 4
+      },
+      "a (II)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a (Lcom/mojang/minecraft/b/d;)V": {
+        "access": 20,
+        "override": "com/mojang/minecraft/b/c"
+      },
+      "a ([Ljava/lang/String;)V": {
+        "access": 4
+      },
+      "run ()V": {
+        "access": 1,
+        "override": "java/lang/Runnable"
+      }
+    },
+    "fields": {
+      "e": {
+        "desc": "Ljava/lang/String;",
+        "access": 4
+      },
+      "f": {
+        "desc": "Lcom/mojang/minecraft/b/c;",
+        "access": 2
+      },
+      "g": {
+        "desc": "Z",
+        "access": 2
+      },
+      "h": {
+        "desc": "Z",
+        "access": 2
+      },
+      "i": {
+        "desc": "[Ljava/lang/String;",
+        "access": 2
+      },
+      "j": {
+        "desc": "Ljava/lang/String;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/b/h": {
+    "name": "com/mojang/minecraft/b/h",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Ljava/lang/String;Lcom/mojang/minecraft/a/a;)V": {
+        "access": 1
+      },
+      "a (Ljava/lang/String;)I": {
+        "access": 17
+      },
+      "a (Ljava/lang/String;III)V": {
+        "access": 17
+      },
+      "a (Ljava/lang/String;IIIZ)V": {
+        "access": 2
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "[I",
+        "access": 2
+      },
+      "b": {
+        "desc": "I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/particle/Particle": {
+    "name": "com/mojang/minecraft/particle/Particle",
+    "access": 33,
+    "superName": "com/mojang/minecraft/Entity",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/Level;FFFFFFI)V": {
+        "access": 1
+      },
+      "render (Lcom/mojang/minecraft/a/c;FFFFFF)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1,
+        "override": "com/mojang/minecraft/Entity"
+      }
+    },
+    "fields": {
+      "age": {
+        "desc": "I",
+        "access": 2
+      },
+      "lifetime": {
+        "desc": "I",
+        "access": 2
+      },
+      "size": {
+        "desc": "F",
+        "access": 2
+      },
+      "tex": {
+        "desc": "I",
+        "access": 1
+      },
+      "uo": {
+        "desc": "F",
+        "access": 2
+      },
+      "vo": {
+        "desc": "F",
+        "access": 2
+      },
+      "xd": {
+        "desc": "F",
+        "access": 2
+      },
+      "yd": {
+        "desc": "F",
+        "access": 2
+      },
+      "zd": {
+        "desc": "F",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/Level": {
+    "name": "com/mojang/minecraft/level/Level",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/io/Serializable"
+    ],
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a (FFF)Z": {
+        "access": 2
+      },
+      "a (III)Z": {
+        "access": 2
+      },
+      "a (IIII)V": {
+        "access": 2
+      },
+      "addListener$74652038 (Lcom/mojang/minecraft/a/g;)V": {
+        "access": 1
+      },
+      "addToTickNextTick (IIII)V": {
+        "access": 1
+      },
+      "b (IIII)V": {
+        "access": 2
+      },
+      "calcLightDepths (IIII)V": {
+        "access": 1
+      },
+      "containsAnyLiquid (Lcom/mojang/minecraft/phys/AABB;)Z": {
+        "access": 1
+      },
+      "containsLiquid (Lcom/mojang/minecraft/phys/AABB;I)Z": {
+        "access": 1
+      },
+      "finalize ()V": {
+        "access": 1,
+        "override": "java/lang/Object"
+      },
+      "findSpawn ()V": {
+        "access": 1
+      },
+      "getBrightness (III)F": {
+        "access": 1
+      },
+      "getCaveness (FFFF)F": {
+        "access": 1
+      },
+      "getCaveness (Lcom/mojang/minecraft/Entity;)F": {
+        "access": 1
+      },
+      "getCubes (Lcom/mojang/minecraft/phys/AABB;)Ljava/util/ArrayList;": {
+        "access": 1
+      },
+      "getGroundLevel ()F": {
+        "access": 1
+      },
+      "getHighestTile (II)I": {
+        "access": 1
+      },
+      "getTile (III)I": {
+        "access": 1
+      },
+      "getWaterLevel ()F": {
+        "access": 1
+      },
+      "initTransient ()V": {
+        "access": 1
+      },
+      "isFree (Lcom/mojang/minecraft/phys/AABB;)Z": {
+        "access": 1
+      },
+      "isLightBlocker (III)Z": {
+        "access": 1
+      },
+      "isLit (III)Z": {
+        "access": 1
+      },
+      "isSolid (FFFF)Z": {
+        "access": 1
+      },
+      "isSolidTile (III)Z": {
+        "access": 1
+      },
+      "removeListener$74652038 (Lcom/mojang/minecraft/a/g;)V": {
+        "access": 1
+      },
+      "setData (III[B)V": {
+        "access": 1
+      },
+      "setSpawnPos (IIIF)V": {
+        "access": 1
+      },
+      "setTile (IIII)Z": {
+        "access": 1
+      },
+      "setTileNoNeighborChange (IIII)Z": {
+        "access": 1
+      },
+      "setTileNoUpdate (IIII)Z": {
+        "access": 1
+      },
+      "swap (IIIIII)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Ljava/util/ArrayList;",
+        "access": 130
+      },
+      "b": {
+        "desc": "[I",
+        "access": 130
+      },
+      "blocks": {
+        "desc": "[B",
+        "access": 0
+      },
+      "c": {
+        "desc": "Ljava/util/Random;",
+        "access": 130
+      },
+      "createTime": {
+        "desc": "J",
+        "access": 1
+      },
+      "creator": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      },
+      "d": {
+        "desc": "I",
+        "access": 130
+      },
+      "depth": {
+        "desc": "I",
+        "access": 1
+      },
+      "e": {
+        "desc": "Ljava/util/ArrayList;",
+        "access": 130
+      },
+      "entities": {
+        "desc": "Ljava/util/ArrayList;",
+        "access": 1
+      },
+      "height": {
+        "desc": "I",
+        "access": 1
+      },
+      "name": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      },
+      "rotSpawn": {
+        "desc": "F",
+        "access": 1
+      },
+      "serialVersionUID": {
+        "desc": "J",
+        "access": 25
+      },
+      "tickCount": {
+        "desc": "I",
+        "access": 2
+      },
+      "unprocessed": {
+        "desc": "I",
+        "access": 0
+      },
+      "width": {
+        "desc": "I",
+        "access": 1
+      },
+      "xSpawn": {
+        "desc": "I",
+        "access": 1
+      },
+      "ySpawn": {
+        "desc": "I",
+        "access": 1
+      },
+      "zSpawn": {
+        "desc": "I",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/player/a": {
+    "name": "com/mojang/minecraft/player/a",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 1
+      },
+      "a (IZ)V": {
+        "access": 1
+      },
+      "b ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "F",
+        "access": 1
+      },
+      "b": {
+        "desc": "F",
+        "access": 1
+      },
+      "c": {
+        "desc": "Z",
+        "access": 1
+      },
+      "d": {
+        "desc": "Z",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/player/b": {
+    "name": "com/mojang/minecraft/player/b",
+    "access": 49,
+    "superName": "com/mojang/minecraft/player/a",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/player/a"
+      },
+      "a (IZ)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/player/a"
+      },
+      "b ()V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/player/a"
+      }
+    },
+    "fields": {
+      "e": {
+        "desc": "[Z",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/b/a/d": {
+    "name": "com/mojang/minecraft/level/b/a/d",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/b/a/c",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "\u003cinit\u003e (Ljava/util/Random;)V": {
+        "access": 1
+      },
+      "a (D)D": {
+        "access": 10
+      },
+      "a (DD)D": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/b/a/c"
+      },
+      "a (DDD)D": {
+        "access": 10
+      },
+      "a (IDDD)D": {
+        "access": 10
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "[I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/b/a/c": {
+    "name": "com/mojang/minecraft/level/b/a/c",
+    "access": 1057,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a (DD)D": {
+        "access": 1025
+      }
+    }
+  },
+  "com/mojang/minecraft/phys/AABB": {
+    "name": "com/mojang/minecraft/phys/AABB",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/io/Serializable"
+    ],
+    "methods": {
+      "\u003cinit\u003e (FFFFFF)V": {
+        "access": 1
+      },
+      "clipXCollide (Lcom/mojang/minecraft/phys/AABB;F)F": {
+        "access": 1
+      },
+      "clipYCollide (Lcom/mojang/minecraft/phys/AABB;F)F": {
+        "access": 1
+      },
+      "clipZCollide (Lcom/mojang/minecraft/phys/AABB;F)F": {
+        "access": 1
+      },
+      "cloneMove (FFF)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 1
+      },
+      "expand (FFF)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 1
+      },
+      "grow (FFF)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 1
+      },
+      "intersects (Lcom/mojang/minecraft/phys/AABB;)Z": {
+        "access": 1
+      },
+      "move (FFF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "epsilon": {
+        "desc": "F",
+        "access": 2
+      },
+      "serialVersionUID": {
+        "desc": "J",
+        "access": 25
+      },
+      "x0": {
+        "desc": "F",
+        "access": 1
+      },
+      "x1": {
+        "desc": "F",
+        "access": 1
+      },
+      "y0": {
+        "desc": "F",
+        "access": 1
+      },
+      "y1": {
+        "desc": "F",
+        "access": 1
+      },
+      "z0": {
+        "desc": "F",
+        "access": 1
+      },
+      "z1": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/level/b/a/b": {
+    "name": "com/mojang/minecraft/level/b/a/b",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/b/a/c",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/b/a/c;Lcom/mojang/minecraft/level/b/a/c;)V": {
+        "access": 1
+      },
+      "a (DD)D": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/b/a/c"
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/level/b/a/c;",
+        "access": 2
+      },
+      "b": {
+        "desc": "Lcom/mojang/minecraft/level/b/a/c;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/b/a/a": {
+    "name": "com/mojang/minecraft/level/b/a/a",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/b/a/c",
+    "methods": {
+      "\u003cinit\u003e (Ljava/util/Random;I)V": {
+        "access": 1
+      },
+      "a (DD)D": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/b/a/c"
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "[Lcom/mojang/minecraft/level/b/a/d;",
+        "access": 2
+      },
+      "b": {
+        "desc": "I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/b": {
+    "name": "com/mojang/minecraft/level/b",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (IIII)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "I",
+        "access": 1
+      },
+      "b": {
+        "desc": "I",
+        "access": 1
+      },
+      "c": {
+        "desc": "I",
+        "access": 1
+      },
+      "d": {
+        "desc": "I",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/b": {
+    "name": "com/mojang/minecraft/level/a/b",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      },
+      "a ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/c": {
+    "name": "com/mojang/minecraft/level/a/c",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      }
+    }
+  },
+  "com/mojang/minecraft/MinecraftApplet$1": {
+    "name": "com/mojang/minecraft/MinecraftApplet$1",
+    "access": 48,
+    "superName": "java/awt/Canvas",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/MinecraftApplet;)V": {
+        "access": 0
+      },
+      "addNotify ()V": {
+        "access": 17,
+        "override": "java/awt/Component"
+      },
+      "removeNotify ()V": {
+        "access": 17,
+        "override": "java/awt/Component"
+      }
+    },
+    "fields": {
+      "this$0": {
+        "desc": "Lcom/mojang/minecraft/MinecraftApplet;",
+        "access": 4112
+      }
+    }
+  },
+  "com/mojang/minecraft/MinecraftApplet": {
+    "name": "com/mojang/minecraft/MinecraftApplet",
+    "access": 33,
+    "superName": "java/applet/Applet",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "destroy ()V": {
+        "access": 1,
+        "override": "java/applet/Applet"
+      },
+      "init ()V": {
+        "access": 1,
+        "override": "java/applet/Applet"
+      },
+      "start ()V": {
+        "access": 1,
+        "override": "java/applet/Applet"
+      },
+      "startGameThread ()V": {
+        "access": 1
+      },
+      "stop ()V": {
+        "access": 1,
+        "override": "java/applet/Applet"
+      },
+      "stopGameThread ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "canvas": {
+        "desc": "Ljava/awt/Canvas;",
+        "access": 2
+      },
+      "minecraft": {
+        "desc": "Lcom/mojang/minecraft/c;",
+        "access": 2
+      },
+      "thread": {
+        "desc": "Ljava/lang/Thread;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/a/b": {
+    "name": "com/mojang/minecraft/a/b",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/util/Comparator"
+    ],
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/player/Player;)V": {
+        "access": 1
+      },
+      "compare (Ljava/lang/Object;Ljava/lang/Object;)I": {
+        "access": 4177,
+        "override": "java/util/Comparator"
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/player/Player;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/d": {
+    "name": "com/mojang/minecraft/level/a/d",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/level/Level;III)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b (Lcom/mojang/minecraft/level/Level;III)V": {
+        "access": 10
+      },
+      "b (Lcom/mojang/minecraft/level/Level;IIII)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    }
+  },
+  "com/mojang/minecraft/a/a": {
+    "name": "com/mojang/minecraft/a/a",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "a (Ljava/lang/String;I)I": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Ljava/util/HashMap;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a": {
+    "name": "com/mojang/minecraft/level/a",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/c;)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V": {
+        "access": 9
+      },
+      "a (Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z": {
+        "access": 17
+      },
+      "a (Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;": {
+        "access": 17
+      },
+      "a (Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/minecraft/level/Level;": {
+        "access": 17
+      },
+      "b (Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/c;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/e": {
+    "name": "com/mojang/minecraft/level/a/e",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/i",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b (Lcom/mojang/minecraft/level/Level;IIII)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    }
+  },
+  "com/mojang/minecraft/a/d": {
+    "name": "com/mojang/minecraft/a/d",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e ()V": {
+        "access": 2
+      },
+      "a ()Lcom/mojang/minecraft/a/d;": {
+        "access": 9
+      },
+      "a (FFFFFF)Z": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/phys/AABB;)Z": {
+        "access": 17
+      },
+      "a ([[FI)V": {
+        "access": 10
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "[[F",
+        "access": 2
+      },
+      "b": {
+        "desc": "Lcom/mojang/minecraft/a/d;",
+        "access": 10
+      },
+      "c": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "d": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "e": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "f": {
+        "desc": "[F",
+        "access": 2
+      },
+      "g": {
+        "desc": "[F",
+        "access": 2
+      },
+      "h": {
+        "desc": "[F",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/f": {
+    "name": "com/mojang/minecraft/level/a/f",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (I)V": {
+        "access": 4
+      },
+      "a (I)I": {
+        "access": 20,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    }
+  },
+  "com/mojang/minecraft/a/c": {
+    "name": "com/mojang/minecraft/a/c",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e ()V": {
+        "access": 2
+      },
+      "a ()V": {
+        "access": 17
+      },
+      "a (FFF)V": {
+        "access": 17
+      },
+      "a (FFFFF)V": {
+        "access": 17
+      },
+      "a (I)V": {
+        "access": 17
+      },
+      "a (III)V": {
+        "access": 17
+      },
+      "b ()V": {
+        "access": 17
+      },
+      "b (FFF)V": {
+        "access": 17
+      },
+      "c ()V": {
+        "access": 17
+      },
+      "d ()V": {
+        "access": 2
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/a/c;",
+        "access": 9
+      },
+      "b": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "c": {
+        "desc": "[F",
+        "access": 2
+      },
+      "d": {
+        "desc": "I",
+        "access": 2
+      },
+      "e": {
+        "desc": "F",
+        "access": 2
+      },
+      "f": {
+        "desc": "F",
+        "access": 2
+      },
+      "g": {
+        "desc": "F",
+        "access": 2
+      },
+      "h": {
+        "desc": "F",
+        "access": 2
+      },
+      "i": {
+        "desc": "F",
+        "access": 2
+      },
+      "j": {
+        "desc": "Z",
+        "access": 2
+      },
+      "k": {
+        "desc": "Z",
+        "access": 2
+      },
+      "l": {
+        "desc": "I",
+        "access": 2
+      },
+      "m": {
+        "desc": "I",
+        "access": 2
+      },
+      "n": {
+        "desc": "Z",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/g": {
+    "name": "com/mojang/minecraft/level/a/g",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (I)V": {
+        "access": 4
+      },
+      "a (I)I": {
+        "access": 20,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    }
+  },
+  "com/mojang/minecraft/a/f": {
+    "name": "com/mojang/minecraft/a/f",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/Level;IIII)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/a/d;)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/player/Player;)F": {
+        "access": 17
+      },
+      "a (Ljava/nio/IntBuffer;I)V": {
+        "access": 17
+      },
+      "b ()V": {
+        "access": 17
+      },
+      "c ()V": {
+        "access": 2
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "I",
+        "access": 9
+      },
+      "b": {
+        "desc": "Z",
+        "access": 1
+      },
+      "c": {
+        "desc": "Lcom/mojang/minecraft/level/Level;",
+        "access": 2
+      },
+      "d": {
+        "desc": "I",
+        "access": 2
+      },
+      "e": {
+        "desc": "Lcom/mojang/minecraft/a/c;",
+        "access": 10
+      },
+      "f": {
+        "desc": "I",
+        "access": 2
+      },
+      "g": {
+        "desc": "I",
+        "access": 2
+      },
+      "h": {
+        "desc": "I",
+        "access": 2
+      },
+      "i": {
+        "desc": "I",
+        "access": 2
+      },
+      "j": {
+        "desc": "I",
+        "access": 2
+      },
+      "k": {
+        "desc": "I",
+        "access": 2
+      },
+      "l": {
+        "desc": "[Z",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/player/Player": {
+    "name": "com/mojang/minecraft/player/Player",
+    "access": 33,
+    "superName": "com/mojang/minecraft/Entity",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V": {
+        "access": 1
+      },
+      "releaseAllKeys ()V": {
+        "access": 1
+      },
+      "setKey (IZ)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1,
+        "override": "com/mojang/minecraft/Entity"
+      }
+    },
+    "fields": {
+      "input": {
+        "desc": "Lcom/mojang/minecraft/player/a;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/h": {
+    "name": "com/mojang/minecraft/level/a/h",
+    "access": 49,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (I)V": {
+        "access": 4
+      },
+      "a ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/a/c;Lcom/mojang/minecraft/level/Level;IIII)Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b (III)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    }
+  },
+  "com/mojang/minecraft/Entity": {
+    "name": "com/mojang/minecraft/Entity",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/io/Serializable"
+    ],
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/Level;)V": {
+        "access": 1
+      },
+      "getBrightness ()F": {
+        "access": 1
+      },
+      "interpolateTurn (FF)V": {
+        "access": 1
+      },
+      "isFree (FFF)Z": {
+        "access": 1
+      },
+      "isInLava ()Z": {
+        "access": 1
+      },
+      "isInWater ()Z": {
+        "access": 1
+      },
+      "isLit ()Z": {
+        "access": 1
+      },
+      "move (FFF)V": {
+        "access": 1
+      },
+      "moveRelative (FFF)V": {
+        "access": 1
+      },
+      "remove ()V": {
+        "access": 1
+      },
+      "render (Lcom/mojang/minecraft/a/a;F)V": {
+        "access": 1
+      },
+      "resetPos ()V": {
+        "access": 4
+      },
+      "setLevel (Lcom/mojang/minecraft/level/Level;)V": {
+        "access": 1
+      },
+      "setPos (FFF)V": {
+        "access": 1
+      },
+      "setSize (FF)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1
+      },
+      "turn (FF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "bb": {
+        "desc": "Lcom/mojang/minecraft/phys/AABB;",
+        "access": 1
+      },
+      "bbHeight": {
+        "desc": "F",
+        "access": 1
+      },
+      "bbWidth": {
+        "desc": "F",
+        "access": 4
+      },
+      "heightOffset": {
+        "desc": "F",
+        "access": 1
+      },
+      "horizontalCollision": {
+        "desc": "Z",
+        "access": 1
+      },
+      "level": {
+        "desc": "Lcom/mojang/minecraft/level/Level;",
+        "access": 4
+      },
+      "onGround": {
+        "desc": "Z",
+        "access": 1
+      },
+      "removed": {
+        "desc": "Z",
+        "access": 1
+      },
+      "serialVersionUID": {
+        "desc": "J",
+        "access": 25
+      },
+      "x": {
+        "desc": "F",
+        "access": 1
+      },
+      "xRot": {
+        "desc": "F",
+        "access": 1
+      },
+      "xRotI": {
+        "desc": "F",
+        "access": 1
+      },
+      "xd": {
+        "desc": "F",
+        "access": 1
+      },
+      "xo": {
+        "desc": "F",
+        "access": 1
+      },
+      "y": {
+        "desc": "F",
+        "access": 1
+      },
+      "yRot": {
+        "desc": "F",
+        "access": 1
+      },
+      "yRotI": {
+        "desc": "F",
+        "access": 1
+      },
+      "yd": {
+        "desc": "F",
+        "access": 1
+      },
+      "yo": {
+        "desc": "F",
+        "access": 1
+      },
+      "z": {
+        "desc": "F",
+        "access": 1
+      },
+      "zd": {
+        "desc": "F",
+        "access": 1
+      },
+      "zo": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/a/e": {
+    "name": "com/mojang/minecraft/a/e",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/util/Comparator"
+    ],
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/player/Player;)V": {
+        "access": 1
+      },
+      "compare (Ljava/lang/Object;Ljava/lang/Object;)I": {
+        "access": 4177,
+        "override": "java/util/Comparator"
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/player/Player;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/i": {
+    "name": "com/mojang/minecraft/level/a/i",
+    "access": 33,
+    "superName": "com/mojang/minecraft/level/a/a",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      },
+      "a ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/a/c;IIII)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/level/Level;III)V": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIIII)Z": {
+        "access": 20,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V": {
+        "access": 1,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b (III)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "b (Lcom/mojang/minecraft/level/Level;III)Z": {
+        "access": 2
+      },
+      "b (Lcom/mojang/minecraft/level/Level;IIII)V": {
+        "access": 1,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "c ()Z": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      },
+      "d ()I": {
+        "access": 17,
+        "override": "com/mojang/minecraft/level/a/a"
+      }
+    },
+    "fields": {
+      "w": {
+        "desc": "I",
+        "access": 4
+      },
+      "x": {
+        "desc": "I",
+        "access": 4
+      },
+      "y": {
+        "desc": "I",
+        "access": 4
+      }
+    }
+  },
+  "com/mojang/minecraft/a/g": {
+    "name": "com/mojang/minecraft/a/g",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/a/a;)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17
+      },
+      "a (F)V": {
+        "access": 17
+      },
+      "a (III)V": {
+        "access": 17
+      },
+      "a (IIIIII)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/a/d;F)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/d;I)V": {
+        "access": 9
+      },
+      "a (Lcom/mojang/minecraft/level/Level;)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/player/Player;I)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/player/Player;Lcom/mojang/minecraft/d;II)V": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/level/Level;",
+        "access": 1
+      },
+      "b": {
+        "desc": "I",
+        "access": 1
+      },
+      "c": {
+        "desc": "I",
+        "access": 1
+      },
+      "d": {
+        "desc": "Ljava/util/Set;",
+        "access": 1
+      },
+      "e": {
+        "desc": "[Lcom/mojang/minecraft/a/f;",
+        "access": 1
+      },
+      "f": {
+        "desc": "I",
+        "access": 1
+      },
+      "g": {
+        "desc": "Lcom/mojang/minecraft/a/a;",
+        "access": 2
+      },
+      "h": {
+        "desc": "Ljava/nio/IntBuffer;",
+        "access": 2
+      },
+      "i": {
+        "desc": "[Lcom/mojang/minecraft/a/f;",
+        "access": 2
+      },
+      "j": {
+        "desc": "I",
+        "access": 2
+      },
+      "k": {
+        "desc": "I",
+        "access": 2
+      },
+      "l": {
+        "desc": "I",
+        "access": 2
+      },
+      "m": {
+        "desc": "F",
+        "access": 2
+      },
+      "n": {
+        "desc": "F",
+        "access": 2
+      },
+      "o": {
+        "desc": "F",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/character/e": {
+    "name": "com/mojang/minecraft/character/e",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (FFFFF)V": {
+        "access": 1
+      },
+      "\u003cinit\u003e (Lcom/mojang/minecraft/character/c;FF)V": {
+        "access": 2
+      },
+      "\u003cinit\u003e (Lcom/mojang/minecraft/character/e;FF)V": {
+        "access": 2
+      },
+      "a (FF)Lcom/mojang/minecraft/character/e;": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/character/c;",
+        "access": 1
+      },
+      "b": {
+        "desc": "F",
+        "access": 1
+      },
+      "c": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/character/d": {
+    "name": "com/mojang/minecraft/character/d",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17
+      },
+      "a (FFF)V": {
+        "access": 17
+      },
+      "a (FFFIII)V": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "F",
+        "access": 1
+      },
+      "b": {
+        "desc": "F",
+        "access": 1
+      },
+      "c": {
+        "desc": "F",
+        "access": 1
+      },
+      "d": {
+        "desc": "[Lcom/mojang/minecraft/character/e;",
+        "access": 2
+      },
+      "e": {
+        "desc": "[Lcom/mojang/minecraft/character/b;",
+        "access": 2
+      },
+      "f": {
+        "desc": "I",
+        "access": 2
+      },
+      "g": {
+        "desc": "I",
+        "access": 2
+      },
+      "h": {
+        "desc": "F",
+        "access": 2
+      },
+      "i": {
+        "desc": "F",
+        "access": 2
+      },
+      "j": {
+        "desc": "F",
+        "access": 2
+      },
+      "k": {
+        "desc": "Z",
+        "access": 2
+      },
+      "l": {
+        "desc": "I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/character/c": {
+    "name": "com/mojang/minecraft/character/c",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (FFF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "F",
+        "access": 1
+      },
+      "b": {
+        "desc": "F",
+        "access": 1
+      },
+      "c": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/particle/a": {
+    "name": "com/mojang/minecraft/particle/a",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/a/a;)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/player/Player;F)V": {
+        "access": 17
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Ljava/util/List;",
+        "access": 1
+      },
+      "b": {
+        "desc": "Lcom/mojang/minecraft/a/a;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/d": {
+    "name": "com/mojang/minecraft/d",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (IIIII)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/player/Player;I)F": {
+        "access": 0
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "I",
+        "access": 1
+      },
+      "b": {
+        "desc": "I",
+        "access": 1
+      },
+      "c": {
+        "desc": "I",
+        "access": 1
+      },
+      "d": {
+        "desc": "I",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/character/b": {
+    "name": "com/mojang/minecraft/character/b",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ([Lcom/mojang/minecraft/character/e;)V": {
+        "access": 2
+      },
+      "\u003cinit\u003e ([Lcom/mojang/minecraft/character/e;IIII)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "[Lcom/mojang/minecraft/character/e;",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/c": {
+    "name": "com/mojang/minecraft/c",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/lang/Runnable"
+    ],
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (Ljava/awt/Canvas;IIZ)V": {
+        "access": 1
+      },
+      "a ()V": {
+        "access": 17
+      },
+      "a (F)V": {
+        "access": 2
+      },
+      "a (FFFF)Ljava/nio/FloatBuffer;": {
+        "access": 2
+      },
+      "a (I)V": {
+        "access": 17
+      },
+      "a (ILjava/lang/String;)Z": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/b/c;)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/level/Level;)V": {
+        "access": 2
+      },
+      "a (Ljava/lang/String;)V": {
+        "access": 17
+      },
+      "a (Ljava/lang/String;I)Z": {
+        "access": 17
+      },
+      "b ()V": {
+        "access": 17
+      },
+      "b (F)V": {
+        "access": 2
+      },
+      "b (I)V": {
+        "access": 17
+      },
+      "b (Ljava/lang/String;)V": {
+        "access": 17
+      },
+      "c ()V": {
+        "access": 17
+      },
+      "c (I)V": {
+        "access": 2
+      },
+      "c (Ljava/lang/String;)V": {
+        "access": 10
+      },
+      "d ()V": {
+        "access": 2
+      },
+      "e ()V": {
+        "access": 2
+      },
+      "f ()V": {
+        "access": 2
+      },
+      "run ()V": {
+        "access": 17,
+        "override": "java/lang/Runnable"
+      }
+    },
+    "fields": {
+      "A": {
+        "desc": "I",
+        "access": 2
+      },
+      "B": {
+        "desc": "Ljava/awt/Robot;",
+        "access": 2
+      },
+      "C": {
+        "desc": "[I",
+        "access": 26
+      },
+      "D": {
+        "desc": "F",
+        "access": 2
+      },
+      "E": {
+        "desc": "F",
+        "access": 2
+      },
+      "F": {
+        "desc": "F",
+        "access": 2
+      },
+      "G": {
+        "desc": "Z",
+        "access": 66
+      },
+      "H": {
+        "desc": "Ljava/lang/String;",
+        "access": 2
+      },
+      "I": {
+        "desc": "Z",
+        "access": 2
+      },
+      "J": {
+        "desc": "I",
+        "access": 2
+      },
+      "K": {
+        "desc": "F",
+        "access": 2
+      },
+      "L": {
+        "desc": "Ljava/nio/IntBuffer;",
+        "access": 2
+      },
+      "M": {
+        "desc": "Ljava/nio/IntBuffer;",
+        "access": 2
+      },
+      "N": {
+        "desc": "Lcom/mojang/minecraft/d;",
+        "access": 2
+      },
+      "O": {
+        "desc": "I",
+        "access": 66
+      },
+      "P": {
+        "desc": "I",
+        "access": 66
+      },
+      "Q": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "R": {
+        "desc": "Ljava/lang/String;",
+        "access": 2
+      },
+      "S": {
+        "desc": "Ljava/lang/String;",
+        "access": 2
+      },
+      "a": {
+        "desc": "I",
+        "access": 1
+      },
+      "b": {
+        "desc": "I",
+        "access": 1
+      },
+      "c": {
+        "desc": "Lcom/mojang/minecraft/a;",
+        "access": 1
+      },
+      "d": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      },
+      "e": {
+        "desc": "Z",
+        "access": 1
+      },
+      "f": {
+        "desc": "Z",
+        "access": 65
+      },
+      "g": {
+        "desc": "Lcom/mojang/minecraft/b/h;",
+        "access": 1
+      },
+      "h": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      },
+      "i": {
+        "desc": "I",
+        "access": 1
+      },
+      "j": {
+        "desc": "Z",
+        "access": 2
+      },
+      "k": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "l": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "m": {
+        "desc": "Lcom/mojang/minecraft/b;",
+        "access": 2
+      },
+      "n": {
+        "desc": "Lcom/mojang/minecraft/level/Level;",
+        "access": 2
+      },
+      "o": {
+        "desc": "Lcom/mojang/minecraft/a/g;",
+        "access": 2
+      },
+      "p": {
+        "desc": "Lcom/mojang/minecraft/player/Player;",
+        "access": 2
+      },
+      "q": {
+        "desc": "I",
+        "access": 2
+      },
+      "r": {
+        "desc": "Lcom/mojang/minecraft/particle/a;",
+        "access": 2
+      },
+      "s": {
+        "desc": "Ljava/awt/Canvas;",
+        "access": 2
+      },
+      "t": {
+        "desc": "Lorg/lwjgl/input/Cursor;",
+        "access": 2
+      },
+      "u": {
+        "desc": "I",
+        "access": 2
+      },
+      "v": {
+        "desc": "Lcom/mojang/minecraft/a/a;",
+        "access": 2
+      },
+      "w": {
+        "desc": "I",
+        "access": 2
+      },
+      "x": {
+        "desc": "Lcom/mojang/minecraft/b/c;",
+        "access": 2
+      },
+      "y": {
+        "desc": "Lcom/mojang/minecraft/level/a;",
+        "access": 2
+      },
+      "z": {
+        "desc": "Lcom/mojang/minecraft/level/b/a;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/character/a": {
+    "name": "com/mojang/minecraft/character/a",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/character/d;",
+        "access": 1
+      },
+      "b": {
+        "desc": "Lcom/mojang/minecraft/character/d;",
+        "access": 1
+      },
+      "c": {
+        "desc": "Lcom/mojang/minecraft/character/d;",
+        "access": 1
+      },
+      "d": {
+        "desc": "Lcom/mojang/minecraft/character/d;",
+        "access": 1
+      },
+      "e": {
+        "desc": "Lcom/mojang/minecraft/character/d;",
+        "access": 1
+      },
+      "f": {
+        "desc": "Lcom/mojang/minecraft/character/d;",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/b": {
+    "name": "com/mojang/minecraft/b",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (F)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "F",
+        "access": 0
+      },
+      "b": {
+        "desc": "J",
+        "access": 0
+      },
+      "c": {
+        "desc": "I",
+        "access": 1
+      },
+      "d": {
+        "desc": "F",
+        "access": 1
+      },
+      "e": {
+        "desc": "F",
+        "access": 1
+      },
+      "f": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/a": {
+    "name": "com/mojang/minecraft/a",
+    "access": 49,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Ljava/lang/String;Ljava/lang/String;)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      },
+      "b": {
+        "desc": "Ljava/lang/String;",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/minecraft/level/a/a": {
+    "name": "com/mojang/minecraft/level/a/a",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (I)V": {
+        "access": 4
+      },
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      },
+      "a ()Z": {
+        "access": 1
+      },
+      "a (FFFFFF)V": {
+        "access": 20
+      },
+      "a (I)I": {
+        "access": 4
+      },
+      "a (III)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 9
+      },
+      "a (Lcom/mojang/minecraft/a/c;IIII)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/a/c;Lcom/mojang/minecraft/level/Level;IIII)Z": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/level/Level;III)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIII)Z": {
+        "access": 9
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIIII)Z": {
+        "access": 4
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIILcom/mojang/minecraft/particle/a;)V": {
+        "access": 17
+      },
+      "a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V": {
+        "access": 1
+      },
+      "a (Lcom/mojang/minecraft/player/Player;Lcom/mojang/minecraft/a/c;IIII)V": {
+        "access": 9
+      },
+      "a (Z)V": {
+        "access": 20
+      },
+      "b ()Z": {
+        "access": 1
+      },
+      "b (III)Lcom/mojang/minecraft/phys/AABB;": {
+        "access": 1
+      },
+      "b (Lcom/mojang/minecraft/a/c;IIII)V": {
+        "access": 17
+      },
+      "b (Lcom/mojang/minecraft/level/Level;IIII)V": {
+        "access": 1
+      },
+      "c ()Z": {
+        "access": 1
+      },
+      "d ()I": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "A": {
+        "desc": "F",
+        "access": 2
+      },
+      "B": {
+        "desc": "F",
+        "access": 2
+      },
+      "a": {
+        "desc": "[Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "b": {
+        "desc": "[Z",
+        "access": 25
+      },
+      "c": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "d": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "e": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "f": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "g": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "h": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "i": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "j": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "k": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "l": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "m": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "n": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "o": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "p": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "q": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "r": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "s": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "t": {
+        "desc": "Lcom/mojang/minecraft/level/a/a;",
+        "access": 25
+      },
+      "u": {
+        "desc": "I",
+        "access": 1
+      },
+      "v": {
+        "desc": "I",
+        "access": 17
+      },
+      "w": {
+        "desc": "F",
+        "access": 2
+      },
+      "x": {
+        "desc": "F",
+        "access": 2
+      },
+      "y": {
+        "desc": "F",
+        "access": 2
+      },
+      "z": {
+        "desc": "F",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/minecraft/character/Zombie": {
+    "name": "com/mojang/minecraft/character/Zombie",
+    "access": 33,
+    "superName": "com/mojang/minecraft/Entity",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (Lcom/mojang/minecraft/level/Level;FFF)V": {
+        "access": 1
+      },
+      "render (Lcom/mojang/minecraft/a/a;F)V": {
+        "access": 1,
+        "override": "com/mojang/minecraft/Entity"
+      },
+      "tick ()V": {
+        "access": 1,
+        "override": "com/mojang/minecraft/Entity"
+      }
+    },
+    "fields": {
+      "a": {
+        "desc": "Lcom/mojang/minecraft/character/a;",
+        "access": 10
+      },
+      "rot": {
+        "desc": "F",
+        "access": 1
+      },
+      "rotA": {
+        "desc": "F",
+        "access": 1
+      },
+      "serialVersionUID": {
+        "desc": "J",
+        "access": 25
+      },
+      "speed": {
+        "desc": "F",
+        "access": 1
+      },
+      "timeOffs": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  }
+}
