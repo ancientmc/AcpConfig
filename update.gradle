@@ -1,3 +1,5 @@
+import com.ancientmc.acpconfig.tasks.UpdateTsrg
+
 repositories {
     mavenCentral()
 }
@@ -14,8 +16,13 @@ ext {
     MATCH = 'data/matches/' + OLD + '-' + NEW + '.match'
 }
 
-tasks.register('updateTsrg') {
-
+tasks.register('updateTsrg', UpdateTsrg) {
+    oldIds = file(OLD_DIR + '/mappings/ids.csv')
+    match = file(MATCH)
+    newJar = file(NEW_DIR + '/game/jars/client.jar')
+    inheritanceJson = file(NEW_DIR + '/inheritance_map.json')
+    tsrg = file(NEW_DIR + '/mappings/intermediate.tsrg')
+    newIds = file(NEW_DIR + '/mappings/ids.csv')
 }
 
 static def phase(String ver) {

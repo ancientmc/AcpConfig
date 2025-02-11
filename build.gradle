@@ -70,6 +70,7 @@ subprojects {
         jar = file(Paths.BASE_JAR)
         tsrg = file(Paths.INTERMEDIATE_TSRG)
         inheritanceJson = file(Paths.INHERITANCE)
+        ids = file('mappings/ids.csv')
     }
 
     tasks.register('split', JavaExec) {
@@ -133,3 +134,5 @@ subprojects {
         args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
     }
 }
+
+apply from: ('update.gradle')

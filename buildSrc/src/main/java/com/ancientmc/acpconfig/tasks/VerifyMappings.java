@@ -35,7 +35,7 @@ public abstract class VerifyMappings extends DefaultTask {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 

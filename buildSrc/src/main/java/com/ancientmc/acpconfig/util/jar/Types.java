@@ -13,12 +13,12 @@ public class Types {
 
     public static class Field {
         public String parent;
-        public String type;
+        public String desc;
         public String name;
 
-        public Field(String parent, String type, String name) {
+        public Field(String parent, String desc, String name) {
             this.parent = parent;
-            this.type = type;
+            this.desc = desc;
             this.name = name;
         }
     }

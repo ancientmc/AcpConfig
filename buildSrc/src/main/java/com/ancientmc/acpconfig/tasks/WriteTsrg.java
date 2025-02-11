@@ -30,14 +30,16 @@ public abstract class WriteTsrg extends DefaultTask {
         File file = getJar().getAsFile().get();
         File json = getInheritanceJson().getAsFile().get();
         File tsrg = getTsrg().getAsFile().get();
+        File ids = getIds().getAsFile().get();
         MinecraftJar jar = new MinecraftJar(file, json);
 
-        Map<Types.Clazz, String> classIds = Ids.getAllClassIds(jar.classes);
-        Map<Types.Field, String> fieldIds = Ids.getAllFieldIds(jar.fields);
-        Map<Types.Method, String> methodIds = Ids.getAllMethodIds(jar.methods);
+        Map<Types.Clazz, String> classIds = Ids.getClassIds(jar.classes);
+        Map<Types.Field, String> fieldIds = Ids.getFieldIds(jar.fields);
+        Map<Types.Method, String> methodIds = Ids.getMethodIds(jar.methods);
 
         List<String> lines = getLines(jar, classIds, fieldIds, methodIds);
         write(tsrg, lines);
+        writeIds(ids, classIds.size(), fieldIds.size(), methodIds.size());
     }
 
     public static List<String> getLines(MinecraftJar jar, Map<Types.Clazz, String> classIds, Map<Types.Field, String> fieldIds, Map<Types.Method, String> methodIds) {
@@ -95,6 +97,17 @@ public abstract class WriteTsrg extends DefaultTask {
         }
     }
 
+    public static void writeIds(File ids, int classes, int fields, int methods) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ids))) {
+            writer.write(String.join(",", "classes", Integer.toString(classes)) + "\n");
+            writer.write(String.join(",", "fields", Integer.toString(fields)) + "\n");
+            writer.write(String.join(",", "methods", Integer.toString(methods)) + "\n");
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     // get the name if it's a prenamed class file, otherwise get the intermediary with an id
     public static String getDeobfClass(Types.Clazz clazz, Map<Types.Clazz, String> classIds) {
         return clazz.name.contains("com/mojang/minecraft/Minecraft") ? clazz.name : "com/mojang/minecraft/src/c_" + classIds.get(clazz);
@@ -130,4 +143,7 @@ public abstract class WriteTsrg extends DefaultTask {
 
     @OutputFile
     public abstract RegularFileProperty getTsrg();
+
+    @OutputFile
+    public abstract RegularFileProperty getIds();
 }

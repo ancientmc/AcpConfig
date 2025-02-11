@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Ids {
-    public static Map<Types.Clazz, String> getAllClassIds(List<Types.Clazz> classes) {
+    public static Map<Types.Clazz, String> getClassIds(List<Types.Clazz> classes) {
         Map<Types.Clazz, String> ids = new HashMap<>();
         for (int i = 0; i < classes.size(); i++) {
             Types.Clazz entry = classes.get(i);
@@ -19,7 +19,7 @@ public class Ids {
         return ids;
     }
 
-    public static Map<Types.Field, String> getAllFieldIds(List<Types.Field> fields) {
+    public static Map<Types.Field, String> getFieldIds(List<Types.Field> fields) {
         Map<Types.Field, String> ids = new HashMap<>();
         for (int i = 0; i < fields.size(); i++) {
             Types.Field field = fields.get(i);
@@ -30,7 +30,7 @@ public class Ids {
         return ids;
     }
 
-    public static Map<Types.Method, String> getAllMethodIds(List<Types.Method> methods) {
+    public static Map<Types.Method, String> getMethodIds(List<Types.Method> methods) {
         Map<Types.Method, String> ids = new HashMap<>();
 
         List<Types.Method> sortedMethods = methods.stream().filter(m -> !m.inherited).toList();
