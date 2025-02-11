@@ -81,9 +81,8 @@ public class MatchParser {
                     name.substring(1, name.indexOf(';')); // L<class_name>; -> <class_name>
             case 'f' -> // field
                     name.substring(0, 7); // <field_name>;; -> <field_name>
-            case 'm' -> // method
-                    name.substring(0, name.indexOf('(') - 1); // <method_name>descriptor -> <method_name>
-            default -> name; // anything else
+            default ->
+                    name.substring(0, name.lastIndexOf('(')); // <method_name>descriptor -> <method_name>
         };
     }
 

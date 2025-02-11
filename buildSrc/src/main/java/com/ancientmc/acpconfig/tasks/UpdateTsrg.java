@@ -18,6 +18,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Very similar to WriteTsrg, but also parses the match file for the new JAR version, and assigns new IDs to everything else.
@@ -34,9 +35,6 @@ public abstract class UpdateTsrg extends DefaultTask {
         File newIds = getNewIds().getAsFile().get();
         MinecraftJar jar = new MinecraftJar(newJar, inheritance);
 
-        classCounter = getCount(oldIds, "classes");
-        fieldCounter = getCount(oldIds, "fields");
-
         List<String> lines = getLines(jar, match, oldIds);
 
         write(tsrg, lines);
@@ -45,6 +43,10 @@ public abstract class UpdateTsrg extends DefaultTask {
     public List<String> getLines(MinecraftJar jar, File match, File ids) {
         List<String> lines = new ArrayList<>();
 
+        int classCounter = getCount(ids, "classes") + 1;
+        int methodCounter = getCount(ids, "methods") + 1;
+        int fieldCounter = getCount(ids, "fields") + 1;
+
         // first line
         lines.add("tsrg2 obf cnf\n");
 
@@ -52,19 +54,34 @@ public abstract class UpdateTsrg extends DefaultTask {
         String[] exclude = {"com/jcraft", "paulscode/sound"};
         List<Types.Clazz> sortedClasses = jar.classes.stream().filter(c -> Arrays.stream(exclude).noneMatch(c.name::startsWith)).toList();
 
-        sortedClasses.forEach(clazz -> {
-            lines.add(clazz.name + " " + getDeobfClass(clazz, match) + "\n");
-            System.out.println("CLASS " + clazz.name + " -> " + getDeobfClass(clazz, match));
+        for(Types.Clazz clazz : sortedClasses) {
+            lines.add(clazz.name + " " + getDeobfClass(clazz, match, classCounter) + "\n");
+            System.out.println("CLASS " + clazz.name + " -> " + getDeobfClass(clazz, match, classCounter));
+            if (counted) {
+                counted = false;
+                classCounter++;
+            }
 
             List<Types.Field> sortedFields = jar.fields.stream().filter(f -> f.parent.equals(clazz.name)).toList();
-            sortedFields.forEach(field -> {
-                lines.add("\t" + field.name + " " + getDeobfField(field, match) + "\n");
-                System.out.println("FIELD: " + field.name + " -> " + getDeobfField(field, match));
-            });
-        });
+            for (Types.Field field : sortedFields) {
+                lines.add("\t" + field.name + " " + getDeobfField(field, match, fieldCounter) + "\n");
+                System.out.println("FIELD: " + field.name + " -> " + getDeobfField(field, match, fieldCounter));
+                if (counted) {
+                    counted = false;
+                    fieldCounter++;
+                }
+            }
 
-        // WIP...
-
+            List<Types.Method> sortedMethods = jar.methods.stream().filter(m -> m.parent.equals(clazz.name)).toList();
+            for (Types.Method method : sortedMethods) {
+                lines.add("\t" + method.name + " " + method.desc + " " + getDeobfMethod(method, match, methodCounter) + "\n");
+                System.out.println("METHOD: " + method.name + " -> " + getDeobfMethod(method, match, methodCounter));
+                if (counted) {
+                    counted = false;
+                    methodCounter++;
+                }
+            };
+        }
         return lines;
     }
 
@@ -78,28 +95,55 @@ public abstract class UpdateTsrg extends DefaultTask {
         }
     }
 
-    public static String getDeobfClass(Types.Clazz clazz, File match) {
+    public static String getDeobfClass(Types.Clazz clazz, File match, int counter) {
         String old = MatchParser.getOldClass(clazz.name, match, "c", 1);
-        return old != null ? old : getNewDeobfClass();
+        if (old != null) {
+            return old;
+        } else {
+            counted = true;
+            return "com/mojang/minecraft/src/c_" + new DecimalFormat("00000").format(counter);
+        }
     }
 
-    public static String getDeobfField(Types.Field field, File match) {
+    public static String getDeobfField(Types.Field field, File match, int counter) {
         String old = MatchParser.getOldInner(field.name, field.parent, field.desc, match, "\tf", 2);
-        return old != null ? old : getNewDeobfField();
+        if (old != null) {
+            return old;
+        } else {
+            counted = true;
+            return "f_" + new DecimalFormat("00000").format(counter);
+        }
     }
 
-    public static String getNewDeobfClass() {
-        classCounter = classCounter + 1;
-        return "com/mojang/minecraft/src/c_" + getFormattedId(classCounter);
+    public static String getDeobfMethod(Types.Method method, File match, int counter) {
+        String old = MatchParser.getOldInner(method.name, method.parent, method.desc, match, "\tf", 2);
+        return old != null ? old : getNewDeobfMethod(method, match, counter);
     }
 
-    public static String getNewDeobfField() {
-        fieldCounter = fieldCounter + 1;
-        return "f_" + getFormattedId(fieldCounter);
+    public static String getNewDeobfMethod(Types.Method method, File match, int counter) {
+        if (method.name.contains("init>"))
+            return method.name;
+        if (!method.inherited) {
+            String old = MatchParser.getOldInner(method.name, method.parent, method.desc, match, "\tm", 2);
+            return Objects.requireNonNullElseGet(old, () -> "m_" + new DecimalFormat("00000").format(counter)); // thanks IntelliJ!
+        } else {    // We have to worry about inheritance.
+            return getInheritedFormattedId(match, method, counter);
+        }
     }
 
-    public static String getFormattedId(int counter) {
-        return new DecimalFormat("00000").format(counter + 1);
+    // Two possibilities:
+    // a) the method is inherited from a class found in the first jar version. We parse the Match file and find the method entry in the super parent's block.
+    // b) the method is inherited from a brand-new class. Then what do we do...?
+    public static String getInheritedFormattedId(File match, Types.Method method, int counter) {
+        try {
+            boolean condition = Files.readAllLines(match.toPath()).stream().anyMatch(l -> l.contains("L" + method.superParent + ";"));
+            if (condition) {
+                return MatchParser.getOldInner(method.name, method.superParent, method.desc, match, "\tm", 2);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return method.name;
     }
 
     public static void write(File tsrg, List<String> lines) {
@@ -113,9 +157,7 @@ public abstract class UpdateTsrg extends DefaultTask {
         }
     }
 
-    private static int classCounter = 0;
-    private static int fieldCounter = 0;
-    private static int methodCounter = 0;
+    private static boolean counted = false;
 
     @InputFile
     public abstract RegularFileProperty getMatch();
