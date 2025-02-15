@@ -31,7 +31,7 @@ public abstract class ApplyCsv extends DefaultTask {
             Map<String, String> map = getMap(csv);
 
             // Add first line of old to new
-            newLines.add(oldLines.get(0));
+            newLines.add(oldLines.getFirst());
 
             for (int i = 1; i < oldLines.size(); i++) {
                 String line = oldLines.get(i);
@@ -57,12 +57,11 @@ public abstract class ApplyCsv extends DefaultTask {
 
     public String getReplacedLine(String line, Map<String, String> map) {
         if (map.keySet().stream().anyMatch(line::contains)) {
-            String sub = line.substring(line.lastIndexOf(' ') + 1);
-            String srg = map.keySet().stream().filter(sub::equals).findAny().get();
+            String srg = map.keySet().stream().filter(line::contains).findAny().get();
             String cuneiform = srg.isEmpty() ? srg : map.get(srg);
-
             line = line.replace(srg, cuneiform);
         }
+
         return line;
     }
 
@@ -73,10 +72,9 @@ public abstract class ApplyCsv extends DefaultTask {
             for (int i = 1; i < lines.size(); i++) {
                 String line = lines.get(i);
                 String[] split = line.split(",");
-                String data = split[1].isBlank() ? split[0] : split[1];
 
                 // split[0] = srg, split[1] = cuneiform
-                map.put(split[0], data);
+                map.put(split[0], split[1]);
             }
             return map;
         } catch (IOException e) {

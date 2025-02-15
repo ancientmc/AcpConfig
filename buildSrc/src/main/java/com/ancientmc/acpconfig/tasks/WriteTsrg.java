@@ -46,38 +46,38 @@ public abstract class WriteTsrg extends DefaultTask {
         List<String> lines = new ArrayList<>();
 
         // first line
-        lines.add("tsrg2 obf cnf\n");
+        lines.add("tsrg2 obf cnf id\n");
 
         // Only include Minecraft classes
         String[] exclude = {"com/jcraft", "paulscode/sound"};
         List<Types.Clazz> sortedClasses = jar.classes.stream().filter(c -> Arrays.stream(exclude).noneMatch(c.name::startsWith)).toList();
 
-
-        sortedClasses.forEach(clazz -> {
-            lines.add(clazz.name + " " + getDeobfClass(clazz, classIds) + "\n");
-            System.out.println("CLASS: " + clazz.name + " -> " + getDeobfClass(clazz, classIds));
+        sortedClasses.forEach(cls -> {
+            lines.add(String.join(" ", cls.name, getDeobfClass(cls, classIds), classIds.get(cls)) + "\n");
+            System.out.println("CLASS: " + cls.name + " -> " + getDeobfClass(cls, classIds));
 
             // Get fields in the currently iterated class
-            List<Types.Field> sortedFields = jar.fields.stream().filter(f -> f.parent.equals(clazz.name)).toList();
+            List<Types.Field> sortedFields = jar.fields.stream().filter(f -> f.parent.equals(cls.name)).toList();
             sortedFields.forEach(field -> {
-                lines.add("\t" + field.name + " " + getDeobfField(field, fieldIds) + "\n");
+                lines.add("\t" + String.join(" ", field.name, getDeobfField(field, fieldIds), fieldIds.get(field)) + "\n");
                 System.out.println("FIELD: " + field.name + " -> " + getDeobfField(field, fieldIds));
             });
 
             // Get methods in the currently iterated class
-            List<Types.Method> sortedMethods = jar.methods.stream().filter(m -> m.parent.equals(clazz.name)).toList();
+            List<Types.Method> sortedMethods = jar.methods.stream().filter(m -> m.parent.equals(cls.name)).toList();
             sortedMethods.forEach(method -> {
 
                 // We have to deal with inheritance. If a method is inherited, get the id of the root parent. If not, just get the id of the normal method.
                 String id = method.inherited ? methodIds.get(getSuperMethod(jar, method)) : methodIds.get(method);
-                lines.add("\t" + method.name + " " + method.desc + " " + getDeobfMethod(method, id) + "\n");
+                lines.add("\t" + String.join(" ", method.name, method.desc, getDeobfMethod(method, id), id) + "\n");
                 System.out.println("METHOD: " + method.name + " -> " + getDeobfMethod(method, id));
 
                 // Get lines for the params of the currently iterated method
                 if (method.params > 0) {
                     for (int i = 0; i < method.params; i++) {
-                        lines.add("\t\t" + i + " o " + "p_" + id + "_" + i + "\n");
-                        System.out.println("PARAM: p_" + id + "_" + i);
+                        String pid = id + "_" + i;
+                        lines.add("\t\t" + String.join("", Integer.toString(i), "o", "p_" + pid, pid) + "\n");
+                        System.out.println("PARAM: p_" + pid);
                     }
                 }
             });
@@ -121,11 +121,10 @@ public abstract class WriteTsrg extends DefaultTask {
         return field.name.length() <= 2 ? "f_" + fieldIds.get(field) : field.name;
     }
 
-
     public static Types.Method getSuperMethod(MinecraftJar jar, Types.Method method) {
         if (jar.classes.stream().anyMatch(c -> c.name.equals(method.superParent))) {
             Types.Clazz superParent = jar.classes.stream().filter(c -> c.name.equals(method.superParent)).findAny().get();
-            if (!superParent.name.equals("")) {
+            if (!superParent.name.isEmpty()) {
                 List<Types.Method> superMethods = jar.methods.stream().filter(m -> m.parent.equals(superParent.name)).toList();
                 return superMethods.stream().filter(m -> (m.desc.equals(method.desc) && m.name.equals(method.name))).findAny().get();
             }
