@@ -107,7 +107,8 @@ public abstract class UpdateTsrg extends DefaultTask {
                     } else {
                         id = newMethodIds.get(method);
                     }
-                    lines.add("\t" + String.join(" ", method.name, method.desc, "m_" + id, id) + "\n");
+                    String mapped = method.name.contains("init>") ? method.name : "m_" + id;
+                    lines.add("\t" + String.join(" ", method.name, method.desc, mapped, id) + "\n");
                 }
 
                 // Parameters
