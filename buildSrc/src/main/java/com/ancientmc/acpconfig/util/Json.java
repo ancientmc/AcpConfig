@@ -7,6 +7,7 @@ import org.gradle.internal.os.OperatingSystem;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,7 +95,7 @@ public class Json {
                 String os = Util.getOSName();
                 JsonObject natives = entry.getAsJsonObject("classifiers").getAsJsonObject("natives-" + os);
                 if (natives != null && isAllowed(name)) {
-                    URL url = new URL(natives.get("url").getAsString());
+                    URL url = URI.create(natives.get("url").getAsString()).toURL();
                     urls.add(url);
                 }
             }
@@ -111,7 +112,7 @@ public class Json {
      */
     public static URL getAssetIndexUrl(File json) throws IOException {
         JsonObject jsonObj = Util.getJsonAsObject(json);
-        return new URL(jsonObj.getAsJsonObject("assetIndex").get("url").getAsString());
+        return URI.create(jsonObj.getAsJsonObject("assetIndex").get("url").getAsString()).toURL();
     }
 
     /**

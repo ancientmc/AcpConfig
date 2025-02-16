@@ -1,5 +1,7 @@
 package com.ancientmc.acpconfig.util.mapping;
 
+import com.ancientmc.acpconfig.util.jar.Types;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -52,6 +54,32 @@ public class Match {
         return fields;
     }
 
+    public List<MatchMethod> getMethods(List<MatchClass> classes) {
+        List<MatchMethod> methods = new ArrayList<>();
+
+        try {
+            List<String> matchLines = Files.readAllLines(match.toPath());
+            classes.forEach(cls -> {
+                String classLine = matchLines.stream().filter(line -> line.startsWith("c\tL" + cls.oldName)).findAny().get();
+                List<String> classBlock = matchLines.subList(matchLines.indexOf(classLine) + 1, getNextClassIndex(matchLines, classLine));
+
+                classBlock.forEach(line -> {
+                    if (line.startsWith("\tm\t")) { // method prefix
+                        String[] split = line.split("\t");
+                        String oldName = split[1].substring(0, split[1].indexOf('(') - 1); // method name and descriptor are strung together, so we just separate them
+                        String newName = split[2].substring(0, split[2].indexOf('(') - 1);
+                        String oldDesc = split[1].substring(split[1].indexOf('('));
+                        String newDesc = split[2].substring(split[2].indexOf('('));
+                        methods.add(new MatchMethod(cls.oldName, cls.newName, oldName, newName, oldDesc, newDesc));
+                    }
+                });
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return methods;
+    }
+
     public static class MatchClass {
         public String oldName;
         public String newName;
@@ -102,5 +130,32 @@ public class Match {
             }
         }
         return lines.size();
+    }
+
+    public MatchClass getOldClass(String newClass) throws IOException {
+        for (Match.MatchClass cls : this.getClasses()) {
+            if (cls.newName.equals(newClass)) {
+                return cls;
+            }
+        }
+        return null;
+    }
+
+    public MatchField getOldField(Types.Field field) throws IOException {
+        for (Match.MatchField fld : this.getFields(this.getClasses())) {
+            if (fld.newParent.equals(field.parent) && fld.newName.equals(field.name)) {
+                return fld;
+            }
+        }
+        return null;
+    }
+
+    public MatchMethod getOldMethod(Types.Method method) throws IOException {
+        for (Match.MatchMethod mtd : this.getMethods(this.getClasses())) {
+            if (mtd.newDesc.equals(method.desc) && mtd.newName.equals(method.name) && mtd.newParent.equals(method.parent)) {
+                return mtd;
+            }
+        }
+        return null;
     }
 }

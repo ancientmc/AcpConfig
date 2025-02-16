@@ -15,6 +15,10 @@ import com.ancientmc.acpconfig.tasks.*
 import com.ancientmc.acpconfig.tasks.csv.*
 import com.ancientmc.acpconfig.util.*
 
+dependencies {
+    implementation 'net.minecraftforge:srgutils:0.5.4'
+}
+
 subprojects {
     repositories {
         mavenCentral()
@@ -84,6 +88,7 @@ subprojects {
         dependsOn split
         jar = file(Paths.SLIM_JAR)
         tsrg = file(Paths.INTERMEDIATE_TSRG)
+        log = file('mappings/verify.txt')
     }
 
     tasks.register('mcinject', JavaExec) {

@@ -1,6 +1,7 @@
 package com.ancientmc.acpconfig.tasks;
 
-import com.ancientmc.acpconfig.util.MatchParser;
+import com.ancientmc.acpconfig.util.mapping.Match;
+import com.ancientmc.acpconfig.util.mapping.Tsrg;
 import com.ancientmc.acpconfig.util.jar.MinecraftJar;
 import com.ancientmc.acpconfig.util.jar.Types;
 import org.gradle.api.DefaultTask;
@@ -15,149 +16,180 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Very similar to WriteTsrg, but also parses the match file for the new JAR version, and assigns new IDs to everything else.
  */
 public abstract class UpdateTsrg extends DefaultTask {
 
+    // The updated counters for each type, which are exported as a CSV file.
+    private static int lastClassCounter;
+    private static int lastFieldCounter;
+    private static int lastMethodCounter;
+
     @TaskAction
     public void exec() {
-        File match = getMatch().getAsFile().get();
+        File oldTsrg = getOldTsrg().getAsFile().get();
+        File matchFile = getMatch().getAsFile().get();
         File oldIds = getOldIds().getAsFile().get();
-        File newJar = getNewJar().getAsFile().get();
         File inheritance = getInheritanceJson().getAsFile().get();
-        File tsrg = getTsrg().getAsFile().get();
+        File newJar = getNewJar().getAsFile().get();
+        File newTsrg = getNewTsrg().getAsFile().get();
         File newIds = getNewIds().getAsFile().get();
+
         MinecraftJar jar = new MinecraftJar(newJar, inheritance);
+        Tsrg tsrg = Tsrg.load(oldTsrg);
+        Match match = new Match(matchFile);
 
-        List<String> lines = getLines(jar, match, oldIds);
-
-        write(tsrg, lines);
+        try {
+            List<String> lines = getLines(tsrg, jar, match, oldIds);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public List<String> getLines(MinecraftJar jar, File match, File ids) {
+    public static List<String> getLines(Tsrg tsrg, MinecraftJar jar, Match match, File ids) throws IOException {
         List<String> lines = new ArrayList<>();
 
-        int classCounter = getCount(ids, "classes") + 1;
-        int methodCounter = getCount(ids, "methods") + 1;
-        int fieldCounter = getCount(ids, "fields") + 1;
+        // Maps of types that are new to our new version, and not found in the match file.
+        Map<Types.Clazz, String> newClassIds = getNewClassIds(jar.classes, match, ids);
+        Map<Types.Field, String> newFieldIds = getNewFieldIds(jar.fields, match, ids);
+        Map<Types.Method, String> newMethodIds = getNewMethodIds(jar.methods, match, ids);
 
-        // first line
-        lines.add("tsrg2 obf cnf\n");
-
-        // Only include Minecraft classes
+        lines.add("tsrg2 obf cnf id\n");
         String[] exclude = {"com/jcraft", "paulscode/sound"};
+
         List<Types.Clazz> sortedClasses = jar.classes.stream().filter(c -> Arrays.stream(exclude).noneMatch(c.name::startsWith)).toList();
-
-        for(Types.Clazz clazz : sortedClasses) {
-            lines.add(clazz.name + " " + getDeobfClass(clazz, match, classCounter) + "\n");
-            System.out.println("CLASS " + clazz.name + " -> " + getDeobfClass(clazz, match, classCounter));
-            if (counted) {
-                counted = false;
-                classCounter++;
+        for (Types.Clazz cls : sortedClasses) {
+            if (isOldClass(cls, match)) {
+                Match.MatchClass oldClass = match.getOldClass(cls.name);
+                Tsrg.TsrgClass intermediateClass = tsrg.getIntermediateClass(oldClass);
+                lines.add(String.join(" ", cls.name, intermediateClass.mapped, intermediateClass.id) + "\n");
+            } else {
+                String id = newClassIds.get(cls);
+                lines.add(String.join(" ", cls.name, "com/mojang/minecraft/src/c_" + id, id));
             }
 
-            List<Types.Field> sortedFields = jar.fields.stream().filter(f -> f.parent.equals(clazz.name)).toList();
+            // Fields
+            List<Types.Field> sortedFields = jar.fields.stream().filter(f -> f.parent.equals(cls.name)).toList();
             for (Types.Field field : sortedFields) {
-                lines.add("\t" + field.name + " " + getDeobfField(field, match, fieldCounter) + "\n");
-                System.out.println("FIELD: " + field.name + " -> " + getDeobfField(field, match, fieldCounter));
-                if (counted) {
-                    counted = false;
-                    fieldCounter++;
+                if (isOldField(field, match)) {
+                    Match.MatchField oldField = match.getOldField(field);
+                    Tsrg.TsrgField intermediateField = tsrg.getIntermediateField(oldField);
+                    lines.add("\t" + String.join(" ", field.name, intermediateField.mapped, intermediateField.id) + "\n");
+                } else {
+                    String id = newFieldIds.get(field);
+                    lines.add(String.join(" ", field.name, "f_" + id, id) + "\n");
                 }
             }
 
-            List<Types.Method> sortedMethods = jar.methods.stream().filter(m -> m.parent.equals(clazz.name)).toList();
+            // Methods
+            List<Types.Method> sortedMethods = jar.methods.stream().filter(m -> m.parent.equals(cls.name)).toList();
             for (Types.Method method : sortedMethods) {
-                lines.add("\t" + method.name + " " + method.desc + " " + getDeobfMethod(method, match, methodCounter) + "\n");
-                System.out.println("METHOD: " + method.name + " -> " + getDeobfMethod(method, match, methodCounter));
-                if (counted) {
-                    counted = false;
-                    methodCounter++;
+                if (isOldMethod(method, match)) {
+                    Match.MatchMethod oldMethod = match.getOldMethod(method);
+                    Tsrg.TsrgMethod intermediateMethod = tsrg.getIntermediateMethod(oldMethod);
+                    lines.add("\t" + String.join(" ", method.name, intermediateMethod.mapped, intermediateMethod.id) + "\n");
+                } else {
+                    System.out.println("finish idk");
                 }
-            };
+            }
         }
+
         return lines;
     }
 
-    public static int getCount(File ids, String type) {
-        try {
-            String line = Files.readAllLines(ids.toPath()).stream().filter(l -> l.startsWith(type)).findAny().get();
-            String[] split = line.split(",");
-            return Integer.parseInt(split[1]);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String getDeobfClass(Types.Clazz clazz, File match, int counter) {
-        String old = MatchParser.getOldClass(clazz.name, match, "c", 1);
-        if (old != null) {
-            return old;
-        } else {
-            counted = true;
-            return "com/mojang/minecraft/src/c_" + new DecimalFormat("00000").format(counter);
-        }
-    }
-
-    public static String getDeobfField(Types.Field field, File match, int counter) {
-        String old = MatchParser.getOldInner(field.name, field.parent, field.desc, match, "\tf", 2);
-        if (old != null) {
-            return old;
-        } else {
-            counted = true;
-            return "f_" + new DecimalFormat("00000").format(counter);
-        }
-    }
-
-    public static String getDeobfMethod(Types.Method method, File match, int counter) {
-        String old = MatchParser.getOldInner(method.name, method.parent, method.desc, match, "\tf", 2);
-        return old != null ? old : getNewDeobfMethod(method, match, counter);
-    }
-
-    public static String getNewDeobfMethod(Types.Method method, File match, int counter) {
-        if (method.name.contains("init>"))
-            return method.name;
-        if (!method.inherited) {
-            String old = MatchParser.getOldInner(method.name, method.parent, method.desc, match, "\tm", 2);
-            return Objects.requireNonNullElseGet(old, () -> "m_" + new DecimalFormat("00000").format(counter)); // thanks IntelliJ!
-        } else {    // We have to worry about inheritance.
-            return getInheritedFormattedId(match, method, counter);
-        }
-    }
-
-    // Two possibilities:
-    // a) the method is inherited from a class found in the first jar version. We parse the Match file and find the method entry in the super parent's block.
-    // b) the method is inherited from a brand-new class. Then what do we do...?
-    public static String getInheritedFormattedId(File match, Types.Method method, int counter) {
-        try {
-            boolean condition = Files.readAllLines(match.toPath()).stream().anyMatch(l -> l.contains("L" + method.superParent + ";"));
-            if (condition) {
-                return MatchParser.getOldInner(method.name, method.superParent, method.desc, match, "\tm", 2);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return method.name;
-    }
-
-    public static void write(File tsrg, List<String> lines) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(tsrg))) {
-            for (String line : lines) {
-                writer.write(line);
-            }
+    public static void writeIds(File ids) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ids))) {
+            writer.write(String.join(",", "classes", Integer.toString(lastClassCounter)) + "\n");
+            writer.write(String.join(",", "fields", Integer.toString(lastFieldCounter)) + "\n");
+            writer.write(String.join(",", "methods", Integer.toString(lastMethodCounter)) + "\n");
             writer.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static boolean counted = false;
+    /*
+     * These methods check if a given type is old, (i.e. if it's present in the match file).
+     */
+
+    public static boolean isOldClass(Types.Clazz cls, Match match) throws IOException {
+        return match.getClasses().stream().anyMatch(mc -> mc.newName.equals(cls.name));
+    }
+
+    public static boolean isOldField(Types.Field field, Match match) throws IOException {
+        List<Match.MatchClass> classes = match.getClasses();
+        return match.getFields(classes).stream().anyMatch(mf -> mf.newName.equals(field.name) && mf.newParent.equals(field.parent));
+    }
+
+    public static boolean isOldMethod(Types.Method method, Match match) throws IOException {
+        List<Match.MatchClass> classes = match.getClasses();
+        return match.getMethods(classes).stream().anyMatch(mm -> mm.newName.equals(method.name) && mm.newParent.equals(method.parent) && mm.newDesc.equals(method.desc));
+    }
+
+    /*
+     * These three methods return ID lists of types that are new (not in the match file).
+     * The counters for each type are also updated so they can be exported into the CSV file.
+     */
+    public static Map<Types.Clazz, String> getNewClassIds(List<Types.Clazz> classes, Match match, File ids) throws IOException {
+        int counter = getCount(ids, "classes") + 1;
+        Map<Types.Clazz, String> newClasses = new HashMap<>();
+
+        for (Types.Clazz cls : classes) {
+            if (!isOldClass(cls, match)) {
+                newClasses.put(cls, getFormattedId(counter));
+                counter++;
+            }
+        }
+
+        lastClassCounter = counter;
+        return newClasses;
+    }
+
+    public static Map<Types.Field, String> getNewFieldIds(List<Types.Field> fields, Match match, File ids) throws IOException {
+        int counter = getCount(ids, "fields") + 1;
+        Map<Types.Field, String> newField = new HashMap<>();
+
+        for (Types.Field field : fields) {
+            if (!isOldField(field, match)) {
+                newField.put(field, getFormattedId(counter));
+                counter++;
+            }
+        }
+
+        lastFieldCounter = counter;
+        return newField;
+    }
+
+    public static Map<Types.Method, String> getNewMethodIds(List<Types.Method> methods, Match match, File ids) throws IOException {
+        int counter = getCount(ids, "fields") + 1;
+        Map<Types.Method, String> newMethods = new HashMap<>();
+
+        for (Types.Method method : methods) {
+            if (!isOldMethod(method, match)) {
+                newMethods.put(method, getFormattedId(counter));
+                counter++;
+            }
+        }
+
+        lastMethodCounter = counter;
+        return newMethods;
+    }
+
+    public static String getFormattedId(int id) {
+        return new DecimalFormat("00000").format(id);
+    }
+
+    public static int getCount(File ids, String type) throws IOException {
+        String line = Files.readAllLines(ids.toPath()).stream().filter(l -> l.startsWith(type)).findAny().get();
+        String[] split = line.split(",");
+        return Integer.parseInt(split[1]);
+    }
+
+    @InputFile
+    public abstract RegularFileProperty getOldTsrg();
 
     @InputFile
     public abstract RegularFileProperty getMatch();
@@ -172,7 +204,7 @@ public abstract class UpdateTsrg extends DefaultTask {
     public abstract RegularFileProperty getInheritanceJson();
 
     @OutputFile
-    public abstract RegularFileProperty getTsrg();
+    public abstract RegularFileProperty getNewTsrg();
 
     @OutputFile
     public abstract RegularFileProperty getNewIds();

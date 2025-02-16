@@ -110,6 +110,33 @@ public class Tsrg {
         return lines.size(); // returned after everything's parsed.
     }
 
+    public TsrgClass getIntermediateClass(Match.MatchClass cls) {
+        for (TsrgClass tsrgClass : this.getClasses()) {
+            if (tsrgClass.obf.equals(cls.oldName)) {
+                return tsrgClass;
+            }
+        }
+        return null;
+    }
+
+    public TsrgField getIntermediateField(Match.MatchField field) {
+        for (TsrgField tsrgField : this.getFields()) {
+            if (tsrgField.parent.equals(field.oldParent) && tsrgField.obf.equals(field.oldName)) {
+                return tsrgField;
+            }
+        }
+        return null;
+    }
+
+    public TsrgMethod getIntermediateMethod(Match.MatchMethod method) {
+        for (TsrgMethod tsrgMethod : this.getMethods()) {
+            if (tsrgMethod.parent.equals(method.oldParent) && tsrgMethod.obf.equals(method.oldName) && tsrgMethod.desc.equals(method.oldDesc)) {
+                return tsrgMethod;
+            }
+        }
+        return null;
+    }
+
     public static class TsrgClass {
         public String obf;
         public String mapped;
