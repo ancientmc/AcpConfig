@@ -45,6 +45,7 @@ public abstract class UpdateTsrg extends DefaultTask {
         try {
             List<String> lines = getLines(tsrg, jar, match, oldIds);
             write(newTsrg, lines);
+            writeIds(newIds);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -91,7 +92,6 @@ public abstract class UpdateTsrg extends DefaultTask {
                 String id = "";
                 if (isOldMethod(method, match)) {
                     Match.MatchMethod oldMethod = match.getOldMethod(method);
-                    System.out.println(oldMethod.toString());
                     Tsrg.TsrgMethod intermediateMethod = tsrg.getIntermediateMethod(oldMethod);
                     id = intermediateMethod.id;
                     lines.add("\t" + String.join(" ", method.name, method.desc, intermediateMethod.mapped, id) + "\n");
@@ -134,9 +134,9 @@ public abstract class UpdateTsrg extends DefaultTask {
 
     public static void writeIds(File ids) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ids))) {
-            writer.write(String.join(",", "classes", Integer.toString(lastClassCounter)) + "\n");
-            writer.write(String.join(",", "fields", Integer.toString(lastFieldCounter)) + "\n");
-            writer.write(String.join(",", "methods", Integer.toString(lastMethodCounter)) + "\n");
+            writer.write(String.join(",", "classes", Integer.toString(lastClassCounter - 1)) + "\n");
+            writer.write(String.join(",", "fields", Integer.toString(lastFieldCounter - 1)) + "\n");
+            writer.write(String.join(",", "methods", Integer.toString(lastMethodCounter - 1)) + "\n");
             writer.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -209,7 +209,7 @@ public abstract class UpdateTsrg extends DefaultTask {
     }
 
     public static Map<Types.Method, String> getNewMethodIds(List<Types.Method> methods, Match match, File ids) throws IOException {
-        int counter = getCount(ids, "fields") + 1;
+        int counter = getCount(ids, "methods") + 1;
         Map<Types.Method, String> newMethods = new HashMap<>();
 
         for (Types.Method method : methods) {

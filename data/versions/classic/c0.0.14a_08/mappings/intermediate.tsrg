@@ -71,10 +71,10 @@ com/mojang/minecraft/c com/mojang/minecraft/src/c_00003 00003
 		0 o p_00007_0 00007_0
 	a ()V m_00009 00009
 	run ()V run 00010
-	b ()V m_00250 00250
+	b ()V m_00186 00186
 	c ()V m_00011 00011
 	d ()V m_00012 00012
-	e ()V m_00251 00251
+	e ()V m_00187 00187
 	f ()V m_00013 00013
 	a (F)V m_00014 00014
 		0 o p_00014_0 00014_0
@@ -95,15 +95,15 @@ com/mojang/minecraft/c com/mojang/minecraft/src/c_00003 00003
 		0 o p_00020_0 00020_0
 	b (I)V m_00021 00021
 		0 o p_00021_0 00021_0
-	a (ILjava/lang/String;)Z m_00252 00252
-		0 o p_00252_0 00252_0
-		1 o p_00252_1 00252_1
+	a (ILjava/lang/String;)Z m_00188 00188
+		0 o p_00188_0 00188_0
+		1 o p_00188_1 00188_1
 	a (Ljava/lang/String;I)Z m_00022 00022
 		0 o p_00022_0 00022_0
 		1 o p_00022_1 00022_1
-	a (Lcom/mojang/minecraft/level/Level;)V m_00253 00253
-		0 o p_00253_0 00253_0
-	<clinit> ()V m_00254 00254
+	a (Lcom/mojang/minecraft/level/Level;)V m_00189 00189
+		0 o p_00189_0 00189_0
+	<clinit> ()V m_00190 00190
 com/mojang/minecraft/d com/mojang/minecraft/src/c_00006 00006
 	a f_00047 00047
 	b f_00048 00048
@@ -144,7 +144,7 @@ com/mojang/minecraft/Entity com/mojang/minecraft/src/c_00007 00007
 	<init> (Lcom/mojang/minecraft/level/Level;)V <init> 00027
 		0 o p_00027_0 00027_0
 	resetPos ()V m_00028 00028
-	remove ()V m_00255 00255
+	remove ()V m_00191 00191
 	setSize (FF)V m_00029 00029
 		0 o p_00029_0 00029_0
 		1 o p_00029_1 00029_1
@@ -152,12 +152,12 @@ com/mojang/minecraft/Entity com/mojang/minecraft/src/c_00007 00007
 		0 o p_00030_0 00030_0
 		1 o p_00030_1 00030_1
 		2 o p_00030_2 00030_2
-	turn (FF)V m_00256 00256
-		0 o p_00256_0 00256_0
-		1 o p_00256_1 00256_1
-	interpolateTurn (FF)V m_00257 00257
-		0 o p_00257_0 00257_0
-		1 o p_00257_1 00257_1
+	turn (FF)V m_00192 00192
+		0 o p_00192_0 00192_0
+		1 o p_00192_1 00192_1
+	interpolateTurn (FF)V m_00193 00193
+		0 o p_00193_0 00193_0
+		1 o p_00193_1 00193_1
 	tick ()V m_00031 00031
 	isFree (FFF)Z m_00032 00032
 		0 o p_00032_0 00032_0
@@ -174,12 +174,12 @@ com/mojang/minecraft/Entity com/mojang/minecraft/src/c_00007 00007
 		1 o p_00036_1 00036_1
 		2 o p_00036_2 00036_2
 	isLit ()Z m_00037 00037
-	getBrightness ()F m_00258 00258
+	getBrightness ()F m_00194 00194
 	render (Lcom/mojang/minecraft/a/a;F)V m_00038 00038
 		0 o p_00038_0 00038_0
 		1 o p_00038_1 00038_1
-	setLevel (Lcom/mojang/minecraft/level/Level;)V m_00259 00259
-		0 o p_00259_0 00259_0
+	setLevel (Lcom/mojang/minecraft/level/Level;)V m_00195 00195
+		0 o p_00195_0 00195_0
 com/mojang/minecraft/MinecraftApplet$1 com/mojang/minecraft/src/c_00002 00002
 	this$0 f_00007 00007
 	<init> (Lcom/mojang/minecraft/MinecraftApplet;)V <init> 00002
@@ -192,7 +192,7 @@ com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet <init>
 	thread f_00072 00072
 	<init> ()V <init> 00039
 	init ()V init 00039
-	startGameThread ()V m_00260 00260
+	startGameThread ()V m_00196 00196
 	start ()V start 00041
 	stop ()V stop 00042
 	destroy ()V destroy 00043
@@ -265,13 +265,13 @@ com/mojang/minecraft/a/d com/mojang/minecraft/src/c_00017 00017
 	a ([[FI)V m_00096 00096
 		0 o p_00096_0 00096_0
 		1 o p_00096_1 00096_1
-	a (FFFFFF)Z m_00261 00261
-		0 o p_00261_0 00261_0
-		1 o p_00261_1 00261_1
-		2 o p_00261_2 00261_2
-		3 o p_00261_3 00261_3
-		4 o p_00261_4 00261_4
-		5 o p_00261_5 00261_5
+	a (FFFFFF)Z m_00197 00197
+		0 o p_00197_0 00197_0
+		1 o p_00197_1 00197_1
+		2 o p_00197_2 00197_2
+		3 o p_00197_3 00197_3
+		4 o p_00197_4 00197_4
+		5 o p_00197_5 00197_5
 	a (Lcom/mojang/minecraft/phys/AABB;)Z m_00097 00097
 		0 o p_00097_0 00097_0
 	<clinit> ()V <clinit> 00098
@@ -309,8 +309,8 @@ com/mojang/minecraft/a/f com/mojang/minecraft/src/c_00011 00011
 	a (Ljava/nio/IntBuffer;I)V m_00056 00056
 		0 o p_00056_0 00056_0
 		1 o p_00056_1 00056_1
-	a (Lcom/mojang/minecraft/a/d;)V m_00262 00262
-		0 o p_00262_0 00262_0
+	a (Lcom/mojang/minecraft/a/d;)V m_00198 00198
+		0 o p_00198_0 00198_0
 	<clinit> ()V <clinit> 00062
 com/mojang/minecraft/a/g com/mojang/minecraft/src/c_00013 00013
 	a f_00094 00094
@@ -330,21 +330,21 @@ com/mojang/minecraft/a/g com/mojang/minecraft/src/c_00013 00013
 	o f_00106 00106
 	<init> (Lcom/mojang/minecraft/a/a;)V <init> 00065
 		0 o p_00065_0 00065_0
-	a (Lcom/mojang/minecraft/level/Level;)V m_00263 00263
-		0 o p_00263_0 00263_0
+	a (Lcom/mojang/minecraft/level/Level;)V m_00199 00199
+		0 o p_00199_0 00199_0
 	a ()V m_00066 00066
-	a (Lcom/mojang/minecraft/a/d;F)V m_00264 00264
-		0 o p_00264_0 00264_0
-		1 o p_00264_1 00264_1
+	a (Lcom/mojang/minecraft/a/d;F)V m_00200 00200
+		0 o p_00200_0 00200_0
+		1 o p_00200_1 00200_1
 	a (Lcom/mojang/minecraft/player/Player;I)V m_00067 00067
 		0 o p_00067_0 00067_0
 		1 o p_00067_1 00067_1
-	a (F)V m_00265 00265
-		0 o p_00265_0 00265_0
-	a (III)V m_00266 00266
-		0 o p_00266_0 00266_0
-		1 o p_00266_1 00266_1
-		2 o p_00266_2 00266_2
+	a (F)V m_00201 00201
+		0 o p_00201_0 00201_0
+	a (III)V m_00202 00202
+		0 o p_00202_0 00202_0
+		1 o p_00202_1 00202_1
+		2 o p_00202_2 00202_2
 	a (Lcom/mojang/minecraft/player/Player;Lcom/mojang/minecraft/d;II)V m_00068 00068
 		0 o p_00068_0 00068_0
 		1 o p_00068_1 00068_1
@@ -452,8 +452,8 @@ com/mojang/minecraft/b/d com/mojang/minecraft/src/c_00019 00019
 		5 o p_00100_5 00100_5
 com/mojang/minecraft/b/e com/mojang/minecraft/src/c_00045 00045
 	e f_00266 00266
-	<init> (Lcom/mojang/minecraft/b/c;)V m_00267 00267
-		0 o p_00267_0 00267_0
+	<init> (Lcom/mojang/minecraft/b/c;)V m_00203 00203
+		0 o p_00203_0 00203_0
 	a ()V m_00107 00107
 	a (Lcom/mojang/minecraft/b/d;)V m_00105 00105
 		0 o p_00105_0 00105_0
@@ -625,11 +625,11 @@ com/mojang/minecraft/level/b com/mojang/minecraft/src/c_00046 00046
 	b f_00269 00269
 	c f_00270 00270
 	d f_00271 00271
-	<init> (IIII)V m_00268 00268
-		0 o p_00268_0 00268_0
-		1 o p_00268_1 00268_1
-		2 o p_00268_2 00268_2
-		3 o p_00268_3 00268_3
+	<init> (IIII)V m_00204 00204
+		0 o p_00204_0 00204_0
+		1 o p_00204_1 00204_1
+		2 o p_00204_2 00204_2
+		3 o p_00204_3 00204_3
 com/mojang/minecraft/level/Level com/mojang/minecraft/src/c_00014 00014
 	serialVersionUID f_00272 00272
 	width f_00107 00107
@@ -652,51 +652,51 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/src/c_00014 00014
 	unprocessed f_00279 00279
 	tickCount f_00118 00118
 	<init> ()V <init> 00071
-	initTransient ()V m_00269 00269
+	initTransient ()V m_00205 00205
 	setData (III[B)V m_00072 00072
 		0 o p_00072_0 00072_0
 		1 o p_00072_1 00072_1
 		2 o p_00072_2 00072_2
 		3 o p_00072_3 00072_3
-	findSpawn ()V m_00270 00270
+	findSpawn ()V m_00206 00206
 	calcLightDepths (IIII)V m_00073 00073
 		0 o p_00073_0 00073_0
 		1 o p_00073_1 00073_1
 		2 o p_00073_2 00073_2
 		3 o p_00073_3 00073_3
-	addListener$74652038 (Lcom/mojang/minecraft/a/g;)V m_00271 00271
-		0 o p_00271_0 00271_0
-	finalize ()V m_00272 00272
-	removeListener$74652038 (Lcom/mojang/minecraft/a/g;)V m_00273 00273
-		0 o p_00273_0 00273_0
-	isLightBlocker (III)Z m_00274 00274
-		0 o p_00274_0 00274_0
-		1 o p_00274_1 00274_1
-		2 o p_00274_2 00274_2
+	addListener$74652038 (Lcom/mojang/minecraft/a/g;)V m_00207 00207
+		0 o p_00207_0 00207_0
+	finalize ()V m_00208 00208
+	removeListener$74652038 (Lcom/mojang/minecraft/a/g;)V m_00209 00209
+		0 o p_00209_0 00209_0
+	isLightBlocker (III)Z m_00210 00210
+		0 o p_00210_0 00210_0
+		1 o p_00210_1 00210_1
+		2 o p_00210_2 00210_2
 	getCubes (Lcom/mojang/minecraft/phys/AABB;)Ljava/util/ArrayList; m_00074 00074
 		0 o p_00074_0 00074_0
-	swap (IIIIII)V m_00275 00275
-		0 o p_00275_0 00275_0
-		1 o p_00275_1 00275_1
-		2 o p_00275_2 00275_2
-		3 o p_00275_3 00275_3
-		4 o p_00275_4 00275_4
-		5 o p_00275_5 00275_5
-	setTileNoNeighborChange (IIII)Z m_00276 00276
-		0 o p_00276_0 00276_0
-		1 o p_00276_1 00276_1
-		2 o p_00276_2 00276_2
-		3 o p_00276_3 00276_3
+	swap (IIIIII)V m_00211 00211
+		0 o p_00211_0 00211_0
+		1 o p_00211_1 00211_1
+		2 o p_00211_2 00211_2
+		3 o p_00211_3 00211_3
+		4 o p_00211_4 00211_4
+		5 o p_00211_5 00211_5
+	setTileNoNeighborChange (IIII)Z m_00212 00212
+		0 o p_00212_0 00212_0
+		1 o p_00212_1 00212_1
+		2 o p_00212_2 00212_2
+		3 o p_00212_3 00212_3
 	setTile (IIII)Z m_00075 00075
 		0 o p_00075_0 00075_0
 		1 o p_00075_1 00075_1
 		2 o p_00075_2 00075_2
 		3 o p_00075_3 00075_3
-	a (IIII)V m_00277 00277
-		0 o p_00277_0 00277_0
-		1 o p_00277_1 00277_1
-		2 o p_00277_2 00277_2
-		3 o p_00277_3 00277_3
+	a (IIII)V m_00213 00213
+		0 o p_00213_0 00213_0
+		1 o p_00213_1 00213_1
+		2 o p_00213_2 00213_2
+		3 o p_00213_3 00213_3
 	setTileNoUpdate (IIII)Z m_00076 00076
 		0 o p_00076_0 00076_0
 		1 o p_00076_1 00076_1
@@ -715,57 +715,57 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/src/c_00014 00014
 		0 o p_00079_0 00079_0
 		1 o p_00079_1 00079_1
 		2 o p_00079_2 00079_2
-	isSolidTile (III)Z m_00278 00278
-		0 o p_00278_0 00278_0
-		1 o p_00278_1 00278_1
-		2 o p_00278_2 00278_2
-	tick ()V m_00279 00279
-	a (III)Z m_00280 00280
-		0 o p_00280_0 00280_0
-		1 o p_00280_1 00280_1
-		2 o p_00280_2 00280_2
-	getGroundLevel ()F m_00281 00281
-	getWaterLevel ()F m_00282 00282
-	containsAnyLiquid (Lcom/mojang/minecraft/phys/AABB;)Z m_00283 00283
-		0 o p_00283_0 00283_0
+	isSolidTile (III)Z m_00214 00214
+		0 o p_00214_0 00214_0
+		1 o p_00214_1 00214_1
+		2 o p_00214_2 00214_2
+	tick ()V m_00215 00215
+	a (III)Z m_00216 00216
+		0 o p_00216_0 00216_0
+		1 o p_00216_1 00216_1
+		2 o p_00216_2 00216_2
+	getGroundLevel ()F m_00217 00217
+	getWaterLevel ()F m_00218 00218
+	containsAnyLiquid (Lcom/mojang/minecraft/phys/AABB;)Z m_00219 00219
+		0 o p_00219_0 00219_0
 	containsLiquid (Lcom/mojang/minecraft/phys/AABB;I)Z m_00080 00080
 		0 o p_00080_0 00080_0
 		1 o p_00080_1 00080_1
-	addToTickNextTick (IIII)V m_00284 00284
-		0 o p_00284_0 00284_0
-		1 o p_00284_1 00284_1
-		2 o p_00284_2 00284_2
-		3 o p_00284_3 00284_3
-	isFree (Lcom/mojang/minecraft/phys/AABB;)Z m_00285 00285
-		0 o p_00285_0 00285_0
-	isSolid (FFFF)Z m_00286 00286
-		0 o p_00286_0 00286_0
-		1 o p_00286_1 00286_1
-		2 o p_00286_2 00286_2
-		3 o p_00286_3 00286_3
-	a (FFF)Z m_00287 00287
-		0 o p_00287_0 00287_0
-		1 o p_00287_1 00287_1
-		2 o p_00287_2 00287_2
-	getHighestTile (II)I m_00288 00288
-		0 o p_00288_0 00288_0
-		1 o p_00288_1 00288_1
-	setSpawnPos (IIIF)V m_00289 00289
-		0 o p_00289_0 00289_0
-		1 o p_00289_1 00289_1
-		2 o p_00289_2 00289_2
-		3 o p_00289_3 00289_3
-	getBrightness (III)F m_00290 00290
-		0 o p_00290_0 00290_0
-		1 o p_00290_1 00290_1
-		2 o p_00290_2 00290_2
-	getCaveness (FFFF)F m_00291 00291
-		0 o p_00291_0 00291_0
-		1 o p_00291_1 00291_1
-		2 o p_00291_2 00291_2
-		3 o p_00291_3 00291_3
-	getCaveness (Lcom/mojang/minecraft/Entity;)F m_00292 00292
-		0 o p_00292_0 00292_0
+	addToTickNextTick (IIII)V m_00220 00220
+		0 o p_00220_0 00220_0
+		1 o p_00220_1 00220_1
+		2 o p_00220_2 00220_2
+		3 o p_00220_3 00220_3
+	isFree (Lcom/mojang/minecraft/phys/AABB;)Z m_00221 00221
+		0 o p_00221_0 00221_0
+	isSolid (FFFF)Z m_00222 00222
+		0 o p_00222_0 00222_0
+		1 o p_00222_1 00222_1
+		2 o p_00222_2 00222_2
+		3 o p_00222_3 00222_3
+	a (FFF)Z m_00223 00223
+		0 o p_00223_0 00223_0
+		1 o p_00223_1 00223_1
+		2 o p_00223_2 00223_2
+	getHighestTile (II)I m_00224 00224
+		0 o p_00224_0 00224_0
+		1 o p_00224_1 00224_1
+	setSpawnPos (IIIF)V m_00225 00225
+		0 o p_00225_0 00225_0
+		1 o p_00225_1 00225_1
+		2 o p_00225_2 00225_2
+		3 o p_00225_3 00225_3
+	getBrightness (III)F m_00226 00226
+		0 o p_00226_0 00226_0
+		1 o p_00226_1 00226_1
+		2 o p_00226_2 00226_2
+	getCaveness (FFFF)F m_00227 00227
+		0 o p_00227_0 00227_0
+		1 o p_00227_1 00227_1
+		2 o p_00227_2 00227_2
+		3 o p_00227_3 00227_3
+	getCaveness (Lcom/mojang/minecraft/Entity;)F m_00228 00228
+		0 o p_00228_0 00228_0
 com/mojang/minecraft/particle/a com/mojang/minecraft/src/c_00025 00025
 	a f_00167 00167
 	b f_00168 00168
@@ -795,14 +795,14 @@ com/mojang/minecraft/particle/Particle com/mojang/minecraft/src/c_00026 00026
 		6 o p_00126_6 00126_6
 		7 o p_00126_7 00126_7
 	tick ()V m_00031 00031
-	render (Lcom/mojang/minecraft/a/c;FFFFFF)V m_00293 00293
-		0 o p_00293_0 00293_0
-		1 o p_00293_1 00293_1
-		2 o p_00293_2 00293_2
-		3 o p_00293_3 00293_3
-		4 o p_00293_4 00293_4
-		5 o p_00293_5 00293_5
-		6 o p_00293_6 00293_6
+	render (Lcom/mojang/minecraft/a/c;FFFFFF)V m_00229 00229
+		0 o p_00229_0 00229_0
+		1 o p_00229_1 00229_1
+		2 o p_00229_2 00229_2
+		3 o p_00229_3 00229_3
+		4 o p_00229_4 00229_4
+		5 o p_00229_5 00229_5
+		6 o p_00229_6 00229_6
 com/mojang/minecraft/phys/AABB com/mojang/minecraft/src/c_00033 00033
 	serialVersionUID f_00280 00280
 	epsilon f_00209 00209
@@ -819,27 +819,27 @@ com/mojang/minecraft/phys/AABB com/mojang/minecraft/src/c_00033 00033
 		3 o p_00141_3 00141_3
 		4 o p_00141_4 00141_4
 		5 o p_00141_5 00141_5
-	expand (FFF)Lcom/mojang/minecraft/phys/AABB; m_00294 00294
-		0 o p_00294_0 00294_0
-		1 o p_00294_1 00294_1
-		2 o p_00294_2 00294_2
+	expand (FFF)Lcom/mojang/minecraft/phys/AABB; m_00230 00230
+		0 o p_00230_0 00230_0
+		1 o p_00230_1 00230_1
+		2 o p_00230_2 00230_2
 	grow (FFF)Lcom/mojang/minecraft/phys/AABB; m_00142 00142
 		0 o p_00142_0 00142_0
 		1 o p_00142_1 00142_1
 		2 o p_00142_2 00142_2
-	cloneMove (FFF)Lcom/mojang/minecraft/phys/AABB; m_00295 00295
-		0 o p_00295_0 00295_0
-		1 o p_00295_1 00295_1
-		2 o p_00295_2 00295_2
-	clipXCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00296 00296
-		0 o p_00296_0 00296_0
-		1 o p_00296_1 00296_1
-	clipYCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00297 00297
-		0 o p_00297_0 00297_0
-		1 o p_00297_1 00297_1
-	clipZCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00298 00298
-		0 o p_00298_0 00298_0
-		1 o p_00298_1 00298_1
+	cloneMove (FFF)Lcom/mojang/minecraft/phys/AABB; m_00231 00231
+		0 o p_00231_0 00231_0
+		1 o p_00231_1 00231_1
+		2 o p_00231_2 00231_2
+	clipXCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00232 00232
+		0 o p_00232_0 00232_0
+		1 o p_00232_1 00232_1
+	clipYCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00233 00233
+		0 o p_00233_0 00233_0
+		1 o p_00233_1 00233_1
+	clipZCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00234 00234
+		0 o p_00234_0 00234_0
+		1 o p_00234_1 00234_1
 	intersects (Lcom/mojang/minecraft/phys/AABB;)Z m_00143 00143
 		0 o p_00143_0 00143_0
 	move (FFF)V m_00144 00144
@@ -851,30 +851,30 @@ com/mojang/minecraft/player/a com/mojang/minecraft/src/c_00047 00047
 	b f_00282 00282
 	c f_00283 00283
 	d f_00284 00284
-	<init> ()V m_00299 00299
-	a ()V m_00300 00300
-	b ()V m_00301 00301
-	a (IZ)V m_00302 00302
-		0 o p_00302_0 00302_0
-		1 o p_00302_1 00302_1
+	<init> ()V m_00235 00235
+	a ()V m_00236 00236
+	b ()V m_00237 00237
+	a (IZ)V m_00238 00238
+		0 o p_00238_0 00238_0
+		1 o p_00238_1 00238_1
 com/mojang/minecraft/player/b com/mojang/minecraft/src/c_00048 00048
 	e f_00285 00285
-	<init> ()V m_00303 00303
-	a (IZ)V m_00302 00302
-		0 o p_00302_0 00302_0
-		1 o p_00302_1 00302_1
-	b ()V m_00301 00301
-	a ()V m_00300 00300
+	<init> ()V m_00239 00239
+	a (IZ)V m_00238 00238
+		0 o p_00238_0 00238_0
+		1 o p_00238_1 00238_1
+	b ()V m_00237 00237
+	a ()V m_00236 00236
 com/mojang/minecraft/player/Player com/mojang/minecraft/src/c_00005 00005
 	input f_00286 00286
-	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V m_00304 00304
-		0 o p_00304_0 00304_0
-		1 o p_00304_1 00304_1
+	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V m_00240 00240
+		0 o p_00240_0 00240_0
+		1 o p_00240_1 00240_1
 	tick ()V m_00031 00031
-	releaseAllKeys ()V m_00305 00305
-	setKey (IZ)V m_00306 00306
-		0 o p_00306_0 00306_0
-		1 o p_00306_1 00306_1
+	releaseAllKeys ()V m_00241 00241
+	setKey (IZ)V m_00242 00242
+		0 o p_00242_0 00242_0
+		1 o p_00242_1 00242_1
 com/mojang/minecraft/level/a/a com/mojang/minecraft/src/c_00034 00034
 	a f_00216 00216
 	b f_00217 00217
@@ -925,12 +925,12 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/src/c_00034 00034
 		3 o p_00149_3 00149_3
 		4 o p_00149_4 00149_4
 		5 o p_00149_5 00149_5
-	a (Lcom/mojang/minecraft/level/Level;IIII)Z m_00307 00307
-		0 o p_00307_0 00307_0
-		1 o p_00307_1 00307_1
-		2 o p_00307_2 00307_2
-		3 o p_00307_3 00307_3
-		4 o p_00307_4 00307_4
+	a (Lcom/mojang/minecraft/level/Level;IIII)Z m_00243 00243
+		0 o p_00243_0 00243_0
+		1 o p_00243_1 00243_1
+		2 o p_00243_2 00243_2
+		3 o p_00243_3 00243_3
+		4 o p_00243_4 00243_4
 	a (Lcom/mojang/minecraft/level/Level;IIIII)Z m_00150 00150
 		0 o p_00150_0 00150_0
 		1 o p_00150_1 00150_1
@@ -989,16 +989,16 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/src/c_00034 00034
 		2 o p_00163_2 00163_2
 		3 o p_00163_3 00163_3
 		4 o p_00163_4 00163_4
-	a (Lcom/mojang/minecraft/level/Level;III)V m_00308 00308
-		0 o p_00308_0 00308_0
-		1 o p_00308_1 00308_1
-		2 o p_00308_2 00308_2
-		3 o p_00308_3 00308_3
+	a (Lcom/mojang/minecraft/level/Level;III)V m_00244 00244
+		0 o p_00244_0 00244_0
+		1 o p_00244_1 00244_1
+		2 o p_00244_2 00244_2
+		3 o p_00244_3 00244_3
 	<clinit> ()V <clinit> 00164
 com/mojang/minecraft/level/a/b com/mojang/minecraft/src/c_00049 00049
-	<init> (II)V m_00309 00309
-		0 o p_00309_0 00309_0
-		1 o p_00309_1 00309_1
+	<init> (II)V m_00245 00245
+		0 o p_00245_0 00245_0
+		1 o p_00245_1 00245_1
 	b ()Z m_00158 00158
 	a ()Z m_00157 00157
 com/mojang/minecraft/level/a/c com/mojang/minecraft/src/c_00036 00036
@@ -1006,25 +1006,25 @@ com/mojang/minecraft/level/a/c com/mojang/minecraft/src/c_00036 00036
 		0 o p_00166_0 00166_0
 		1 o p_00166_1 00166_1
 com/mojang/minecraft/level/a/d com/mojang/minecraft/src/c_00050 00050
-	<init> (II)V m_00310 00310
-		0 o p_00310_0 00310_0
-		1 o p_00310_1 00310_1
-	a (Lcom/mojang/minecraft/level/Level;III)V m_00308 00308
-		0 o p_00308_0 00308_0
-		1 o p_00308_1 00308_1
-		2 o p_00308_2 00308_2
-		3 o p_00308_3 00308_3
+	<init> (II)V m_00246 00246
+		0 o p_00246_0 00246_0
+		1 o p_00246_1 00246_1
+	a (Lcom/mojang/minecraft/level/Level;III)V m_00244 00244
+		0 o p_00244_0 00244_0
+		1 o p_00244_1 00244_1
+		2 o p_00244_2 00244_2
+		3 o p_00244_3 00244_3
 	b (Lcom/mojang/minecraft/level/Level;IIII)V m_00163 00163
 		0 o p_00163_0 00163_0
 		1 o p_00163_1 00163_1
 		2 o p_00163_2 00163_2
 		3 o p_00163_3 00163_3
 		4 o p_00163_4 00163_4
-	b (Lcom/mojang/minecraft/level/Level;III)V m_00311 00311
-		0 o p_00311_0 00311_0
-		1 o p_00311_1 00311_1
-		2 o p_00311_2 00311_2
-		3 o p_00311_3 00311_3
+	b (Lcom/mojang/minecraft/level/Level;III)V m_00247 00247
+		0 o p_00247_0 00247_0
+		1 o p_00247_1 00247_1
+		2 o p_00247_2 00247_2
+		3 o p_00247_3 00247_3
 com/mojang/minecraft/level/a/e com/mojang/minecraft/src/c_00037 00037
 	<init> (II)V <init> 00167
 		0 o p_00167_0 00167_0
@@ -1042,8 +1042,8 @@ com/mojang/minecraft/level/a/e com/mojang/minecraft/src/c_00037 00037
 		3 o p_00163_3 00163_3
 		4 o p_00163_4 00163_4
 com/mojang/minecraft/level/a/f com/mojang/minecraft/src/c_00051 00051
-	<init> (I)V m_00312 00312
-		0 o p_00312_0 00312_0
+	<init> (I)V m_00248 00248
+		0 o p_00248_0 00248_0
 	a (I)I m_00151 00151
 		0 o p_00151_0 00151_0
 com/mojang/minecraft/level/a/g com/mojang/minecraft/src/c_00039 00039
@@ -1086,11 +1086,11 @@ com/mojang/minecraft/level/a/i com/mojang/minecraft/src/c_00038 00038
 	<init> (II)V <init> 00168
 		0 o p_00168_0 00168_0
 		1 o p_00168_1 00168_1
-	a (Lcom/mojang/minecraft/level/Level;III)V m_00308 00308
-		0 o p_00308_0 00308_0
-		1 o p_00308_1 00308_1
-		2 o p_00308_2 00308_2
-		3 o p_00308_3 00308_3
+	a (Lcom/mojang/minecraft/level/Level;III)V m_00244 00244
+		0 o p_00244_0 00244_0
+		1 o p_00244_1 00244_1
+		2 o p_00244_2 00244_2
+		3 o p_00244_3 00244_3
 	a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V m_00160 00160
 		0 o p_00160_0 00160_0
 		1 o p_00160_1 00160_1
@@ -1144,15 +1144,15 @@ com/mojang/minecraft/level/b/a com/mojang/minecraft/src/c_00040 00040
 		1 o p_00173_1 00173_1
 		2 o p_00173_2 00173_2
 		3 o p_00173_3 00173_3
-	a ([I)V m_00313 00313
-		0 o p_00313_0 00313_0
-	b ([I)V m_00314 00314
-		0 o p_00314_0 00314_0
-	a (IIII)V m_00315 00315
-		0 o p_00315_0 00315_0
-		1 o p_00315_1 00315_1
-		2 o p_00315_2 00315_2
-		3 o p_00315_3 00315_3
+	a ([I)V m_00249 00249
+		0 o p_00249_0 00249_0
+	b ([I)V m_00250 00250
+		0 o p_00250_0 00250_0
+	a (IIII)V m_00251 00251
+		0 o p_00251_0 00251_0
+		1 o p_00251_1 00251_1
+		2 o p_00251_2 00251_2
+		3 o p_00251_3 00251_3
 	a (I)V m_00174 00174
 		0 o p_00174_0 00174_0
 	a ()V m_00175 00175
