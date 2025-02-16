@@ -1,11 +1,8 @@
+import com.ancientmc.acpconfig.tasks.csv.UpdateCsv
 import com.ancientmc.acpconfig.tasks.UpdateTsrg
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-
 }
 
 ext {
@@ -13,10 +10,13 @@ ext {
     NEW = 'c0.0.14a_08'
     OLD_DIR = String.join('/', 'data/versions', phase(OLD as String), OLD)
     NEW_DIR = String.join('/', 'data/versions', phase(NEW as String), NEW)
+    OLD_CSV_DIR = String.join('/', OLD_DIR, 'mappings/csv/')
+    NEW_CSV_DIR = String.join('/', NEW_DIR, 'mappings/csv/')
     MATCH = 'data/matches/' + OLD + '-' + NEW + '.match'
 }
 
 tasks.register('updateTsrg', UpdateTsrg) {
+    group = 'update'
     oldIds = file(OLD_DIR + '/mappings/ids.csv')
     oldTsrg = file(OLD_DIR + '/mappings/intermediate.tsrg')
     match = file(MATCH)
@@ -24,6 +24,17 @@ tasks.register('updateTsrg', UpdateTsrg) {
     inheritanceJson = file(NEW_DIR + '/inheritance_map.json')
     newTsrg = file(NEW_DIR + '/mappings/intermediate.tsrg')
     newIds = file(NEW_DIR + '/mappings/ids.csv')
+}
+
+// Params are not updated because they aren't matched between versions, and are instead freshly generated in the TSRG with their parent methods.
+def csvs = ['classes', 'fields', 'methods']
+csvs.each { table ->
+    def updateCsv = tasks.register("update${table.capitalize()}Csv", UpdateCsv) {
+        group = 'update'
+        input = file(OLD_CSV_DIR + '/' + table + '.csv')
+        blankOutput = file(NEW_CSV_DIR + '/' + table + '.csv')
+        output = file(NEW_CSV_DIR + '/' + table + '.csv')
+    }
 }
 
 static def phase(String ver) {
