@@ -58,7 +58,7 @@ public class Tsrg {
             if (!cls.getMethods().isEmpty()) {
                 cls.getMethods().forEach(mtd -> {
                     String id = getMethodId(this.file, cls.getOriginal(), mtd.getMapped(), mtd.getDescriptor());
-                    TsrgMethod tsrgMethod = new TsrgMethod(mtd.getOriginal(), mtd.getMapped(), mtd.getDescriptor(), cls.getOriginal(), id);
+                    TsrgMethod tsrgMethod = new TsrgMethod(mtd.getOriginal(), mtd.getMapped(), cls.getOriginal(), mtd.getDescriptor(), id);
                     methods.add(tsrgMethod);
                 });
             }
@@ -79,7 +79,7 @@ public class Tsrg {
     public static String getFieldId(File file, String parent, String mapped) {
         try {
             List<String> lines = Files.readAllLines(file.toPath());
-            String classLine = lines.stream().filter(l -> l.startsWith(parent)).findAny().get();
+            String classLine = lines.stream().filter(l -> l.startsWith(parent + " ")).findAny().get();
             List<String> classBlock = lines.subList(lines.indexOf(classLine), getNextClassIndex(lines, classLine));
             String fieldLine = classBlock.stream().filter(l -> l.contains(mapped)).findAny().get();
             return fieldLine.split(" ")[2];
@@ -91,7 +91,7 @@ public class Tsrg {
     public static String getMethodId(File file, String parent, String mapped, String desc) {
         try {
             List<String> lines = Files.readAllLines(file.toPath());
-            String classLine = lines.stream().filter(l -> l.startsWith(parent)).findAny().get();
+            String classLine = lines.stream().filter(l -> l.startsWith(parent + " ")).findAny().get();
             List<String> classBlock = lines.subList(lines.indexOf(classLine), getNextClassIndex(lines, classLine));
             String methodLine = classBlock.stream().filter(l -> l.contains(mapped) && l.contains(desc)).findAny().get();
             return methodLine.split(" ")[3];
@@ -160,6 +160,10 @@ public class Tsrg {
             this.mapped = mapped;
             this.parent = parent;
             this.id = id;
+        }
+
+        public String toString() {
+            return "TsrgField obf=" + obf + " mapped=" + mapped + " parent=" + parent + " id" + id;
         }
     }
 

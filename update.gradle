@@ -18,10 +18,11 @@ ext {
 
 tasks.register('updateTsrg', UpdateTsrg) {
     oldIds = file(OLD_DIR + '/mappings/ids.csv')
+    oldTsrg = file(OLD_DIR + '/mappings/intermediate.tsrg')
     match = file(MATCH)
     newJar = file(NEW_DIR + '/game/jars/client.jar')
     inheritanceJson = file(NEW_DIR + '/inheritance_map.json')
-    tsrg = file(NEW_DIR + '/mappings/intermediate.tsrg')
+    newTsrg = file(NEW_DIR + '/mappings/intermediate.tsrg')
     newIds = file(NEW_DIR + '/mappings/ids.csv')
 }
 

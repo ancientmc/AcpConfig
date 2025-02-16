@@ -35,14 +35,14 @@ public class Match {
         try {
             List<String> matchLines = Files.readAllLines(match.toPath());
             classes.forEach(cls -> {
-                String classLine = matchLines.stream().filter(line -> line.startsWith("c\tL" + cls.oldName)).findAny().get();
+                String classLine = matchLines.stream().filter(line -> line.startsWith("c\tL" + cls.oldName + ";")).findAny().get();
                 List<String> classBlock = matchLines.subList(matchLines.indexOf(classLine) + 1, getNextClassIndex(matchLines, classLine));
 
                 classBlock.forEach(line -> {
                     if (line.startsWith("\tf\t")) { // field prefix
                         String[] split = line.split("\t");
-                        String oldName = split[1].substring(0, split[1].indexOf(';') - 1); // <field_name>;;<descriptor> -> <field_name>
-                        String newName = split[2].substring(0, split[2].indexOf(';') - 1);
+                        String oldName = split[2].substring(0, split[2].indexOf(";;")); // <field_name>;;<descriptor> -> <field_name>
+                        String newName = split[3].substring(0, split[3].indexOf(";;"));
                         fields.add(new MatchField(cls.oldName, cls.newName, oldName, newName));
                     }
                 });
@@ -60,16 +60,16 @@ public class Match {
         try {
             List<String> matchLines = Files.readAllLines(match.toPath());
             classes.forEach(cls -> {
-                String classLine = matchLines.stream().filter(line -> line.startsWith("c\tL" + cls.oldName)).findAny().get();
+                String classLine = matchLines.stream().filter(line -> line.startsWith("c\tL" + cls.oldName + ";")).findAny().get();
                 List<String> classBlock = matchLines.subList(matchLines.indexOf(classLine) + 1, getNextClassIndex(matchLines, classLine));
 
                 classBlock.forEach(line -> {
                     if (line.startsWith("\tm\t")) { // method prefix
                         String[] split = line.split("\t");
-                        String oldName = split[1].substring(0, split[1].indexOf('(') - 1); // method name and descriptor are strung together, so we just separate them
-                        String newName = split[2].substring(0, split[2].indexOf('(') - 1);
-                        String oldDesc = split[1].substring(split[1].indexOf('('));
-                        String newDesc = split[2].substring(split[2].indexOf('('));
+                        String oldName = split[2].substring(0, split[2].indexOf('(')); // method name and descriptor are strung together, so we just separate them
+                        String newName = split[3].substring(0, split[3].indexOf('('));
+                        String oldDesc = split[2].substring(split[2].indexOf('('));
+                        String newDesc = split[3].substring(split[3].indexOf('('));
                         methods.add(new MatchMethod(cls.oldName, cls.newName, oldName, newName, oldDesc, newDesc));
                     }
                 });
@@ -102,6 +102,10 @@ public class Match {
             this.oldName = oldName;
             this.newName = newName;
         }
+
+        public String toString() {
+            return "MatchField oldParent=" + oldParent + " newParent=" + newParent + " oldName=" + oldName + " newName=" + newName;
+        }
     }
 
     public static class MatchMethod {
@@ -119,6 +123,11 @@ public class Match {
             this.newName = newName;
             this.oldDesc = oldDesc;
             this.newDesc = newDesc;
+        }
+
+        public String toString() {
+            return "MatchMethod oldParent=" + oldParent + " newParent=" + newParent + " oldName=" + oldName + " newName=" + newName
+                    + " oldDesc=" + oldDesc + " newDesc=" + newDesc;
         }
     }
 

@@ -44,6 +44,7 @@ public abstract class UpdateTsrg extends DefaultTask {
 
         try {
             List<String> lines = getLines(tsrg, jar, match, oldIds);
+            write(newTsrg, lines);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -68,7 +69,7 @@ public abstract class UpdateTsrg extends DefaultTask {
                 lines.add(String.join(" ", cls.name, intermediateClass.mapped, intermediateClass.id) + "\n");
             } else {
                 String id = newClassIds.get(cls);
-                lines.add(String.join(" ", cls.name, "com/mojang/minecraft/src/c_" + id, id));
+                lines.add(String.join(" ", cls.name, "com/mojang/minecraft/src/c_" + id, id) + "\n");
             }
 
             // Fields
@@ -80,24 +81,55 @@ public abstract class UpdateTsrg extends DefaultTask {
                     lines.add("\t" + String.join(" ", field.name, intermediateField.mapped, intermediateField.id) + "\n");
                 } else {
                     String id = newFieldIds.get(field);
-                    lines.add(String.join(" ", field.name, "f_" + id, id) + "\n");
+                    lines.add("\t" + String.join(" ", field.name, "f_" + id, id) + "\n");
                 }
             }
 
             // Methods
             List<Types.Method> sortedMethods = jar.methods.stream().filter(m -> m.parent.equals(cls.name)).toList();
             for (Types.Method method : sortedMethods) {
+                String id = "";
                 if (isOldMethod(method, match)) {
                     Match.MatchMethod oldMethod = match.getOldMethod(method);
+                    System.out.println(oldMethod.toString());
                     Tsrg.TsrgMethod intermediateMethod = tsrg.getIntermediateMethod(oldMethod);
-                    lines.add("\t" + String.join(" ", method.name, intermediateMethod.mapped, intermediateMethod.id) + "\n");
+                    id = intermediateMethod.id;
+                    lines.add("\t" + String.join(" ", method.name, method.desc, intermediateMethod.mapped, id) + "\n");
                 } else {
-                    System.out.println("finish idk");
+                    if (method.inherited) {
+                        Types.Method superMethod = getSuperMethod(jar, method);
+                        if (isOldMethod(superMethod, match)) { // if the method's parent is old
+                            Match.MatchMethod oldSuperMethod = match.getOldMethod(superMethod);
+                            id = tsrg.getIntermediateMethod(oldSuperMethod).id;
+                        } else { // if the method's parent id is also new
+                            id = newMethodIds.get(superMethod);
+                        }
+                    } else {
+                        id = newMethodIds.get(method);
+                    }
+                    lines.add("\t" + String.join(" ", method.name, method.desc, "m_" + id, id) + "\n");
+                }
+
+                // Parameters
+                for (int i = 0; i < method.params; i++) {
+                    String index = Integer.toString(i);
+                    String pid = id + "_" + index;
+                    lines.add("\t\t" + String.join(" ", index, "o", "p_" + pid, pid) + "\n");
                 }
             }
         }
-
         return lines;
+    }
+
+    public static void write(File tsrg, List<String> lines) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(tsrg))) {
+            for (String line : lines) {
+                writer.write(line);
+            }
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void writeIds(File ids) {
@@ -109,6 +141,19 @@ public abstract class UpdateTsrg extends DefaultTask {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static Types.Method getSuperMethod(MinecraftJar jar, Types.Method method) {
+        if (jar.classes.stream().anyMatch(c -> c.name.equals(method.superParent))) {
+            Types.Clazz superParent = jar.classes.stream().filter(c -> c.name.equals(method.superParent)).findAny().get();
+            if (!superParent.name.isEmpty()) {
+                List<Types.Method> superMethods = jar.methods.stream().filter(m -> m.parent.equals(superParent.name)).toList();
+                return superMethods.stream().filter(m -> (m.desc.equals(method.desc) && m.name.equals(method.name))).findAny().get();
+            }
+        } else {
+            return method;
+        }
+        return null;
     }
 
     /*
@@ -168,7 +213,7 @@ public abstract class UpdateTsrg extends DefaultTask {
         Map<Types.Method, String> newMethods = new HashMap<>();
 
         for (Types.Method method : methods) {
-            if (!isOldMethod(method, match)) {
+            if (!isOldMethod(method, match) && !method.inherited) {
                 newMethods.put(method, getFormattedId(counter));
                 counter++;
             }
