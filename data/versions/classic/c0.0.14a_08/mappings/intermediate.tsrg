@@ -103,7 +103,7 @@ com/mojang/minecraft/c com/mojang/minecraft/src/c_00003 00003
 		1 o p_00022_1 00022_1
 	a (Lcom/mojang/minecraft/level/Level;)V m_00189 00189
 		0 o p_00189_0 00189_0
-	<clinit> ()V m_00190 00190
+	<clinit> ()V <clinit> 00190
 com/mojang/minecraft/d com/mojang/minecraft/src/c_00006 00006
 	a f_00047 00047
 	b f_00048 00048
@@ -452,7 +452,7 @@ com/mojang/minecraft/b/d com/mojang/minecraft/src/c_00019 00019
 		5 o p_00100_5 00100_5
 com/mojang/minecraft/b/e com/mojang/minecraft/src/c_00045 00045
 	e f_00266 00266
-	<init> (Lcom/mojang/minecraft/b/c;)V m_00203 00203
+	<init> (Lcom/mojang/minecraft/b/c;)V <init> 00203
 		0 o p_00203_0 00203_0
 	a ()V m_00107 00107
 	a (Lcom/mojang/minecraft/b/d;)V m_00105 00105
@@ -625,7 +625,7 @@ com/mojang/minecraft/level/b com/mojang/minecraft/src/c_00046 00046
 	b f_00269 00269
 	c f_00270 00270
 	d f_00271 00271
-	<init> (IIII)V m_00204 00204
+	<init> (IIII)V <init> 00204
 		0 o p_00204_0 00204_0
 		1 o p_00204_1 00204_1
 		2 o p_00204_2 00204_2
@@ -851,7 +851,7 @@ com/mojang/minecraft/player/a com/mojang/minecraft/src/c_00047 00047
 	b f_00282 00282
 	c f_00283 00283
 	d f_00284 00284
-	<init> ()V m_00235 00235
+	<init> ()V <init> 00235
 	a ()V m_00236 00236
 	b ()V m_00237 00237
 	a (IZ)V m_00238 00238
@@ -859,7 +859,7 @@ com/mojang/minecraft/player/a com/mojang/minecraft/src/c_00047 00047
 		1 o p_00238_1 00238_1
 com/mojang/minecraft/player/b com/mojang/minecraft/src/c_00048 00048
 	e f_00285 00285
-	<init> ()V m_00239 00239
+	<init> ()V <init> 00239
 	a (IZ)V m_00238 00238
 		0 o p_00238_0 00238_0
 		1 o p_00238_1 00238_1
@@ -867,7 +867,7 @@ com/mojang/minecraft/player/b com/mojang/minecraft/src/c_00048 00048
 	a ()V m_00236 00236
 com/mojang/minecraft/player/Player com/mojang/minecraft/src/c_00005 00005
 	input f_00286 00286
-	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V m_00240 00240
+	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V <init> 00240
 		0 o p_00240_0 00240_0
 		1 o p_00240_1 00240_1
 	tick ()V m_00031 00031
@@ -996,7 +996,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/src/c_00034 00034
 		3 o p_00244_3 00244_3
 	<clinit> ()V <clinit> 00164
 com/mojang/minecraft/level/a/b com/mojang/minecraft/src/c_00049 00049
-	<init> (II)V m_00245 00245
+	<init> (II)V <init> 00245
 		0 o p_00245_0 00245_0
 		1 o p_00245_1 00245_1
 	b ()Z m_00158 00158
@@ -1006,7 +1006,7 @@ com/mojang/minecraft/level/a/c com/mojang/minecraft/src/c_00036 00036
 		0 o p_00166_0 00166_0
 		1 o p_00166_1 00166_1
 com/mojang/minecraft/level/a/d com/mojang/minecraft/src/c_00050 00050
-	<init> (II)V m_00246 00246
+	<init> (II)V <init> 00246
 		0 o p_00246_0 00246_0
 		1 o p_00246_1 00246_1
 	a (Lcom/mojang/minecraft/level/Level;III)V m_00244 00244
@@ -1042,7 +1042,7 @@ com/mojang/minecraft/level/a/e com/mojang/minecraft/src/c_00037 00037
 		3 o p_00163_3 00163_3
 		4 o p_00163_4 00163_4
 com/mojang/minecraft/level/a/f com/mojang/minecraft/src/c_00051 00051
-	<init> (I)V m_00248 00248
+	<init> (I)V <init> 00248
 		0 o p_00248_0 00248_0
 	a (I)I m_00151 00151
 		0 o p_00151_0 00151_0

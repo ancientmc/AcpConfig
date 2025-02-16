@@ -1,0 +1,7 @@
+Doc written by Mason
+
+This version is unique in that it's *partially* deobfuscated. Take a look at the TSRG. Some of the classes, fields, and methods don't have
+ProGuard names, but others do. I've never ever seen this before.
+
+Pre-Classic versions were notably not obfuscated at all. The version before this one, meanwhile, was entirely obfuscated. This
+version is in a weird in-between state for some inexplicable reason.
