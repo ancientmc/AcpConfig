@@ -62,7 +62,7 @@ public abstract class WriteCsvs extends DefaultTask {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(csv))) {
             writer.write("srg,cnf\n");
             for (String line : lines) {
-                writer.write(line + ",\n");
+                writer.write(line + "," + line + "\n");
             }
             writer.flush();
         } catch (IOException e) {

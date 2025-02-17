@@ -37,6 +37,11 @@ csvs.each { table ->
     }
 }
 
+tasks.register('updateAllCsvs') {
+    group = 'update'
+    dependsOn(updateClassesCsv, updateMethodsCsv, updateFieldsCsv)
+}
+
 static def phase(String ver) {
     if (ver.startsWith('c')) return 'classic'
     if (ver.startsWith('in-')) return 'indev'

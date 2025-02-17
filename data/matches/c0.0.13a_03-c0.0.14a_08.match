@@ -1,4 +1,4 @@
-Matches saved 2025-02-16T00:23:27.268157700Z, input files:
+Matches saved 2025-02-17T06:36:33.331972200Z, input files:
 	a:
 		66276	SHA256	QFlfDDetscWB0NTYNnM4Bv91r5d4NvgV8aVgD+8KQ74=	client.jar
 	b:
@@ -476,6 +476,7 @@ c	Lcom/mojang/minecraft/e/f;	Lcom/mojang/minecraft/character/c;
 	f	b;;F	b;;F
 	f	c;;F	c;;F
 c	Lcom/mojang/minecraft/e;	Lcom/mojang/minecraft/player/Player;
+	m	<init>(Lcom/mojang/minecraft/a/f;)V	<init>(Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V
 	m	a()V	tick()V
 	fu	a	a;;[Z
 c	Lcom/mojang/minecraft/f/a;	Lcom/mojang/minecraft/phys/AABB;

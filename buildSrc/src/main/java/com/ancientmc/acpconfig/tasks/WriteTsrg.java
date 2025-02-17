@@ -76,7 +76,7 @@ public abstract class WriteTsrg extends DefaultTask {
                 if (method.params > 0) {
                     for (int i = 0; i < method.params; i++) {
                         String pid = id + "_" + i;
-                        lines.add("\t\t" + String.join("", Integer.toString(i), "o", "p_" + pid, pid) + "\n");
+                        lines.add("\t\t" + String.join(" ", Integer.toString(i), "o", "p_" + pid, pid) + "\n");
                         System.out.println("PARAM: p_" + pid);
                     }
                 }
