@@ -31,7 +31,7 @@ public class Json {
         System.out.println("Version is: " + version);
         try {
             if (manifest.exists()) {
-                JsonObject manifestObj = Util.getJsonAsObject(manifest);
+                JsonObject manifestObj = Util.getJson(manifest);
                 JsonArray versions = manifestObj.getAsJsonArray("versions");
 
                 for (int i = 0; i < versions.size(); i++) {
@@ -61,7 +61,7 @@ public class Json {
         Map<String, String> map = new HashMap<>();
 
         for(File json : jsons) {
-            JsonObject object = Util.getJsonAsObject(json);
+            JsonObject object = Util.getJson(json);
             JsonArray libraries = object.getAsJsonArray("libraries");
 
             for(int i = 0; i < libraries.size(); i++) {
@@ -84,7 +84,7 @@ public class Json {
      * @throws IOException
      */
     public static List<URL> getNativeUrls(File json) throws IOException {
-        JsonObject jsonObj = Util.getJsonAsObject(json);
+        JsonObject jsonObj = Util.getJson(json);
         JsonArray libraries = jsonObj.getAsJsonArray("libraries");
         List<URL> urls = new ArrayList<>();
 
@@ -95,7 +95,7 @@ public class Json {
                 String os = Util.getOSName();
                 JsonObject natives = entry.getAsJsonObject("classifiers").getAsJsonObject("natives-" + os);
                 if (natives != null && isAllowed(name)) {
-                    URL url = URI.create(natives.get("url").getAsString()).toURL();
+                    URL url = Util.toUrl(natives.get("url").getAsString());
                     urls.add(url);
                 }
             }
@@ -108,11 +108,11 @@ public class Json {
      * Minecraft's resources (ones not already present within the JAR).
      * @param json The Minecraft version JSON.
      * @return The asset index URL.
-     * @throws IOException
+     * @throws IOException exception
      */
     public static URL getAssetIndexUrl(File json) throws IOException {
-        JsonObject jsonObj = Util.getJsonAsObject(json);
-        return URI.create(jsonObj.getAsJsonObject("assetIndex").get("url").getAsString()).toURL();
+        JsonObject jsonObj = Util.getJson(json);
+        return Util.toUrl(jsonObj.getAsJsonObject("assetIndex").get("url").getAsString());
     }
 
     /**
@@ -121,12 +121,11 @@ public class Json {
      * @param side The game side. Acceptable inputs are "client" and "server", though older versions may not have the server JAR in their
      *             JSONs.
      * @return The URL to the JAR file.
-     * @throws IOException
      */
     public static String getJarUrl(File json, String side) {
         try {
             if (json.exists()) {
-                JsonObject jsonObj = Util.getJsonAsObject(json);
+                JsonObject jsonObj = Util.getJson(json);
                 JsonObject sideObj = jsonObj.getAsJsonObject("downloads").getAsJsonObject(side);
                 return sideObj.get("url").getAsString();
             } else {

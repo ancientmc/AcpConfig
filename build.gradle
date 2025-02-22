@@ -29,6 +29,7 @@ subprojects {
     configurations {
         inheritance
         jarsplitter
+        rosetta
         forgeart
         mcinjector
     }
@@ -36,6 +37,7 @@ subprojects {
     dependencies {
         inheritance "net.neoforged.installertools:installertools:3.0.2:fatjar"
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
+        rosetta 'com.ancientmc:rosetta:0.0.9.3:all'
         forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
         mcinjector 'de.oceanlabs.mcp:mcinjector:4.1-am'
     }
@@ -69,12 +71,11 @@ subprojects {
 
     // Only generate if the version to update is radically different than the previous one.
     // Otherwise we'll just match and update. Also, make sure to check the inheritance map first for any access errors so inheritance is intact.
-    tasks.register('writeTsrg', WriteTsrg) {
+    tasks.register('writeTsrg', JavaExec) {
         dependsOn downloadClient
-        jar = file(Paths.BASE_JAR)
-        tsrg = file(Paths.INTERMEDIATE_TSRG)
-        inheritanceJson = file(Paths.INHERITANCE)
-        ids = file('mappings/ids.csv')
+        mainClass = 'com.ancientmc.rosetta.Rosetta'
+        classpath = files(project.configurations.named('rosetta'))
+        args('generate', Paths.ROSETTA_CFG, Paths.BASE_JAR, Paths.INHERITANCE, Paths.INTERMEDIATE_TSRG, Paths.IDS)
     }
 
     tasks.register('split', JavaExec) {

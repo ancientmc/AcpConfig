@@ -8,10 +8,13 @@ import org.gradle.internal.os.OperatingSystem;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 import java.nio.file.Files;
 
 public class Util {
-    public static JsonObject getJsonAsObject(File json) throws IOException {
+    public static JsonObject getJson(File json) throws IOException {
         Reader reader = Files.newBufferedReader(json.toPath());
         JsonElement element = JsonParser.parseReader(reader);
         return element.getAsJsonObject();
@@ -27,5 +30,13 @@ public class Util {
             return "linux";
         }
         return "unknown";
+    }
+
+    public static URL toUrl(String path) {
+        try {
+            return URI.create(path).toURL();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
