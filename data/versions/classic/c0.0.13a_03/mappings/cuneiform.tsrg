@@ -7,11 +7,11 @@ com/mojang/minecraft/a com/mojang/minecraft/util/TickTimer 00001
 	e timeScale 00005
 	f fps 00006
 	<init> (F)V <init> 00001
-		0 o tps 00001_0
+		0 o tps 00001
 com/mojang/minecraft/b com/mojang/minecraft/MinecraftAppletCanvas 00002
 	a applet 00007
 	<init> (Lcom/mojang/minecraft/MinecraftApplet;)V <init> 00002
-		0 o applet 00002_0
+		0 o applet 00002
 	addNotify ()V addNotify 00003
 	removeNotify ()V removeNotify 00004
 com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
@@ -52,14 +52,14 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	I worldStatus 00042
 	J worldSubStatus 00043
 	<init> (Ljava/awt/Canvas;IIZ)V <init> 00005
-		0 o canvas 00005_0
-		1 o width 00005_1
-		2 o height 00005_2
-		3 o fullscreen 00005_3
+		0 o canvas 00003
+		1 o width 00004
+		2 o height 00005
+		3 o fullscreen 00006
 	a (Lcom/mojang/minecraft/c/d;)V setScreen 00006
-		0 o screen 00006_0
+		0 o screen 00007
 	c (Ljava/lang/String;)V setGlError 00007
-		0 o status 00007_0
+		0 o status 00008
 	d ()V saveWorld 00008
 	a ()V close 00009
 	run ()V run 00010
@@ -67,36 +67,36 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	e ()V releaseMouse 00012
 	f ()V tick 00013
 	a (F)V setCamera 00014
-		0 o partialTicks 00014_0
+		0 o partialTicks 00009
 	b (F)V render 00015
-		0 o partialTicks 00015_0
+		0 o partialTicks 00010
 	b (I)V renderFog 00016
-		0 o mode 00016_0
+		0 o mode 00011
 	a (FFFF)Ljava/nio/FloatBuffer; getFogColorBuffer 00017
-		0 o red 00017_0
-		1 o green 00017_1
-		2 o blue 00017_2
-		3 o alpha 00017_3
+		0 o red 00012
+		1 o green 00013
+		2 o blue 00014
+		3 o alpha 00015
 	a (Ljava/lang/String;)V displayWorldStatus 00018
-		0 o worldStatus 00018_0
+		0 o worldStatus 00016
 	b (Ljava/lang/String;)V displayWorldSubStatus 00019
-		0 o worldSubStatus 00019_0
+		0 o worldSubStatus 00017
 	a (I)V setWorldStatusProgress 00020
-		0 o percent 00020_0
+		0 o percent 00018
 	c ()V generateWorld 00021
 	a (Ljava/lang/String;I)Z loadWorld 00022
-		0 o username 00022_0
-		1 o sessionId 00022_1
+		0 o username 00019
+		1 o sessionId 00020
 com/mojang/minecraft/d com/mojang/minecraft/client/UserSession 00004
 	a username 00044
 	b sessionId 00045
 	<init> (Ljava/lang/String;Ljava/lang/String;)V <init> 00023
-		0 o username 00023_0
-		1 o sessionId 00023_1
+		0 o username 00021
+		1 o sessionId 00022
 com/mojang/minecraft/e com/mojang/minecraft/entity/player/Player 00005
 	a inputs 00046
 	<init> (Lcom/mojang/minecraft/a/f;)V <init> 00024
-		0 o world 00024_0
+		0 o world 00023
 	a ()V onTick 00031
 com/mojang/minecraft/f com/mojang/minecraft/util/HitResult 00006
 	a x 00047
@@ -104,14 +104,14 @@ com/mojang/minecraft/f com/mojang/minecraft/util/HitResult 00006
 	c z 00049
 	d side 00050
 	<init> (IIIII)V <init> 00025
-		0 o type 00025_0
-		1 o x 00025_1
-		2 o y 00025_2
-		3 o z 00025_3
-		4 o side 00025_4
+		0 o type 00024
+		1 o x 00025
+		2 o y 00026
+		3 o z 00027
+		4 o side 00028
 	a (Lcom/mojang/minecraft/e;I)F distanceToBlock 00026
-		0 o player 00026_0
-		1 o blockId 00026_1
+		0 o player 00029
+		1 o blockId 00030
 com/mojang/minecraft/g com/mojang/minecraft/entity/Entity 00007
 	a world 00051
 	e offsetX 00052
@@ -133,33 +133,33 @@ com/mojang/minecraft/g com/mojang/minecraft/entity/Entity 00007
 	b boxWidth 00068
 	u boxHeight 00069
 	<init> (Lcom/mojang/minecraft/a/f;)V <init> 00027
-		0 o world 00027_0
+		0 o world 00031
 	b ()V resetPosition 00028
 	a (FF)V setHitbox 00029
-		0 o boxWidth 00029_0
-		1 o boxHeight 00029_1
+		0 o boxWidth 00032
+		1 o boxHeight 00033
 	a (FFF)V setPosition 00030
-		0 o x 00030_0
-		1 o y 00030_1
-		2 o z 00030_2
+		0 o x 00034
+		1 o y 00035
+		2 o z 00036
 	a ()V onTick 00031
 	b (FFF)Z canMove 00032
-		0 o x 00032_0
-		1 o y 00032_1
-		2 o z 00032_2
+		0 o x 00037
+		1 o y 00038
+		2 o z 00039
 	c (FFF)V offsetPosition 00033
-		0 o x 00033_0
-		1 o y 00033_1
-		2 o z 00033_2
+		0 o x 00040
+		1 o y 00041
+		2 o z 00042
 	c ()Z inWater 00034
 	d ()Z inLava 00035
 	d (FFF)V addMotion 00036
-		0 o x 00036_0
-		1 o z 00036_1
-		2 o speed 00036_2
+		0 o x 00043
+		1 o z 00044
+		2 o speed 00045
 	e ()Z isLit 00037
 	a (F)V render 00038
-		0 o partialTicks 00038_0
+		0 o partialTicks 00046
 com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00008
 	c canvas 00070
 	a minecraft 00071
@@ -173,35 +173,35 @@ com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00008
 com/mojang/minecraft/a/a com/mojang/minecraft/world/WorldManager 00009
 	a minecraft 00073
 	<init> (Lcom/mojang/minecraft/c;)V <init> 00045
-		0 o minecraft 00045_0
+		0 o minecraft 00047
 	a (Lcom/mojang/minecraft/a/f;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z saveWorld 00046
-		0 o world 00046_0
-		1 o uri 00046_1
-		2 o username 00046_2
-		3 o sessionId 00046_3
-		4 o worldName 00046_4
-		5 o worldId 00046_5
+		0 o world 00048
+		1 o uri 00049
+		2 o username 00050
+		3 o sessionId 00051
+		4 o worldName 00052
+		5 o worldId 00053
 	a (Lcom/mojang/minecraft/a/f;Ljava/lang/String;Ljava/lang/String;I)Z loadWorld 00047
-		0 o world 00047_0
-		1 o uri 00047_1
-		2 o username 00047_2
-		3 o sessionId 00047_3
+		0 o world 00054
+		1 o uri 00055
+		2 o username 00056
+		3 o sessionId 00057
 	a (Lcom/mojang/minecraft/a/f;Ljava/io/InputStream;)Z readWorldData 00048
-		0 o world 00048_0
-		1 o in 00048_1
+		0 o world 00058
+		1 o in 00059
 	b (Lcom/mojang/minecraft/a/f;Ljava/io/InputStream;)Z readLegacyWorldData 00049
-		0 o world 00049_0
-		1 o in 00049_1
+		0 o world 00060
+		1 o in 00061
 	a (Lcom/mojang/minecraft/a/f;Ljava/io/OutputStream;)V writeWorldData 00050
-		0 o world 00050_0
-		1 o out 00050_1
+		0 o world 00062
+		1 o out 00063
 com/mojang/minecraft/a/b com/mojang/minecraft/world/chunk/DirtyChunkComparator 00010
 	a player 00074
 	<init> (Lcom/mojang/minecraft/e;)V <init> 00051
-		0 o player 00051_0
+		0 o player 00064
 	compare (Ljava/lang/Object;Ljava/lang/Object;)I compare 00052
-		0 o objOne 00052_0
-		1 o objTwo 00052_1
+		0 o objOne 00065
+		1 o objTwo 00066
 com/mojang/minecraft/a/c com/mojang/minecraft/world/chunk/Chunk 00011
 	a box 00075
 	e world 00076
@@ -222,32 +222,32 @@ com/mojang/minecraft/a/c com/mojang/minecraft/world/chunk/Chunk 00011
 	d updateCount 00091
 	r updateCounter 00092
 	<init> (Lcom/mojang/minecraft/a/f;IIIIII)V <init> 00053
-		0 o world 00053_0
-		1 o minX 00053_1
-		2 o minY 00053_2
-		3 o minZ 00053_3
-		4 o maxX 00053_4
-		5 o maxY 00053_5
-		6 o maxZ 00053_6
+		0 o world 00067
+		1 o minX 00068
+		2 o minY 00069
+		3 o minZ 00070
+		4 o maxX 00071
+		5 o maxY 00072
+		6 o maxZ 00073
 	b (I)V render 00054
-		0 o layer 00054_0
+		0 o layer 00074
 	a ()V render 00055
 	a (I)I addLayer 00056
-		0 o layer 00056_0
+		0 o layer 00075
 	b ()V setDirty 00057
 	c ()Z isDirty 00058
 	a (Lcom/mojang/minecraft/e;)F compare 00059
-		0 o player 00059_0
+		0 o player 00076
 	d ()V sortAndSetDirty 00060
 	e ()V sort 00061
 	<clinit> ()V <clinit> 00062
 com/mojang/minecraft/a/d com/mojang/minecraft/world/DistanceComparator 00012
 	a player 00093
 	<init> (Lcom/mojang/minecraft/e;)V <init> 00063
-		0 o player 00063_0
+		0 o player 00077
 	compare (Ljava/lang/Object;Ljava/lang/Object;)I compare 00064
-		0 o objOne 00064_0
-		1 o objTwo 00064_1
+		0 o objOne 00078
+		1 o objTwo 00079
 com/mojang/minecraft/a/e com/mojang/minecraft/client/render/WorldRenderer 00013
 	a world 00094
 	b unsortedChunks 00095
@@ -263,27 +263,27 @@ com/mojang/minecraft/a/e com/mojang/minecraft/client/render/WorldRenderer 00013
 	l layerY 00105
 	m layerZ 00106
 	<init> (Lcom/mojang/minecraft/a/f;Lcom/mojang/minecraft/b/a;)V <init> 00065
-		0 o world 00065_0
-		1 o textureRenderer 00065_1
+		0 o world 00080
+		1 o textureRenderer 00081
 	a ()V sort 00066
 	a (Lcom/mojang/minecraft/e;I)V render 00067
-		0 o player 00067_0
-		1 o layer 00067_1
+		0 o player 00082
+		1 o layer 00083
 	a (Lcom/mojang/minecraft/e;Lcom/mojang/minecraft/f;II)V renderHitBlock 00068
-		0 o player 00068_0
-		1 o hitResult 00068_1
-		2 o side 00068_2
-		3 o id 00068_3
+		0 o player 00084
+		1 o hitResult 00085
+		2 o side 00086
+		3 o id 00087
 	a (Lcom/mojang/minecraft/f;I)V renderHitBlockOutline 00069
-		0 o hitResult 00069_0
-		1 o side 00069_1
+		0 o hitResult 00088
+		1 o side 00089
 	a (IIIIII)V setDirty 00070
-		0 o minX 00070_0
-		1 o minY 00070_1
-		2 o minZ 00070_2
-		3 o maxX 00070_3
-		4 o maxY 00070_4
-		5 o maxZ 00070_5
+		0 o minX 00090
+		1 o minY 00091
+		2 o minZ 00092
+		3 o maxX 00093
+		4 o maxY 00094
+		5 o maxZ 00095
 com/mojang/minecraft/a/f com/mojang/minecraft/world/World 00014
 	a xSize 00107
 	b zSize 00108
@@ -299,49 +299,49 @@ com/mojang/minecraft/a/f com/mojang/minecraft/world/World 00014
 	k tickedBlocks 00118
 	<init> ()V <init> 00071
 	a (III[B)V set 00072
-		0 o xSize 00072_0
-		1 o depth 00072_1
-		2 o zSize 00072_2
-		3 o blocks 00072_3
+		0 o xSize 00096
+		1 o depth 00097
+		2 o zSize 00098
+		3 o blocks 00099
 	c (IIII)V setLightDepths 00073
-		0 o minX 00073_0
-		1 o minZ 00073_1
-		2 o maxX 00073_2
-		3 o maxZ 00073_3
+		0 o minX 00100
+		1 o minZ 00101
+		2 o maxX 00102
+		3 o maxZ 00103
 	a (Lcom/mojang/minecraft/f/a;)Ljava/util/ArrayList; getBoxes 00074
-		0 o boxes 00074_0
+		0 o boxes 00104
 	a (IIII)Z setBlockAndUpdate 00075
-		0 o x 00075_0
-		1 o y 00075_1
-		2 o z 00075_2
-		3 o id 00075_3
+		0 o x 00105
+		1 o y 00106
+		2 o z 00107
+		3 o id 00108
 	b (IIII)Z setBlock 00076
-		0 o x 00076_0
-		1 o y 00076_1
-		2 o z 00076_2
-		3 o id 00076_3
+		0 o x 00109
+		1 o y 00110
+		2 o z 00111
+		3 o id 00112
 	d (IIII)V updateNeighbor 00077
-		0 o x 00077_0
-		1 o y 00077_1
-		2 o z 00077_2
-		3 o id 00077_3
+		0 o x 00113
+		1 o y 00114
+		2 o z 00115
+		3 o id 00116
 	a (III)Z exposedToLight 00078
-		0 o x 00078_0
-		1 o y 00078_1
-		2 o z 00078_2
+		0 o x 00117
+		1 o y 00118
+		2 o z 00119
 	b (III)I getBlock 00079
-		0 o x 00079_0
-		1 o y 00079_1
-		2 o z 00079_2
+		0 o x 00120
+		1 o y 00121
+		2 o z 00122
 	a (Lcom/mojang/minecraft/f/a;I)Z isLiquid 00080
-		0 o box 00080_0
-		1 o id 00080_1
+		0 o box 00123
+		1 o id 00124
 com/mojang/minecraft/b/a com/mojang/minecraft/client/render/TextureRenderer 00015
 	a idMap 00119
 	<init> ()V <init> 00081
 	a (Ljava/lang/String;I)I getTexture 00082
-		0 o resource 00082_0
-		1 o id 00082_1
+		0 o resource 00125
+		1 o id 00126
 com/mojang/minecraft/b/b com/mojang/minecraft/util/Tesselator 00016
 	b buffer 00120
 	c bufferArray 00121
@@ -362,25 +362,25 @@ com/mojang/minecraft/b/b com/mojang/minecraft/util/Tesselator 00016
 	d ()V resetBuffers 00085
 	b ()V reset 00086
 	a (III)V setColor 00087
-		0 o red 00087_0
-		1 o green 00087_1
-		2 o blue 00087_2
+		0 o red 00127
+		1 o green 00128
+		2 o blue 00129
 	a (BBB)V setColor 00088
-		0 o red 00088_0
-		1 o green 00088_1
-		2 o blue 00088_2
+		0 o red 00130
+		1 o green 00131
+		2 o blue 00132
 	a (FFFFF)V setTexture 00089
-		0 o x 00089_0
-		1 o y 00089_1
-		2 o z 00089_2
-		3 o u 00089_3
-		4 o v 00089_4
+		0 o x 00133
+		1 o y 00134
+		2 o z 00135
+		3 o u 00136
+		4 o v 00137
 	a (FFF)V setTexture 00090
-		0 o x 00090_0
-		1 o y 00090_1
-		2 o z 00090_2
+		0 o x 00138
+		1 o y 00139
+		2 o z 00140
 	a (I)V setColor 00091
-		0 o color 00091_0
+		0 o color 00141
 	c ()V disableColor 00092
 	<clinit> ()V <clinit> 00093
 com/mojang/minecraft/b/c com/mojang/minecraft/util/Frustrum 00017
@@ -395,10 +395,10 @@ com/mojang/minecraft/b/c com/mojang/minecraft/util/Frustrum 00017
 	<init> ()V <init> 00094
 	a ()Lcom/mojang/minecraft/b/c; get 00095
 	a ([[FI)V normalizeSide 00096
-		0 o sides 00096_0
-		1 o side 00096_1
+		0 o sides 00142
+		1 o side 00143
 	a (Lcom/mojang/minecraft/f/a;)Z isBoxInside 00097
-		0 o box 00097_0
+		0 o box 00144
 	<clinit> ()V <clinit> 00098
 com/mojang/minecraft/c/a com/mojang/minecraft/client/gui/screen/CreateWorldScreen 00018
 	e parent 00142
@@ -407,20 +407,20 @@ com/mojang/minecraft/c/a com/mojang/minecraft/client/gui/screen/CreateWorldScree
 	h name 00145
 	i counter 00146
 	<init> (Lcom/mojang/minecraft/c/d;Ljava/lang/String;I)V <init> 00099
-		0 o parent 00099_0
-		1 o id 00099_1
-		2 o name 00099_2
+		0 o parent 00145
+		1 o id 00146
+		2 o name 00147
 	a ()V addElements 00107
 	b ()V close 00114
 	c ()V updateCounter 00113
 	a (Lcom/mojang/minecraft/c/b;)V buttonEvent 00105
-		0 o button 00105_0
+		0 o button 00158
 	a (CI)V keyEvent 00104
-		0 o key 00104_0
-		1 o code 00104_1
+		0 o key 00156
+		1 o code 00157
 	a (II)V render 00103
-		0 o x 00103_0
-		1 o y 00103_1
+		0 o x 00154
+		1 o y 00155
 com/mojang/minecraft/c/b com/mojang/minecraft/client/gui/Button 00019
 	a x 00147
 	b y 00148
@@ -431,20 +431,20 @@ com/mojang/minecraft/c/b com/mojang/minecraft/client/gui/Button 00019
 	g clickable 00153
 	h visible 00154
 	<init> (IIIIILjava/lang/String;)V <init> 00100
-		0 o index 00100_0
-		1 o x 00100_1
-		2 o y 00100_2
-		3 o width 00100_3
-		4 o height 00100_4
-		5 o text 00100_5
+		0 o index 00148
+		1 o x 00149
+		2 o y 00150
+		3 o width 00151
+		4 o height 00152
+		5 o text 00153
 com/mojang/minecraft/c/c com/mojang/minecraft/client/gui/screen/PauseMenu 00020
 	<init> ()V <init> 00101
 	a ()V addElements 00107
 	a (Lcom/mojang/minecraft/c/b;)V buttonEvent 00105
-		0 o button 00105_0
+		0 o button 00158
 	a (II)V render 00103
-		0 o x 00103_0
-		1 o y 00103_1
+		0 o x 00154
+		1 o y 00155
 com/mojang/minecraft/c/d com/mojang/minecraft/client/gui/screen/Screen 00021
 	a minecraft 00155
 	b x 00156
@@ -452,41 +452,41 @@ com/mojang/minecraft/c/d com/mojang/minecraft/client/gui/screen/Screen 00021
 	d elements 00158
 	<init> ()V <init> 00102
 	a (II)V render 00103
-		0 o x 00103_0
-		1 o y 00103_1
+		0 o x 00154
+		1 o y 00155
 	a (CI)V keyEvent 00104
-		0 o key 00104_0
-		1 o code 00104_1
+		0 o key 00156
+		1 o code 00157
 	a (Lcom/mojang/minecraft/c/b;)V buttonEvent 00105
-		0 o button 00105_0
+		0 o button 00158
 	a (Lcom/mojang/minecraft/c;II)V set 00106
-		0 o minecraft 00106_0
-		1 o x 00106_1
-		2 o y 00106_2
+		0 o minecraft 00159
+		1 o x 00160
+		2 o y 00161
 	a ()V addElements 00107
 	a (IIIII)V renderElementColor 00108
-		0 o x 00108_0
-		1 o y 00108_1
-		2 o width 00108_2
-		3 o height 00108_3
-		4 o color 00108_4
+		0 o x 00162
+		1 o y 00163
+		2 o width 00164
+		3 o height 00165
+		4 o color 00166
 	a (IIIIII)V renderElementGradient 00109
-		0 o x 00109_0
-		1 o y 00109_1
-		2 o width 00109_2
-		3 o height 00109_3
-		4 o color 00109_4
-		5 o gradient 00109_5
+		0 o x 00167
+		1 o y 00168
+		2 o width 00169
+		3 o height 00170
+		4 o color 00171
+		5 o gradient 00172
 	a (Ljava/lang/String;III)V renderCenteredText 00110
-		0 o text 00110_0
-		1 o x 00110_1
-		2 o y 00110_2
-		3 o color 00110_3
+		0 o text 00173
+		1 o x 00174
+		2 o y 00175
+		3 o color 00176
 	b (Ljava/lang/String;III)V renderText 00111
-		0 o text 00111_0
-		1 o x 00111_1
-		2 o y 00111_2
-		3 o color 00111_3
+		0 o text 00177
+		1 o x 00178
+		2 o y 00179
+		3 o color 00180
 	d ()V update 00112
 	c ()V updateCounter 00113
 	b ()V close 00114
@@ -498,54 +498,54 @@ com/mojang/minecraft/c/e com/mojang/minecraft/client/gui/screen/LoadWorldScreen 
 	j consoleMessage 00163
 	e text 00164
 	<init> (Lcom/mojang/minecraft/c/d;)V <init> 00115
-		0 o parent 00115_0
+		0 o parent 00181
 	run ()V run 00116
 	a ([Ljava/lang/String;)V setWorlds 00117
-		0 o worlds 00117_0
+		0 o worlds 00182
 	a ()V addElements 00107
 	a (Lcom/mojang/minecraft/c/b;)V buttonEvent 00105
-		0 o button 00105_0
+		0 o button 00158
 	a (I)V loadWorld 00118
-		0 o sessionId 00118_0
+		0 o sessionId 00183
 	a (II)V render 00103
-		0 o x 00103_0
-		1 o y 00103_1
+		0 o x 00154
+		1 o y 00155
 com/mojang/minecraft/c/f com/mojang/minecraft/client/gui/screen/SaveWorldScreen 00023
 	<init> (Lcom/mojang/minecraft/c/d;)V <init> 00119
-		0 o screen 00119_0
+		0 o screen 00184
 	a ([Ljava/lang/String;)V setWorlds 00117
-		0 o worlds 00117_0
+		0 o worlds 00182
 	a (I)V loadWorld 00118
-		0 o sessionId 00118_0
+		0 o sessionId 00183
 com/mojang/minecraft/c/g com/mojang/minecraft/client/render/FontRenderer 00024
 	a characterWidths 00165
 	b texture 00166
 	<init> (Ljava/lang/String;Lcom/mojang/minecraft/b/a;)V <init> 00120
-		0 o resource 00120_0
-		1 o textureRenderer 00120_1
+		0 o resource 00185
+		1 o textureRenderer 00186
 	a (Ljava/lang/String;III)V render 00121
-		0 o x 00121_0
-		1 o y 00121_1
-		2 o z 00121_2
-		3 o color 00121_3
+		0 o text 00187
+		1 o x 00188
+		2 o y 00189
+		3 o color 00190
 	a (Ljava/lang/String;IIIZ)V render 00122
-		0 o x 00122_0
-		1 o y 00122_1
-		2 o z 00122_2
-		3 o color 00122_3
-		4 o shadow 00122_4
+		0 o text 00191
+		1 o x 00192
+		2 o y 00193
+		3 o color 00194
+		4 o shadow 00195
 	a (Ljava/lang/String;)I getWidth 00123
-		0 o text 00123_0
+		0 o text 00196
 com/mojang/minecraft/d/a com/mojang/minecraft/client/render/entity/ParticleRenderer 00025
 	a particles 00167
 	b textureRenderer 00168
 	<init> (Lcom/mojang/minecraft/a/f;Lcom/mojang/minecraft/b/a;)V <init> 00124
-		0 o world 00124_0
-		1 o textureRenderer 00124_1
+		0 o world 00197
+		1 o textureRenderer 00198
 	a (Lcom/mojang/minecraft/e;FI)V render 00125
-		0 o player 00125_0
-		1 o partialTicks 00125_1
-		2 o layer 00125_2
+		0 o player 00199
+		1 o partialTicks 00200
+		2 o layer 00201
 com/mojang/minecraft/d/b com/mojang/minecraft/entity/particle/Particle 00026
 	v xDirection 00169
 	w yDirection 00170
@@ -557,14 +557,14 @@ com/mojang/minecraft/d/b com/mojang/minecraft/entity/particle/Particle 00026
 	z lifespan 00176
 	d size 00177
 	<init> (Lcom/mojang/minecraft/a/f;FFFFFFI)V <init> 00126
-		0 o world 00126_0
-		1 o x 00126_1
-		2 o y 00126_2
-		3 o z 00126_3
-		4 o motionX 00126_4
-		5 o motionY 00126_5
-		6 o motionZ 00126_6
-		7 o texture 00126_7
+		0 o world 00202
+		1 o x 00203
+		2 o y 00204
+		3 o z 00205
+		4 o motionX 00206
+		5 o motionY 00207
+		6 o motionZ 00208
+		7 o texture 00209
 	a ()V onTick 00031
 com/mojang/minecraft/e/a com/mojang/minecraft/entity/passive/Human 00027
 	a rotation 00178
@@ -574,14 +574,14 @@ com/mojang/minecraft/e/a com/mojang/minecraft/entity/passive/Human 00027
 	v model 00182
 	w textureRenderer 00183
 	<init> (Lcom/mojang/minecraft/a/f;Lcom/mojang/minecraft/b/a;FFF)V <init> 00127
-		0 o world 00127_0
-		1 o textureRenderer 00127_1
-		2 o x 00127_2
-		3 o y 00127_3
-		4 o z 00127_4
+		0 o world 00210
+		1 o textureRenderer 00211
+		2 o x 00212
+		3 o y 00213
+		4 o z 00214
 	a ()V onTick 00031
 	a (F)V render 00038
-		0 o partialTicks 00038_0
+		0 o partialTicks 00046
 	<clinit> ()V <clinit> 00128
 com/mojang/minecraft/e/b com/mojang/minecraft/client/model/ModelPart 00028
 	d vertices 00184
@@ -597,19 +597,19 @@ com/mojang/minecraft/e/b com/mojang/minecraft/client/model/ModelPart 00028
 	k mirrored 00194
 	l renderList 00195
 	<init> (II)V <init> 00129
-		0 o width 00129_0
-		1 o height 00129_1
+		0 o width 00215
+		1 o height 00216
 	a (FFFIII)V addPart 00130
-		0 o offsetX 00130_0
-		1 o offsetY 00130_1
-		2 o offsetZ 00130_2
-		3 o width 00130_3
-		4 o height 00130_4
-		5 o depth 00130_5
+		0 o offsetX 00217
+		1 o offsetY 00218
+		2 o offsetZ 00219
+		3 o width 00220
+		4 o height 00221
+		5 o depth 00222
 	a (FFF)V setPosition 00131
-		0 o x 00131_0
-		1 o y 00131_1
-		2 o z 00131_2
+		0 o x 00223
+		1 o y 00224
+		2 o z 00225
 	a ()V render 00132
 com/mojang/minecraft/e/c com/mojang/minecraft/client/model/HumanModel 00029
 	a head 00196
@@ -622,42 +622,42 @@ com/mojang/minecraft/e/c com/mojang/minecraft/client/model/HumanModel 00029
 com/mojang/minecraft/e/d com/mojang/minecraft/util/math/Quad 00030
 	a vertices 00202
 	<init> ([Lcom/mojang/minecraft/e/e;)V <init> 00134
-		0 o vertices 00134_0
+		0 o vertices 00226
 	<init> ([Lcom/mojang/minecraft/e/e;IIII)V <init> 00135
-		0 o vertices 00135_0
-		1 o uOne 00135_1
-		2 o uTwo 00135_2
-		3 o vOne 00135_3
-		4 o vTwo 00135_4
+		0 o vertices 00227
+		1 o uOne 00228
+		2 o uTwo 00229
+		3 o vOne 00230
+		4 o vTwo 00231
 com/mojang/minecraft/e/e com/mojang/minecraft/util/math/Vertex 00031
 	a vec 00203
 	b u 00204
 	c v 00205
 	<init> (FFFFF)V <init> 00136
-		0 o x 00136_0
-		1 o y 00136_1
-		2 o z 00136_2
-		3 o u 00136_3
-		4 o v 00136_4
+		0 o x 00232
+		1 o y 00233
+		2 o z 00234
+		3 o u 00235
+		4 o v 00236
 	a (FF)Lcom/mojang/minecraft/e/e; get 00137
-		0 o u 00137_0
-		1 o v 00137_1
+		0 o u 00237
+		1 o v 00238
 	<init> (Lcom/mojang/minecraft/e/e;FF)V <init> 00138
-		0 o vertex 00138_0
-		1 o u 00138_1
-		2 o v 00138_2
+		0 o vertex 00239
+		1 o u 00240
+		2 o v 00241
 	<init> (Lcom/mojang/minecraft/e/f;FF)V <init> 00139
-		0 o vec 00139_0
-		1 o u 00139_1
-		2 o v 00139_2
+		0 o vec 00242
+		1 o u 00243
+		2 o v 00244
 com/mojang/minecraft/e/f com/mojang/minecraft/util/math/Vec3d 00032
 	a x 00206
 	b y 00207
 	c z 00208
 	<init> (FFF)V <init> 00140
-		0 o x 00140_0
-		1 o y 00140_1
-		2 o z 00140_2
+		0 o x 00245
+		1 o y 00246
+		2 o z 00247
 com/mojang/minecraft/f/a com/mojang/minecraft/util/math/AABB 00033
 	g epsilon 00209
 	a minX 00210
@@ -667,22 +667,22 @@ com/mojang/minecraft/f/a com/mojang/minecraft/util/math/AABB 00033
 	e maxY 00214
 	f maxZ 00215
 	<init> (FFFFFF)V <init> 00141
-		0 o minX 00141_0
-		1 o minY 00141_1
-		2 o minZ 00141_2
-		3 o maxX 00141_3
-		4 o maxY 00141_4
-		5 o maxZ 00141_5
+		0 o minX 00248
+		1 o minY 00249
+		2 o minZ 00250
+		3 o maxX 00251
+		4 o maxY 00252
+		5 o maxZ 00253
 	a (FFF)Lcom/mojang/minecraft/f/a; expand 00142
-		0 o x 00142_0
-		1 o y 00142_1
-		2 o z 00142_2
+		0 o x 00254
+		1 o y 00255
+		2 o z 00256
 	a (Lcom/mojang/minecraft/f/a;)Z intersects 00143
-		0 o box 00143_0
+		0 o box 00257
 	b (FFF)V offset 00144
-		0 o x 00144_0
-		1 o y 00144_1
-		2 o z 00144_2
+		0 o x 00258
+		1 o y 00259
+		2 o z 00260
 com/mojang/minecraft/a/a/a com/mojang/minecraft/block/Block 00034
 	a BLOCK_REGISTRY 00216
 	b TICKING_BLOCK_INDEX 00217
@@ -703,191 +703,191 @@ com/mojang/minecraft/a/a/a com/mojang/minecraft/block/Block 00034
 	q maxY 00232
 	r maxZ 00233
 	<init> (I)V <init> 00145
-		0 o id 00145_0
+		0 o id 00261
 	a (Z)V setTicking 00146
-		0 o ticking 00146_0
+		0 o ticking 00262
 	a (FFFFFF)V setBounds 00147
-		0 o minX 00147_0
-		1 o minY 00147_1
-		2 o minZ 00147_2
-		3 o maxX 00147_3
-		4 o maxY 00147_4
-		5 o maxZ 00147_5
+		0 o minX 00263
+		1 o minY 00264
+		2 o minZ 00265
+		3 o maxX 00266
+		4 o maxY 00267
+		5 o maxZ 00268
 	<init> (II)V <init> 00148
-		0 o id 00148_0
-		1 o texture 00148_1
+		0 o id 00269
+		1 o texture 00270
 	a (Lcom/mojang/minecraft/b/b;Lcom/mojang/minecraft/a/f;IIII)Z render 00149
-		0 o tesselator 00149_0
-		1 o world 00149_1
-		2 o layer 00149_2
-		3 o x 00149_3
-		4 o y 00149_4
-		5 o z 00149_5
+		0 o tesselator 00271
+		1 o world 00272
+		2 o layer 00273
+		3 o x 00274
+		4 o y 00275
+		5 o z 00276
 	a (Lcom/mojang/minecraft/a/f;IIIII)Z isSideRendered 00150
-		0 o world 00150_0
-		1 o x 00150_1
-		2 o y 00150_2
-		3 o z 00150_3
-		4 o layer 00150_4
-		5 o side 00150_5
+		0 o world 00277
+		1 o x 00278
+		2 o y 00279
+		3 o z 00280
+		4 o layer 00281
+		5 o side 00282
 	a (I)I getTexture 00151
-		0 o side 00151_0
+		0 o side 00283
 	a (Lcom/mojang/minecraft/b/b;IIII)V renderSide 00152
-		0 o tesselator 00152_0
-		1 o x 00152_1
-		2 o y 00152_2
-		3 o z 00152_3
-		4 o side 00152_4
+		0 o tesselator 00284
+		1 o x 00285
+		2 o y 00286
+		3 o z 00287
+		4 o side 00288
 	b (Lcom/mojang/minecraft/b/b;IIII)V renderBackSide 00153
-		0 o tesselator 00153_0
-		1 o x 00153_1
-		2 o y 00153_2
-		3 o z 00153_3
-		4 o side 00153_4
+		0 o tesselator 00289
+		1 o x 00290
+		2 o y 00291
+		3 o z 00292
+		4 o side 00293
 	a (Lcom/mojang/minecraft/e;Lcom/mojang/minecraft/b/b;IIII)V renderTexturelessSide 00154
-		0 o player 00154_0
-		1 o tesselator 00154_1
-		2 o x 00154_2
-		3 o y 00154_3
-		4 o z 00154_4
-		5 o side 00154_5
+		0 o player 00294
+		1 o tesselator 00295
+		2 o x 00296
+		3 o y 00297
+		4 o z 00298
+		5 o side 00299
 	a (III)Lcom/mojang/minecraft/f/a; setBlockBox 00155
-		0 o x 00155_0
-		1 o y 00155_1
-		2 o z 00155_2
+		0 o x 00300
+		1 o y 00301
+		2 o z 00302
 	b (III)Lcom/mojang/minecraft/f/a; setBox 00156
-		0 o x 00156_0
-		1 o y 00156_1
-		2 o z 00156_2
+		0 o x 00303
+		1 o y 00304
+		2 o z 00305
 	a ()Z isOpaque 00157
 	b ()Z isSolid 00158
 	c ()Z isTicking 00159
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160
-		0 o world 00160_0
-		1 o x 00160_1
-		2 o y 00160_2
-		3 o z 00160_3
-		4 o random 00160_4
+		0 o world 00306
+		1 o x 00307
+		2 o y 00308
+		3 o z 00309
+		4 o random 00310
 	a (Lcom/mojang/minecraft/a/f;IIILcom/mojang/minecraft/d/a;)V destroy 00161
-		0 o world 00161_0
-		1 o x 00161_1
-		2 o y 00161_2
-		3 o z 00161_3
-		4 o renderer 00161_4
+		0 o world 00311
+		1 o x 00312
+		2 o y 00313
+		3 o z 00314
+		4 o renderer 00315
 	d ()I getLiquidType 00162
 	a (Lcom/mojang/minecraft/a/f;IIII)V onNeighborUpdate 00163
-		0 o world 00163_0
-		1 o x 00163_1
-		2 o y 00163_2
-		3 o z 00163_3
-		4 o neighbor 00163_4
+		0 o world 00316
+		1 o x 00317
+		2 o y 00318
+		3 o z 00319
+		4 o neighbor 00320
 	<clinit> ()V <clinit> 00164
 com/mojang/minecraft/a/a/b com/mojang/minecraft/block/partial/plant/Sapling 00035
 	<init> (I)V <init> 00165
-		0 o id 00165_0
+		0 o id 00321
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160
-		0 o world 00160_0
-		1 o x 00160_1
-		2 o y 00160_2
-		3 o z 00160_3
-		4 o random 00160_4
+		0 o world 00306
+		1 o x 00307
+		2 o y 00308
+		3 o z 00309
+		4 o random 00310
 	a (Lcom/mojang/minecraft/b/b;Lcom/mojang/minecraft/a/f;IIII)Z render 00149
-		0 o tesselator 00149_0
-		1 o world 00149_1
-		2 o layer 00149_2
-		3 o x 00149_3
-		4 o y 00149_4
-		5 o z 00149_5
+		0 o tesselator 00271
+		1 o world 00272
+		2 o layer 00273
+		3 o x 00274
+		4 o y 00275
+		5 o z 00276
 	b (III)Lcom/mojang/minecraft/f/a; setBox 00156
-		0 o x 00156_0
-		1 o y 00156_1
-		2 o z 00156_2
+		0 o x 00303
+		1 o y 00304
+		2 o z 00305
 	a ()Z isOpaque 00157
 	b ()Z isSolid 00158
 com/mojang/minecraft/a/a/c com/mojang/minecraft/block/Dirt 00036
 	<init> (II)V <init> 00166
-		0 o id 00166_0
-		1 o texture 00166_1
+		0 o id 00322
+		1 o texture 00323
 com/mojang/minecraft/a/a/d com/mojang/minecraft/block/liquid/SourceLiquid 00037
 	<init> (II)V <init> 00167
-		0 o id 00167_0
-		1 o type 00167_1
+		0 o id 00324
+		1 o type 00325
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160
-		0 o world 00160_0
-		1 o x 00160_1
-		2 o y 00160_2
-		3 o z 00160_3
-		4 o random 00160_4
+		0 o world 00306
+		1 o x 00307
+		2 o y 00308
+		3 o z 00309
+		4 o random 00310
 	a (Lcom/mojang/minecraft/a/f;IIII)V onNeighborUpdate 00163
-		0 o world 00163_0
-		1 o x 00163_1
-		2 o y 00163_2
-		3 o z 00163_3
-		4 o neighbor 00163_4
+		0 o world 00316
+		1 o x 00317
+		2 o y 00318
+		3 o z 00319
+		4 o neighbor 00320
 com/mojang/minecraft/a/a/e com/mojang/minecraft/block/liquid/Liquid 00038
 	m type 00234
 	n sourceId 00235
 	o flowingId 00236
 	p speed 00237
 	<init> (II)V <init> 00168
-		0 o id 00168_0
-		1 o type 00168_1
+		0 o id 00326
+		1 o type 00327
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160
-		0 o world 00160_0
-		1 o x 00160_1
-		2 o y 00160_2
-		3 o z 00160_3
-		4 o random 00160_4
+		0 o world 00306
+		1 o x 00307
+		2 o y 00308
+		3 o z 00309
+		4 o random 00310
 	b (Lcom/mojang/minecraft/a/f;IIII)Z flow 00169
-		0 o world 00169_0
-		1 o x 00169_1
-		2 o y 00169_2
-		3 o z 00169_3
-		4 o speed 00169_4
+		0 o world 00328
+		1 o x 00329
+		2 o y 00330
+		3 o z 00331
+		4 o speed 00332
 	c (Lcom/mojang/minecraft/a/f;IIII)Z waterFlow 00170
-		0 o world 00170_0
-		1 o x 00170_1
-		2 o y 00170_2
-		3 o z 00170_3
-		4 o speed 00170_4
+		0 o world 00333
+		1 o x 00334
+		2 o y 00335
+		3 o z 00336
+		4 o speed 00337
 	a (Lcom/mojang/minecraft/a/f;IIIII)Z isSideRendered 00150
-		0 o world 00150_0
-		1 o x 00150_1
-		2 o y 00150_2
-		3 o z 00150_3
-		4 o layer 00150_4
-		5 o side 00150_5
+		0 o world 00277
+		1 o x 00278
+		2 o y 00279
+		3 o z 00280
+		4 o layer 00281
+		5 o side 00282
 	a (Lcom/mojang/minecraft/b/b;IIII)V renderSide 00152
-		0 o tesselator 00152_0
-		1 o x 00152_1
-		2 o y 00152_2
-		3 o z 00152_3
-		4 o side 00152_4
+		0 o tesselator 00284
+		1 o x 00285
+		2 o y 00286
+		3 o z 00287
+		4 o side 00288
 	c ()Z isTicking 00159
 	b (III)Lcom/mojang/minecraft/f/a; setBox 00156
-		0 o x 00156_0
-		1 o y 00156_1
-		2 o z 00156_2
+		0 o x 00303
+		1 o y 00304
+		2 o z 00305
 	a ()Z isOpaque 00157
 	b ()Z isSolid 00158
 	d ()I getLiquidType 00162
 	a (Lcom/mojang/minecraft/a/f;IIII)V onNeighborUpdate 00163
-		0 o world 00163_0
-		1 o x 00163_1
-		2 o y 00163_2
-		3 o z 00163_3
-		4 o neighbor 00163_4
+		0 o world 00316
+		1 o x 00317
+		2 o y 00318
+		3 o z 00319
+		4 o neighbor 00320
 com/mojang/minecraft/a/a/f com/mojang/minecraft/block/GrassBlock 00039
 	<init> (I)V <init> 00171
-		0 o id 00171_0
+		0 o id 00338
 	a (I)I getTexture 00151
-		0 o side 00151_0
+		0 o side 00283
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160
-		0 o world 00160_0
-		1 o x 00160_1
-		2 o y 00160_2
-		3 o z 00160_3
-		4 o random 00160_4
+		0 o world 00306
+		1 o x 00307
+		2 o y 00308
+		3 o z 00309
+		4 o random 00310
 com/mojang/minecraft/a/b/a com/mojang/minecraft/world/gen/WorldGenerator 00040
 	a minecraft 00238
 	b xSize 00239
@@ -897,61 +897,61 @@ com/mojang/minecraft/a/b/a com/mojang/minecraft/world/gen/WorldGenerator 00040
 	f blocks 00243
 	g coordinates 00244
 	<init> (Lcom/mojang/minecraft/c;)V <init> 00172
-		0 o minecraft 00172_0
+		0 o minecraft 00339
 	a (Lcom/mojang/minecraft/a/f;Ljava/lang/String;III)Z generate 00173
-		0 o world 00173_0
-		1 o username 00173_1
-		2 o xSize 00173_2
-		3 o zSize 00173_3
-		4 o depth 00173_4
+		0 o world 00340
+		1 o username 00341
+		2 o xSize 00342
+		3 o zSize 00343
+		4 o depth 00344
 	a (I)V setProgress 00174
-		0 o percent 00174_0
+		0 o percent 00345
 	a ()V generateLava 00175
 	a (IIIII)J generateLiquids 00176
-		0 o x 00176_0
-		1 o y 00176_1
-		2 o z 00176_2
-		3 o speed 00176_3
-		4 o id 00176_4
+		0 o x 00346
+		1 o y 00347
+		2 o z 00348
+		3 o speed 00349
+		4 o id 00350
 com/mojang/minecraft/a/b/a/a com/mojang/minecraft/world/gen/noise/DistortedNoiseGenerator 00041
 	a start 00245
 	b distorted 00246
 	<init> (Lcom/mojang/minecraft/a/b/a/c;Lcom/mojang/minecraft/a/b/a/c;)V <init> 00177
-		0 o start 00177_0
-		1 o distorted 00177_1
+		0 o start 00351
+		1 o distorted 00352
 	a (DD)D get 00180
-		0 o width 00180_0
-		1 o height 00180_1
+		0 o width 00355
+		1 o height 00356
 com/mojang/minecraft/a/b/a/b com/mojang/minecraft/world/gen/noise/OctaveNoiseGenerator 00042
 	a generators 00247
 	b octaves 00248
 	<init> (Ljava/util/Random;I)V <init> 00178
-		0 o random 00178_0
-		1 o index 00178_1
+		0 o random 00353
+		1 o index 00354
 	a (DD)D get 00180
-		0 o width 00180_0
-		1 o height 00180_1
+		0 o width 00355
+		1 o height 00356
 com/mojang/minecraft/a/b/a/c com/mojang/minecraft/world/gen/noise/NoiseGenerator 00043
 	<init> ()V <init> 00179
 	a (DD)D get 00180
-		0 o width 00180_0
-		1 o height 00180_1
+		0 o width 00355
+		1 o height 00356
 com/mojang/minecraft/a/b/a/d com/mojang/minecraft/world/gen/noise/PerlinNoiseGenerator 00044
 	a permutations 00249
 	<init> ()V <init> 00181
 	<init> (Ljava/util/Random;)V <init> 00182
-		0 o random 00182_0
+		0 o random 00357
 	a (D)D fade 00183
-		0 o coord 00183_0
+		0 o coord 00358
 	a (DDD)D lerp 00184
-		0 o p_00184_0 00184_0
-		1 o p_00184_1 00184_1
-		2 o p_00184_2 00184_2
+		0 o p_00359 00359
+		1 o p_00360 00360
+		2 o p_00361 00361
 	a (IDDD)D grad 00185
-		0 o p_00185_0 00185_0
-		1 o p_00185_1 00185_1
-		2 o p_00185_2 00185_2
-		3 o p_00185_3 00185_3
+		0 o p_00362 00362
+		1 o p_00363 00363
+		2 o p_00364 00364
+		3 o p_00365 00365
 	a (DD)D get 00180
-		0 o width 00180_0
-		1 o height 00180_1
+		0 o width 00355
+		1 o height 00356
