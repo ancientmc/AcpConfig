@@ -450,7 +450,7 @@ com/mojang/minecraft/b/d com/mojang/minecraft/client/gui/Button 00019
 		3 o width 00151
 		4 o height 00152
 		5 o text 00153
-com/mojang/minecraft/b/e com/mojang/minecraft/src/00045 00045
+com/mojang/minecraft/b/e com/mojang/minecraft/src/c_00045 00045
 	e f_00266 00266
 	<init> (Lcom/mojang/minecraft/b/c;)V <init> 00203
 		0 o p_00391 00391
@@ -620,7 +620,7 @@ com/mojang/minecraft/level/a com/mojang/minecraft/world/WorldManager 00009
 	a (Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V writeWorldData 00050
 		0 o world 00062
 		1 o out 00063
-com/mojang/minecraft/level/b com/mojang/minecraft/src/00046 00046
+com/mojang/minecraft/level/b com/mojang/minecraft/src/c_00046 00046
 	a f_00268 00268
 	b f_00269 00269
 	c f_00270 00270
@@ -846,7 +846,7 @@ com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/math/AABB 00033
 		0 o x 00258
 		1 o y 00259
 		2 o z 00260
-com/mojang/minecraft/player/a com/mojang/minecraft/src/00047 00047
+com/mojang/minecraft/player/a com/mojang/minecraft/src/c_00047 00047
 	a f_00281 00281
 	b f_00282 00282
 	c f_00283 00283
@@ -857,7 +857,7 @@ com/mojang/minecraft/player/a com/mojang/minecraft/src/00047 00047
 	a (IZ)V m_00238 00238
 		0 o p_00467 00467
 		1 o p_00468 00468
-com/mojang/minecraft/player/b com/mojang/minecraft/src/00048 00048
+com/mojang/minecraft/player/b com/mojang/minecraft/src/c_00048 00048
 	e f_00285 00285
 	<init> ()V <init> 00239
 	a (IZ)V m_00238 00238
@@ -995,7 +995,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 		2 o p_00479 00479
 		3 o p_00480 00480
 	<clinit> ()V <clinit> 00164
-com/mojang/minecraft/level/a/b com/mojang/minecraft/src/00049 00049
+com/mojang/minecraft/level/a/b com/mojang/minecraft/src/c_00049 00049
 	<init> (II)V <init> 00244
 		0 o p_00481 00481
 		1 o p_00482 00482
@@ -1005,7 +1005,7 @@ com/mojang/minecraft/level/a/c com/mojang/minecraft/block/Dirt 00036
 	<init> (II)V <init> 00166
 		0 o p_00483 00483
 		1 o p_00484 00484
-com/mojang/minecraft/level/a/d com/mojang/minecraft/src/00050 00050
+com/mojang/minecraft/level/a/d com/mojang/minecraft/src/c_00050 00050
 	<init> (II)V <init> 00245
 		0 o p_00485 00485
 		1 o p_00486 00486
@@ -1041,7 +1041,7 @@ com/mojang/minecraft/level/a/e com/mojang/minecraft/block/liquid/SourceLiquid 00
 		2 o y 00318
 		3 o z 00319
 		4 o neighbor 00320
-com/mojang/minecraft/level/a/f com/mojang/minecraft/src/00051 00051
+com/mojang/minecraft/level/a/f com/mojang/minecraft/src/c_00051 00051
 	<init> (I)V <init> 00247
 		0 o p_00491 00491
 	a (I)I getTexture 00151

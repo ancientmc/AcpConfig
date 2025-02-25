@@ -1,5 +1,4 @@
 import com.ancientmc.acpconfig.tasks.csv.UpdateCsv
-import com.ancientmc.acpconfig.tasks.UpdateTsrg
 
 repositories {
     mavenCentral()
@@ -29,19 +28,6 @@ ext {
     NEW_CSV_DIR = String.join('/', NEW_DIR, 'mappings/csv/')
     MATCH = 'data/matches/' + OLD + '-' + NEW + '.match'
 }
-
-/*
-tasks.register('updateTsrg', UpdateTsrg) {
-    group = 'update'
-    oldIds = file(OLD_DIR + '/mappings/ids.csv')
-    oldTsrg = file(OLD_DIR + '/mappings/intermediate.tsrg')
-    match = file(MATCH)
-    newJar = file(NEW_DIR + '/game/jars/client.jar')
-    inheritanceJson = file(NEW_DIR + '/inheritance_map.json')
-    newTsrg = file(NEW_DIR + '/mappings/intermediate.tsrg')
-    newIds = file(NEW_DIR + '/mappings/ids.csv')
-}
- */
 
 tasks.register('updateTsrg', JavaExec) {
     group = 'update'
