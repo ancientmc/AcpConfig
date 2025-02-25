@@ -288,6 +288,7 @@ c	Lcom/mojang/minecraft/a/b/a/d;	Lcom/mojang/minecraft/level/b/a/d;
 	f	a;;[I	a;;[I
 c	Lcom/mojang/minecraft/a/b/a;	Lcom/mojang/minecraft/level/b/a;
 	m	<init>(Lcom/mojang/minecraft/c;)V	<init>(Lcom/mojang/minecraft/c;)V
+		ma	0	0
 	m	a(Lcom/mojang/minecraft/a/f;Ljava/lang/String;III)Z	a(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;
 		ma	1	0
 		ma	2	1
