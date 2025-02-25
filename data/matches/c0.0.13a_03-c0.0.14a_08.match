@@ -1,4 +1,4 @@
-Matches saved 2025-02-18T21:34:34.842407900Z, input files:
+Matches saved 2025-02-21T22:16:43.970064700Z, input files:
 	a:
 		66276	SHA256	QFlfDDetscWB0NTYNnM4Bv91r5d4NvgV8aVgD+8KQ74=	client.jar
 	b:
@@ -175,12 +175,8 @@ c	Lcom/mojang/minecraft/a/a/e;	Lcom/mojang/minecraft/level/a/i;
 		ma	2	2
 		ma	3	3
 		ma	4	4
-	m	b(Lcom/mojang/minecraft/a/f;IIII)Z	b(Lcom/mojang/minecraft/level/Level;III)Z
-		ma	0	0
-		ma	1	1
-		ma	2	2
-		ma	3	3
-	m	c(Lcom/mojang/minecraft/a/f;IIII)Z	a(Lcom/mojang/minecraft/level/Level;III)V
+	mu	a	b(Lcom/mojang/minecraft/a/f;IIII)Z
+	m	c(Lcom/mojang/minecraft/a/f;IIII)Z	b(Lcom/mojang/minecraft/level/Level;III)Z
 		ma	0	0
 		ma	1	1
 		ma	2	2
@@ -365,7 +361,7 @@ c	Lcom/mojang/minecraft/a/d;	Lcom/mojang/minecraft/a/e;
 	f	a;;Lcom/mojang/minecraft/e;	a;;Lcom/mojang/minecraft/player/Player;
 c	Lcom/mojang/minecraft/a/e;	Lcom/mojang/minecraft/a/g;
 	m	<init>(Lcom/mojang/minecraft/a/f;Lcom/mojang/minecraft/b/a;)V	<init>(Lcom/mojang/minecraft/a/a;)V
-	    ma  1   0
+		ma	1	0
 	m	a()V	a()V
 	m	a(Lcom/mojang/minecraft/e;I)V	a(Lcom/mojang/minecraft/player/Player;I)V
 		ma	0	0
@@ -865,7 +861,8 @@ c	Lcom/mojang/minecraft/e/f;	Lcom/mojang/minecraft/character/c;
 	f	b;;F	b;;F
 	f	c;;F	c;;F
 c	Lcom/mojang/minecraft/e;	Lcom/mojang/minecraft/player/Player;
-    m   <init>(
+	m	<init>(Lcom/mojang/minecraft/a/f;)V	<init>(Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V
+		ma	0	0
 	m	a()V	tick()V
 	fu	a	a;;[Z
 c	Lcom/mojang/minecraft/f/a;	Lcom/mojang/minecraft/phys/AABB;

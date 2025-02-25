@@ -1,0 +1,13 @@
+UPDATE PROCEDURE
+
+1. Update TSRG, CSV, mappings
+2. Generate workspace and decompile
+3. Inspect. Look for:
+	a. Exceptions
+	b. Access level issues
+4. Using this data, write the exceptions.txt & access.txt files
+5. Go back to step one. The MCInjector corrections will be applied.
+6. Make a new workspace, inspect, and fix any other errors.
+7. Generate patches.
+8. Run the game. Maybe compare with an instance in Prism/BetaCraft or something.
+9. Done!

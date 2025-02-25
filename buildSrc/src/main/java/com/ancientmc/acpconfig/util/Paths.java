@@ -1,7 +1,10 @@
 package com.ancientmc.acpconfig.util;
 
 public class Paths {
-    public static final String DIR_LIBRARIES = "game/lib/";
+    public static final String DIR_LIBRARIES = "run/lib/";
+    public static final String DIR_NATIVES = "run/bin/natives/";
+    public static final String DIR_ASSETS = "run/resources/";
+    public static final String DIR_SRC = "run/src/main/java/";
     public static final String VERSION_MANIFEST = "../../version_manifest.json";
     public static final String JSON = "game/version.json";
     public static final String BASE_JAR = "game/jars/client.jar";
@@ -10,6 +13,7 @@ public class Paths {
     public static final String INJECT_JAR = "game/jars/inject.jar";
     public static final String SRG_JAR = "game/jars/srg.jar";
     public static final String CNF_JAR = "game/jars/cuneiform.jar";
+    public static final String DECOMP_JAR = "game/jars/decomp.jar";
     public static final String JARDEP_JSON = "data/jardep.json";
     public static final String ROSETTA_CFG = "mappings/rosetta.cfg";
     public static final String INTERMEDIATE_TSRG = "mappings/intermediate.tsrg";

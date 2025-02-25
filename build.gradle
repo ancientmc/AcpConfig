@@ -32,14 +32,16 @@ subprojects {
         rosetta
         forgeart
         mcinjector
+        fernflower
     }
 
     dependencies {
         inheritance "net.neoforged.installertools:installertools:3.0.2:fatjar"
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
-        rosetta 'com.ancientmc:rosetta:0.0.9.3:all'
+        rosetta "com.ancientmc:rosetta:$rosetta_version:all"
         forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
         mcinjector 'de.oceanlabs.mcp:mcinjector:4.1-am'
+        fernflower 'com.ancientmc:fernflower:1.0'
     }
 
     version = project.name
@@ -60,6 +62,12 @@ subprojects {
         def list = Collections.singletonList(file(Paths.JSON))
         jsons = list
         libs = file(Paths.DIR_LIBRARIES)
+    }
+
+    tasks.register('downloadNatives', DownloadNatives) {
+        dependsOn downloadJson
+        urls = Json.getNativeUrls(file(downloadJson.dest))
+        output = file(Paths.DIR_NATIVES)
     }
 
     tasks.register('extractInheritance', JavaExec) {
@@ -138,6 +146,19 @@ subprojects {
         mainClass = 'net.neoforged.art.Main'
         classpath = files(project.configurations.named('forgeart'))
         args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
+    }
+
+    tasks.register('decompile', JavaExec) {
+        dependsOn deobfMapped
+        mainClass = 'org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
+        classpath = files(project.configurations.named('fernflower'))
+        args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=0', '-jvn=1', Paths.CNF_JAR, Paths.DECOMP_JAR)
+    }
+
+    tasks.register('unzip', Copy) {
+        dependsOn decompile
+        from zipTree(file(Paths.DECOMP_JAR))
+        into file(Paths.DIR_SRC)
     }
 }
 

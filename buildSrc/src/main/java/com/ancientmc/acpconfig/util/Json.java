@@ -94,7 +94,7 @@ public class Json {
             if(entry.has("classifiers")) {
                 String os = Util.getOSName();
                 JsonObject natives = entry.getAsJsonObject("classifiers").getAsJsonObject("natives-" + os);
-                if (natives != null && isAllowed(name)) {
+                if (natives != null) {
                     URL url = Util.toUrl(natives.get("url").getAsString());
                     urls.add(url);
                 }

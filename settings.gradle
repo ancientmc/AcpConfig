@@ -2,7 +2,7 @@ rootProject.name = 'AcpConfig'
 
 def root = new File(rootDir, '/data/versions/')
 
-// Dev phases
+// Group version projects in subdirectories based on dev phase.
 def phases = ['classic', 'indev', 'infdev', 'alpha', 'beta', 'release', 'snapshot']
 phases.each { phase ->
     def sub = new File(root, '/' + phase + '/')
