@@ -210,7 +210,7 @@ com/mojang/minecraft/a/b com/mojang/minecraft/world/chunk/DirtyChunkComparator 0
 	compare (Ljava/lang/Object;Ljava/lang/Object;)I compare 00052
 		0 o objOne 00065
 		1 o objTwo 00066
-com/mojang/minecraft/a/c com/mojang/minecraft/util/Tesselator 00016
+com/mojang/minecraft/a/c com/mojang/minecraft/client/render/Tesselator 00016
 	b buffer 00120
 	c bufferArray 00121
 	d vertices 00122
@@ -251,7 +251,7 @@ com/mojang/minecraft/a/c com/mojang/minecraft/util/Tesselator 00016
 		0 o color 00141
 	c ()V disableColor 00092
 	<clinit> ()V <clinit> 00093
-com/mojang/minecraft/a/d com/mojang/minecraft/util/Frustrum 00017
+com/mojang/minecraft/a/d com/mojang/minecraft/client/render/Frustrum 00017
 	a sides 00134
 	b frustrum 00135
 	c projectionBuffer 00136
@@ -514,7 +514,7 @@ com/mojang/minecraft/character/a com/mojang/minecraft/client/model/HumanModel 00
 	e rightLeg 00200
 	f leftLeg 00201
 	<init> ()V <init> 00133
-com/mojang/minecraft/character/b com/mojang/minecraft/util/math/Quad 00030
+com/mojang/minecraft/character/b com/mojang/minecraft/client/model/Quad 00030
 	a vertices 00202
 	<init> ([Lcom/mojang/minecraft/character/e;)V <init> 00134
 		0 o vertices 00226
@@ -524,7 +524,7 @@ com/mojang/minecraft/character/b com/mojang/minecraft/util/math/Quad 00030
 		2 o uTwo 00229
 		3 o vOne 00230
 		4 o vTwo 00231
-com/mojang/minecraft/character/c com/mojang/minecraft/util/math/Vec3d 00032
+com/mojang/minecraft/character/c com/mojang/minecraft/util/phys/Vec3d 00032
 	a x 00206
 	b y 00207
 	c z 00208
@@ -560,7 +560,7 @@ com/mojang/minecraft/character/d com/mojang/minecraft/client/model/ModelPart 000
 		1 o y 00224
 		2 o z 00225
 	a ()V render 00132
-com/mojang/minecraft/character/e com/mojang/minecraft/util/math/Vertex 00031
+com/mojang/minecraft/character/e com/mojang/minecraft/client/model/Vertex 00031
 	a vec 00203
 	b u 00204
 	c v 00205
@@ -803,7 +803,7 @@ com/mojang/minecraft/particle/Particle com/mojang/minecraft/entity/particle/Part
 		4 o p_00452 00452
 		5 o p_00453 00453
 		6 o p_00454 00454
-com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/math/AABB 00033
+com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/phys/AABB 00033
 	serialVersionUID f_00280 00280
 	epsilon epsilon 00209
 	x0 minX 00210
@@ -1191,16 +1191,16 @@ com/mojang/minecraft/level/b/a/d com/mojang/minecraft/world/gen/noise/PerlinNois
 	<init> (Ljava/util/Random;)V <init> 00181
 		0 o random 00357
 	a (D)D fade 00183
-		0 o coord 00358
+		0 o value 00358
 	a (DDD)D lerp 00184
-		0 o p_00359 00359
-		1 o p_00360 00360
-		2 o p_00361 00361
+		0 o delta 00359
+		1 o start 00360
+		2 o end 00361
 	a (IDDD)D grad 00185
-		0 o p_00362 00362
-		1 o p_00363 00363
-		2 o p_00364 00364
-		3 o p_00365 00365
+		0 o hash 00362
+		1 o x 00363
+		2 o y 00364
+		3 o z 00365
 	a (DD)D get 00180
 		0 o p_00498 00498
 		1 o p_00499 00499

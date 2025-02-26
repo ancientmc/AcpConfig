@@ -13,8 +13,8 @@ com/mojang/minecraft/src/c_00012,com/mojang/minecraft/world/DistanceComparator
 com/mojang/minecraft/src/c_00013,com/mojang/minecraft/client/render/WorldRenderer
 com/mojang/minecraft/src/c_00014,com/mojang/minecraft/world/World
 com/mojang/minecraft/src/c_00015,com/mojang/minecraft/client/render/TextureRenderer
-com/mojang/minecraft/src/c_00016,com/mojang/minecraft/util/Tesselator
-com/mojang/minecraft/src/c_00017,com/mojang/minecraft/util/Frustrum
+com/mojang/minecraft/src/c_00016,com/mojang/minecraft/client/render/Tesselator
+com/mojang/minecraft/src/c_00017,com/mojang/minecraft/client/render/Frustrum
 com/mojang/minecraft/src/c_00018,com/mojang/minecraft/client/gui/screen/CreateWorldScreen
 com/mojang/minecraft/src/c_00019,com/mojang/minecraft/client/gui/Button
 com/mojang/minecraft/src/c_00020,com/mojang/minecraft/client/gui/screen/PauseMenu
@@ -27,10 +27,10 @@ com/mojang/minecraft/src/c_00026,com/mojang/minecraft/entity/particle/Particle
 com/mojang/minecraft/src/c_00027,com/mojang/minecraft/entity/passive/Human
 com/mojang/minecraft/src/c_00028,com/mojang/minecraft/client/model/ModelPart
 com/mojang/minecraft/src/c_00029,com/mojang/minecraft/client/model/HumanModel
-com/mojang/minecraft/src/c_00030,com/mojang/minecraft/util/math/Quad
-com/mojang/minecraft/src/c_00031,com/mojang/minecraft/util/math/Vertex
-com/mojang/minecraft/src/c_00032,com/mojang/minecraft/util/math/Vec3d
-com/mojang/minecraft/src/c_00033,com/mojang/minecraft/util/math/AABB
+com/mojang/minecraft/src/c_00030,com/mojang/minecraft/client/model/Quad
+com/mojang/minecraft/src/c_00031,com/mojang/minecraft/client/model/Vertex
+com/mojang/minecraft/src/c_00032,com/mojang/minecraft/util/phys/Vec3d
+com/mojang/minecraft/src/c_00033,com/mojang/minecraft/util/phys/AABB
 com/mojang/minecraft/src/c_00034,com/mojang/minecraft/block/Block
 com/mojang/minecraft/src/c_00035,com/mojang/minecraft/block/partial/plant/Sapling
 com/mojang/minecraft/src/c_00036,com/mojang/minecraft/block/Dirt

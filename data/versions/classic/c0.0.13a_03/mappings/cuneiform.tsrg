@@ -342,7 +342,7 @@ com/mojang/minecraft/b/a com/mojang/minecraft/client/render/TextureRenderer 0001
 	a (Ljava/lang/String;I)I getTexture 00082
 		0 o resource 00125
 		1 o id 00126
-com/mojang/minecraft/b/b com/mojang/minecraft/util/Tesselator 00016
+com/mojang/minecraft/b/b com/mojang/minecraft/client/render/Tesselator 00016
 	b buffer 00120
 	c bufferArray 00121
 	d vertices 00122
@@ -383,7 +383,7 @@ com/mojang/minecraft/b/b com/mojang/minecraft/util/Tesselator 00016
 		0 o color 00141
 	c ()V disableColor 00092
 	<clinit> ()V <clinit> 00093
-com/mojang/minecraft/b/c com/mojang/minecraft/util/Frustrum 00017
+com/mojang/minecraft/b/c com/mojang/minecraft/client/render/Frustrum 00017
 	a sides 00134
 	b frustrum 00135
 	c projectionBuffer 00136
@@ -619,7 +619,7 @@ com/mojang/minecraft/e/c com/mojang/minecraft/client/model/HumanModel 00029
 	e rightLeg 00200
 	f leftLeg 00201
 	<init> ()V <init> 00133
-com/mojang/minecraft/e/d com/mojang/minecraft/util/math/Quad 00030
+com/mojang/minecraft/e/d com/mojang/minecraft/client/model/Quad 00030
 	a vertices 00202
 	<init> ([Lcom/mojang/minecraft/e/e;)V <init> 00134
 		0 o vertices 00226
@@ -629,7 +629,7 @@ com/mojang/minecraft/e/d com/mojang/minecraft/util/math/Quad 00030
 		2 o uTwo 00229
 		3 o vOne 00230
 		4 o vTwo 00231
-com/mojang/minecraft/e/e com/mojang/minecraft/util/math/Vertex 00031
+com/mojang/minecraft/e/e com/mojang/minecraft/client/model/Vertex 00031
 	a vec 00203
 	b u 00204
 	c v 00205
@@ -650,7 +650,7 @@ com/mojang/minecraft/e/e com/mojang/minecraft/util/math/Vertex 00031
 		0 o vec 00242
 		1 o u 00243
 		2 o v 00244
-com/mojang/minecraft/e/f com/mojang/minecraft/util/math/Vec3d 00032
+com/mojang/minecraft/e/f com/mojang/minecraft/util/phys/Vec3d 00032
 	a x 00206
 	b y 00207
 	c z 00208
@@ -658,7 +658,7 @@ com/mojang/minecraft/e/f com/mojang/minecraft/util/math/Vec3d 00032
 		0 o x 00245
 		1 o y 00246
 		2 o z 00247
-com/mojang/minecraft/f/a com/mojang/minecraft/util/math/AABB 00033
+com/mojang/minecraft/f/a com/mojang/minecraft/util/phys/AABB 00033
 	g epsilon 00209
 	a minX 00210
 	b minY 00211
@@ -942,16 +942,16 @@ com/mojang/minecraft/a/b/a/d com/mojang/minecraft/world/gen/noise/PerlinNoiseGen
 	<init> (Ljava/util/Random;)V <init> 00182
 		0 o random 00357
 	a (D)D fade 00183
-		0 o coord 00358
+		0 o value 00358
 	a (DDD)D lerp 00184
-		0 o p_00359 00359
-		1 o p_00360 00360
-		2 o p_00361 00361
+		0 o delta 00359
+		1 o start 00360
+		2 o end 00361
 	a (IDDD)D grad 00185
-		0 o p_00362 00362
-		1 o p_00363 00363
-		2 o p_00364 00364
-		3 o p_00365 00365
+		0 o hash 00362
+		1 o x 00363
+		2 o y 00364
+		3 o z 00365
 	a (DD)D get 00180
 		0 o width 00355
 		1 o height 00356
