@@ -782,7 +782,7 @@ com/mojang/minecraft/a/a/a com/mojang/minecraft/block/Block 00034
 		3 o z 00319
 		4 o neighbor 00320
 	<clinit> ()V <clinit> 00164
-com/mojang/minecraft/a/a/b com/mojang/minecraft/block/partial/plant/Sapling 00035
+com/mojang/minecraft/a/a/b com/mojang/minecraft/block/Sapling 00035
 	<init> (I)V <init> 00165
 		0 o id 00321
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160
@@ -808,7 +808,7 @@ com/mojang/minecraft/a/a/c com/mojang/minecraft/block/Dirt 00036
 	<init> (II)V <init> 00166
 		0 o id 00322
 		1 o texture 00323
-com/mojang/minecraft/a/a/d com/mojang/minecraft/block/liquid/SourceLiquid 00037
+com/mojang/minecraft/a/a/d com/mojang/minecraft/block/SourceLiquid 00037
 	<init> (II)V <init> 00167
 		0 o id 00324
 		1 o type 00325
@@ -824,7 +824,7 @@ com/mojang/minecraft/a/a/d com/mojang/minecraft/block/liquid/SourceLiquid 00037
 		2 o y 00318
 		3 o z 00319
 		4 o neighbor 00320
-com/mojang/minecraft/a/a/e com/mojang/minecraft/block/liquid/Liquid 00038
+com/mojang/minecraft/a/a/e com/mojang/minecraft/block/Liquid 00038
 	m type 00234
 	n sourceId 00235
 	o flowingId 00236

@@ -1,5 +1,7 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
+    id 'uk.jamierocks.propatcher' version '2.0.1'
 }
 
 group = 'com.ancientmc'
@@ -14,6 +16,7 @@ repositories {
 import com.ancientmc.acpconfig.tasks.*
 import com.ancientmc.acpconfig.tasks.csv.*
 import com.ancientmc.acpconfig.util.*
+import uk.jamierocks.propatcher.task.*
 
 dependencies {
     implementation 'net.minecraftforge:srgutils:0.5.4'
@@ -59,7 +62,7 @@ subprojects {
 
     tasks.register('downloadLibraries', DownloadLibraries) {
         dependsOn downloadJson
-        def list = Collections.singletonList(file(Paths.JSON))
+        def list = Arrays.asList(file(Paths.JSON), file(Paths.JARDEP_JSON))
         jsons = list
         libs = file(Paths.DIR_LIBRARIES)
     }
@@ -100,11 +103,19 @@ subprojects {
         log = file('mappings/verify.txt')
     }
 
+    tasks.register('obfInject', ObfuscateInjectFiles) {
+        intermediateTsrg = file(Paths.INTERMEDIATE_TSRG)
+        intermediateAccess = file('inject/intermediate/access_intermediate.txt')
+        intermediateExceptions = file('inject/intermediate/exceptions_intermediate.txt')
+        obfuscatedAccess = file(Paths.ACCESS)
+        obfuscatedExceptions = file(Paths.EXCEPTIONS)
+    }
+
     tasks.register('mcinject', JavaExec) {
         dependsOn split
         mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
         classpath = files(project.configurations.named('mcinjector'))
-        args('--in', Paths.SLIM_JAR, '--out', Paths.INJECT_JAR, '--lvt=LVT', '--exc', Paths.EXC, '--blacklist', Paths.BLACKLIST)
+        args('--in', Paths.SLIM_JAR, '--out', Paths.INJECT_JAR, '--lvt=LVT', '--acc', Paths.ACCESS, '--exc', Paths.EXCEPTIONS, '--blacklist', Paths.BLACKLIST)
     }
 
     tasks.register('deobfIntermediate', JavaExec) {
@@ -141,6 +152,11 @@ subprojects {
 
     tasks.register('applyAllCsv') { dependsOn(applyClasses, applyFields, applyMethods, applyParams) }
 
+    tasks.register('exportStats', ExportMappingStats) {
+        csvDirectory = file(projectDir.path + '/mappings/csv')
+        statsCsv = file(projectDir.path + '/mappings/stats.csv')
+    }
+
     tasks.register('deobfMapped', JavaExec) {
         dependsOn (applyAllCsv, mcinject)
         mainClass = 'net.neoforged.art.Main'
@@ -152,13 +168,43 @@ subprojects {
         dependsOn deobfMapped
         mainClass = 'org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
         classpath = files(project.configurations.named('fernflower'))
-        args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=0', '-jvn=1', Paths.CNF_JAR, Paths.DECOMP_JAR)
+        args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=0', '-jvn=1', '-ind=    ', Paths.CNF_JAR, Paths.DECOMP_JAR)
     }
 
     tasks.register('unzip', Copy) {
         dependsOn decompile
         from zipTree(file(Paths.DECOMP_JAR))
         into file(Paths.DIR_SRC)
+    }
+
+    tasks.register('backupSrc', Copy) {
+        dependsOn unzip
+        from fileTree(Paths.DIR_SRC)
+        into file('run/original_src');
+    }
+
+    tasks.register('createPatchesDir') {
+        def dir = file('patches/')
+        dir.mkdir()
+    }
+
+    tasks.register('patchesMake', MakePatchesTask) {
+        dependsOn createPatchesDir
+        rootDir file('run/original_src/')
+        target file(Paths.DIR_SRC)
+        patches file('patches/')
+    }
+
+    tasks.register('patchesApply', ApplyPatchesTask) {
+        target file(Paths.DIR_SRC)
+        patches file('patches/')
+    }
+
+    tasks.register('run', JavaExec) {
+        workingDir = file(Paths.DIR_SRC)
+        mainClass = 'acp.client.Start'
+        classpath = files(Paths.DIR_LIBRARIES).asFileTree
+        systemProperty 'java.library.path', Paths.DIR_NATIVES
     }
 }
 

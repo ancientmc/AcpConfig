@@ -5,6 +5,8 @@ public class Paths {
     public static final String DIR_NATIVES = "run/bin/natives/";
     public static final String DIR_ASSETS = "run/resources/";
     public static final String DIR_SRC = "run/src/main/java/";
+    public static final String DIR_PATCHES = "patches/";
+    public static final String DIR_START = "start/";
     public static final String VERSION_MANIFEST = "../../version_manifest.json";
     public static final String JSON = "game/version.json";
     public static final String BASE_JAR = "game/jars/client.jar";
@@ -14,12 +16,13 @@ public class Paths {
     public static final String SRG_JAR = "game/jars/srg.jar";
     public static final String CNF_JAR = "game/jars/cuneiform.jar";
     public static final String DECOMP_JAR = "game/jars/decomp.jar";
-    public static final String JARDEP_JSON = "data/jardep.json";
+    public static final String JARDEP_JSON = "game/jardep.json";
     public static final String ROSETTA_CFG = "mappings/rosetta.cfg";
     public static final String INTERMEDIATE_TSRG = "mappings/intermediate.tsrg";
     public static final String CUNEIFORM_TSRG = "mappings/cuneiform.tsrg";
     public static final String IDS = "mappings/ids.csv";
-    public static final String EXC = "inject/exceptions.txt";
+    public static final String ACCESS = "inject/access.txt";
+    public static final String EXCEPTIONS = "inject/exceptions.txt";
     public static final String BLACKLIST = "inject/blacklist.txt";
     public static final String INHERITANCE = "inheritance_map.json";
 }

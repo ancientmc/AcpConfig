@@ -1,0 +1,5 @@
+PUBLIC com/mojang/minecraft/a a
+PUBLIC com/mojang/minecraft/a b
+PUBLIC com/mojang/minecraft/e a
+PUBLIC com/mojang/minecraft/f a (Lcom/mojang/minecraft/e;I)F
+PUBLIC com/mojang/minecraft/g b ()V

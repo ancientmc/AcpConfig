@@ -74,7 +74,7 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	b ()V m_00186 00186
 	c ()V lockMouse 00011
 	d ()V releaseMouse 00012
-	e ()V m_00187 00187
+	e ()V onClick 00187
 	f ()V tick 00013
 	a (F)V setCamera 00014
 		0 o partialTicks 00009
@@ -101,8 +101,8 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	a (Ljava/lang/String;I)Z loadWorld 00022
 		0 o username 00019
 		1 o sessionId 00020
-	a (Lcom/mojang/minecraft/level/Level;)V m_00189 00189
-		0 o p_00369 00369
+	a (Lcom/mojang/minecraft/level/Level;)V setWorld 00189
+		0 o world 00369
 	<clinit> ()V <clinit> 00190
 com/mojang/minecraft/d com/mojang/minecraft/util/HitResult 00006
 	a x 00047
@@ -450,10 +450,10 @@ com/mojang/minecraft/b/d com/mojang/minecraft/client/gui/Button 00019
 		3 o width 00151
 		4 o height 00152
 		5 o text 00153
-com/mojang/minecraft/b/e com/mojang/minecraft/src/c_00045 00045
-	e f_00266 00266
+com/mojang/minecraft/b/e com/mojang/minecraft/client/gui/screen/WorldSizeSelect 00045
+	e parent 00266
 	<init> (Lcom/mojang/minecraft/b/c;)V <init> 00203
-		0 o p_00391 00391
+		0 o parent 00391
 	a ()V addElements 00107
 	a (Lcom/mojang/minecraft/b/d;)V buttonEvent 00105
 		0 o button 00158
@@ -620,7 +620,7 @@ com/mojang/minecraft/level/a com/mojang/minecraft/world/WorldManager 00009
 	a (Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V writeWorldData 00050
 		0 o world 00062
 		1 o out 00063
-com/mojang/minecraft/level/b com/mojang/minecraft/src/c_00046 00046
+com/mojang/minecraft/level/b com/mojang/minecraft/world/Coordinate 00046
 	a f_00268 00268
 	b f_00269 00269
 	c f_00270 00270
@@ -831,22 +831,22 @@ com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/phys/AABB 00033
 		0 o p_00458 00458
 		1 o p_00459 00459
 		2 o p_00460 00460
-	clipXCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00232 00232
-		0 o p_00461 00461
-		1 o p_00462 00462
-	clipYCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00233 00233
-		0 o p_00463 00463
-		1 o p_00464 00464
-	clipZCollide (Lcom/mojang/minecraft/phys/AABB;F)F m_00234 00234
-		0 o p_00465 00465
-		1 o p_00466 00466
+	clipXCollide (Lcom/mojang/minecraft/phys/AABB;F)F getOffsetX 00232
+		0 o box 00461
+		1 o xOffset 00462
+	clipYCollide (Lcom/mojang/minecraft/phys/AABB;F)F getOffsetY 00233
+		0 o box 00463
+		1 o yOffset 00464
+	clipZCollide (Lcom/mojang/minecraft/phys/AABB;F)F getOffsetZ 00234
+		0 o box 00465
+		1 o zOffset 00466
 	intersects (Lcom/mojang/minecraft/phys/AABB;)Z intersects 00143
 		0 o box 00257
 	move (FFF)V offset 00144
 		0 o x 00258
 		1 o y 00259
 		2 o z 00260
-com/mojang/minecraft/player/a com/mojang/minecraft/src/c_00047 00047
+com/mojang/minecraft/player/a com/mojang/minecraft/client/input/Inputs 00047
 	a f_00281 00281
 	b f_00282 00282
 	c f_00283 00283
@@ -857,8 +857,8 @@ com/mojang/minecraft/player/a com/mojang/minecraft/src/c_00047 00047
 	a (IZ)V m_00238 00238
 		0 o p_00467 00467
 		1 o p_00468 00468
-com/mojang/minecraft/player/b com/mojang/minecraft/src/c_00048 00048
-	e f_00285 00285
+com/mojang/minecraft/player/b com/mojang/minecraft/client/input/CodeInputs 00048
+	e inputs 00285
 	<init> ()V <init> 00239
 	a (IZ)V m_00238 00238
 		0 o p_00467 00467
@@ -881,21 +881,21 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 	c STONE 00218
 	d GRASS_BLOCK 00219
 	e DIRT 00220
-	f f_00287 00287
-	g f_00288 00288
-	h f_00289 00289
+	f COBBLESTONE 00287
+	g OAK_PLANKS 00288
+	h OAK_SAPLING 00289
 	i BEDROCK 00221
 	j FLOWING_WATER 00222
 	k WATER 00223
 	l FLOWING_LAVA 00224
 	m LAVA 00225
-	n f_00290 00290
-	o f_00291 00291
-	p f_00292 00292
-	q f_00293 00293
-	r f_00294 00294
-	s f_00295 00295
-	t f_00296 00296
+	n SAND 00290
+	o GRAVEL 00291
+	p GOLD_ORE 00292
+	q IRON_ORE 00293
+	r COAL_ORE 00294
+	s OAK_LOG 00295
+	t OAK_LEAVES 00296
 	u texture 00226
 	v id 00227
 	w minX 00228
@@ -995,7 +995,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 		2 o p_00479 00479
 		3 o p_00480 00480
 	<clinit> ()V <clinit> 00164
-com/mojang/minecraft/level/a/b com/mojang/minecraft/src/c_00049 00049
+com/mojang/minecraft/level/a/b com/mojang/minecraft/block/Leaves 00049
 	<init> (II)V <init> 00244
 		0 o p_00481 00481
 		1 o p_00482 00482
@@ -1005,10 +1005,10 @@ com/mojang/minecraft/level/a/c com/mojang/minecraft/block/Dirt 00036
 	<init> (II)V <init> 00166
 		0 o id 00322
 		1 o texture 00323
-com/mojang/minecraft/level/a/d com/mojang/minecraft/src/c_00050 00050
+com/mojang/minecraft/level/a/d com/mojang/minecraft/block/FallingBlock 00050
 	<init> (II)V <init> 00245
-		0 o p_00483 00483
-		1 o p_00484 00484
+		0 o id 00483
+		1 o texture 00484
 	a (Lcom/mojang/minecraft/level/Level;III)V m_00243 00243
 		0 o p_00477 00477
 		1 o p_00478 00478
@@ -1021,10 +1021,10 @@ com/mojang/minecraft/level/a/d com/mojang/minecraft/src/c_00050 00050
 		3 o z 00319
 		4 o neighbor 00320
 	b (Lcom/mojang/minecraft/level/Level;III)V m_00246 00246
-		0 o p_00485 00485
-		1 o p_00486 00486
-		2 o p_00487 00487
-		3 o p_00488 00488
+		0 o world 00485
+		1 o x 00486
+		2 o y 00487
+		3 o z 00488
 com/mojang/minecraft/level/a/e com/mojang/minecraft/block/liquid/SourceLiquid 00037
 	<init> (II)V <init> 00167
 		0 o id 00324
@@ -1041,9 +1041,9 @@ com/mojang/minecraft/level/a/e com/mojang/minecraft/block/liquid/SourceLiquid 00
 		2 o y 00318
 		3 o z 00319
 		4 o neighbor 00320
-com/mojang/minecraft/level/a/f com/mojang/minecraft/src/c_00051 00051
+com/mojang/minecraft/level/a/f com/mojang/minecraft/block/Log 00051
 	<init> (I)V <init> 00247
-		0 o p_00489 00489
+		0 o id 00489
 	a (I)I getTexture 00151
 		0 o side 00283
 com/mojang/minecraft/level/a/g com/mojang/minecraft/block/GrassBlock 00039

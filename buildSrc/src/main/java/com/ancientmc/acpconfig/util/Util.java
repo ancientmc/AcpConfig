@@ -3,6 +3,7 @@ package com.ancientmc.acpconfig.util;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.gradle.api.file.FileSystemLocationProperty;
 import org.gradle.internal.os.OperatingSystem;
 
 import java.io.File;
@@ -38,5 +39,9 @@ public class Util {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static File getFile(FileSystemLocationProperty<?> property) {
+        return property.getAsFile().get();
     }
 }

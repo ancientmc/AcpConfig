@@ -64,13 +64,15 @@ public class Json {
             JsonObject object = Util.getJson(json);
             JsonArray libraries = object.getAsJsonArray("libraries");
 
-            for(int i = 0; i < libraries.size(); i++) {
-                JsonObject entry = libraries.get(i).getAsJsonObject();
-                JsonObject artifacts = entry.getAsJsonObject("downloads").getAsJsonObject("artifact");
-                if (artifacts != null) {
-                    String path = artifacts.get("path").getAsString();
-                    String url = artifacts.get("url").getAsString();
-                    map.put(url, path);
+            if (!libraries.isEmpty()) {
+                for(int i = 0; i < libraries.size(); i++) {
+                    JsonObject entry = libraries.get(i).getAsJsonObject();
+                    JsonObject artifacts = entry.getAsJsonObject("downloads").getAsJsonObject("artifact");
+                    if (artifacts != null) {
+                        String path = artifacts.get("path").getAsString();
+                        String url = artifacts.get("url").getAsString();
+                        map.put(url, path);
+                    }
                 }
             }
         }

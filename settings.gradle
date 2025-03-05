@@ -1,4 +1,4 @@
-rootProject.name = 'AcpConfig'
+rootProject.name = 'AcpGen'
 
 def root = new File(rootDir, '/data/versions/')
 

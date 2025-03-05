@@ -1,0 +1,28 @@
+repositories {
+    mavenCentral()
+}
+
+version = file('../').name
+
+tasks.register('createDir') {
+    def dir = file(dir_patches)
+    dir.mkdir()
+}
+
+tasks.named('makePatches').configure {
+    dependsOn createDir
+    rootDir file(dir_original_src)
+    target file('src/main/java/')
+    patches file(dir_patches)
+}
+
+tasks.named('applyPatches').configure {
+    target file('src/main/java/')
+    patches file(dir_patches)
+}
+
+tasks.register('run', JavaExec) {
+    mainClass = 'acp.client/start/'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'java.library.path', dir_natives
+}
