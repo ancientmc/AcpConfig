@@ -1,0 +1,66 @@
+--- a/com/mojang/minecraft/world/gen/WorldGenerator.java
++++ b/com/mojang/minecraft/world/gen/WorldGenerator.java
+@@ -265,16 +265,16 @@
+                 System.out.println("hoooly fuck");
+             }
+ 
+-            j2 = 0;
+-            k2 = 0;
++            boolean flag3 = false;
++            boolean flag4 = false;
+             boolean flag = false;
+             l1 += (long) (i2 - k1);
+ 
+-            for (k1 = k1; k1 < i2; ++k1) {
++            for (int k3 = k1; k3 < i2; ++k3) {
+                 this.blocks[y] = (byte)speed;
+                 if (z > 0) {
+                     boolean flag1;
+-                    if ((flag1 = this.blocks[y - this.xSize] == 0) && !j2) {
++                    if ((flag1 = this.blocks[y - this.xSize] == 0) && !flag3) {
+                         if (i == this.coordinates.length) {
+                             arraylist.add(this.coordinates);
+                             this.coordinates = new int[1048576];
+@@ -284,12 +284,12 @@
+                         this.coordinates[i++] = y - this.xSize;
+                     }
+ 
+-                    j2 = flag1;
++                    flag3 = flag1;
+                 }
+ 
+                 if (z < this.zSize - 1) {
+                     boolean flag2;
+-                    if ((flag2 = this.blocks[y + this.xSize] == 0) && !k2) {
++                    if ((flag2 = this.blocks[y + this.xSize] == 0) && !flag4) {
+                         if (i == this.coordinates.length) {
+                             arraylist.add(this.coordinates);
+                             this.coordinates = new int[1048576];
+@@ -299,7 +299,7 @@
+                         this.coordinates[i++] = y + this.xSize;
+                     }
+ 
+-                    k2 = flag2;
++                    flag4 = flag2;
+                 }
+ 
+                 if (j1 > 0) {
+@@ -308,7 +308,8 @@
+                         this.blocks[y - x] = (byte) Block.STONE.id;
+                     }
+ 
+-                    if ((b0 = b0 == 0) && !flag) {
++                    boolean flag5;
++                    if ((flag5 = b0 == 0) && !flag) {
+                         if (i == this.coordinates.length) {
+                             arraylist.add(this.coordinates);
+                             this.coordinates = new int[1048576];
+@@ -318,7 +319,7 @@
+                         this.coordinates[i++] = y - x;
+                     }
+ 
+-                    flag = (boolean)b0;
++                    flag = flag5;
+                 }
+ 
+                 ++y;

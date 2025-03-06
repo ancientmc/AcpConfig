@@ -7,7 +7,6 @@ import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Frame;
-import java.awt.Thread;
 
 public class Start {
     public static void main(String[] args) {

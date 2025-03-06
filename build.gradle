@@ -221,11 +221,6 @@ subprojects {
         options.compilerArgs = ["-g:none"]
         destinationDirectory = file('build/classes/')
     }
-
-    tasks.register('runClient', MinecraftExec) {
-        sources = file(Paths.DIR_SRC)
-        libraries = file(Paths.DIR_LIBRARIES)
-    }
 }
 
 apply from: ('update.gradle')
