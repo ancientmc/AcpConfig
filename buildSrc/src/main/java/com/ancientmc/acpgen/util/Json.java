@@ -1,4 +1,4 @@
-package com.ancientmc.acpconfig.util;
+package com.ancientmc.acpgen.util;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -7,7 +7,6 @@ import org.gradle.internal.os.OperatingSystem;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;

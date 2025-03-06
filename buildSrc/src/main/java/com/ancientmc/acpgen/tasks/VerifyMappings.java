@@ -1,4 +1,4 @@
-package com.ancientmc.acpconfig.tasks;
+package com.ancientmc.acpgen.tasks;
 
 import net.minecraftforge.mappingverifier.IVerifier;
 import net.minecraftforge.mappingverifier.MappingVerifier;

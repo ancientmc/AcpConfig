@@ -13,13 +13,20 @@ repositories {
     maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
 }
 
-import com.ancientmc.acpconfig.tasks.*
-import com.ancientmc.acpconfig.tasks.csv.*
-import com.ancientmc.acpconfig.util.*
+import com.ancientmc.acpgen.tasks.*
+import com.ancientmc.acpgen.tasks.csv.*
+import com.ancientmc.acpgen.util.*
 import uk.jamierocks.propatcher.task.*
 
 dependencies {
     implementation 'net.minecraftforge:srgutils:0.5.4'
+}
+
+// Java 8 required for running old Minecraft.
+tasks.withType(JavaCompile).configureEach {
+    javaCompiler = javaToolchains.compilerFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
 }
 
 subprojects {
@@ -39,7 +46,7 @@ subprojects {
     }
 
     dependencies {
-        inheritance "net.neoforged.installertools:installertools:3.0.2:fatjar"
+        inheritance 'net.neoforged.installertools:installertools:3.0.2:fatjar'
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
         rosetta "com.ancientmc:rosetta:$rosetta_version:all"
         forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
@@ -177,6 +184,12 @@ subprojects {
         into file(Paths.DIR_SRC)
     }
 
+    tasks.register('extractResources', Copy) {
+        dependsOn unzip
+        from zipTree(file(Paths.EXTRA_JAR))
+        into file(Paths.DIR_RESOURCES)
+    }
+
     tasks.register('backupSrc', Copy) {
         dependsOn unzip
         from fileTree(Paths.DIR_SRC)
@@ -200,11 +213,18 @@ subprojects {
         patches file('patches/')
     }
 
-    tasks.register('run', JavaExec) {
-        workingDir = file(Paths.DIR_SRC)
-        mainClass = 'acp.client.Start'
+    tasks.register('compileClient', JavaCompile) {
+        source = files(Paths.DIR_SRC).asFileTree
         classpath = files(Paths.DIR_LIBRARIES).asFileTree
-        systemProperty 'java.library.path', Paths.DIR_NATIVES
+        sourceCompatibility = '8'
+        targetCompatibility = '8'
+        options.compilerArgs = ["-g:none"]
+        destinationDirectory = file('build/classes/')
+    }
+
+    tasks.register('runClient', MinecraftExec) {
+        sources = file(Paths.DIR_SRC)
+        libraries = file(Paths.DIR_LIBRARIES)
     }
 }
 

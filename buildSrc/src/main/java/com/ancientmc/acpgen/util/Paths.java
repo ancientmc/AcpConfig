@@ -1,10 +1,11 @@
-package com.ancientmc.acpconfig.util;
+package com.ancientmc.acpgen.util;
 
 public class Paths {
     public static final String DIR_LIBRARIES = "run/lib/";
     public static final String DIR_NATIVES = "run/bin/natives/";
     public static final String DIR_ASSETS = "run/resources/";
     public static final String DIR_SRC = "run/src/main/java/";
+    public static final String DIR_RESOURCES = "run/src/main/resources";
     public static final String DIR_PATCHES = "patches/";
     public static final String DIR_START = "start/";
     public static final String VERSION_MANIFEST = "../../version_manifest.json";

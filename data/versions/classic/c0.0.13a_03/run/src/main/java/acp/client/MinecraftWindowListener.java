@@ -4,6 +4,7 @@ import com.mojang.minecraft.Minecraft;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.lang.reflect.Field;
 
 public class MinecraftWindowListener extends WindowAdapter {
     private final Minecraft minecraft;

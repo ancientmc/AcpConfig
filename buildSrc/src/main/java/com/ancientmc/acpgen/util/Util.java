@@ -1,4 +1,4 @@
-package com.ancientmc.acpconfig.util;
+package com.ancientmc.acpgen.util;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

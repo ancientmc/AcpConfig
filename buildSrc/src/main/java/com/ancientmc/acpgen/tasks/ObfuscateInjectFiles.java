@@ -1,6 +1,6 @@
-package com.ancientmc.acpconfig.tasks;
+package com.ancientmc.acpgen.tasks;
 
-import com.ancientmc.acpconfig.util.Util;
+import com.ancientmc.acpgen.util.Util;
 import net.minecraftforge.srgutils.IMappingFile;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;

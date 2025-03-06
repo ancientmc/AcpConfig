@@ -1,4 +1,4 @@
-package com.ancientmc.acpconfig.tasks;
+package com.ancientmc.acpgen.tasks;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.net.URL;
 import java.util.Map;
 import java.util.List;
 
-import com.ancientmc.acpconfig.util.Json;
+import com.ancientmc.acpgen.util.Json;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;

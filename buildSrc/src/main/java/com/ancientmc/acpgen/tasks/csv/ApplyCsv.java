@@ -1,4 +1,4 @@
-package com.ancientmc.acpconfig.tasks.csv;
+package com.ancientmc.acpgen.tasks.csv;
 
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;

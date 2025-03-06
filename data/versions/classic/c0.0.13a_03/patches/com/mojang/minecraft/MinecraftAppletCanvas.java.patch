@@ -1,0 +1,10 @@
+--- a/com/mojang/minecraft/MinecraftAppletCanvas.java
++++ b/com/mojang/minecraft/MinecraftAppletCanvas.java
+@@ -8,7 +8,6 @@
+ 
+     MinecraftAppletCanvas(MinecraftApplet applet) {
+         this.applet = applet;
+-        super();
+     }
+ 
+     public final void addNotify() {

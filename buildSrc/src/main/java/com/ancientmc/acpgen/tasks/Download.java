@@ -1,4 +1,4 @@
-package com.ancientmc.acpconfig.tasks;
+package com.ancientmc.acpgen.tasks;
 
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;

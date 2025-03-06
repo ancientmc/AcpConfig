@@ -1,5 +1,9 @@
 PUBLIC com/mojang/minecraft/src/c_00001 f_00001
 PUBLIC com/mojang/minecraft/src/c_00001 f_00002
 PUBLIC com/mojang/minecraft/src/c_00005 f_00046
+PUBLIC com/mojang/minecraft/src/c_00014 f_00112
+PUBLIC com/mojang/minecraft/src/c_00026 f_00173
+PUBLIC com/mojang/minecraft/src/c_00026 f_00174
+PUBLIC com/mojang/minecraft/src/c_00026 f_00177
 PUBLIC com/mojang/minecraft/src/c_00006 m_00026 (Lcom/mojang/minecraft/src/c_00005;I)F
 PUBLIC com/mojang/minecraft/src/c_00007 m_00028 ()V

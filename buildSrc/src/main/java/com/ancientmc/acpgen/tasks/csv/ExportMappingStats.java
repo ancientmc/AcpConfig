@@ -1,6 +1,6 @@
-package com.ancientmc.acpconfig.tasks.csv;
+package com.ancientmc.acpgen.tasks.csv;
 
-import com.ancientmc.acpconfig.util.Util;
+import com.ancientmc.acpgen.util.Util;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
