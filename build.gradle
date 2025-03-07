@@ -240,6 +240,39 @@ subprojects {
         from ('run/src/main/java/acp/') { into 'start/acp' }
         from (Paths.DIR_PATCHES) { into 'patches' }
     }
+
+    publishing {
+        publications.register("version${project.name}", MavenPublication) {
+            artifact makeZip
+            groupId = 'com.ancientmc'
+            artifactId = 'versions'
+            version = project.name
+            pom {
+                name = 'ACP Version Data'
+                description = 'Version data for ACP processes, generated via AcpGen'
+                url = 'https://github.com/ancientmc/AcpGen'
+                licenses {
+                    license {
+                        name = 'GNU General Public License Version 2' // until our license is updated
+                        url = 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'moist-mason'
+                        name = 'Mason'
+                        url = 'https://github.com/moist-mason'
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = 'ancientmc-maven'
+                url = '../ancientmc-maven'
+            }
+        }
+    }
 }
 
 apply from: ('update.gradle')
