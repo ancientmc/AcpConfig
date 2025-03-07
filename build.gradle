@@ -37,7 +37,6 @@ subprojects {
     }
 
     configurations {
-        minecraft
         inheritance
         jarsplitter
         rosetta
@@ -47,7 +46,6 @@ subprojects {
     }
 
     dependencies {
-        minecraft fileTree('lib/') { include ('*.jar') }
         inheritance 'net.neoforged.installertools:installertools:3.0.2:fatjar'
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
         rosetta "com.ancientmc:rosetta:$rosetta_version:all"
@@ -264,7 +262,7 @@ subprojects {
     publishing {
         publications.register("version${project.name}", MavenPublication) {
             artifact makeZip
-            groupId = 'com.ancientmc'
+            groupId = rootProject.group
             artifactId = 'versions'
             version = project.name
             pom {
