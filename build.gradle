@@ -221,6 +221,25 @@ subprojects {
         options.compilerArgs = ["-g:none"]
         destinationDirectory = file('build/classes/')
     }
+
+    tasks.register('buildResources', Copy) {
+        from file(Paths.DIR_RESOURCES)
+        into file('build/resources/')
+    }
+
+    tasks.register('makeZip', Zip) {
+        archiveBaseName = 'versions'
+        archiveVersion = project.name
+        destinationDirectory = file('build/zip/')
+
+        from Paths.CUNEIFORM_TSRG
+        from (Paths.EXCEPTIONS) { into 'inject' }
+        from (Paths.ACCESS) { into 'inject' }
+        from (Paths.BLACKLIST) { into 'inject' }
+        from (Paths.JARDEP_JSON)
+        from ('run/src/main/java/acp/') { into 'start/acp' }
+        from (Paths.DIR_PATCHES) { into 'patches' }
+    }
 }
 
 apply from: ('update.gradle')
