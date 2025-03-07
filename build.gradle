@@ -22,7 +22,7 @@ dependencies {
     implementation 'net.minecraftforge:srgutils:0.5.4'
 }
 
-// Java 8 required for running old Minecraft.
+// Java 8 required for compiling and running old Minecraft.
 tasks.withType(JavaCompile).configureEach {
     javaCompiler = javaToolchains.compilerFor {
         languageVersion = JavaLanguageVersion.of(8)
@@ -149,10 +149,10 @@ subprojects {
 
         // This is garbage and needs to be refactored
         // I don't know why but the projectDir.path is needed here for it to run.
-        def applyCsv = tasks.register("apply${name}", ApplyCsv) {
-            csv = file(projectDir.path + '/mappings/csv/' + table + ".csv")
+        tasks.register("apply${name}", ApplyCsv) {
+            csv = file(projectDir.path + '/mappings/csv/' + table + '.csv')
             inTsrg = i == 0 ? file(projectDir.path + '/' + Paths.INTERMEDIATE_TSRG) : file(temp)
-            outTsrg = i == 3 ? file(projectDir.path + '/' + Paths.CUNEIFORM_TSRG) : file(projectDir.path + "/mappings/temp/temp-" + (i + 1) + ".tsrg")
+            outTsrg = i == 3 ? file(projectDir.path + '/' + Paths.CUNEIFORM_TSRG) : file(projectDir.path + '/mappings/temp/temp-' + (i + 1) + '.tsrg')
             mustRunAfter i != 0 ? "apply${csvs.get(i - 1).capitalize()}" : [:]
         }
     }
@@ -193,7 +193,7 @@ subprojects {
     tasks.register('backupSrc', Copy) {
         dependsOn unzip
         from fileTree(Paths.DIR_SRC)
-        into file('run/original_src');
+        into file('run/original_src')
     }
 
     tasks.register('createPatchesDir') {
@@ -213,12 +213,12 @@ subprojects {
         patches file('patches/')
     }
 
-    tasks.register('compileClient', JavaCompile) {
+    tasks.register('buildClasses', JavaCompile) {
         source = files(Paths.DIR_SRC).asFileTree
         classpath = files(Paths.DIR_LIBRARIES).asFileTree
         sourceCompatibility = '8'
         targetCompatibility = '8'
-        options.compilerArgs = ["-g:none"]
+        options.compilerArgs = ['-g:none']
         destinationDirectory = file('build/classes/')
     }
 
@@ -232,7 +232,7 @@ subprojects {
         archiveVersion = project.name
         destinationDirectory = file('build/zip/')
 
-        from Paths.CUNEIFORM_TSRG
+        from (Paths.CUNEIFORM_TSRG)
         from (Paths.EXCEPTIONS) { into 'inject' }
         from (Paths.ACCESS) { into 'inject' }
         from (Paths.BLACKLIST) { into 'inject' }
