@@ -37,6 +37,7 @@ subprojects {
     }
 
     configurations {
+        minecraft
         inheritance
         jarsplitter
         rosetta
@@ -46,6 +47,7 @@ subprojects {
     }
 
     dependencies {
+        minecraft fileTree('lib/') { include ('*.jar') }
         inheritance 'net.neoforged.installertools:installertools:3.0.2:fatjar'
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
         rosetta "com.ancientmc:rosetta:$rosetta_version:all"
@@ -227,6 +229,24 @@ subprojects {
         into file('build/resources/')
     }
 
+    tasks.register('buildJar', Jar) {
+        dependsOn (buildClasses, buildResources)
+        archiveBaseName = 'built'
+        destinationDirectory = file('game/jars/')
+
+        manifest.attributes('Main-Class': 'acp.client.Start')
+        from ('build/classes')
+        from ('build/resources')
+        from files('run/lib/').asFileTree.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    tasks.register('runClient', JavaExec) {
+        dependsOn buildJar
+        mainClass = 'acp.client.Start'
+        classpath = files(Paths.BUILT_JAR)
+        systemProperty 'java.library.path', Paths.DIR_NATIVES
+    }
+
     tasks.register('makeZip', Zip) {
         archiveBaseName = 'versions'
         archiveVersion = project.name
@@ -253,7 +273,7 @@ subprojects {
                 url = 'https://github.com/ancientmc/AcpGen'
                 licenses {
                     license {
-                        name = 'GNU General Public License Version 2' // until our license is updated
+                        name = 'GNU General Public License Version 2' // until our license is updated and Cuneiform's license figured out
                         url = 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt'
                     }
                 }

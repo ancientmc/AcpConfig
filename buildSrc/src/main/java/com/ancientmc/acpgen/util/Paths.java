@@ -17,6 +17,7 @@ public class Paths {
     public static final String SRG_JAR = "game/jars/srg.jar";
     public static final String CNF_JAR = "game/jars/cuneiform.jar";
     public static final String DECOMP_JAR = "game/jars/decomp.jar";
+    public static final String BUILT_JAR = "game/jars/built.jar";
     public static final String JARDEP_JSON = "game/jardep.json";
     public static final String ROSETTA_CFG = "mappings/rosetta.cfg";
     public static final String INTERMEDIATE_TSRG = "mappings/intermediate.tsrg";
