@@ -621,14 +621,14 @@ com/mojang/minecraft/level/a com/mojang/minecraft/world/WorldManager 00009
 		0 o world 00062
 		1 o out 00063
 com/mojang/minecraft/level/b com/mojang/minecraft/world/Coordinate 00046
-	a f_00268 00268
-	b f_00269 00269
-	c f_00270 00270
+	a x 00268
+	b y 00269
+	c z 00270
 	d f_00271 00271
 	<init> (IIII)V <init> 00204
-		0 o p_00392 00392
-		1 o p_00393 00393
-		2 o p_00394 00394
+		0 o x 00392
+		1 o y 00393
+		2 o z 00394
 		3 o p_00395 00395
 com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	serialVersionUID f_00272 00272
@@ -639,40 +639,40 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	name name 00115
 	creator username 00116
 	createTime time 00117
-	xSpawn f_00273 00273
-	ySpawn f_00274 00274
-	zSpawn f_00275 00275
-	rotSpawn f_00276 00276
+	xSpawn xSpawn 00273
+	ySpawn ySpawn 00274
+	zSpawn zSpawn 00275
+	rotSpawn spawnRotation 00276
 	a renderers 00112
 	b lightDepths 00111
 	c random 00113
 	d randomInt 00114
 	e f_00277 00277
-	entities f_00278 00278
+	entities entities 00278
 	unprocessed f_00279 00279
 	tickCount tickedBlocks 00118
 	<init> ()V <init> 00071
-	initTransient ()V m_00205 00205
+	initTransient ()V setTransient 00205
 	setData (III[B)V set 00072
 		0 o xSize 00096
 		1 o depth 00097
 		2 o zSize 00098
 		3 o blocks 00099
-	findSpawn ()V m_00206 00206
+	findSpawn ()V setRandomSpawn 00206
 	calcLightDepths (IIII)V setLightDepths 00073
 		0 o minX 00100
 		1 o minZ 00101
 		2 o maxX 00102
 		3 o maxZ 00103
-	addListener$74652038 (Lcom/mojang/minecraft/a/g;)V m_00207 00207
-		0 o p_00396 00396
-	finalize ()V m_00208 00208
-	removeListener$74652038 (Lcom/mojang/minecraft/a/g;)V m_00209 00209
-		0 o p_00397 00397
-	isLightBlocker (III)Z m_00210 00210
-		0 o p_00398 00398
-		1 o p_00399 00399
-		2 o p_00400 00400
+	addListener$74652038 (Lcom/mojang/minecraft/a/g;)V addRenderer 00207
+		0 o renderer 00396
+	finalize ()V finalize 00208
+	removeListener$74652038 (Lcom/mojang/minecraft/a/g;)V removeRenderer 00209
+		0 o renderer 00397
+	isLightBlocker (III)Z isOpaque 00210
+		0 o x 00398
+		1 o y 00399
+		2 o z 00400
 	getCubes (Lcom/mojang/minecraft/phys/AABB;)Ljava/util/ArrayList; getBoxes 00074
 		0 o boxes 00104
 	swap (IIIIII)V m_00211 00211
@@ -715,17 +715,17 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		0 o x 00120
 		1 o y 00121
 		2 o z 00122
-	isSolidTile (III)Z m_00214 00214
-		0 o p_00415 00415
-		1 o p_00416 00416
-		2 o p_00417 00417
+	isSolidTile (III)Z isSolid 00214
+		0 o x 00415
+		1 o y 00416
+		2 o z 00417
 	tick ()V m_00215 00215
 	a (III)Z m_00216 00216
 		0 o p_00418 00418
 		1 o p_00419 00419
 		2 o p_00420 00420
-	getGroundLevel ()F m_00217 00217
-	getWaterLevel ()F m_00218 00218
+	getGroundLevel ()F getGroundLevel 00217
+	getWaterLevel ()F getSeaLevel 00218
 	containsAnyLiquid (Lcom/mojang/minecraft/phys/AABB;)Z m_00219 00219
 		0 o p_00421 00421
 	containsLiquid (Lcom/mojang/minecraft/phys/AABB;I)Z isLiquid 00080
@@ -736,7 +736,7 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		1 o p_00423 00423
 		2 o p_00424 00424
 		3 o p_00425 00425
-	isFree (Lcom/mojang/minecraft/phys/AABB;)Z m_00221 00221
+	isFree (Lcom/mojang/minecraft/phys/AABB;)Z entityInsideBox 00221
 		0 o p_00426 00426
 	isSolid (FFFF)Z m_00222 00222
 		0 o p_00427 00427
@@ -1025,7 +1025,7 @@ com/mojang/minecraft/level/a/d com/mojang/minecraft/block/FallingBlock 00050
 		1 o x 00486
 		2 o y 00487
 		3 o z 00488
-com/mojang/minecraft/level/a/e com/mojang/minecraft/block/liquid/SourceLiquid 00037
+com/mojang/minecraft/level/a/e com/mojang/minecraft/block/SourceLiquid 00037
 	<init> (II)V <init> 00167
 		0 o id 00324
 		1 o type 00325
@@ -1057,7 +1057,7 @@ com/mojang/minecraft/level/a/g com/mojang/minecraft/block/GrassBlock 00039
 		2 o y 00308
 		3 o z 00309
 		4 o random 00310
-com/mojang/minecraft/level/a/h com/mojang/minecraft/block/partial/plant/Sapling 00035
+com/mojang/minecraft/level/a/h com/mojang/minecraft/block/Sapling 00035
 	<init> (I)V <init> 00165
 		0 o id 00321
 	a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V tick 00160
@@ -1079,7 +1079,7 @@ com/mojang/minecraft/level/a/h com/mojang/minecraft/block/partial/plant/Sapling 
 		2 o z 00305
 	a ()Z isOpaque 00157
 	b ()Z isSolid 00158
-com/mojang/minecraft/level/a/i com/mojang/minecraft/block/liquid/Liquid 00038
+com/mojang/minecraft/level/a/i com/mojang/minecraft/block/Liquid 00038
 	w type 00234
 	x sourceId 00235
 	y flowingId 00236
@@ -1144,10 +1144,10 @@ com/mojang/minecraft/level/b/a com/mojang/minecraft/world/gen/WorldGenerator 000
 		1 o xSize 00342
 		2 o zSize 00343
 		3 o depth 00344
-	a ([I)V m_00248 00248
-		0 o p_00490 00490
-	b ([I)V m_00249 00249
-		0 o p_00491 00491
+	a ([I)V generateSandBlobs 00248
+		0 o worldMap 00490
+	b ([I)V generateTrees 00249
+		0 o worldMap 00491
 	a (IIII)V m_00250 00250
 		0 o p_00492 00492
 		1 o p_00493 00493

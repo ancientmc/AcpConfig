@@ -1,0 +1,4 @@
+PUBLIC com/mojang/minecraft/b a
+PUBLIC com/mojang/minecraft/b b
+PUBLIC com/mojang/minecraft/d a (Lcom/mojang/minecraft/player/Player;I)F
+PUBLIC com/mojang/minecraft/Entity resetPos ()V

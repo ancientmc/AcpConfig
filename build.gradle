@@ -230,7 +230,7 @@ subprojects {
     tasks.register('buildJar', Jar) {
         dependsOn (buildClasses, buildResources)
         archiveBaseName = 'built'
-        destinationDirectory = file('game/jars/')
+        destinationDirectory = projectDir
 
         manifest.attributes('Main-Class': 'acp.client.Start')
         from ('build/classes')
