@@ -53,10 +53,8 @@ subprojects {
         fernflower 'com.ancientmc:fernflower:1.0'
     }
 
-    version = project.name
-
     tasks.register('downloadJson', Download) {
-        src = Json.getJsonUrl(file(Paths.VERSION_MANIFEST), version)
+        src = Json.getJsonUrl(file(Paths.VERSION_MANIFEST), project.name)
         dest = file(Paths.JSON)
     }
 
