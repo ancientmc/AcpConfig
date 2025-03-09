@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'com.ancientmc'
-version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -188,6 +187,7 @@ subprojects {
         dependsOn unzip
         from zipTree(file(Paths.EXTRA_JAR))
         into file(Paths.DIR_RESOURCES)
+        exclude 'META-INF/*'
     }
 
     tasks.register('backupSrc', Copy) {
@@ -209,11 +209,13 @@ subprojects {
     }
 
     tasks.register('patchesApply', ApplyPatchesTask) {
+        dependsOn unzip
         target file(Paths.DIR_SRC)
         patches file('patches/')
     }
 
     tasks.register('buildClasses', JavaCompile) {
+        dependsOn file(Paths.DIR_PATCHES).exists() ? patchesApply : [:]
         source = files(Paths.DIR_SRC).asFileTree
         classpath = files(Paths.DIR_LIBRARIES).asFileTree
         sourceCompatibility = '8'
@@ -222,17 +224,12 @@ subprojects {
         destinationDirectory = file('build/classes/')
     }
 
-    tasks.register('buildResources', Copy) {
-        from file(Paths.DIR_RESOURCES)
-        into file('build/resources/')
-    }
-
     tasks.register('buildJar', Jar) {
-        dependsOn (buildClasses, buildResources)
+        dependsOn (buildClasses, extractResources)
         archiveBaseName = 'built'
-        destinationDirectory = projectDir
+        destinationDirectory = project.file('run/')
 
-        manifest.attributes('Main-Class': 'acp.client.Start')
+        manifest { attributes('Main-Class': 'acp.client.Start') }
         from ('build/classes')
         from ('build/resources')
         from files('run/lib/').asFileTree.collect { it.isDirectory() ? it : zipTree(it) }

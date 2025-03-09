@@ -36,7 +36,6 @@ tasks.register('updateTsrg', JavaExec) {
     args('update', NEW_CFG, NEW_JAR, NEW_INHERITANCE, OLD_TSRG, OLD_IDS, MATCH, NEW_TSRG, NEW_IDS)
 }
 
-// Params are not updated because they aren't matched between versions, and are instead freshly generated in the TSRG with their parent methods.
 def csvs = ['classes', 'fields', 'methods', 'params']
 csvs.each { table ->
     def updateCsv = tasks.register("update${table.capitalize()}Csv", UpdateCsv) {
