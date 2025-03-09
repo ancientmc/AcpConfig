@@ -408,8 +408,8 @@ com/mojang/minecraft/c/a com/mojang/minecraft/client/gui/screen/CreateWorldScree
 	i counter 00146
 	<init> (Lcom/mojang/minecraft/c/d;Ljava/lang/String;I)V <init> 00099
 		0 o parent 00145
-		1 o id 00146
-		2 o name 00147
+		1 o name 00146
+		2 o id 00147
 	a ()V addElements 00107
 	b ()V close 00114
 	c ()V updateCounter 00113
