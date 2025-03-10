@@ -176,7 +176,7 @@ com/mojang/minecraft/Entity com/mojang/minecraft/entity/Entity 00007
 	isLit ()Z isLit 00037
 	getBrightness ()F m_00194 00194
 	render (Lcom/mojang/minecraft/a/a;F)V render 00038
-		0 o p_00374 00374
+		0 o textureRenderer 00374
 		1 o partialTicks 00046
 	setLevel (Lcom/mojang/minecraft/level/Level;)V setWorld 00195
 		0 o world 00375
@@ -265,13 +265,13 @@ com/mojang/minecraft/a/d com/mojang/minecraft/client/render/Frustrum 00017
 	a ([[FI)V normalizeSide 00096
 		0 o sides 00142
 		1 o side 00143
-	a (FFFFFF)Z m_00197 00197
-		0 o p_00376 00376
-		1 o p_00377 00377
-		2 o p_00378 00378
-		3 o p_00379 00379
-		4 o p_00380 00380
-		5 o p_00381 00381
+	a (FFFFFF)Z isBoxInside 00197
+		0 o minX 00376
+		1 o minY 00377
+		2 o minZ 00378
+		3 o maxX 00379
+		4 o maxY 00380
+		5 o maxZ 00381
 	a (Lcom/mojang/minecraft/phys/AABB;)Z isBoxInside 00097
 		0 o box 00144
 	<clinit> ()V <clinit> 00098
@@ -307,10 +307,10 @@ com/mojang/minecraft/a/f com/mojang/minecraft/world/chunk/Chunk 00011
 	a ()V sort 00061
 	b ()V render 00055
 	a (Ljava/nio/IntBuffer;I)V addLayer 00056
-		0 o p_00382 00382
+		0 o buffer 00382
 		1 o layer 00075
-	a (Lcom/mojang/minecraft/a/d;)V m_00198 00198
-		0 o p_00383 00383
+	a (Lcom/mojang/minecraft/a/d;)V isVisible 00198
+		0 o frustrum 00383
 	<clinit> ()V <clinit> 00062
 com/mojang/minecraft/a/g com/mojang/minecraft/client/render/WorldRenderer 00013
 	a world 00094
@@ -330,21 +330,21 @@ com/mojang/minecraft/a/g com/mojang/minecraft/client/render/WorldRenderer 00013
 	o layerZ 00106
 	<init> (Lcom/mojang/minecraft/a/a;)V <init> 00065
 		0 o textureRenderer 00081
-	a (Lcom/mojang/minecraft/level/Level;)V m_00199 00199
-		0 o p_00384 00384
+	a (Lcom/mojang/minecraft/level/Level;)V setWorld 00199
+		0 o world 00384
 	a ()V sort 00066
-	a (Lcom/mojang/minecraft/a/d;F)V m_00200 00200
-		0 o p_00385 00385
-		1 o p_00386 00386
+	a (Lcom/mojang/minecraft/a/d;F)V renderEntities 00200
+		0 o frustrum 00385
+		1 o partialTicks 00386
 	a (Lcom/mojang/minecraft/player/Player;I)V render 00067
 		0 o player 00082
 		1 o layer 00083
-	a (F)V m_00201 00201
-		0 o p_00387 00387
-	a (III)V m_00202 00202
-		0 o p_00388 00388
-		1 o p_00389 00389
-		2 o p_00390 00390
+	a (F)V renderClouds 00201
+		0 o partialTicks 00387
+	a (III)V renderBlock 00202
+		0 o x 00388
+		1 o y 00389
+		2 o z 00390
 	a (Lcom/mojang/minecraft/player/Player;Lcom/mojang/minecraft/d;II)V renderHitBlock 00068
 		0 o player 00084
 		1 o hitResult 00085
@@ -595,7 +595,7 @@ com/mojang/minecraft/character/Zombie com/mojang/minecraft/entity/passive/Human 
 		3 o z 00214
 	tick ()V onTick 00031
 	render (Lcom/mojang/minecraft/a/a;F)V render 00038
-		0 o p_00374 00374
+		0 o textureRenderer 00374
 		1 o partialTicks 00046
 	<clinit> ()V <clinit> 00128
 com/mojang/minecraft/level/a com/mojang/minecraft/world/WorldManager 00009
@@ -755,10 +755,10 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		1 o ySpawn 00437
 		2 o zSpawn 00438
 		3 o spawnRotation 00439
-	getBrightness (III)F m_00226 00226
-		0 o p_00440 00440
-		1 o p_00441 00441
-		2 o p_00442 00442
+	getBrightness (III)F getBrightness 00226
+		0 o x 00440
+		1 o y 00441
+		2 o z 00442
 	getCaveness (FFFF)F m_00227 00227
 		0 o p_00443 00443
 		1 o p_00444 00444
@@ -819,18 +819,18 @@ com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/phys/AABB 00033
 		3 o maxX 00251
 		4 o maxY 00252
 		5 o maxZ 00253
-	expand (FFF)Lcom/mojang/minecraft/phys/AABB; m_00230 00230
-		0 o p_00455 00455
-		1 o p_00456 00456
-		2 o p_00457 00457
+	expand (FFF)Lcom/mojang/minecraft/phys/AABB; add 00230
+		0 o x 00455
+		1 o y 00456
+		2 o z 00457
 	grow (FFF)Lcom/mojang/minecraft/phys/AABB; expand 00142
 		0 o x 00254
 		1 o y 00255
 		2 o z 00256
-	cloneMove (FFF)Lcom/mojang/minecraft/phys/AABB; m_00231 00231
-		0 o p_00458 00458
-		1 o p_00459 00459
-		2 o p_00460 00460
+	cloneMove (FFF)Lcom/mojang/minecraft/phys/AABB; getOffsetBox 00231
+		0 o x 00458
+		1 o y 00459
+		2 o z 00460
 	clipXCollide (Lcom/mojang/minecraft/phys/AABB;F)F getOffsetX 00232
 		0 o box 00461
 		1 o xOffset 00462
@@ -853,17 +853,17 @@ com/mojang/minecraft/player/a com/mojang/minecraft/client/input/Inputs 00047
 	d f_00284 00284
 	<init> ()V <init> 00235
 	a ()V m_00236 00236
-	b ()V m_00237 00237
-	a (IZ)V m_00238 00238
-		0 o p_00467 00467
-		1 o p_00468 00468
+	b ()V resetActiveInputs 00237
+	a (IZ)V setInput 00238
+		0 o code 00467
+		1 o active 00468
 com/mojang/minecraft/player/b com/mojang/minecraft/client/input/CodeInputs 00048
 	e inputs 00285
 	<init> ()V <init> 00239
-	a (IZ)V m_00238 00238
-		0 o p_00467 00467
-		1 o p_00468 00468
-	b ()V m_00237 00237
+	a (IZ)V setInput 00238
+		0 o code 00467
+		1 o active 00468
+	b ()V resetActiveInputs 00237
 	a ()V m_00236 00236
 com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 00005
 	input inputs 00286
@@ -871,10 +871,10 @@ com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 000
 		0 o world 00023
 		1 o p_00469 00469
 	tick ()V onTick 00031
-	releaseAllKeys ()V m_00240 00240
-	setKey (IZ)V m_00241 00241
-		0 o p_00470 00470
-		1 o p_00471 00471
+	releaseAllKeys ()V resetActiveInputs 00240
+	setKey (IZ)V setInput 00241
+		0 o code 00470
+		1 o active 00471
 com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 	a BLOCK_REGISTRY 00216
 	b TICKING_BLOCK_INDEX 00217
@@ -997,8 +997,8 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 	<clinit> ()V <clinit> 00164
 com/mojang/minecraft/level/a/b com/mojang/minecraft/block/Leaves 00049
 	<init> (II)V <init> 00244
-		0 o p_00481 00481
-		1 o p_00482 00482
+		0 o id 00481
+		1 o texture 00482
 	b ()Z isSolid 00158
 	a ()Z isOpaque 00157
 com/mojang/minecraft/level/a/c com/mojang/minecraft/block/Dirt 00036
@@ -1148,8 +1148,8 @@ com/mojang/minecraft/level/b/a com/mojang/minecraft/world/gen/WorldGenerator 000
 		0 o worldMap 00490
 	b ([I)V generateTrees 00249
 		0 o worldMap 00491
-	a (IIII)V m_00250 00250
-		0 o p_00492 00492
+	a (IIII)V generateOreVeins 00250
+		0 o id 00492
 		1 o p_00493 00493
 		2 o p_00494 00494
 		3 o p_00495 00495
