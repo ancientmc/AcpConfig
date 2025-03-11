@@ -215,14 +215,14 @@ com/mojang/minecraft/MinecraftApplet$1 com/mojang/minecraft/src/c_00002 00002
 		0 o p_00002 00002
 	addNotify ()V addNotify 00003
 	removeNotify ()V removeNotify 00004
-com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00002
+com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00008
 	canvas f_00070 00070
 	minecraft f_00071 00071
 	thread f_00072 00072
 	<init> ()V <init> 00039
-	init ()V init 00039
+	init ()V init 00040
 	startGameThread ()V m_00196 00196
-	start ()V start 00196
+	start ()V start 00041
 	stop ()V stop 00042
 	destroy ()V destroy 00043
 	stopGameThread ()V m_00044 00044

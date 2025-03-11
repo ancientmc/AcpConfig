@@ -191,7 +191,7 @@ com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00008
 	minecraft f_00071 00071
 	thread f_00072 00072
 	<init> ()V <init> 00039
-	init ()V init 00039
+	init ()V init 00040
 	startGameThread ()V m_00196 00196
 	start ()V start 00041
 	stop ()V stop 00042

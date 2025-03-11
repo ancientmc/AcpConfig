@@ -3,7 +3,6 @@ package com.ancientmc.acpgen.util;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import org.gradle.internal.os.OperatingSystem;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,8 +16,6 @@ import java.util.Map;
  * Utility class for JSON parsing, mainly Minecraft's version JSON.
  */
 public class Json {
-    private static final String LWJGL_VERSION = "2.9.0";
-    private static final String LWJGL_MAC_VERSION = "2.9.1";
 
     /**
      * Gets the JSON URL for the specified version from the version manifest file.
@@ -135,16 +132,5 @@ public class Json {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    /**
-     * Filters through the correct LWJGL version to download. All libraries are passed through this method in above methods, but any non-LWJGL library
-     * will get skipped through the first if statement.
-     */
-    public static boolean isAllowed(String name) {
-        if (!name.contains("org.lwjgl")) {
-            return true;
-        }
-        return (OperatingSystem.current().isMacOsX()) ? name.contains(LWJGL_MAC_VERSION) : name.contains(LWJGL_VERSION);
     }
 }

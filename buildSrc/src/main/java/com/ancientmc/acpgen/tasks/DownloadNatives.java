@@ -1,5 +1,6 @@
 package com.ancientmc.acpgen.tasks;
 
+import com.ancientmc.acpgen.util.Util;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
@@ -15,8 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class DownloadNatives extends DefaultTask {
-    @Input public abstract ListProperty<URL> getUrls();
-    @OutputDirectory public abstract DirectoryProperty getOutput();
 
     @TaskAction
     private void exec() {
@@ -24,7 +23,7 @@ public abstract class DownloadNatives extends DefaultTask {
             List<File> jars = new ArrayList<>();
             for (URL url : getUrls().get()) {
                 String path = url.getPath().substring(url.getPath().lastIndexOf('/') + 1);
-                File file = new File(getOutput().getAsFile().get(), path);
+                File file = new File(Util.getFile(getOutput()), path);
                 FileUtils.copyURLToFile(url, file);
                 jars.add(file);
             }
@@ -39,4 +38,10 @@ public abstract class DownloadNatives extends DefaultTask {
             throw new RuntimeException(e);
         }
     }
+
+    @Input
+    public abstract ListProperty<URL> getUrls();
+
+    @OutputDirectory
+    public abstract DirectoryProperty getOutput();
 }
