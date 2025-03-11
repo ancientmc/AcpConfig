@@ -26,7 +26,7 @@ public abstract class DownloadLibraries extends DefaultTask {
 
             Map<String, String> map = Json.getLibraryMap(jsons);
             for (Map.Entry<String, String> entry : map.entrySet()) {
-                URL url = new URL(entry.getKey());
+                URL url = Util.toUrl(entry.getKey());
                 File jar = new File(libs, entry.getValue());
                 FileUtils.copyURLToFile(url, jar);
             }

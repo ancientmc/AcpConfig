@@ -1,5 +1,6 @@
 package com.ancientmc.acpgen.tasks;
 
+import com.ancientmc.acpgen.util.Util;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
@@ -13,11 +14,12 @@ import java.net.URI;
 import java.net.URL;
 
 public abstract class Download extends DefaultTask {
+
     @TaskAction
     public void exec() {
         try {
-            URL url = URI.create(getSrc().get()).toURL();
-            FileUtils.copyURLToFile(url, getDest().getAsFile().get());
+            URL url = Util.toUrl(getSrc().get());
+            FileUtils.copyURLToFile(url, Util.getFile(getDest()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

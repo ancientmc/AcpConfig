@@ -7,7 +7,6 @@ public class Paths {
     public static final String DIR_SRC = "run/src/main/java/";
     public static final String DIR_RESOURCES = "build/resources/";
     public static final String DIR_PATCHES = "patches/";
-    public static final String DIR_START = "start/";
     public static final String VERSION_MANIFEST = "../../version_manifest.json";
     public static final String JSON = "game/version.json";
     public static final String BASE_JAR = "game/jars/client.jar";

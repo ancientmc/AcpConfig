@@ -1,5 +1,6 @@
 package com.ancientmc.acpgen.tasks;
 
+import com.ancientmc.acpgen.util.Util;
 import net.minecraftforge.mappingverifier.IVerifier;
 import net.minecraftforge.mappingverifier.MappingVerifier;
 import org.gradle.api.DefaultTask;
@@ -19,12 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class VerifyMappings extends DefaultTask {
+
     @TaskAction
     public void exec() {
         try {
-            File jar = getJar().getAsFile().get();
-            File tsrg = getTsrg().getAsFile().get();
-            File log = getLog().getAsFile().get();
+            File jar = Util.getFile(getJar());
+            File tsrg = Util.getFile(getTsrg());
+            File log = Util.getFile(getLog());
 
             MappingVerifier verifier = new MappingVerifier();
             verifier.loadMap(tsrg);

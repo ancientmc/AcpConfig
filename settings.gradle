@@ -1,16 +1,16 @@
 rootProject.name = 'AcpGen'
 
-def root = new File(rootDir, '/data/versions/')
+def versions = new File(rootDir, '/data/versions/')
 
 // Group version projects in subdirectories based on dev phase.
 def phases = ['classic', 'indev', 'infdev', 'alpha', 'beta', 'release', 'snapshot']
 phases.each { phase ->
-    def sub = new File(root, '/' + phase + '/')
-    if (sub.exists()) {
-        sub.eachDir() { dir ->
-            def proj = rootDir.toPath().relativize(dir.toPath()).toFile()
+    def phaseDir = new File(versions, '/' + phase + '/')
+    if (phaseDir.exists()) {
+        phaseDir.eachDir() { verDir ->
+            def proj = rootDir.toPath().relativize(verDir.toPath()).toFile()
             include proj.path
-            project(':' + proj.path).name = dir.name
+            project(':' + proj.path).name = verDir.name
         }
     }
 }

@@ -38,7 +38,7 @@ tasks.register('updateTsrg', JavaExec) {
 
 def csvs = ['classes', 'fields', 'methods', 'params']
 csvs.each { table ->
-    def updateCsv = tasks.register("update${table.capitalize()}Csv", UpdateCsv) {
+    tasks.register("update${table.capitalize()}Csv", UpdateCsv) {
         group = 'update'
         input = file(OLD_CSV_DIR + '/' + table + '.csv')
         blankOutput = file(NEW_CSV_DIR + '/' + table + '.csv')
