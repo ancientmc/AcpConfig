@@ -39,7 +39,7 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	x currentScreen 00030
 	y manager 00031
 	z generator 00032
-	A f_00250 00250
+	A ranTicks 00250
 	h loadMapUser 00033
 	i loadMapId 00034
 	B robot 00251
@@ -50,8 +50,8 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	G running 00035
 	H debugText 00036
 	I mouseGrabbed 00037
-	J f_00256 00256
-	K f_00257 00257
+	J previousFrameTime 00256
+	K renderDistance 00257
 	L viewportBuffer 00038
 	M selectBuffer 00039
 	N hitResult 00040
@@ -137,14 +137,14 @@ com/mojang/minecraft/Entity com/mojang/minecraft/entity/Entity 00007
 	bb box 00063
 	onGround onGround 00064
 	horizontalCollision horizontalCollision 00065
-	removed collision 00066
+	removed removed 00066
 	heightOffset verticalOffset 00067
 	bbWidth boxWidth 00068
 	bbHeight boxHeight 00069
 	<init> (Lcom/mojang/minecraft/level/Level;)V <init> 00027
 		0 o world 00031
 	resetPos ()V resetPosition 00028
-	remove ()V m_00191 00191
+	remove ()V remove 00191
 	setSize (FF)V setHitbox 00029
 		0 o boxWidth 00032
 		1 o boxHeight 00033
@@ -174,7 +174,7 @@ com/mojang/minecraft/Entity com/mojang/minecraft/entity/Entity 00007
 		1 o z 00044
 		2 o speed 00045
 	isLit ()Z isLit 00037
-	getBrightness ()F m_00194 00194
+	getBrightness ()F getBrightness 00194
 	render (Lcom/mojang/minecraft/a/a;F)V render 00038
 		0 o textureRenderer 00374
 		1 o partialTicks 00046
@@ -186,13 +186,13 @@ com/mojang/minecraft/MinecraftApplet$1 com/mojang/minecraft/MinecraftAppletCanva
 		0 o applet 00002
 	addNotify ()V addNotify 00003
 	removeNotify ()V removeNotify 00004
-com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet <init>
+com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00008
 	canvas canvas 00070
 	minecraft minecraft 00071
 	thread thread 00072
 	<init> ()V <init> 00039
 	init ()V init 00039
-	startGameThread ()V m_00196 00196
+	startGameThread ()V startThread 00196
 	start ()V start 00041
 	stop ()V stop 00042
 	destroy ()V destroy 00043
@@ -293,7 +293,7 @@ com/mojang/minecraft/a/f com/mojang/minecraft/world/chunk/Chunk 00011
 	i maxX 00080
 	j maxY 00081
 	k maxZ 00082
-	l f_00263 00263
+	l skipRenderPass 00263
 	b visible 00088
 	<init> (Lcom/mojang/minecraft/level/Level;IIII)V <init> 00053
 		0 o world 00067
@@ -318,13 +318,13 @@ com/mojang/minecraft/a/g com/mojang/minecraft/client/render/WorldRenderer 00013
 	b renderList 00101
 	c renderDistance 00102
 	h buffer 00103
-	d f_00264 00264
+	d dirtyChunks 00264
 	i sortedChunks 00096
 	e unsortedChunks 00095
 	j chunkX 00097
 	k chunkY 00098
 	l chunkZ 00099
-	f f_00265 00265
+	f cloudTickCounter 00265
 	m layerX 00104
 	n layerY 00105
 	o layerZ 00106
@@ -624,12 +624,12 @@ com/mojang/minecraft/level/b com/mojang/minecraft/world/Coordinate 00046
 	a x 00268
 	b y 00269
 	c z 00270
-	d f_00271 00271
+	d id 00271
 	<init> (IIII)V <init> 00204
 		0 o x 00392
 		1 o y 00393
 		2 o z 00394
-		3 o p_00395 00395
+		3 o id 00395
 com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	serialVersionUID serialVersionUID 00272
 	width xSize 00107
@@ -649,7 +649,7 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	d randomInt 00114
 	e coordinates 00277
 	entities entities 00278
-	unprocessed f_00279 00279
+	unprocessed unprocessed 00279
 	tickCount tickedBlocks 00118
 	<init> ()V <init> 00071
 	initTransient ()V setTransient 00205
@@ -731,7 +731,7 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	containsLiquid (Lcom/mojang/minecraft/phys/AABB;I)Z isLiquid 00080
 		0 o box 00123
 		1 o id 00124
-	addToTickNextTick (IIII)V addCoordinate 00220
+	addToTickNextTick (IIII)V addCoordinateForTicking 00220
 		0 o p_00422 00422
 		1 o p_00423 00423
 		2 o p_00424 00424
@@ -765,7 +765,7 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		2 o p_00445 00445
 		3 o p_00446 00446
 	getCaveness (Lcom/mojang/minecraft/Entity;)F m_00228 00228
-		0 o p_00447 00447
+		0 o entity 00447
 com/mojang/minecraft/particle/a com/mojang/minecraft/client/render/entity/ParticleRenderer 00025
 	a particles 00167
 	b textureRenderer 00168
@@ -796,7 +796,7 @@ com/mojang/minecraft/particle/Particle com/mojang/minecraft/entity/particle/Part
 		7 o texture 00209
 	tick ()V onTick 00031
 	render (Lcom/mojang/minecraft/a/c;FFFFFF)V setTexture 00229
-		0 o p_00448 00448
+		0 o tesselator 00448
 		1 o p_00449 00449
 		2 o p_00450 00450
 		3 o p_00451 00451
@@ -847,12 +847,12 @@ com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/phys/AABB 00033
 		1 o y 00259
 		2 o z 00260
 com/mojang/minecraft/player/a com/mojang/minecraft/client/input/Inputs 00047
-	a f_00281 00281
-	b f_00282 00282
-	c f_00283 00283
-	d f_00284 00284
+	a strafeOffset 00281
+	b forwardOffset 00282
+	c jumping 00283
+	d jumpKeyHeld 00284
 	<init> ()V <init> 00235
-	a ()V m_00236 00236
+	a ()V updatePlayerMovements 00236
 	b ()V resetActiveInputs 00237
 	a (IZ)V setInput 00238
 		0 o code 00467
@@ -864,12 +864,12 @@ com/mojang/minecraft/player/b com/mojang/minecraft/client/input/CodeInputs 00048
 		0 o code 00467
 		1 o active 00468
 	b ()V resetActiveInputs 00237
-	a ()V m_00236 00236
+	a ()V updatePlayerMovements 00236
 com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 00005
 	input inputs 00286
 	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V <init> 00024
 		0 o world 00023
-		1 o p_00469 00469
+		1 o player 00469
 	tick ()V onTick 00031
 	releaseAllKeys ()V resetActiveInputs 00240
 	setKey (IZ)V setInput 00241
@@ -925,12 +925,12 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 		3 o x 00274
 		4 o y 00275
 		5 o z 00276
-	a (Lcom/mojang/minecraft/level/Level;IIII)Z m_00242 00242
-		0 o p_00472 00472
-		1 o p_00473 00473
-		2 o p_00474 00474
-		3 o p_00475 00475
-		4 o p_00476 00476
+	a (Lcom/mojang/minecraft/level/Level;IIII)Z cullFace 00242
+		0 o world 00472
+		1 o x 00473
+		2 o y 00474
+		3 o z 00475
+		4 o side 00476
 	a (Lcom/mojang/minecraft/level/Level;IIIII)Z isSideRendered 00150
 		0 o world 00277
 		1 o x 00278
@@ -989,11 +989,11 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 		2 o y 00318
 		3 o z 00319
 		4 o neighbor 00320
-	a (Lcom/mojang/minecraft/level/Level;III)V m_00243 00243
-		0 o p_00477 00477
-		1 o p_00478 00478
-		2 o p_00479 00479
-		3 o p_00480 00480
+	a (Lcom/mojang/minecraft/level/Level;III)V onPlacement 00243
+		0 o world 00477
+		1 o x 00478
+		2 o y 00479
+		3 o z 00480
 	<clinit> ()V <clinit> 00164
 com/mojang/minecraft/level/a/b com/mojang/minecraft/block/Leaves 00049
 	<init> (II)V <init> 00244
@@ -1009,11 +1009,11 @@ com/mojang/minecraft/level/a/d com/mojang/minecraft/block/FallingBlock 00050
 	<init> (II)V <init> 00245
 		0 o id 00483
 		1 o texture 00484
-	a (Lcom/mojang/minecraft/level/Level;III)V m_00243 00243
-		0 o p_00477 00477
-		1 o p_00478 00478
-		2 o p_00479 00479
-		3 o p_00480 00480
+	a (Lcom/mojang/minecraft/level/Level;III)V onPlacement 00243
+		0 o world 00477
+		1 o x 00478
+		2 o y 00479
+		3 o z 00480
 	b (Lcom/mojang/minecraft/level/Level;IIII)V onNeighborUpdate 00163
 		0 o world 00316
 		1 o x 00317
@@ -1086,11 +1086,11 @@ com/mojang/minecraft/level/a/i com/mojang/minecraft/block/Liquid 00038
 	<init> (II)V <init> 00168
 		0 o id 00326
 		1 o type 00327
-	a (Lcom/mojang/minecraft/level/Level;III)V m_00243 00243
-		0 o p_00477 00477
-		1 o p_00478 00478
-		2 o p_00479 00479
-		3 o p_00480 00480
+	a (Lcom/mojang/minecraft/level/Level;III)V onPlacement 00243
+		0 o world 00477
+		1 o x 00478
+		2 o y 00479
+		3 o z 00480
 	a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V tick 00160
 		0 o world 00306
 		1 o x 00307
@@ -1148,8 +1148,8 @@ com/mojang/minecraft/level/b/a com/mojang/minecraft/world/gen/WorldGenerator 000
 		0 o worldMap 00490
 	b ([I)V generateTrees 00249
 		0 o worldMap 00491
-	a (IIII)V generateOreVeins 00250
-		0 o id 00492
+	a (IIII)V generateCaves 00250
+		0 o ore 00492
 		1 o p_00493 00493
 		2 o p_00494 00494
 		3 o p_00495 00495

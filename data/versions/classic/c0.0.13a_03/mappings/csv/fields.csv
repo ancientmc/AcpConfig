@@ -64,7 +64,7 @@ f_00062,pitch
 f_00063,box
 f_00064,onGround
 f_00065,horizontalCollision
-f_00066,collision
+f_00066,removed
 f_00067,verticalOffset
 f_00068,boxWidth
 f_00069,boxHeight

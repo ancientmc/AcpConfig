@@ -250,7 +250,7 @@ com/mojang/minecraft/a/d com/mojang/minecraft/world/DistanceComparator 00012
 		1 o objTwo 00079
 com/mojang/minecraft/a/e com/mojang/minecraft/client/render/WorldRenderer 00013
 	a world 00094
-	b unsortedChunks 00095
+	b unchunks 00095
 	e sortedChunks 00096
 	f chunkX 00097
 	g chunkY 00098

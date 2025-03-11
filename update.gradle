@@ -13,8 +13,8 @@ dependencies {
 }
 
 ext {
-    OLD = 'c0.0.13a_03'
-    NEW = 'c0.0.14a_08'
+    OLD = 'c0.0.14a_08'
+    NEW = 'c0.0.15a-05311904'
     OLD_DIR = String.join('/', 'data/versions', phase(OLD as String), OLD)
     NEW_DIR = String.join('/', 'data/versions', phase(NEW as String), NEW)
     NEW_CFG = String.join('/', NEW_DIR, 'mappings/rosetta.cfg')
