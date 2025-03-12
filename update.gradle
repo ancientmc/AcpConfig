@@ -13,10 +13,8 @@ dependencies {
 }
 
 ext {
-    OLD = 'c0.0.14a_08'
-    NEW = 'c0.0.15a-05311904'
-    OLD_DIR = String.join('/', 'data/versions', phase(OLD as String), OLD)
-    NEW_DIR = String.join('/', 'data/versions', phase(NEW as String), NEW)
+    OLD_DIR = String.join('/', 'data/versions', phase(old_version as String), old_version)
+    NEW_DIR = String.join('/', 'data/versions', phase(new_version as String), new_version)
     NEW_CFG = String.join('/', NEW_DIR, 'mappings/rosetta.cfg')
     NEW_JAR = String.join('/', NEW_DIR, 'game/jars/client.jar')
     NEW_INHERITANCE = String.join('/', NEW_DIR, 'inheritance_map.json')
@@ -26,7 +24,7 @@ ext {
     NEW_IDS = String.join('/', NEW_DIR, 'mappings/ids.csv')
     OLD_CSV_DIR = String.join('/', OLD_DIR, 'mappings/csv/')
     NEW_CSV_DIR = String.join('/', NEW_DIR, 'mappings/csv/')
-    MATCH = 'data/matches/' + OLD + '-' + NEW + '.match'
+    MATCH = 'data/matches/' + old_version + '-' + new_version + '.match'
 }
 
 tasks.register('updateTsrg', JavaExec) {
@@ -47,7 +45,7 @@ csvs.each { table ->
 }
 
 /**
- * new version -> writeCsvs *before* running this!
+ * new_version version -> writeCsvs *before* running this!
  */
 tasks.register('updateAllCsvs') {
     group = 'update'

@@ -732,24 +732,24 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		0 o box 00123
 		1 o id 00124
 	addToTickNextTick (IIII)V addCoordinateForTicking 00220
-		0 o p_00422 00422
-		1 o p_00423 00423
-		2 o p_00424 00424
-		3 o p_00425 00425
+		0 o x 00422
+		1 o y 00423
+		2 o z 00424
+		3 o id 00425
 	isFree (Lcom/mojang/minecraft/phys/AABB;)Z entityOutsideBox 00221
 		0 o box 00426
-	isSolid (FFFF)Z m_00222 00222
-		0 o p_00427 00427
-		1 o p_00428 00428
-		2 o p_00429 00429
-		3 o p_00430 00430
-	a (FFF)Z m_00223 00223
-		0 o p_00431 00431
-		1 o p_00432 00432
-		2 o p_00433 00433
-	getHighestTile (II)I m_00224 00224
-		0 o p_00434 00434
-		1 o p_00435 00435
+	isSolid (FFFF)Z isSolidWithOffset 00222
+		0 o x 00427
+		1 o y 00428
+		2 o z 00429
+		3 o offset 00430
+	a (FFF)Z isSolid 00223
+		0 o x 00431
+		1 o y 00432
+		2 o z 00433
+	getHighestTile (II)I getHighestBlock 00224
+		0 o x 00434
+		1 o z 00435
 	setSpawnPos (IIIF)V setSpawn 00225
 		0 o xSpawn 00436
 		1 o ySpawn 00437
@@ -759,12 +759,12 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		0 o x 00440
 		1 o y 00441
 		2 o z 00442
-	getCaveness (FFFF)F m_00227 00227
+	getCaveness (FFFF)F getCaveness 00227
 		0 o p_00443 00443
 		1 o p_00444 00444
 		2 o p_00445 00445
 		3 o p_00446 00446
-	getCaveness (Lcom/mojang/minecraft/Entity;)F m_00228 00228
+	getCaveness (Lcom/mojang/minecraft/Entity;)F getCaveness 00228
 		0 o entity 00447
 com/mojang/minecraft/particle/a com/mojang/minecraft/client/render/entity/ParticleRenderer 00025
 	a particles 00167
@@ -795,14 +795,14 @@ com/mojang/minecraft/particle/Particle com/mojang/minecraft/entity/particle/Part
 		6 o motionZ 00208
 		7 o texture 00209
 	tick ()V onTick 00031
-	render (Lcom/mojang/minecraft/a/c;FFFFFF)V setTexture 00229
+	render (Lcom/mojang/minecraft/a/c;FFFFFF)V render 00229
 		0 o tesselator 00448
-		1 o p_00449 00449
-		2 o p_00450 00450
-		3 o p_00451 00451
-		4 o p_00452 00452
-		5 o p_00453 00453
-		6 o p_00454 00454
+		1 o partialTicks 00449
+		2 o cameraX 00450
+		3 o cameraY 00451
+		4 o cameraZ 00452
+		5 o cameraXWithY 00453
+		6 o cameraZWithY 00454
 com/mojang/minecraft/phys/AABB com/mojang/minecraft/util/phys/AABB 00033
 	serialVersionUID serialVersionUID 00280
 	epsilon epsilon 00209

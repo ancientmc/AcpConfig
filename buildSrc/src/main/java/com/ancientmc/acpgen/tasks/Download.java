@@ -10,7 +10,6 @@ import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.URL;
 
 public abstract class Download extends DefaultTask {
