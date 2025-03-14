@@ -27,6 +27,20 @@ ext {
     MATCH = 'data/matches/' + old_version + '-' + new_version + '.match'
 }
 
+tasks.register('setupNewVersion', Copy) {
+    group = 'update'
+    destinationDir = file(NEW_DIR)
+    from (OLD_DIR + '/game/jardep.json') { into ('/game/') }
+    from (OLD_DIR + '/mappings/rosetta.cfg') { into ('/mappings/') }
+    from (OLD_DIR + '/inject/intermediate/') { into ('/inject/intermediate/') }
+    from (OLD_DIR + '/inject/blacklist.txt') { into ('/inject/') }
+    from (OLD_DIR + '/run/src/main/java/acp/client/') { into ('/run/src/main/java/acp/client/')}
+    doLast {
+        file(NEW_DIR + '/inject/access.txt/').withWriter('UTF-8') { w -> w.write('') }
+        file(NEW_DIR + '/inject/exceptions.txt/').withWriter('UTF-8') { w -> w.write('') }
+    }
+}
+
 tasks.register('updateTsrg', JavaExec) {
     group = 'update'
     mainClass = 'com.ancientmc.rosetta.Rosetta'

@@ -1,0 +1,24 @@
+{
+  "update": [
+    "setupNewVersion",
+    "updateTsrg",
+    "{new_version}:writeCsvs",
+    "updateClassesCsv",
+    "updateFieldsCsv",
+    "updateMethodsCsv",
+    "updateParamsCsv",
+    "{new_version}:applyClasses",
+    "{new_version}:applyFields",
+    "{new_version}:applyMethods",
+    "{new_version}:applyParams",
+    "{new_version}:exportStats"
+  ],
+  "intermediate": [ ":{new_version}:deobfIntermediate" ],
+  "unzip": [
+    ":{new_version}:exportStats",
+    ":{new_version}:obfToInject",
+    ":{new_version}:unzip"
+  ],
+  "launch": [ ":{new_version}:runClient" ],
+  "publish": [ ":publishVersion{new_version}PublicationToAncientmc-mavenRepository" ]
+}

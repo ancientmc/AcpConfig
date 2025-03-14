@@ -49,6 +49,10 @@ public abstract class WriteCsvs extends DefaultTask {
             methods = methods.stream().sorted().distinct().collect(Collectors.toList());
             params = params.stream().sorted().distinct().collect(Collectors.toList());
 
+            if (!classCsv.getParentFile().exists()) {
+                Files.createDirectories(classCsv.getParentFile().toPath());
+            }
+
             write(classCsv, classes);
             write(fieldCsv, fields);
             write(methodCsv, methods);

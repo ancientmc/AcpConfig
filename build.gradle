@@ -4,6 +4,13 @@ plugins {
     id 'uk.jamierocks.propatcher' version '2.0.1'
 }
 
+import com.ancientmc.acpgen.tasks.*
+import com.ancientmc.acpgen.tasks.csv.*
+import com.ancientmc.acpgen.util.*
+import uk.jamierocks.propatcher.task.*
+
+apply from: ('update.gradle')
+
 group = 'com.ancientmc'
 
 repositories {
@@ -11,11 +18,6 @@ repositories {
     maven { url = 'https://maven.neoforged.net' }
     maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
 }
-
-import com.ancientmc.acpgen.tasks.*
-import com.ancientmc.acpgen.tasks.csv.*
-import com.ancientmc.acpgen.util.*
-import uk.jamierocks.propatcher.task.*
 
 dependencies {
     implementation 'net.minecraftforge:srgutils:0.5.4'
@@ -27,6 +29,12 @@ tasks.withType(JavaCompile).configureEach {
         languageVersion = JavaLanguageVersion.of(8)
     }
 }
+
+tasks.register('easyUpdate', EasyRun) { runName = 'update' }
+tasks.register('easyIntermediate', EasyRun) { runName = 'intermediate' }
+tasks.register('easyUnzip', EasyRun) { runName = 'unzip' }
+tasks.register('easyLaunch', EasyRun) { runName = 'launch' }
+tasks.register('easyPublish', EasyRun) { runName = 'publish' }
 
 subprojects {
     repositories {
@@ -86,7 +94,7 @@ subprojects {
 
     // Only generate if the version to update is radically different than the previous one.
     // Otherwise we'll just match and update. Also, make sure to check the inheritance map first for any access errors so inheritance is intact.
-    tasks.register('writeTsrg', JavaExec) {
+    tasks.register('generateTsrg', JavaExec) {
         dependsOn downloadClient
         mainClass = 'com.ancientmc.rosetta.Rosetta'
         classpath = files(project.configurations.named('rosetta'))
@@ -287,5 +295,3 @@ subprojects {
         }
     }
 }
-
-apply from: ('update.gradle')

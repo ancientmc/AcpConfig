@@ -24,7 +24,6 @@ public abstract class ApplyCsv extends DefaultTask {
         File csv = getCsv().getAsFile().get();
         File outTsrg = getOutTsrg().getAsFile().get();
 
-
         try {
             List<String> oldLines = Files.readAllLines(inTsrg.toPath());
             List<String> newLines = new ArrayList<>();
@@ -37,6 +36,10 @@ public abstract class ApplyCsv extends DefaultTask {
                 String line = oldLines.get(i);
                 String replacedLine = getReplacedLine(line, map);
                 newLines.add(replacedLine);
+            }
+
+            if (!outTsrg.getParentFile().exists()) {
+                Files.createDirectories(outTsrg.getParentFile().toPath());
             }
 
             write(outTsrg, newLines);
