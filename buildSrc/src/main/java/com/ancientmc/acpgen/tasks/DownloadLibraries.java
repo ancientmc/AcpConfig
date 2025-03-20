@@ -28,6 +28,8 @@ public abstract class DownloadLibraries extends DefaultTask {
             for (Map.Entry<String, String> entry : map.entrySet()) {
                 URL url = Util.toUrl(entry.getKey());
                 File jar = new File(libs, entry.getValue());
+
+                getProject().getLogger().lifecycle("Download " + url);
                 FileUtils.copyURLToFile(url, jar);
             }
         } catch (IOException e) {

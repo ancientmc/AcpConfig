@@ -6,9 +6,7 @@ import com.google.gson.JsonParser;
 import org.gradle.api.file.FileSystemLocationProperty;
 import org.gradle.internal.os.OperatingSystem;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
@@ -17,6 +15,13 @@ import java.nio.file.Files;
 public class Util {
     public static JsonObject getJson(File json) throws IOException {
         Reader reader = Files.newBufferedReader(json.toPath());
+        JsonElement element = JsonParser.parseReader(reader);
+        return element.getAsJsonObject();
+    }
+
+    public static JsonObject getJson(URL url) throws IOException {
+        InputStream in = url.openConnection().getInputStream();
+        Reader reader = new InputStreamReader(in);
         JsonElement element = JsonParser.parseReader(reader);
         return element.getAsJsonObject();
     }

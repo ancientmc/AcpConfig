@@ -61,8 +61,10 @@ subprojects {
         fernflower 'com.ancientmc:fernflower:1.0'
     }
 
+    version = project.name.contains('legacy') ? project.name.replace('-legacy', '') : project.name
+
     tasks.register('downloadJson', Download) {
-        src = Json.getJsonUrl(file(Paths.VERSION_MANIFEST), project.name)
+        src = Json.getJsonUrl(file(Paths.VERSION_MANIFEST), version)
         dest = file(Paths.JSON)
     }
 

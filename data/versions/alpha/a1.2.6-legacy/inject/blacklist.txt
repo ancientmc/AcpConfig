@@ -1,0 +1,17 @@
+ModLoader.class
+BaseMod.class
+spawnlist.class
+ibxm/Sample.class
+ibxm/Player.class
+ibxm/FastTracker2.class
+ibxm/ScreamTracker3.class
+ibxm/Channel.class
+ibxm/Pattern.class
+ibxm/IBXM.class
+ibxm/Envelope.class
+ibxm/Module.class
+ibxm/LogTable.class
+ibxm/ProTracker.class
+ibxm/Instrument.class
+paulscode/sound/codecs/CodecIBXM.class
+ToolUtils.class
