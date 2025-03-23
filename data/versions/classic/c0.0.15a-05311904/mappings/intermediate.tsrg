@@ -1119,9 +1119,9 @@ com/mojang/minecraft/level/a/d com/mojang/minecraft/src/c_00050 00050
 		2 o p_00487 00487
 		3 o p_00488 00488
 com/mojang/minecraft/level/a/e com/mojang/minecraft/src/c_00037 00037
-	<init> (ILcom/mojang/minecraft/level/c/a;)V <init> 00270
-		0 o p_00530 00530
-		1 o p_00531 00531
+	<init> (ILcom/mojang/minecraft/level/c/a;)V <init> 00167
+		0 o p_00324 00324
+		1 o p_00530 00530
 	a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V m_00160 00160
 		0 o p_00306 00306
 		1 o p_00307 00307
@@ -1176,9 +1176,9 @@ com/mojang/minecraft/level/a/i com/mojang/minecraft/src/c_00038 00038
 	x f_00332 00332
 	y f_00235 00235
 	z f_00236 00236
-	<init> (ILcom/mojang/minecraft/level/c/a;)V <init> 00271
-		0 o p_00532 00532
-		1 o p_00533 00533
+	<init> (ILcom/mojang/minecraft/level/c/a;)V <init> 00168
+		0 o p_00326 00326
+		1 o p_00531 00531
 	b (Lcom/mojang/minecraft/level/Level;III)V m_00243 00243
 		0 o p_00477 00477
 		1 o p_00478 00478
@@ -1266,9 +1266,9 @@ com/mojang/minecraft/level/c/a com/mojang/minecraft/src/c_00056 00056
 	a f_00334 00334
 	b f_00335 00335
 	c f_00336 00336
-	<init> (I)V <init> 00272
-		0 o p_00534 00534
-	<clinit> ()V <clinit> 00273
+	<init> (I)V <init> 00270
+		0 o p_00532 00532
+	<clinit> ()V <clinit> 00271
 com/mojang/minecraft/level/b/a/a com/mojang/minecraft/src/c_00042 00042
 	a f_00247 00247
 	b f_00248 00248

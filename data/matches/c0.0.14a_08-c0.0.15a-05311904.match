@@ -897,6 +897,8 @@ c	Lcom/mojang/minecraft/level/a/d;	Lcom/mojang/minecraft/level/a/d;
 		ma	2	2
 		ma	3	3
 c	Lcom/mojang/minecraft/level/a/e;	Lcom/mojang/minecraft/level/a/e;
+	m	<init>(II)V	<init>(ILcom/mojang/minecraft/level/c/a;)V
+		ma	0	0
 	m	a(Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V	a(Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V
 		ma	0	0
 		ma	1	1
@@ -948,6 +950,8 @@ c	Lcom/mojang/minecraft/level/a/h;	Lcom/mojang/minecraft/level/a/h;
 	m	a()Z	a()Z
 	m	b()Z	b()Z
 c	Lcom/mojang/minecraft/level/a/i;	Lcom/mojang/minecraft/level/a/i;
+	m	<init>(II)V	<init>(ILcom/mojang/minecraft/level/c/a;)V
+		ma	0	0
 	m	a(Lcom/mojang/minecraft/level/Level;III)V	b(Lcom/mojang/minecraft/level/Level;III)V
 		ma	0	0
 		ma	1	1

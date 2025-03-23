@@ -172,14 +172,14 @@ m_00246,fall
 m_00248,generateSandBlobs
 m_00249,generateTrees
 m_00250,generateCaves
-m_00252,m_00252
+m_00252,disconnect
 m_00253,m_00253
 m_00254,m_00254
 m_00255,m_00255
 m_00256,m_00256
-m_00257,m_00257
+m_00257,set
 m_00259,m_00259
-m_00260,m_00260
+m_00260,readWorldData
 m_00261,m_00261
 m_00267,m_00267
 m_00268,m_00268
