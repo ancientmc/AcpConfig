@@ -38,7 +38,7 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	h fontRenderer 00028
 	z editMode 00029
 	A currentScreen 00030
-	i manager 00031
+	i worldManager 00031
 	B generator 00032
 	j loadMapUser 00033
 	k loadMapId 00034
@@ -128,7 +128,7 @@ com/mojang/minecraft/g com/mojang/minecraft/entity/Entity 00007
 	p box 00063
 	q onGround 00064
 	r horizontalCollision 00065
-	s collision 00066
+	s removed 00066
 	t verticalOffset 00067
 	b boxWidth 00068
 	u boxHeight 00069
@@ -250,7 +250,7 @@ com/mojang/minecraft/a/d com/mojang/minecraft/world/DistanceComparator 00012
 		1 o objTwo 00079
 com/mojang/minecraft/a/e com/mojang/minecraft/client/render/WorldRenderer 00013
 	a world 00094
-	b unchunks 00095
+	b unsortedChunks 00095
 	e sortedChunks 00096
 	f chunkX 00097
 	g chunkY 00098

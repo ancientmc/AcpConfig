@@ -1,9 +1,9 @@
 MAPPINGS CREDITS
-- RetroMCP https://github.com/MCPHackers/MCPHackers.github.io
+- RetroMCP https://github.com/MCPHackers/MCPHackers.github.io, https://github.com/MCPHackers/RetroMCP/versions
 - Linen https://github.com/PolyesterMC/Linen
 - Yarn https://github.com/FabricMC/yarn
 - The Code of Notch https://github.com/thecodeofnotch/mc-161807
-
+- John Payne for getCaveness function params https://github.com/johnpayne-dev/MinecraftC/blob/2ed7e38b6b9e8f3181653db271cf6e24fb15adc7/MinecraftC/Level/Level.h#L73
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991

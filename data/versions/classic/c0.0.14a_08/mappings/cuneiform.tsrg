@@ -37,7 +37,7 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	g fontRenderer 00028
 	w editMode 00029
 	x currentScreen 00030
-	y manager 00031
+	y worldManager 00031
 	z generator 00032
 	A ranTicks 00250
 	h loadMapUser 00033
@@ -94,10 +94,10 @@ com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
 	a (I)V setWorldStatusProgress 00020
 		0 o percent 00018
 	b (I)V generateWorld 00021
-		0 o p_00366 00366
+		0 o sizeModifier 00366
 	a (ILjava/lang/String;)Z saveWorld 00188
-		0 o worldName 00367
-		1 o worldId 00368
+		0 o worldId 00367
+		1 o worldName 00368
 	a (Ljava/lang/String;I)Z loadWorld 00022
 		0 o username 00019
 		1 o sessionId 00020
@@ -518,7 +518,7 @@ com/mojang/minecraft/character/b com/mojang/minecraft/client/model/Quad 00030
 	a vertices 00202
 	<init> ([Lcom/mojang/minecraft/character/e;)V <init> 00134
 		0 o vertices 00226
-	<init> ([Lcom/mojang/minecraft/character/e;IIII)V <init> 00134
+	<init> ([Lcom/mojang/minecraft/character/e;IIII)V <init> 00135
 		0 o vertices 00227
 		1 o uOne 00228
 		2 o uTwo 00229
@@ -573,11 +573,11 @@ com/mojang/minecraft/character/e com/mojang/minecraft/client/model/Vertex 00031
 	a (FF)Lcom/mojang/minecraft/character/e; get 00137
 		0 o u 00237
 		1 o v 00238
-	<init> (Lcom/mojang/minecraft/character/e;FF)V <init> 00136
+	<init> (Lcom/mojang/minecraft/character/e;FF)V <init> 00138
 		0 o vertex 00239
 		1 o u 00240
 		2 o v 00241
-	<init> (Lcom/mojang/minecraft/character/c;FF)V <init> 00136
+	<init> (Lcom/mojang/minecraft/character/c;FF)V <init> 00139
 		0 o vec 00242
 		1 o u 00243
 		2 o v 00244
@@ -760,10 +760,10 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		1 o y 00441
 		2 o z 00442
 	getCaveness (FFFF)F getCaveness 00227
-		0 o p_00443 00443
-		1 o p_00444 00444
-		2 o p_00445 00445
-		3 o p_00446 00446
+		0 o x 00443
+		1 o y 00444
+		2 o z 00445
+		3 o degrees 00446
 	getCaveness (Lcom/mojang/minecraft/Entity;)F getCaveness 00228
 		0 o entity 00447
 com/mojang/minecraft/particle/a com/mojang/minecraft/client/render/entity/ParticleRenderer 00025
@@ -869,7 +869,7 @@ com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 000
 	input inputs 00286
 	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V <init> 00024
 		0 o world 00023
-		1 o player 00469
+		1 o inputs 00469
 	tick ()V onTick 00031
 	releaseAllKeys ()V resetActiveInputs 00240
 	setKey (IZ)V setInput 00241
@@ -915,7 +915,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 		3 o maxX 00266
 		4 o maxY 00267
 		5 o maxZ 00268
-	<init> (II)V <init> 00145
+	<init> (II)V <init> 00148
 		0 o id 00269
 		1 o texture 00270
 	a (Lcom/mojang/minecraft/a/c;Lcom/mojang/minecraft/level/Level;IIII)Z render 00149
@@ -925,7 +925,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 		3 o x 00274
 		4 o y 00275
 		5 o z 00276
-	a (Lcom/mojang/minecraft/level/Level;IIII)Z cullFace 00242
+	a (Lcom/mojang/minecraft/level/Level;IIII)Z cullSide 00242
 		0 o world 00472
 		1 o x 00473
 		2 o y 00474
@@ -1188,7 +1188,7 @@ com/mojang/minecraft/level/b/a/c com/mojang/minecraft/world/gen/noise/NoiseGener
 com/mojang/minecraft/level/b/a/d com/mojang/minecraft/world/gen/noise/PerlinNoiseGenerator 00044
 	a permutations 00249
 	<init> ()V <init> 00181
-	<init> (Ljava/util/Random;)V <init> 00181
+	<init> (Ljava/util/Random;)V <init> 00182
 		0 o random 00357
 	a (D)D fade 00183
 		0 o value 00358

@@ -1,0 +1,3 @@
+com/mojang/minecraft/src/c_00052/<init> (Ljava/lang/String;I)V java/io/IOException
+com/mojang/minecraft/src/c_00052/m_00253 ()V java/io/IOException
+com/mojang/minecraft/src/c_00054/<init> (Lcom/mojang/minecraft/c;Ljava/lang/String;ILjava/lang/String;)V java/io/IOException

@@ -518,7 +518,7 @@ com/mojang/minecraft/character/b com/mojang/minecraft/src/c_00030 00030
 	a f_00202 00202
 	<init> ([Lcom/mojang/minecraft/character/e;)V <init> 00134
 		0 o p_00226 00226
-	<init> ([Lcom/mojang/minecraft/character/e;IIII)V <init> 00134
+	<init> ([Lcom/mojang/minecraft/character/e;IIII)V <init> 00135
 		0 o p_00227 00227
 		1 o p_00228 00228
 		2 o p_00229 00229
@@ -573,11 +573,11 @@ com/mojang/minecraft/character/e com/mojang/minecraft/src/c_00031 00031
 	a (FF)Lcom/mojang/minecraft/character/e; m_00137 00137
 		0 o p_00237 00237
 		1 o p_00238 00238
-	<init> (Lcom/mojang/minecraft/character/e;FF)V <init> 00136
+	<init> (Lcom/mojang/minecraft/character/e;FF)V <init> 00138
 		0 o p_00239 00239
 		1 o p_00240 00240
 		2 o p_00241 00241
-	<init> (Lcom/mojang/minecraft/character/c;FF)V <init> 00136
+	<init> (Lcom/mojang/minecraft/character/c;FF)V <init> 00139
 		0 o p_00242 00242
 		1 o p_00243 00243
 		2 o p_00244 00244
@@ -915,7 +915,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/src/c_00034 00034
 		3 o p_00266 00266
 		4 o p_00267 00267
 		5 o p_00268 00268
-	<init> (II)V <init> 00145
+	<init> (II)V <init> 00148
 		0 o p_00269 00269
 		1 o p_00270 00270
 	a (Lcom/mojang/minecraft/a/c;Lcom/mojang/minecraft/level/Level;IIII)Z m_00149 00149
@@ -1188,7 +1188,7 @@ com/mojang/minecraft/level/b/a/c com/mojang/minecraft/src/c_00043 00043
 com/mojang/minecraft/level/b/a/d com/mojang/minecraft/src/c_00044 00044
 	a f_00249 00249
 	<init> ()V <init> 00181
-	<init> (Ljava/util/Random;)V <init> 00181
+	<init> (Ljava/util/Random;)V <init> 00182
 		0 o p_00357 00357
 	a (D)D m_00183 00183
 		0 o p_00358 00358

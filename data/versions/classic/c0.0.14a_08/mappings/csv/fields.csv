@@ -28,7 +28,7 @@ f_00027,textureRenderer
 f_00028,fontRenderer
 f_00029,editMode
 f_00030,currentScreen
-f_00031,manager
+f_00031,worldManager
 f_00032,generator
 f_00033,loadMapUser
 f_00034,loadMapId

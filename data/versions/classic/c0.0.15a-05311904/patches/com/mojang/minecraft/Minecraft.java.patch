@@ -1,0 +1,27 @@
+--- a/com/mojang/minecraft/Minecraft.java
++++ b/com/mojang/minecraft/Minecraft.java
+@@ -152,7 +152,7 @@
+     }
+ 
+     public final void close() {
+-        if (!(this = this).isApplet) {
++        if (!this.isApplet) {
+             try {
+                 WorldManager.writeWorldData(this.world, new FileOutputStream(new File("level.dat")));
+             } catch (Exception exception) {
+@@ -846,12 +846,12 @@
+         }
+ 
+         setGlError("Update chunks");
+-        int j2 = this.world.isSolidWithOffset(this.player.x, this.player.y, this.player.z, 0.1F);
++        boolean flag = this.world.isSolidWithOffset(this.player.x, this.player.y, this.player.z, 0.1F);
+         this.renderFog(0);
+         GL11.glEnable(2912);
+         this.worldRenderer.render(this.player, 0);
+-        if (j2) {
+-            j2 = (int) this.player.x;
++        if (flag) {
++            int j2 = (int) this.player.x;
+             l2 = (int) this.player.y;
+             int i3 = (int) this.player.z;
+ 

@@ -166,7 +166,7 @@ m_00237,resetActiveInputs
 m_00238,setInput
 m_00240,resetActiveInputs
 m_00241,setInput
-m_00242,cullFace
+m_00242,cullSide
 m_00243,onPlacement
 m_00246,fall
 m_00248,generateSandBlobs

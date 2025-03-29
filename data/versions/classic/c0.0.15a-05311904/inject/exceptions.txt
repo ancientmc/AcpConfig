@@ -1,0 +1,3 @@
+com/mojang/a/a/<init> (Ljava/lang/String;I)V java/io/IOException
+com/mojang/a/a/b ()V java/io/IOException
+com/mojang/minecraft/net/b/<init> (Lcom/mojang/minecraft/c;Ljava/lang/String;ILjava/lang/String;)V java/io/IOException

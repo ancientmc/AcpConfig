@@ -8,6 +8,9 @@ import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Frame;
 
+/**
+ * Class based on similar class used in RetroMCP https://github.com/mcphackers/mcpHackers.github.io/versions
+ */
 public class Start {
     public static void main(String[] args) {
         String username = "Player" + System.currentTimeMillis() % 1000L;
