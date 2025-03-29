@@ -146,23 +146,11 @@ subprojects {
         paramCsv = file('mappings/csv/params.csv')
     }
 
-    def csvs = ['classes', 'fields', 'methods', 'params']
-    csvs.each { table ->
-        int i = csvs.indexOf(table)
-        def name = table.capitalize()
-        def temp = projectDir.path + '/mappings/temp/temp-' + i + '.tsrg'
-
-        // This is garbage and needs to be refactored
-        // I don't know why but the projectDir.path is needed here for it to run.
-        tasks.register("apply${name}", ApplyCsv) {
-            csv = file(projectDir.path + '/mappings/csv/' + table + '.csv')
-            inTsrg = i == 0 ? file(projectDir.path + '/' + Paths.INTERMEDIATE_TSRG) : file(temp)
-            outTsrg = i == 3 ? file(projectDir.path + '/' + Paths.CUNEIFORM_TSRG) : file(projectDir.path + '/mappings/temp/temp-' + (i + 1) + '.tsrg')
-            mustRunAfter i != 0 ? "apply${csvs.get(i - 1).capitalize()}" : [:]
-        }
+    tasks.register('applyCsvs', ApplyCsvs) {
+        csvDirectory = project.file('mappings/csv/')
+        inTsrg = file(Paths.INTERMEDIATE_TSRG)
+        outTsrg = file(Paths.CUNEIFORM_TSRG)
     }
-
-    tasks.register('applyAllCsv') { dependsOn(applyClasses, applyFields, applyMethods, applyParams) }
 
     tasks.register('exportStats', ExportMappingStats) {
         csvDirectory = file(projectDir.path + '/mappings/csv')
@@ -170,7 +158,7 @@ subprojects {
     }
 
     tasks.register('deobfMapped', JavaExec) {
-        dependsOn (applyAllCsv, mcinject)
+        dependsOn (applyCsvs, mcinject)
         mainClass = 'net.neoforged.art.Main'
         classpath = files(project.configurations.named('forgeart'))
         args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
