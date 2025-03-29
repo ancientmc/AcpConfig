@@ -221,6 +221,7 @@ subprojects {
     }
 
     tasks.register('buildClasses', JavaCompile) {
+        dependsOn (downloadLibraries, downloadNatives)
         dependsOn file(Paths.DIR_PATCHES).exists() ? patchesApply : [:]
         source = files(Paths.DIR_SRC).asFileTree
         classpath = files(Paths.DIR_LIBRARIES).asFileTree
@@ -242,7 +243,6 @@ subprojects {
     }
 
     tasks.register('runClient', JavaExec) {
-        dependsOn buildJar
         mainClass = 'acp.client.Start'
         classpath = files(Paths.BUILT_JAR)
         systemProperty 'java.library.path', Paths.DIR_NATIVES

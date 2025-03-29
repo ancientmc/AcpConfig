@@ -624,8 +624,8 @@ com/mojang/minecraft/character/d com/mojang/minecraft/client/model/ModelPart 000
 	i y 00189
 	j z 00190
 	a pitch 00191
-	b roll 00193
-	c yaw 00192
+	b yaw 00192
+	c roll 00193
 	k mirrored 00194
 	l renderList 00195
 	<init> (II)V <init> 00129

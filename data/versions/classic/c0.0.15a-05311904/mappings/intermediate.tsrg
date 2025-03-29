@@ -573,8 +573,8 @@ com/mojang/minecraft/character/d com/mojang/minecraft/src/c_00028 00028
 	i f_00189 00189
 	j f_00190 00190
 	a f_00191 00191
-	b f_00193 00193
-	c f_00192 00192
+	b f_00192 00192
+	c f_00193 00193
 	k f_00194 00194
 	l f_00195 00195
 	<init> (II)V <init> 00129

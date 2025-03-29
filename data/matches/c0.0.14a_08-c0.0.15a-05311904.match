@@ -572,8 +572,8 @@ c	Lcom/mojang/minecraft/character/d;	Lcom/mojang/minecraft/character/d;
 	f	i;;F	i;;F
 	f	j;;F	j;;F
 	f	a;;F	a;;F
-	f	b;;F	c;;F
-	f	c;;F	b;;F
+	f	b;;F	b;;F
+	f	c;;F	c;;F
 	f	k;;Z	k;;Z
 	f	l;;I	l;;I
 c	Lcom/mojang/minecraft/character/e;	Lcom/mojang/minecraft/character/e;
