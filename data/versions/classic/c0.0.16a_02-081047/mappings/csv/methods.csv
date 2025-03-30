@@ -184,12 +184,12 @@ m_00261,entityTick
 m_00267,setTickSpeed
 m_00268,getBrightness
 m_00269,getFluidType
-m_00272,m_00272
+m_00272,getDataType
 m_00274,m_00274
-m_00275,m_00275
+m_00275,renderHud
 m_00276,m_00276
 m_00277,m_00277
-m_00278,m_00278
+m_00278,setRotation
 m_00281,m_00281
 m_00282,m_00282
 m_00286,m_00286

@@ -16,8 +16,8 @@ com/mojang/a/a com/mojang/minecraft/network/SocketConnection 00052
 	a (Lcom/mojang/minecraft/net/a;[Ljava/lang/Object;)V writeData 00254
 		0 o object 00498
 		1 o data 00499
-	a (Ljava/lang/Class;)Ljava/lang/Object; m_00272 00272
-		0 o p_00533 00533
+	a (Ljava/lang/Class;)Ljava/lang/Object; getDataType 00272
+		0 o typeClass 00533
 com/mojang/minecraft/a com/mojang/minecraft/client/UserSession 00004
 	a username 00044
 	b sessionId 00045
@@ -28,7 +28,7 @@ com/mojang/minecraft/b com/mojang/minecraft/client/gui/hud/ChatLine 00057
 	a message 00337
 	b counter 00338
 	<init> (Ljava/lang/String;)V <init> 00273
-		0 o p_00534 00534
+		0 o message 00534
 com/mojang/minecraft/c com/mojang/minecraft/util/TickTimer 00001
 	a tps 00001
 	b lastTime 00002
@@ -70,8 +70,8 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	l networkManager 00305
 	E f_00339 00339
 	F holdableBlockIds 00252
-	G f_00340 00340
-	H f_00341 00341
+	G hostName 00340
+	H port 00341
 	I fogRed 00253
 	J fogGreen 00254
 	K fogBlue 00255
@@ -115,7 +115,7 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	b (F)V render 00015
 		0 o partialTicks 00010
 	h ()V m_00274 00274
-	i ()V m_00275 00275
+	i ()V renderHud 00275
 	j ()V renderFog 00016
 	a (FFFF)Ljava/nio/FloatBuffer; getFogColorBuffer 00017
 		0 o red 00012
@@ -186,10 +186,10 @@ com/mojang/minecraft/Entity com/mojang/minecraft/entity/Entity 00007
 		0 o boxWidth 00032
 		1 o boxHeight 00033
 	setPos (Lcom/mojang/minecraft/net/b;)V m_00277 00277
-		0 o p_00536 00536
-	setRot (FF)V m_00278 00278
-		0 o p_00537 00537
-		1 o p_00538 00538
+		0 o tracker 00536
+	setRot (FF)V setRotation 00278
+		0 o yaw 00537
+		1 o pitch 00538
 	setPos (FFF)V setPosition 00030
 		0 o x 00034
 		1 o y 00035
@@ -877,27 +877,27 @@ com/mojang/minecraft/net/a com/mojang/minecraft/network/packet/Packet 00053
 	<init> ([Ljava/lang/Class;)V <init> 00262
 		0 o packets 00511
 	<clinit> ()V <clinit> 00263
-com/mojang/minecraft/net/b com/mojang/minecraft/src/c_00060 00060
-	a f_00352 00352
-	b f_00353 00353
-	c f_00354 00354
-	d f_00355 00355
-	e f_00356 00356
-	f f_00357 00357
-	g f_00358 00358
+com/mojang/minecraft/net/b com/mojang/minecraft/entity/player/ServerPlayerTracker 00060
+	a x 00352
+	b y 00353
+	c z 00354
+	d yaw 00355
+	e pitch 00356
+	f rotationChanged 00357
+	g positionChanged 00358
 	<init> (FFFFF)V <init> 00283
-		0 o p_00546 00546
-		1 o p_00547 00547
-		2 o p_00548 00548
-		3 o p_00549 00549
-		4 o p_00550 00550
+		0 o x 00546
+		1 o y 00547
+		2 o z 00548
+		3 o yaw 00549
+		4 o pitch 00550
 	<init> (FFF)V <init> 00284
-		0 o p_00551 00551
-		1 o p_00552 00552
-		2 o p_00553 00553
+		0 o x 00551
+		1 o y 00552
+		2 o z 00553
 	<init> (FF)V <init> 00285
-		0 o p_00554 00554
-		1 o p_00555 00555
+		0 o yaw 00554
+		1 o pitch 00555
 com/mojang/minecraft/net/c com/mojang/minecraft/network/NetworkManager 00054
 	a out 00322
 	b connection 00323
