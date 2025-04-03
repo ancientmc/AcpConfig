@@ -57,4 +57,4 @@ com/mojang/minecraft/src/c_00056,com/mojang/minecraft/block/material/Fluid
 com/mojang/minecraft/src/c_00057,com/mojang/minecraft/client/gui/hud/ChatLine
 com/mojang/minecraft/src/c_00058,com/mojang/minecraft/client/gui/screen/ChatScreen
 com/mojang/minecraft/src/c_00059,com/mojang/minecraft/client/gui/screen/FailedConnectionScreen
-com/mojang/minecraft/src/c_00060,com/mojang/minecraft/entity/player/ServerPlayerTracker
+com/mojang/minecraft/src/c_00060,com/mojang/minecraft/entity/player/ServerPlayerUpdater

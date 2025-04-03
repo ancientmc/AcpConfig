@@ -14,7 +14,7 @@ com/mojang/a/a com/mojang/minecraft/network/SocketConnection 00052
 	a ()V disconnect 00252
 	b ()V readData 00253
 	a (Lcom/mojang/minecraft/net/a;[Ljava/lang/Object;)V writeData 00254
-		0 o object 00498
+		0 o packet 00498
 		1 o data 00499
 	a (Ljava/lang/Class;)Ljava/lang/Object; getDataType 00272
 		0 o typeClass 00533
@@ -68,7 +68,7 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	k loadMapId 00034
 	D robot 00251
 	l networkManager 00305
-	E f_00339 00339
+	E chatMessages 00339
 	F holdableBlockIds 00252
 	G hostName 00340
 	H port 00341
@@ -89,7 +89,7 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	W fogColorBuffer 00041
 	X worldStatus 00042
 	Y worldSubStatus 00043
-	m f_00342 00342
+	m guiHidden 00342
 	<init> (Ljava/awt/Canvas;IIZ)V <init> 00005
 		0 o canvas 00003
 		1 o width 00004
@@ -114,8 +114,8 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 		0 o partialTicks 00009
 	b (F)V render 00015
 		0 o partialTicks 00010
-	h ()V m_00274 00274
-	i ()V renderHud 00275
+	h ()V initializeGui 00274
+	i ()V renderGui 00275
 	j ()V renderFog 00016
 	a (FFFF)Ljava/nio/FloatBuffer; getFogColorBuffer 00017
 		0 o red 00012
@@ -138,8 +138,8 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 		1 o sessionId 00020
 	a (Lcom/mojang/minecraft/level/Level;)V setWorld 00189
 		0 o world 00369
-	c (Ljava/lang/String;)V m_00276 00276
-		0 o p_00535 00535
+	c (Ljava/lang/String;)V addChatMessage 00276
+		0 o message 00535
 	<clinit> ()V <clinit> 00190
 com/mojang/minecraft/e com/mojang/minecraft/util/HitResult 00006
 	a x 00047
@@ -185,8 +185,8 @@ com/mojang/minecraft/Entity com/mojang/minecraft/entity/Entity 00007
 	setSize (FF)V setHitbox 00029
 		0 o boxWidth 00032
 		1 o boxHeight 00033
-	setPos (Lcom/mojang/minecraft/net/b;)V m_00277 00277
-		0 o tracker 00536
+	setPos (Lcom/mojang/minecraft/net/b;)V setPosition 00277
+		0 o updater 00536
 	setRot (FF)V setRotation 00278
 		0 o yaw 00537
 		1 o pitch 00538
@@ -572,11 +572,11 @@ com/mojang/minecraft/b/j com/mojang/minecraft/client/render/FontRenderer 00024
 		1 o x 00188
 		2 o y 00189
 		3 o color 00190
-	b (Ljava/lang/String;III)V m_00281 00281
-		0 o p_00541 00541
-		1 o p_00542 00542
-		2 o p_00543 00543
-		3 o p_00544 00544
+	b (Ljava/lang/String;III)V renderShadowless 00281
+		0 o text 00541
+		1 o x 00542
+		2 o y 00543
+		3 o color 00544
 	a (Ljava/lang/String;IIIZ)V render 00122
 		0 o text 00191
 		1 o x 00192
@@ -595,7 +595,7 @@ com/mojang/minecraft/character/a com/mojang/minecraft/client/model/HumanModel 00
 	<init> ()V <init> 00133
 	a (FFF)V render 00259
 		0 o partialTicks 00507
-		1 o p_00545 00545
+		1 o yaw 00545
 		2 o pitch 00508
 com/mojang/minecraft/character/b com/mojang/minecraft/client/model/Quad 00030
 	a vertices 00202
@@ -853,23 +853,23 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		3 o degrees 00446
 	getCaveness (Lcom/mojang/minecraft/Entity;)F getCaveness 00228
 		0 o entity 00447
-	copyBlocks ()[B m_00282 00282
+	copyBlocks ()[B getCopiedBlocks 00282
 com/mojang/minecraft/net/a com/mojang/minecraft/network/packet/Packet 00053
 	a PACKET_REGISTRY 00308
 	b SERVER_CONNECTION_PACKET 00309
 	c LOAD_WORLD_PACKET 00310
 	d SET_WORLD_STATUS_PACKET 00311
 	e SET_WORLD_PACKET 00312
-	f CLOSE_PACKET 00313
+	f BLOCK_UPDATE_PACKET 00313
 	g PLACE_BLOCK_PACKET 00314
 	h SET_PLAYERS_PACKET 00315
-	i PLAYER_MOVEMENT_PACKET 00316
-	j REMOVE_PLAYER_PACKET 00317
-	k f_00347 00347
-	l f_00348 00348
-	m f_00349 00349
-	n f_00350 00350
-	o f_00351 00351
+	i PLAYER_TELEPORT_PACKET 00347
+	j PLAYER_UPDATE_PACKET 00348
+	k PLAYER_MOVEMENT_PACKET 00316
+	l PLAYER_ROTATION_PACKET 00349
+	m REMOVE_PLAYER_PACKET 00317
+	n CHAT_PACKET 00350
+	o LOST_CONNECTION_PACKET 00351
 	p size 00318
 	s idCounter 00319
 	q id 00320
@@ -877,7 +877,7 @@ com/mojang/minecraft/net/a com/mojang/minecraft/network/packet/Packet 00053
 	<init> ([Ljava/lang/Class;)V <init> 00262
 		0 o packets 00511
 	<clinit> ()V <clinit> 00263
-com/mojang/minecraft/net/b com/mojang/minecraft/entity/player/ServerPlayerTracker 00060
+com/mojang/minecraft/net/b com/mojang/minecraft/entity/player/ServerPlayerUpdater 00060
 	a x 00352
 	b y 00353
 	c z 00354
@@ -908,57 +908,57 @@ com/mojang/minecraft/net/c com/mojang/minecraft/network/NetworkManager 00054
 		1 o hostName 00513
 		2 o port 00514
 		3 o username 00515
-	a (IIIII)V m_00286 00286
-		0 o p_00556 00556
-		1 o p_00557 00557
-		2 o p_00558 00558
-		3 o p_00559 00559
-		4 o p_00560 00560
+	a (IIIII)V updateServerBlock 00286
+		0 o x 00556
+		1 o y 00557
+		2 o z 00558
+		3 o editMode 00559
+		4 o id 00560
 com/mojang/minecraft/net/NetworkPlayer com/mojang/minecraft/entity/player/ServerPlayer 00055
 	serialVersionUID serialVersionUID 00326
 	a model 00327
-	animStep f_00359 00359
-	animStepO f_00360 00360
-	moveQueue f_00361 00361
-	minecraft f_00362 00362
-	xp f_00363 00363
-	yp f_00364 00364
-	zp f_00365 00365
-	yBodyRot f_00366 00366
-	yBodyRotO f_00367 00367
-	name f_00368 00368
+	animStep animationPhase 00359
+	animStepO animationPhaseOffset 00360
+	moveQueue updateData 00361
+	minecraft minecraft 00362
+	xp playerX 00363
+	yp playerY 00364
+	zp playerZ 00365
+	yBodyRot bodyYaw 00366
+	yBodyRotO bodyYawOffset 00367
+	name username 00368
 	<init> (Lcom/mojang/minecraft/d;ILjava/lang/String;IIIFF)V <init> 00265
-		0 o p_00561 00561
-		1 o p_00562 00562
-		2 o p_00563 00563
-		3 o p_00564 00564
-		4 o p_00565 00565
-		5 o p_00566 00566
-		6 o p_00567 00567
-		7 o p_00568 00568
+		0 o minecraft 00561
+		1 o p_00517 00517
+		2 o username 00518
+		3 o x 00519
+		4 o y 00520
+		5 o z 00521
+		6 o yaw 00522
+		7 o pitch 00523
 	tick ()V onTick 00031
 	render (Lcom/mojang/minecraft/a/a;F)V render 00038
 		0 o textureRenderer 00374
 		1 o partialTicks 00046
-	queue (BBBFF)V m_00287 00287
-		0 o p_00569 00569
-		1 o p_00570 00570
-		2 o p_00571 00571
-		3 o p_00572 00572
-		4 o p_00573 00573
-	teleport (SSSFF)V m_00288 00288
-		0 o p_00574 00574
-		1 o p_00575 00575
-		2 o p_00576 00576
-		3 o p_00577 00577
-		4 o p_00578 00578
-	queue (BBB)V m_00289 00289
-		0 o p_00579 00579
-		1 o p_00580 00580
-		2 o p_00581 00581
-	queue (FF)V m_00290 00290
-		0 o p_00582 00582
-		1 o p_00583 00583
+	queue (BBBFF)V update 00287
+		0 o xChange 00562
+		1 o yChange 00563
+		2 o zChange 00564
+		3 o yawChange 00565
+		4 o pitchChange 00566
+	teleport (SSSFF)V teleport 00288
+		0 o xChange 00567
+		1 o yChange 00568
+		2 o zChange 00569
+		3 o yawChange 00570
+		4 o pitchChange 00571
+	queue (BBB)V updatePosition 00289
+		0 o xChange 00572
+		1 o yChange 00573
+		2 o zChange 00574
+	queue (FF)V updateRotation 00290
+		0 o yawChange 00575
+		1 o pitchChange 00576
 	<clinit> ()V <clinit> 00266
 com/mojang/minecraft/particle/a com/mojang/minecraft/client/render/entity/ParticleRenderer 00025
 	a particles 00167

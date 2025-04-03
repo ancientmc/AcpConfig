@@ -153,12 +153,13 @@ subprojects {
     }
 
     tasks.register('exportStats', ExportMappingStats) {
-        csvDirectory = file(projectDir.path + '/mappings/csv')
-        statsCsv = file(projectDir.path + '/mappings/stats.csv')
+        dependsOn applyCsvs
+        csvDirectory = file('mappings/csv/')
+        statsCsv = file('mappings/stats.csv')
     }
 
     tasks.register('deobfMapped', JavaExec) {
-        dependsOn (applyCsvs, mcinject)
+        dependsOn (applyCsvs, exportStats, mcinject)
         mainClass = 'net.neoforged.art.Main'
         classpath = files(project.configurations.named('forgeart'))
         args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')

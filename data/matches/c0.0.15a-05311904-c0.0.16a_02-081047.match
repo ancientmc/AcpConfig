@@ -1,13 +1,13 @@
-Matches saved 2025-03-29T06:10:09.479300200Z, input files:
+Matches saved 2025-04-02T19:15:14.687075200Z, input files:
 	a:
 		99608	SHA256	EN8aV0iL/nbFZLeNuk458lHuEFcBqnv/70kOafydr4M=	client.jar
 	b:
 		104721	SHA256	Bp1uyG/0XweDrphuOHiDN8K9E+Feye8tdZZeLZ02/vE=	client.jar
 	cp:
-		1047168	SHA256	gz5yGBf3DRRF7sE9jOWobhKvcO+sUBQ1YwLiu8aLP+I=	lwjgl-2.9.4-nightly-20150209.jar
-		173887	SHA256	A0RWsTKjNrcnVzJbt6r5ngdWge5WUNK+ohcXvUhd5C8=	lwjgl_util-2.9.4-nightly-20150209.jar
 		208338	SHA256	ebWk9YKeGkmkFXEff7jrW5rSLe+nKSn9otqW7DDT8Bg=	jinput-2.0.5.jar
 		7508	SHA256	wzNP85zwqztUklYZEBBUyQCYt8czseeDTHt15MQehKU=	jutils-1.0.0.jar
+		1047168	SHA256	gz5yGBf3DRRF7sE9jOWobhKvcO+sUBQ1YwLiu8aLP+I=	lwjgl-2.9.4-nightly-20150209.jar
+		173887	SHA256	A0RWsTKjNrcnVzJbt6r5ngdWge5WUNK+ohcXvUhd5C8=	lwjgl_util-2.9.4-nightly-20150209.jar
 	cp a:
 	cp b:
 c	Lcom/mojang/a/a;	Lcom/mojang/a/a;
@@ -1167,7 +1167,6 @@ c	Lcom/mojang/minecraft/level/c/a;	Lcom/mojang/minecraft/level/c/a;
 	f	c;;Lcom/mojang/minecraft/level/c/a;	c;;Lcom/mojang/minecraft/level/c/a;
 c	Lcom/mojang/minecraft/net/NetworkPlayer;	Lcom/mojang/minecraft/net/NetworkPlayer;
 	m	<init>(Lcom/mojang/minecraft/level/Level;ILjava/lang/String;FFFFF)V	<init>(Lcom/mojang/minecraft/d;ILjava/lang/String;IIIFF)V
-		mau	a	0
 		ma	1	1
 		ma	2	2
 		ma	3	3
@@ -1195,8 +1194,8 @@ c	Lcom/mojang/minecraft/net/a;	Lcom/mojang/minecraft/net/a;
 	f	f;;Lcom/mojang/minecraft/net/a;	f;;Lcom/mojang/minecraft/net/a;
 	f	g;;Lcom/mojang/minecraft/net/a;	g;;Lcom/mojang/minecraft/net/a;
 	f	h;;Lcom/mojang/minecraft/net/a;	h;;Lcom/mojang/minecraft/net/a;
-	f	i;;Lcom/mojang/minecraft/net/a;	i;;Lcom/mojang/minecraft/net/a;
-	f	j;;Lcom/mojang/minecraft/net/a;	j;;Lcom/mojang/minecraft/net/a;
+	f	i;;Lcom/mojang/minecraft/net/a;	k;;Lcom/mojang/minecraft/net/a;
+	f	j;;Lcom/mojang/minecraft/net/a;	m;;Lcom/mojang/minecraft/net/a;
 	f	k;;I	p;;I
 	f	n;;I	s;;I
 	f	l;;B	q;;B

@@ -14,7 +14,7 @@ com/mojang/a/a com/mojang/minecraft/network/SocketConnection 00052
 	a ()V disconnect 00252
 	b ()V readData 00253
 	a (Lcom/mojang/minecraft/net/a;[Ljava/lang/Object;)V writeData 00254
-		0 o object 00498
+		0 o packet 00498
 		1 o data 00499
 com/mojang/minecraft/a com/mojang/minecraft/client/UserSession 00004
 	a username 00044
@@ -808,7 +808,7 @@ com/mojang/minecraft/net/a com/mojang/minecraft/network/packet/Packet 00053
 	c LOAD_WORLD_PACKET 00310
 	d SET_WORLD_STATUS_PACKET 00311
 	e SET_WORLD_PACKET 00312
-	f CLOSE_PACKET 00313
+	f BLOCK_ 00313
 	g PLACE_BLOCK_PACKET 00314
 	h SET_PLAYERS_PACKET 00315
 	i PLAYER_MOVEMENT_PACKET 00316
@@ -837,7 +837,7 @@ com/mojang/minecraft/net/NetworkPlayer com/mojang/minecraft/entity/player/Server
 	<init> (Lcom/mojang/minecraft/level/Level;ILjava/lang/String;FFFFF)V <init> 00265
 		0 o world 00516
 		1 o p_00517 00517
-		2 o p_00518 00518
+		2 o username 00518
 		3 o x 00519
 		4 o y 00520
 		5 o z 00521
