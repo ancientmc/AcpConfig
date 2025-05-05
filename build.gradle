@@ -91,7 +91,7 @@ subprojects {
         dependsOn downloadClient
         mainClass = 'net.neoforged.installertools.ConsoleTool'
         classpath = files(project.configurations.named('inheritance'))
-        args('--task', 'EXTRACT_INHERITANCE', '--input', Paths.SLIM_JAR, '--output', Paths.INHERITANCE)
+        args('--task', 'EXTRACT_INHERITANCE', '--input', Paths.BASE_JAR, '--output', Paths.INHERITANCE)
     }
 
     // Only generate if the version to update is radically different than the previous one.
