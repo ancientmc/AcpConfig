@@ -1,5 +1,5 @@
---- a/com/mojang/minecraft/client/render/Frustrum.java
-+++ b/com/mojang/minecraft/client/render/Frustrum.java
+--- a/com/mojang/minecraft/client/renderer/Frustrum.java
++++ b/com/mojang/minecraft/client/renderer/Frustrum.java
 @@ -90,7 +90,6 @@
          float f1 = box.minZ;
          float f = box.minY;

@@ -141,7 +141,7 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	c (Ljava/lang/String;)V addChatMessage 00276
 		0 o message 00535
 	<clinit> ()V <clinit> 00190
-com/mojang/minecraft/e com/mojang/minecraft/util/HitResult 00006
+com/mojang/minecraft/e com/mojang/minecraft/util/phys/HitResult 00006
 	a x 00047
 	b y 00048
 	c z 00049
@@ -245,20 +245,20 @@ com/mojang/minecraft/MinecraftApplet com/mojang/minecraft/MinecraftApplet 00008
 	stop ()V stop 00042
 	destroy ()V destroy 00043
 	stopGameThread ()V stopThread 00044
-com/mojang/minecraft/a/a com/mojang/minecraft/client/render/TextureRenderer 00015
+com/mojang/minecraft/a/a com/mojang/minecraft/client/renderer/TextureRenderer 00015
 	a idMap 00119
 	<init> ()V <init> 00081
 	a (Ljava/lang/String;I)I getTexture 00082
 		0 o resource 00125
 		1 o id 00126
-com/mojang/minecraft/a/b com/mojang/minecraft/world/chunk/DirtyChunkComparator 00010
+com/mojang/minecraft/a/b com/mojang/minecraft/client/renderer/DirtyChunkSorter 00010
 	a player 00074
 	<init> (Lcom/mojang/minecraft/player/Player;)V <init> 00051
 		0 o player 00064
 	compare (Ljava/lang/Object;Ljava/lang/Object;)I compare 00052
 		0 o objOne 00065
 		1 o objTwo 00066
-com/mojang/minecraft/a/c com/mojang/minecraft/client/render/Tesselator 00016
+com/mojang/minecraft/a/c com/mojang/minecraft/client/renderer/Tessellator 00016
 	b buffer 00120
 	c bufferArray 00121
 	d vertices 00122
@@ -272,7 +272,7 @@ com/mojang/minecraft/a/c com/mojang/minecraft/client/render/Tesselator 00016
 	l bufferIndex 00130
 	m addedVertices 00131
 	n colorDisabled 00132
-	a tesselator 00133
+	a tessellator 00133
 	<init> ()V <init> 00258
 	a ()V draw 00084
 	d ()V resetBuffers 00085
@@ -299,7 +299,7 @@ com/mojang/minecraft/a/c com/mojang/minecraft/client/render/Tesselator 00016
 		0 o color 00141
 	c ()V disableColor 00092
 	<clinit> ()V <clinit> 00093
-com/mojang/minecraft/a/d com/mojang/minecraft/client/render/Frustrum 00017
+com/mojang/minecraft/a/d com/mojang/minecraft/client/renderer/Frustrum 00017
 	a sides 00134
 	b frustrum 00135
 	c projectionBuffer 00136
@@ -323,17 +323,17 @@ com/mojang/minecraft/a/d com/mojang/minecraft/client/render/Frustrum 00017
 	a (Lcom/mojang/minecraft/phys/AABB;)Z isBoxInside 00097
 		0 o box 00144
 	<clinit> ()V <clinit> 00098
-com/mojang/minecraft/a/e com/mojang/minecraft/world/DistanceComparator 00012
+com/mojang/minecraft/a/e com/mojang/minecraft/client/renderer/ChunkDistanceSorter 00012
 	a player 00093
 	<init> (Lcom/mojang/minecraft/player/Player;)V <init> 00063
 		0 o player 00077
 	compare (Ljava/lang/Object;Ljava/lang/Object;)I compare 00064
 		0 o objOne 00078
 		1 o objTwo 00079
-com/mojang/minecraft/a/f com/mojang/minecraft/world/chunk/Chunk 00011
+com/mojang/minecraft/a/f com/mojang/minecraft/client/renderer/RenderingChunk 00011
 	c world 00076
 	d renderList 00087
-	e tesselator 00090
+	e tessellator 00090
 	a updateCount 00091
 	f minX 00077
 	g minY 00078
@@ -360,7 +360,7 @@ com/mojang/minecraft/a/f com/mojang/minecraft/world/chunk/Chunk 00011
 	a (Lcom/mojang/minecraft/a/d;)V isVisible 00198
 		0 o frustrum 00383
 	<clinit> ()V <clinit> 00062
-com/mojang/minecraft/a/g com/mojang/minecraft/client/render/WorldRenderer 00013
+com/mojang/minecraft/a/g com/mojang/minecraft/client/renderer/WorldRenderer 00013
 	a world 00094
 	b textureRenderer 00100
 	c renderList 00101
@@ -561,7 +561,7 @@ com/mojang/minecraft/b/i com/mojang/minecraft/client/gui/screen/SaveWorldScreen 
 		0 o worlds 00182
 	a (I)V loadWorld 00118
 		0 o sessionId 00183
-com/mojang/minecraft/b/j com/mojang/minecraft/client/render/FontRenderer 00024
+com/mojang/minecraft/b/j com/mojang/minecraft/client/renderer/FontRenderer 00024
 	a characterWidths 00165
 	b texture 00166
 	<init> (Ljava/lang/String;Lcom/mojang/minecraft/a/a;)V <init> 00120
@@ -705,7 +705,7 @@ com/mojang/minecraft/level/a com/mojang/minecraft/world/WorldManager 00009
 		1 o out 00063
 	c (Ljava/io/InputStream;)[B readWorldByteData 00260
 		0 o in 00509
-com/mojang/minecraft/level/b com/mojang/minecraft/world/Coordinate 00046
+com/mojang/minecraft/level/b com/mojang/minecraft/world/BlockPos 00046
 	a x 00268
 	b y 00269
 	c z 00270
@@ -818,7 +818,7 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	containsLiquid (Lcom/mojang/minecraft/phys/AABB;Lcom/mojang/minecraft/level/c/a;)Z isLiquid 00080
 		0 o box 00123
 		1 o fluidType 00510
-	addToTickNextTick (IIII)V addCoordinateForTicking 00220
+	addToTickNextTick (IIII)V addBlockForTicking 00220
 		0 o x 00422
 		1 o y 00423
 		2 o z 00424
@@ -855,7 +855,7 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 		0 o entity 00447
 	copyBlocks ()[B getCopiedBlocks 00282
 com/mojang/minecraft/net/a com/mojang/minecraft/network/packet/Packet 00053
-	a PACKET_REGISTRY 00308
+	a PACKETS 00308
 	b SERVER_CONNECTION_PACKET 00309
 	c LOAD_WORLD_PACKET 00310
 	d SET_WORLD_STATUS_PACKET 00311
@@ -960,7 +960,7 @@ com/mojang/minecraft/net/NetworkPlayer com/mojang/minecraft/entity/player/Server
 		0 o yawChange 00575
 		1 o pitchChange 00576
 	<clinit> ()V <clinit> 00266
-com/mojang/minecraft/particle/a com/mojang/minecraft/client/render/entity/ParticleRenderer 00025
+com/mojang/minecraft/particle/a com/mojang/minecraft/client/renderer/entity/ParticleRenderer 00025
 	a particles 00167
 	b textureRenderer 00168
 	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/a/a;)V <init> 00124
@@ -991,7 +991,7 @@ com/mojang/minecraft/particle/Particle com/mojang/minecraft/entity/particle/Part
 		7 o block 00524
 	tick ()V onTick 00031
 	render (Lcom/mojang/minecraft/a/c;FFFFFF)V render 00229
-		0 o tesselator 00448
+		0 o tessellator 00448
 		1 o partialTicks 00449
 		2 o cameraX 00450
 		3 o cameraY 00451
@@ -1071,7 +1071,7 @@ com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 000
 		0 o code 00470
 		1 o active 00471
 com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
-	a BLOCK_REGISTRY 00216
+	a BLOCKS 00216
 	b TICKING_BLOCK_INDEX 00217
 	x TICK_SPEED_INDEX 00330
 	c STONE 00218
@@ -1118,7 +1118,7 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 	a (I)V setTickSpeed 00267
 		0 o speed 00525
 	a (Lcom/mojang/minecraft/a/c;Lcom/mojang/minecraft/level/Level;IIII)Z render 00149
-		0 o tesselator 00271
+		0 o tessellator 00271
 		1 o world 00272
 		2 o layer 00273
 		3 o x 00274
@@ -1145,20 +1145,20 @@ com/mojang/minecraft/level/a/a com/mojang/minecraft/block/Block 00034
 	b (I)I getTexture 00151
 		0 o side 00283
 	a (Lcom/mojang/minecraft/a/c;IIII)V renderSide 00152
-		0 o tesselator 00284
+		0 o tessellator 00284
 		1 o x 00285
 		2 o y 00286
 		3 o z 00287
 		4 o side 00288
 	b (Lcom/mojang/minecraft/a/c;IIII)V renderBackSide 00153
-		0 o tesselator 00289
+		0 o tessellator 00289
 		1 o x 00290
 		2 o y 00291
 		3 o z 00292
 		4 o side 00293
 	a (Lcom/mojang/minecraft/player/Player;Lcom/mojang/minecraft/a/c;IIII)V renderTexturelessSide 00154
 		0 o player 00294
-		1 o tesselator 00295
+		1 o tessellator 00295
 		2 o x 00296
 		3 o y 00297
 		4 o z 00298
@@ -1272,7 +1272,7 @@ com/mojang/minecraft/level/a/h com/mojang/minecraft/block/Sapling 00035
 		3 o z 00309
 		4 o random 00310
 	a (Lcom/mojang/minecraft/a/c;Lcom/mojang/minecraft/level/Level;IIII)Z render 00149
-		0 o tesselator 00271
+		0 o tessellator 00271
 		1 o world 00272
 		2 o layer 00273
 		3 o x 00274
@@ -1320,7 +1320,7 @@ com/mojang/minecraft/level/a/i com/mojang/minecraft/block/Liquid 00038
 		4 o layer 00281
 		5 o side 00282
 	a (Lcom/mojang/minecraft/a/c;IIII)V renderSide 00152
-		0 o tesselator 00284
+		0 o tessellator 00284
 		1 o x 00285
 		2 o y 00286
 		3 o z 00287

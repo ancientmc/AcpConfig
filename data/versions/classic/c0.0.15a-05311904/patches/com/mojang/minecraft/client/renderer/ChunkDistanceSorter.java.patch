@@ -1,0 +1,13 @@
+--- a/com/mojang/minecraft/client/renderer/ChunkDistanceSorter.java
++++ b/com/mojang/minecraft/client/renderer/ChunkDistanceSorter.java
+@@ -15,8 +15,7 @@
+     // $FF: bridge method
+     public final int compare(Object objOne, Object objTwo) {
+         RenderingChunk renderingchunk = (RenderingChunk) objOne;
+-        objTwo = (RenderingChunk) objTwo;
+-        objOne = renderingchunk;
+-        return objOne.compare(this.player) < objTwo.compare(this.player) ? -1 : 1;
++        RenderingChunk renderingchunk1 = (RenderingChunk) objTwo;
++        return renderingchunk.compare(this.player) < renderingchunk1.compare(this.player) ? -1 : 1;
+     }
+ }

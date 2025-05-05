@@ -143,7 +143,7 @@ m_00216,insideWorld
 m_00217,getGroundLevel
 m_00218,getSeaLevel
 m_00219,isLiquid
-m_00220,addCoordinateForTicking
+m_00220,addBlockForTicking
 m_00221,entityOutsideBox
 m_00222,isSolidWithOffset
 m_00223,isSolid
@@ -193,6 +193,6 @@ m_00287,update
 m_00288,teleport
 m_00289,updatePosition
 m_00290,updateRotation
-m_00293,m_00293
-m_00294,m_00294
-m_00295,m_00295
+m_00293,run
+m_00294,throwConnectionError
+m_00295,connected

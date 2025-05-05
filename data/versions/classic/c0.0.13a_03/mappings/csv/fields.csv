@@ -88,7 +88,7 @@ f_00086,dirty
 f_00087,renderList
 f_00088,visible
 f_00089,rendered
-f_00090,tesselator
+f_00090,tessellator
 f_00091,updateCount
 f_00092,updateCounter
 f_00093,player
@@ -131,7 +131,7 @@ f_00129,textured
 f_00130,bufferIndex
 f_00131,addedVertices
 f_00132,colorDisabled
-f_00133,tesselator
+f_00133,tessellator
 f_00134,sides
 f_00135,frustrum
 f_00136,projectionBuffer
@@ -214,7 +214,7 @@ f_00212,minZ
 f_00213,maxX
 f_00214,maxY
 f_00215,maxZ
-f_00216,BLOCK_REGISTRY
+f_00216,BLOCKS
 f_00217,TICKING_BLOCK_INDEX
 f_00218,STONE
 f_00219,GRASS_BLOCK

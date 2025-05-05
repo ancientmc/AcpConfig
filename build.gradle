@@ -50,6 +50,7 @@ subprojects {
         forgeart
         mcinjector
         fernflower
+        vineflower
     }
 
     dependencies {
@@ -59,6 +60,7 @@ subprojects {
         forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
         mcinjector 'de.oceanlabs.mcp:mcinjector:4.1-am'
         fernflower 'com.ancientmc:fernflower:1.0'
+        vineflower 'org.vineflower:vineflower:1.11.1'
     }
 
     tasks.register('downloadJson', Download) {
@@ -89,7 +91,7 @@ subprojects {
         dependsOn downloadClient
         mainClass = 'net.neoforged.installertools.ConsoleTool'
         classpath = files(project.configurations.named('inheritance'))
-        args('--task', 'EXTRACT_INHERITANCE', '--input', Paths.BASE_JAR, '--output', Paths.INHERITANCE)
+        args('--task', 'EXTRACT_INHERITANCE', '--input', Paths.SLIM_JAR, '--output', Paths.INHERITANCE)
     }
 
     // Only generate if the version to update is radically different than the previous one.
@@ -162,7 +164,7 @@ subprojects {
         dependsOn (applyCsvs, exportStats, mcinject)
         mainClass = 'net.neoforged.art.Main'
         classpath = files(project.configurations.named('forgeart'))
-        args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix', '--strip-sigs')
+        args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix=JAVA')
     }
 
     tasks.register('decompile', JavaExec) {
@@ -232,6 +234,7 @@ subprojects {
     }
 
     tasks.register('runClient', JavaExec) {
+        dependsOn !file(Paths.BUILT_JAR).exists() ? buildJar : [:]
         mainClass = 'acp.client.Start'
         classpath = files(Paths.BUILT_JAR)
         systemProperty 'java.library.path', Paths.DIR_NATIVES

@@ -146,7 +146,7 @@ m_00216,insideWorld
 m_00217,getGroundLevel
 m_00218,getSeaLevel
 m_00219,isLiquid
-m_00220,addCoordinateForTicking
+m_00220,addBlockForTicking
 m_00221,entityOutsideBox
 m_00222,isSolidWithOffset
 m_00223,isSolid
