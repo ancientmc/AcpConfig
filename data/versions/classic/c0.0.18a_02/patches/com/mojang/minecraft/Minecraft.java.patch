@@ -1,0 +1,54 @@
+--- a/com/mojang/minecraft/Minecraft.java
++++ b/com/mojang/minecraft/Minecraft.java
+@@ -173,7 +173,7 @@
+     }
+ 
+     public final void close() {
+-        if (!(this = this).isApplet) {
++        if (!this.isApplet) {
+             try {
+                 WorldManager.writeWorldData(this.world, new FileOutputStream(new File("level.dat")));
+             } catch (Exception exception) {
+@@ -866,12 +866,12 @@
+         }
+ 
+         setGlError("Update chunks");
+-        int l1 = this.world.isSolidWithOffset(this.player.x, this.player.y, this.player.z, 0.1F);
++        boolean flag = this.world.isSolidWithOffset(this.player.x, this.player.y, this.player.z, 0.1F);
+         this.renderFog();
+         GL11.glEnable(2912);
+         this.worldRenderer.render(this.player, 0);
+-        if (l1) {
+-            l1 = (int) this.player.x;
++        if (flag) {
++            int l1 = (int) this.player.x;
+             k2 = (int) this.player.y;
+             int i3 = (int) this.player.z;
+ 
+@@ -973,14 +973,14 @@
+         this.fontRenderer.render("0.0.18a_02", 2, 2, 16777215);
+         this.fontRenderer.render(this.debugText, 2, 12, 16777215);
+         k = 10;
+-        int l = 0;
++        boolean flag = false;
+         if (this.currentScreen instanceof ChatScreen) {
+             k = 20;
+-            l = 1;
++            flag = true;
+         }
+ 
+         for (int i1 = 0; i1 < this.chatMessages.size() && i1 < k; ++i1) {
+-            if (((ChatLine) this.chatMessages.get(i1)).counter < 200 || l) {
++            if (((ChatLine) this.chatMessages.get(i1)).counter < 200 || flag) {
+                 this.fontRenderer.render(((ChatLine) this.chatMessages.get(i1)).message, 2, j - 8 - (i1 << 3) - 16, 16777215);
+             }
+         }
+@@ -1028,7 +1028,7 @@
+ 
+             for (int j1 = 0; j1 < arraylist.size(); ++j1) {
+                 k = k1 + j1 % 2 * 120 - 120;
+-                l = i - 64 + (j1 / 2 << 3);
++                int l = i - 64 + (j1 / 2 << 3);
+                 this.fontRenderer.renderShadowless((String) arraylist.get(j1), k, l, 16777215);
+             }
+         }
