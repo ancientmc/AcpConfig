@@ -43,7 +43,7 @@ com/mojang/minecraft/src/c_00042,com/mojang/minecraft/world/gen/noise/OctaveNois
 com/mojang/minecraft/src/c_00043,com/mojang/minecraft/world/gen/noise/NoiseGenerator
 com/mojang/minecraft/src/c_00044,com/mojang/minecraft/world/gen/noise/PerlinNoiseGenerator
 com/mojang/minecraft/src/c_00045,com/mojang/minecraft/client/gui/screen/WorldSizeSelect
-com/mojang/minecraft/src/c_00046,com/mojang/minecraft/world/BlockPos
+com/mojang/minecraft/src/c_00046,com/mojang/minecraft/world/NextTickBlock
 com/mojang/minecraft/src/c_00047,com/mojang/minecraft/client/input/Inputs
 com/mojang/minecraft/src/c_00048,com/mojang/minecraft/client/input/CodeInputs
 com/mojang/minecraft/src/c_00049,com/mojang/minecraft/block/Leaves

@@ -1,0 +1,20 @@
+--- a/com/mojang/minecraft/client/renderer/HudRenderer.java
++++ b/com/mojang/minecraft/client/renderer/HudRenderer.java
+@@ -80,14 +80,14 @@
+         fontrenderer.render("0.0.19a_04", 2, 2, 16777215);
+         fontrenderer.render(this.minecraft.debugText, 2, 12, 16777215);
+         byte b0 = 10;
+-        i = 0;
++        boolean flag = false;
+         if (this.minecraft.currentScreen instanceof ChatScreen) {
+             b0 = 20;
+-            i = 1;
++            flag = true;
+         }
+ 
+         for (int l1 = 0; l1 < this.chatMessages.size() && l1 < b0; ++l1) {
+-            if (((ChatLine) this.chatMessages.get(l1)).counter < 200 || i) {
++            if (((ChatLine) this.chatMessages.get(l1)).counter < 200 || flag) {
+                 fontrenderer.render(((ChatLine) this.chatMessages.get(l1)).message, 2, this.scaledHeight - 8 - (l1 << 3) - 16, 16777215);
+             }
+         }

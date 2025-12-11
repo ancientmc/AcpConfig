@@ -11,7 +11,7 @@ com/mojang/minecraft/b com/mojang/minecraft/util/TickTimer 00001
 	c ticks 00003
 	d partialTicks 00004
 	e timeScale 00005
-	f fps 00006
+	f passedTime 00006
 	<init> (F)V <init> 00001
 		0 o tps 00001
 com/mojang/minecraft/c com/mojang/minecraft/Minecraft 00003
@@ -620,7 +620,7 @@ com/mojang/minecraft/level/a com/mojang/minecraft/world/WorldManager 00009
 	a (Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V writeWorldData 00050
 		0 o world 00062
 		1 o out 00063
-com/mojang/minecraft/level/b com/mojang/minecraft/world/BlockPos 00046
+com/mojang/minecraft/level/b com/mojang/minecraft/world/NextTickBlock 00046
 	a x 00268
 	b y 00269
 	c z 00270
@@ -649,8 +649,8 @@ com/mojang/minecraft/level/Level com/mojang/minecraft/world/World 00014
 	d randomInt 00114
 	e positions 00277
 	entities entities 00278
-	unprocessed unprocessed 00279
-	tickCount tickedBlocks 00118
+	unprocessed tickedBlocks 00279
+	tickCount unprocessed 00118
 	<init> ()V <init> 00071
 	initTransient ()V setTransient 00205
 	setData (III[B)V set 00072

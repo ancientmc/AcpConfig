@@ -5,7 +5,7 @@ com/mojang/minecraft/a com/mojang/minecraft/util/TickTimer 00001
 	c ticks 00003
 	d partialTicks 00004
 	e timeScale 00005
-	f fps 00006
+	f passedTime 00006
 	<init> (F)V <init> 00001
 		0 o tps 00001
 com/mojang/minecraft/b com/mojang/minecraft/MinecraftAppletCanvas 00002
@@ -296,7 +296,7 @@ com/mojang/minecraft/a/f com/mojang/minecraft/world/World 00014
 	h name 00115
 	i username 00116
 	j time 00117
-	k tickedBlocks 00118
+	k unprocessed 00118
 	<init> ()V <init> 00071
 	a (III[B)V set 00072
 		0 o xSize 00096

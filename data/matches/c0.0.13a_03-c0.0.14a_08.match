@@ -446,7 +446,7 @@ c	Lcom/mojang/minecraft/a/f;	Lcom/mojang/minecraft/level/Level;
 	f	h;;Ljava/lang/String;	name;;Ljava/lang/String;
 	f	i;;Ljava/lang/String;	creator;;Ljava/lang/String;
 	f	j;;J	createTime;;J
-	f	k;;I	tickCount;;I
+	f	k;;I	unprocessed;;I
 c	Lcom/mojang/minecraft/a;	Lcom/mojang/minecraft/b;
 	m	<init>(F)V	<init>(F)V
 		ma	0	0

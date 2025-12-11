@@ -1,0 +1,10 @@
+--- a/com/mojang/minecraft/entity/player/ServerPlayer.java
++++ b/com/mojang/minecraft/entity/player/ServerPlayer.java
+@@ -156,6 +156,7 @@
+             this.bodyYawOffset -= 360.0F;
+         }
+ 
++        float f6;
+         for (f6 = this.bodyYawOffset + (this.bodyYaw - this.bodyYawOffset) * partialTicks; this.interpolatedPitch - this.pitch < -180.0F; this.interpolatedPitch += 360.0F) {
+         }
+ 

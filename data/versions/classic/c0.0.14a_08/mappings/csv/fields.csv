@@ -4,7 +4,7 @@ f_00002,lastTime
 f_00003,ticks
 f_00004,partialTicks
 f_00005,timeScale
-f_00006,fps
+f_00006,passedTime
 f_00007,applet
 f_00008,fullscreen
 f_00009,width
@@ -107,7 +107,7 @@ f_00114,randomInt
 f_00115,name
 f_00116,username
 f_00117,time
-f_00118,tickedBlocks
+f_00118,unprocessed
 f_00119,idMap
 f_00120,buffer
 f_00121,bufferArray
@@ -266,7 +266,7 @@ f_00275,zSpawn
 f_00276,spawnRotation
 f_00277,positions
 f_00278,entities
-f_00279,unprocessed
+f_00279,tickedBlocks
 f_00280,serialVersionUID
 f_00281,strafeOffset
 f_00282,forwardOffset
