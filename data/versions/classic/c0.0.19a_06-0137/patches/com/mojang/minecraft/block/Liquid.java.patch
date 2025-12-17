@@ -1,0 +1,10 @@
+--- a/com/mojang/minecraft/block/Liquid.java
++++ b/com/mojang/minecraft/block/Liquid.java
+@@ -41,7 +41,6 @@
+         y = y;
+         x = x;
+         world = world;
+-        this = this;
+         boolean flag2 = false;
+ 
+         boolean flag;
