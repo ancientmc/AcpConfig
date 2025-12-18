@@ -1,0 +1,10 @@
+--- a/com/mojang/minecraft/entity/player/DownloadPlayerSkin.java
++++ b/com/mojang/minecraft/entity/player/DownloadPlayerSkin.java
+@@ -10,7 +10,6 @@
+ 
+     DownloadPlayerSkin(ServerPlayer player) {
+         this.player = player;
+-        super();
+     }
+ 
+     public final void run() {

@@ -1,6 +1,6 @@
 --- a/com/mojang/minecraft/Minecraft.java
 +++ b/com/mojang/minecraft/Minecraft.java
-@@ -177,7 +177,7 @@
+@@ -176,7 +176,7 @@
      }
  
      public final void close() {
@@ -9,7 +9,7 @@
              try {
                  WorldManager.writeWorldData(this.world, new FileOutputStream(new File("level.dat")));
              } catch (Exception exception) {
-@@ -902,12 +902,12 @@
+@@ -908,12 +908,12 @@
          }
  
          setGlError("Update chunks");

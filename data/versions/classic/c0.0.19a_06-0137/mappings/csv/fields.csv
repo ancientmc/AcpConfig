@@ -382,8 +382,8 @@ f_00397,scaledHeight
 f_00398,online
 f_00399,connected
 f_00400,tickCount
-f_00401,f_00401
-f_00402,f_00402
+f_00401,currentState
+f_00402,nextState
 f_00403,f_00403
 f_00404,f_00404
 f_00405,f_00405

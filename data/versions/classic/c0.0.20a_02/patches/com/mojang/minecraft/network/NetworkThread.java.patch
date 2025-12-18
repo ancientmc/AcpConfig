@@ -1,0 +1,10 @@
+--- a/com/mojang/minecraft/network/NetworkThread.java
++++ b/com/mojang/minecraft/network/NetworkThread.java
+@@ -26,7 +26,6 @@
+         this.username = username;
+         this.mpPass = mpPass;
+         this.minecraft = minecraft;
+-        super();
+     }
+ 
+     public final void run() {

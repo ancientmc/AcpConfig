@@ -607,7 +607,7 @@ com/mojang/minecraft/b/k com/mojang/minecraft/client/renderer/FontRenderer 00024
 		4 o shadow 00195
 	a (Ljava/lang/String;)I getWidth 00123
 		0 o text 00196
-com/mojang/minecraft/character/a com/mojang/minecraft/client/model/HumanModel 00029
+com/mojang/minecraft/character/a com/mojang/minecraft/client/model/HumanoidModel 00029
 	a head 00196
 	b torso 00197
 	c rightArm 00198
@@ -688,7 +688,7 @@ com/mojang/minecraft/character/e com/mojang/minecraft/client/model/Vertex 00031
 		0 o vec 00242
 		1 o u 00243
 		2 o v 00244
-com/mojang/minecraft/character/Zombie com/mojang/minecraft/entity/passive/Human 00027
+com/mojang/minecraft/character/Zombie com/mojang/minecraft/entity/passive/Mob 00027
 	serialVersionUID serialVersionUID 00267
 	a model 00182
 	rot rotation 00178
@@ -1144,15 +1144,15 @@ com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 000
 		0 o code 00470
 		1 o active 00471
 com/mojang/minecraft/a/a/a com/mojang/minecraft/client/renderer/animation/LavaTextureAnimation 00065
-	c f_00401 00401
-	d f_00402 00402
+	c currentState 00401
+	d nextState 00402
 	e f_00403 00403
 	f f_00404 00404
 	<init> ()V <init> 00309
 	a ()V onTick 00312
 com/mojang/minecraft/a/a/b com/mojang/minecraft/client/renderer/animation/WaterTextureAnimation 00066
-	c f_00405 00405
-	d f_00406 00406
+	c currentState 00405
+	d nextState 00406
 	e f_00407 00407
 	f f_00408 00408
 	g tickCounter 00409
@@ -1376,7 +1376,7 @@ com/mojang/minecraft/level/a/g com/mojang/minecraft/block/GrassBlock 00039
 		2 o y 00308
 		3 o z 00309
 		4 o random 00310
-com/mojang/minecraft/level/a/h com/mojang/minecraft/block/Sapling 00035
+com/mojang/minecraft/level/a/h com/mojang/minecraft/block/Plant 00035
 	<init> (I)V <init> 00165
 		0 o id 00321
 	a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V tick 00160

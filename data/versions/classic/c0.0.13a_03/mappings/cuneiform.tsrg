@@ -566,7 +566,7 @@ com/mojang/minecraft/d/b com/mojang/minecraft/entity/particle/Particle 00026
 		6 o motionZ 00208
 		7 o texture 00209
 	a ()V onTick 00031
-com/mojang/minecraft/e/a com/mojang/minecraft/entity/passive/Human 00027
+com/mojang/minecraft/e/a com/mojang/minecraft/entity/passive/Mob 00027
 	a rotation 00178
 	b timeOffset 00179
 	c speed 00180
@@ -611,7 +611,7 @@ com/mojang/minecraft/e/b com/mojang/minecraft/client/model/ModelPart 00028
 		1 o y 00224
 		2 o z 00225
 	a ()V render 00132
-com/mojang/minecraft/e/c com/mojang/minecraft/client/model/HumanModel 00029
+com/mojang/minecraft/e/c com/mojang/minecraft/client/model/HumanoidModel 00029
 	a head 00196
 	b torso 00197
 	c rightArm 00198
@@ -782,7 +782,7 @@ com/mojang/minecraft/a/a/a com/mojang/minecraft/block/Block 00034
 		3 o z 00319
 		4 o neighbor 00320
 	<clinit> ()V <clinit> 00164
-com/mojang/minecraft/a/a/b com/mojang/minecraft/block/Sapling 00035
+com/mojang/minecraft/a/a/b com/mojang/minecraft/block/Plant 00035
 	<init> (I)V <init> 00165
 		0 o id 00321
 	a (Lcom/mojang/minecraft/a/f;IIILjava/util/Random;)V tick 00160

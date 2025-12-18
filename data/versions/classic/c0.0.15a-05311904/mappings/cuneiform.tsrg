@@ -535,7 +535,7 @@ com/mojang/minecraft/b/h com/mojang/minecraft/client/renderer/FontRenderer 00024
 		4 o shadow 00195
 	a (Ljava/lang/String;)I getWidth 00123
 		0 o text 00196
-com/mojang/minecraft/character/a com/mojang/minecraft/client/model/HumanModel 00029
+com/mojang/minecraft/character/a com/mojang/minecraft/client/model/HumanoidModel 00029
 	a head 00196
 	b torso 00197
 	c rightArm 00198
@@ -613,7 +613,7 @@ com/mojang/minecraft/character/e com/mojang/minecraft/client/model/Vertex 00031
 		0 o vec 00242
 		1 o u 00243
 		2 o v 00244
-com/mojang/minecraft/character/Zombie com/mojang/minecraft/entity/passive/Human 00027
+com/mojang/minecraft/character/Zombie com/mojang/minecraft/entity/passive/Mob 00027
 	serialVersionUID serialVersionUID 00267
 	a model 00182
 	rot rotation 00178
@@ -1150,7 +1150,7 @@ com/mojang/minecraft/level/a/g com/mojang/minecraft/block/GrassBlock 00039
 		2 o y 00308
 		3 o z 00309
 		4 o random 00310
-com/mojang/minecraft/level/a/h com/mojang/minecraft/block/Sapling 00035
+com/mojang/minecraft/level/a/h com/mojang/minecraft/block/Plant 00035
 	<init> (I)V <init> 00165
 		0 o id 00321
 	a (Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V tick 00160

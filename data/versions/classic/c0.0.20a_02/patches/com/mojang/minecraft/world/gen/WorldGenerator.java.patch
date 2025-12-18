@@ -1,0 +1,130 @@
+--- a/com/mojang/minecraft/world/gen/WorldGenerator.java
++++ b/com/mojang/minecraft/world/gen/WorldGenerator.java
+@@ -223,16 +223,16 @@
+ 
+             for (int i1 = 0; i1 < j; ++i1) {
+                 boolean flag = octavenoisegenerator.get((double) l, (double) i1) > 8.0D;
+-                int j1 = octavenoisegenerator1.get((double) l, (double) i1) > 12.0D;
++                boolean flag1 = octavenoisegenerator1.get((double) l, (double) i1) > 12.0D;
+                 int k1;
+                 int l1 = ((k1 = worldMap[l + i1 * i]) * this.zSize + i1) * this.xSize + l;
+                 int i2;
+-                if (((i2 = this.blocks[((k1 + 1) * this.zSize + i1) * this.xSize + l] & 255) == Block.FLOWING_WATER.id || i2 == Block.WATER.id) && k1 <= k / 2 - 1 && j1) {
++                if (((i2 = this.blocks[((k1 + 1) * this.zSize + i1) * this.xSize + l] & 255) == Block.FLOWING_WATER.id || i2 == Block.WATER.id) && k1 <= k / 2 - 1 && flag1) {
+                     this.blocks[l1] = (byte) Block.GRAVEL.id;
+                 }
+ 
+                 if (i2 == 0) {
+-                    j1 = Block.GRASS_BLOCK.id;
++                    int j1 = Block.GRASS_BLOCK.id;
+                     if (k1 <= k / 2 - 1 && flag) {
+                         j1 = Block.SAND.id;
+                     }
+@@ -263,7 +263,7 @@
+                     if (k1 >= 0 && l1 >= 0 && k1 < this.xSize && l1 < this.zSize) {
+                         int j2 = worldMap[k1 + l1 * i] + 1;
+                         int k2 = this.random.nextInt(3) + 4;
+-                        int l2 = 1;
++                        boolean flag = true;
+ 
+                         for (int i3 = j2; i3 <= j2 + 1 + k2; ++i3) {
+                             byte b0 = 1;
+@@ -271,20 +271,20 @@
+                                 b0 = 2;
+                             }
+ 
+-                            for (int j3 = k1 - b0; j3 <= k1 + b0 && l2; ++j3) {
+-                                for (int k3 = l1 - b0; k3 <= l1 + b0 && l2; ++k3) {
++                            for (int j3 = k1 - b0; j3 <= k1 + b0 && flag; ++j3) {
++                                for (int k3 = l1 - b0; k3 <= l1 + b0 && flag; ++k3) {
+                                     if (j3 >= 0 && i3 >= 0 && k3 >= 0 && j3 < this.xSize && i3 < this.depth && k3 < this.zSize) {
+                                         if ((this.blocks[(i3 * this.zSize + k3) * this.xSize + j3] & 255) != 0) {
+-                                            l2 = 0;
++                                            flag = false;
+                                         }
+                                     } else {
+-                                        l2 = 0;
++                                        flag = false;
+                                     }
+                                 }
+                             }
+                         }
+ 
+-                        if (l2) {
++                        if (flag) {
+                             int k4 = (j2 * this.zSize + l1) * this.xSize + k1;
+                             if ((this.blocks[((j2 - 1) * this.zSize + l1) * this.xSize + k1] & 255) == Block.GRASS_BLOCK.id && j2 < this.depth - k2 - 1) {
+                                 this.blocks[k4 - 1 * this.xSize * this.zSize] = (byte) Block.DIRT.id;
+@@ -293,7 +293,7 @@
+                                     int k5 = i5 - (j2 + k2);
+                                     int l3 = 1 - k5 / 2;
+ 
+-                                    for (l2 = k1 - l3; l2 <= k1 + l3; ++l2) {
++                                    for (int l2 = k1 - l3; l2 <= k1 + l3; ++l2) {
+                                         int l4 = l2 - k1;
+ 
+                                         for (int i4 = l1 - l3; i4 <= l1 + l3; ++i4) {
+@@ -442,16 +442,16 @@
+                 System.out.println("hoooly fuck");
+             }
+ 
+-            j2 = 0;
+-            k2 = 0;
++            boolean flag3 = false;
++            boolean flag4 = false;
+             boolean flag = false;
+             l1 += (long) (i2 - k1);
+ 
+-            for (k1 = k1; k1 < i2; ++k1) {
++            for (int k3 = k1; k1 < i2; ++k1) {
+                 this.blocks[y] = (byte)speed;
+                 if (z > 0) {
+                     boolean flag1;
+-                    if ((flag1 = this.blocks[y - this.xSize] == 0) && !j2) {
++                    if ((flag1 = this.blocks[y - this.xSize] == 0) && !flag3) {
+                         if (i == this.coordinates.length) {
+                             arraylist.add(this.coordinates);
+                             this.coordinates = new int[1048576];
+@@ -461,12 +461,12 @@
+                         this.coordinates[i++] = y - this.xSize;
+                     }
+ 
+-                    j2 = flag1;
++                    flag3 = flag1;
+                 }
+ 
+                 if (z < this.zSize - 1) {
+                     boolean flag2;
+-                    if ((flag2 = this.blocks[y + this.xSize] == 0) && !k2) {
++                    if ((flag2 = this.blocks[y + this.xSize] == 0) && !flag4) {
+                         if (i == this.coordinates.length) {
+                             arraylist.add(this.coordinates);
+                             this.coordinates = new int[1048576];
+@@ -476,7 +476,7 @@
+                         this.coordinates[i++] = y + this.xSize;
+                     }
+ 
+-                    k2 = flag2;
++                    flag4 = flag2;
+                 }
+ 
+                 if (j1 > 0) {
+@@ -485,7 +485,8 @@
+                         this.blocks[y - x] = (byte) Block.STONE.id;
+                     }
+ 
+-                    if ((b0 = b0 == 0) && !flag) {
++                    boolean flag5;
++                    if ((flag5 = b0 == 0) && !flag) {
+                         if (i == this.coordinates.length) {
+                             arraylist.add(this.coordinates);
+                             this.coordinates = new int[1048576];
+@@ -495,7 +496,7 @@
+                         this.coordinates[i++] = y - x;
+                     }
+ 
+-                    flag = (boolean)b0;
++                    flag = flag5;
+                 }
+ 
+                 ++y;
