@@ -465,7 +465,7 @@ com/mojang/minecraft/b/c com/mojang/minecraft/client/gui/screen/ChatScreen 00058
 	a (II)V render 00103
 		0 o x 00154
 		1 o y 00155
-com/mojang/minecraft/b/d com/mojang/minecraft/client/gui/screen/SelectBlockScreen 00070
+com/mojang/minecraft/b/d com/mojang/minecraft/client/gui/screen/InventoryScreen 00070
 	<init> ()V <init> 00319
 	b (II)I getSlot 00320
 		0 o x 00632
@@ -473,7 +473,7 @@ com/mojang/minecraft/b/d com/mojang/minecraft/client/gui/screen/SelectBlockScree
 	a (II)V render 00103
 		0 o x 00154
 		1 o y 00155
-	a (III)V updateHotbar 00321
+	a (III)V updateInventory 00321
 		0 o x 00634
 		1 o y 00635
 		2 o button 00636
@@ -497,7 +497,7 @@ com/mojang/minecraft/b/f com/mojang/minecraft/client/gui/screen/Screen 00021
 	a (CI)V keyEvent 00104
 		0 o key 00156
 		1 o code 00157
-	a (III)V updateHotbar 00321
+	a (III)V updateInventory 00321
 		0 o x 00634
 		1 o y 00635
 		2 o button 00636
@@ -1155,7 +1155,7 @@ com/mojang/minecraft/player/b com/mojang/minecraft/client/input/CodeInputs 00048
 		1 o active 00468
 	b ()V resetActiveInputs 00237
 	a ()V updatePlayerMovements 00236
-com/mojang/minecraft/player/c com/mojang/minecraft/client/gui/hud/Hotbar 00071
+com/mojang/minecraft/player/c com/mojang/minecraft/world/inventory/Inventory 00071
 	a slots 00416
 	b selectedSlot 00417
 	<init> ()V <init> 00324

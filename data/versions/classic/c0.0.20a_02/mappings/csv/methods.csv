@@ -211,7 +211,7 @@ m_00314,onDestruction
 m_00317,isSpongeNonadjacent
 m_00318,enableLighting
 m_00320,getSlot
-m_00321,updateHotbar
+m_00321,updateInventory
 m_00322,subtract
 m_00323,normalize
 m_00325,getSelectedSlot

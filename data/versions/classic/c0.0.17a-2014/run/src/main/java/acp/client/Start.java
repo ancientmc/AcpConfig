@@ -48,6 +48,7 @@ public class Start {
         Thread thread = new Thread(minecraft, "Minecraft main thread");
         thread.setPriority(10);
         frame.setVisible(true);
+        frame.setResizable(false);
         frame.addWindowListener(new MinecraftWindowListener(minecraft, thread));
         thread.start();
     }

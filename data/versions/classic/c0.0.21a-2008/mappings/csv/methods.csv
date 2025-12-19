@@ -5,7 +5,6 @@ m_00009,close
 m_00011,lockMouse
 m_00012,releaseMouse
 m_00013,tick
-m_00014,setCamera
 m_00015,render
 m_00016,renderFog
 m_00017,getFogColorBuffer
@@ -14,7 +13,6 @@ m_00019,displayWorldSubStatus
 m_00020,setWorldStatusProgress
 m_00021,generateWorld
 m_00022,loadWorld
-m_00026,distanceToBlock
 m_00028,resetPosition
 m_00029,setHitbox
 m_00030,setPosition
@@ -73,7 +71,7 @@ m_00108,renderElementColor
 m_00109,renderElementGradient
 m_00110,renderCenteredText
 m_00111,renderText
-m_00112,update
+m_00112,updateMouse
 m_00113,updateCounter
 m_00114,close
 m_00117,setWorlds
@@ -97,11 +95,9 @@ m_00151,getTexture
 m_00152,renderSide
 m_00153,renderBackSide
 m_00154,renderTexturelessSide
-m_00155,setBlockBox
 m_00156,setBox
 m_00157,isOpaque
 m_00158,isSolid
-m_00159,isTicking
 m_00160,tick
 m_00161,destroy
 m_00162,getLiquidType
@@ -163,7 +159,6 @@ m_00237,resetActiveInputs
 m_00238,setInput
 m_00240,resetActiveInputs
 m_00241,setInput
-m_00242,cullSide
 m_00243,onPlacement
 m_00246,fall
 m_00248,generateSandBlobs
@@ -217,3 +212,5 @@ m_00323,normalize
 m_00325,getSelectedSlot
 m_00326,getSlot
 m_00327,setSlot
+m_00328,updateKeyboard
+m_00329,clip

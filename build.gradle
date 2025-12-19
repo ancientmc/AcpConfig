@@ -23,20 +23,31 @@ dependencies {
     implementation 'net.minecraftforge:srgutils:0.5.4'
 }
 
-// Java 8 required for compiling and running old Minecraft.
-tasks.withType(JavaCompile).configureEach {
-    javaCompiler = javaToolchains.compilerFor {
-        languageVersion = JavaLanguageVersion.of(8)
-    }
-}
-
 tasks.register('easyUpdate', EasyRun) { runName = 'update' }
 tasks.register('easyIntermediate', EasyRun) { runName = 'intermediate' }
 tasks.register('easyUnzip', EasyRun) { runName = 'unzip' }
 tasks.register('easyLaunch', EasyRun) { runName = 'launch' }
 tasks.register('easyPublish', EasyRun) { runName = 'publish' }
 
+publishing {
+    repositories {
+        maven {
+            name = 'ancientmc-maven'
+            url = '../ancientmc-maven'
+        }
+    }
+}
+
 subprojects {
+    apply plugin: 'java-library'
+
+    // Java 8 required for compiling and running old Minecraft.
+    tasks.withType(JavaCompile).configureEach {
+        javaCompiler = javaToolchains.compilerFor {
+            languageVersion = JavaLanguageVersion.of(8)
+        }
+    }
+
     repositories {
         mavenCentral()
         maven { url = 'https://maven.neoforged.net' }
@@ -234,6 +245,9 @@ subprojects {
     }
 
     tasks.register('runClient', JavaExec) {
+        javaLauncher = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(8)
+        }
         dependsOn !file(Paths.BUILT_JAR).exists() ? buildJar : [:]
         mainClass = 'acp.client.Start'
         classpath = files(Paths.BUILT_JAR)
@@ -277,12 +291,6 @@ subprojects {
                         url = 'https://github.com/moist-mason'
                     }
                 }
-            }
-        }
-        repositories {
-            maven {
-                name = 'ancientmc-maven'
-                url = '../ancientmc-maven'
             }
         }
     }

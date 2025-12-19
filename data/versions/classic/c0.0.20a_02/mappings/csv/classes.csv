@@ -67,5 +67,5 @@ com/mojang/minecraft/src/c_00066,com/mojang/minecraft/client/renderer/animation/
 com/mojang/minecraft/src/c_00067,com/mojang/minecraft/client/renderer/animation/TextureAnimation
 com/mojang/minecraft/src/c_00068,com/mojang/minecraft/block/Sponge
 com/mojang/minecraft/src/c_00069,com/mojang/minecraft/block/Glass
-com/mojang/minecraft/src/c_00070,com/mojang/minecraft/client/gui/screen/SelectBlockScreen
-com/mojang/minecraft/src/c_00071,com/mojang/minecraft/client/gui/hud/Hotbar
+com/mojang/minecraft/src/c_00070,com/mojang/minecraft/client/gui/screen/InventoryScreen
+com/mojang/minecraft/src/c_00071,com/mojang/minecraft/world/inventory/Inventory
