@@ -1,0 +1,6 @@
+What is this?
+
+The first versions of Minecraft with sound used the J-Ogg library by Tor-Einar Jarnbjo. For whatever reason, Notch seems to have not only heavily modified the files from this library, but also obfuscated them. 
+
+Because of that I had to determine what classes, methods, and fields he kept from the original library. To do this I compared the jogg files found in c0.0.22a_05's JAR and matched them with a 2003 build of the library I found on the Internet Archive's Wayback Machine (Jarnbjo's website is no longer active). 
+

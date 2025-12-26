@@ -24,7 +24,7 @@ com/mojang/minecraft/a com/mojang/minecraft/client/UserSession 00004
 	<init> (Ljava/lang/String;Ljava/lang/String;)V <init> 00023
 		0 o username 00021
 		1 o sessionId 00022
-com/mojang/minecraft/b com/mojang/minecraft/client/gui/hud/ChatLine 00057
+com/mojang/minecraft/b com/mojang/minecraft/client/gui/ChatLine 00057
 	a message 00337
 	b counter 00338
 	<init> (Ljava/lang/String;)V <init> 00273

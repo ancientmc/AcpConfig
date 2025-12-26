@@ -27,7 +27,7 @@ com/mojang/minecraft/a com/mojang/minecraft/client/UserSession 00004
 		0 o username 00021
 		1 o sessionId 00022
 	<clinit> ()V <clinit> 00291
-com/mojang/minecraft/b com/mojang/minecraft/client/gui/hud/ChatLine 00057
+com/mojang/minecraft/b com/mojang/minecraft/client/gui/ChatLine 00057
 	a message 00337
 	b counter 00338
 	<init> (Ljava/lang/String;)V <init> 00273
@@ -414,7 +414,7 @@ com/mojang/minecraft/a/g com/mojang/minecraft/client/renderer/WorldRenderer 0001
 		3 o maxX 00093
 		4 o maxY 00094
 		5 o maxZ 00095
-com/mojang/minecraft/b/a com/mojang/minecraft/client/renderer/HudRenderer 00064
+com/mojang/minecraft/b/a com/mojang/minecraft/client/gui/Hud 00064
 	a chatMessages 00394
 	b minecraft 00395
 	c scaledWidth 00396

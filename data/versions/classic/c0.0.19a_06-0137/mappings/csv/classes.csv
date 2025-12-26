@@ -54,14 +54,14 @@ com/mojang/minecraft/src/c_00053,com/mojang/minecraft/network/packet/Packet
 com/mojang/minecraft/src/c_00054,com/mojang/minecraft/network/NetworkManager
 com/mojang/minecraft/src/c_00055,com/mojang/minecraft/entity/player/ServerPlayer
 com/mojang/minecraft/src/c_00056,com/mojang/minecraft/block/material/Fluid
-com/mojang/minecraft/src/c_00057,com/mojang/minecraft/client/gui/hud/ChatLine
+com/mojang/minecraft/src/c_00057,com/mojang/minecraft/client/gui/ChatLine
 com/mojang/minecraft/src/c_00058,com/mojang/minecraft/client/gui/screen/ChatScreen
 com/mojang/minecraft/src/c_00059,com/mojang/minecraft/client/gui/screen/FailedConnectionScreen
 com/mojang/minecraft/src/c_00060,com/mojang/minecraft/entity/player/ServerPlayerUpdater
 com/mojang/minecraft/src/c_00061,com/mojang/minecraft/network/NetworkThread
 com/mojang/minecraft/src/c_00062,com/mojang/minecraft/util/StopGameException
 com/mojang/minecraft/src/c_00063,com/mojang/minecraft/entity/player/DownloadPlayerSkin
-com/mojang/minecraft/src/c_00064,com/mojang/minecraft/client/renderer/HudRenderer
+com/mojang/minecraft/src/c_00064,com/mojang/minecraft/client/gui/Hud
 com/mojang/minecraft/src/c_00065,com/mojang/minecraft/client/renderer/animation/LavaTextureAnimation
 com/mojang/minecraft/src/c_00066,com/mojang/minecraft/client/renderer/animation/WaterTextureAnimation
 com/mojang/minecraft/src/c_00067,com/mojang/minecraft/client/renderer/animation/TextureAnimation
