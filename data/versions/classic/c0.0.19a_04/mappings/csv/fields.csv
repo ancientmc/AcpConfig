@@ -350,7 +350,7 @@ f_00365,playerZ
 f_00366,bodyYaw
 f_00367,bodyYawOffset
 f_00368,username
-f_00369,BLOCK_IDS
+f_00369,BLOCKS
 f_00370,mpPass
 f_00371,playerModel
 f_00372,chunkRenderList
@@ -372,7 +372,7 @@ f_00387,lastTime
 f_00388,lastSync
 f_00389,lastHrSync
 f_00390,timeAdjustment
-f_00391,hudRenderer
+f_00391,hud
 f_00392,imageData
 f_00393,animations
 f_00394,chatMessages

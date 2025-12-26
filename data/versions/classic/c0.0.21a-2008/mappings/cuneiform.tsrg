@@ -19,7 +19,7 @@ com/mojang/a/a com/mojang/minecraft/network/SocketConnection 00052
 	a (Ljava/lang/Class;)Ljava/lang/Object; getDataType 00272
 		0 o typeClass 00533
 com/mojang/minecraft/a com/mojang/minecraft/client/UserSession 00004
-	a BLOCK_IDS 00369
+	a BLOCKS 00369
 	b username 00044
 	c sessionId 00045
 	d mpPass 00370
@@ -72,7 +72,7 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	m loadMapUser 00033
 	n loadMapId 00034
 	H robot 00251
-	I hudRenderer 00391
+	I hud 00391
 	o networkManager 00305
 	p hostName 00340
 	q port 00341
@@ -1165,7 +1165,7 @@ com/mojang/minecraft/player/c com/mojang/minecraft/world/inventory/Inventory 000
 		0 o block 00641
 com/mojang/minecraft/player/Player com/mojang/minecraft/entity/player/Player 00005
 	input inputs 00286
-	inventory hotbar 00418
+	inventory inventory 00418
 	userType playerType 00419
 	<init> (Lcom/mojang/minecraft/level/Level;Lcom/mojang/minecraft/player/a;)V <init> 00024
 		0 o world 00023

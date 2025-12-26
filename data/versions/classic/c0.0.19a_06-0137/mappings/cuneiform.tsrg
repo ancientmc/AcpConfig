@@ -19,7 +19,7 @@ com/mojang/a/a com/mojang/minecraft/network/SocketConnection 00052
 	a (Ljava/lang/Class;)Ljava/lang/Object; getDataType 00272
 		0 o typeClass 00533
 com/mojang/minecraft/a com/mojang/minecraft/client/UserSession 00004
-	a BLOCK_IDS 00369
+	a BLOCKS 00369
 	b username 00044
 	c sessionId 00045
 	d mpPass 00370
@@ -73,7 +73,7 @@ com/mojang/minecraft/d com/mojang/minecraft/Minecraft 00003
 	n loadMapUser 00033
 	o loadMapId 00034
 	I robot 00251
-	J hudRenderer 00391
+	J hud 00391
 	p networkManager 00305
 	q hostName 00340
 	r port 00341
