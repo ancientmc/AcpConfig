@@ -94,7 +94,7 @@ public abstract class Tsrg2Csv extends DefaultTask {
             List<CsvEntry> entries = new ArrayList<>();
             data.forEach(e -> entries.add(new CsvEntry(e.getOriginal(), e.getMapped())));
             return entries.stream().sorted(new IntermediateComparator())
-                    .filter(e -> !e.intermediate.equals("<init>"))
+                    .filter(e -> e.intermediate.contains("_"))
                     .distinct().toList(); // remove duplicates, remove init methods, and sort.
         }
     }

@@ -1,0 +1,14 @@
+srg,cnf
+com/mojang/rubydung/src/c_00001,com/mojang/rubydung/world/phys/HitResult
+com/mojang/rubydung/src/c_00002,com/mojang/rubydung/client/renderer/RenderingChunk
+com/mojang/rubydung/src/c_00003,com/mojang/rubydung/client/renderer/Frustum
+com/mojang/rubydung/src/c_00004,com/mojang/rubydung/world/World
+com/mojang/rubydung/src/c_00005,com/mojang/rubydung/world/WorldListener
+com/mojang/rubydung/src/c_00006,com/mojang/rubydung/client/renderer/WorldRenderer
+com/mojang/rubydung/src/c_00007,com/mojang/rubydung/client/renderer/Tessellator
+com/mojang/rubydung/src/c_00008,com/mojang/rubydung/world/Block
+com/mojang/rubydung/src/c_00009,com/mojang/rubydung/world/phys/AABB
+com/mojang/rubydung/src/c_00010,com/mojang/rubydung/world/Player
+com/mojang/rubydung/src/c_00011,com/mojang/rubydung/RubyDung
+com/mojang/rubydung/src/c_00012,com/mojang/rubydung/client/renderer/TextureRenderer
+com/mojang/rubydung/src/c_00013,com/mojang/rubydung/client/TickTimer
