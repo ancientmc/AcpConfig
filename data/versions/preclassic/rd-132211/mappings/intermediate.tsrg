@@ -1,0 +1,359 @@
+tsrg2 obf cnf id
+com/mojang/rubydung/HitResult com/mojang/rubydung/src/c_00001 00001
+	x f_00001 00001
+	y f_00002 00002
+	z f_00003 00003
+	o f_00004 00004
+	f f_00005 00005
+	<init> (IIIII)V <init> 00001
+		0 o p_00001 00001
+		1 o p_00002 00002
+		2 o p_00003 00003
+		3 o p_00004 00004
+		4 o p_00005 00005
+com/mojang/rubydung/level/Chunk com/mojang/rubydung/src/c_00002 00002
+	aabb f_00006 00006
+	level f_00007 00007
+	x0 f_00008 00008
+	y0 f_00009 00009
+	z0 f_00010 00010
+	x1 f_00011 00011
+	y1 f_00012 00012
+	z1 f_00013 00013
+	dirty f_00014 00014
+	lists f_00015 00015
+	texture f_00016 00016
+	t f_00017 00017
+	rebuiltThisFrame f_00018 00018
+	updates f_00019 00019
+	<clinit> ()V <clinit> 00002
+	<init> (Lcom/mojang/rubydung/level/Level;IIIIII)V <init> 00003
+		0 o p_00006 00006
+		1 o p_00007 00007
+		2 o p_00008 00008
+		3 o p_00009 00009
+		4 o p_00010 00010
+		5 o p_00011 00011
+		6 o p_00012 00012
+	rebuild (I)V m_00004 00004
+		0 o p_00013 00013
+	render (I)V m_00005 00005
+		0 o p_00014 00014
+	setDirty ()V m_00006 00006
+com/mojang/rubydung/level/Frustum com/mojang/rubydung/src/c_00003 00003
+	m_Frustum f_00020 00020
+	RIGHT f_00021 00021
+	LEFT f_00022 00022
+	BOTTOM f_00023 00023
+	TOP f_00024 00024
+	BACK f_00025 00025
+	FRONT f_00026 00026
+	A f_00027 00027
+	B f_00028 00028
+	C f_00029 00029
+	D f_00030 00030
+	frustum f_00031 00031
+	_proj f_00032 00032
+	_modl f_00033 00033
+	_clip f_00034 00034
+	proj f_00035 00035
+	modl f_00036 00036
+	clip f_00037 00037
+	<clinit> ()V <clinit> 00007
+	<init> ()V <init> 00008
+	getFrustum ()Lcom/mojang/rubydung/level/Frustum; m_00009 00009
+	normalizePlane ([[FI)V m_00010 00010
+		0 o p_00015 00015
+		1 o p_00016 00016
+	calculateFrustum ()V m_00011 00011
+	pointInFrustum (FFF)Z m_00012 00012
+		0 o p_00017 00017
+		1 o p_00018 00018
+		2 o p_00019 00019
+	sphereInFrustum (FFFF)Z m_00013 00013
+		0 o p_00020 00020
+		1 o p_00021 00021
+		2 o p_00022 00022
+		3 o p_00023 00023
+	cubeFullyInFrustum (FFFFFF)Z m_00014 00014
+		0 o p_00024 00024
+		1 o p_00025 00025
+		2 o p_00026 00026
+		3 o p_00027 00027
+		4 o p_00028 00028
+		5 o p_00029 00029
+	cubeInFrustum (FFFFFF)Z m_00015 00015
+		0 o p_00030 00030
+		1 o p_00031 00031
+		2 o p_00032 00032
+		3 o p_00033 00033
+		4 o p_00034 00034
+		5 o p_00035 00035
+	cubeInFrustum (Lcom/mojang/rubydung/phys/AABB;)Z m_00016 00016
+		0 o p_00036 00036
+com/mojang/rubydung/level/Level com/mojang/rubydung/src/c_00004 00004
+	width f_00038 00038
+	height f_00039 00039
+	depth f_00040 00040
+	blocks f_00041 00041
+	lightDepths f_00042 00042
+	levelListeners f_00043 00043
+	<init> (III)V <init> 00017
+		0 o p_00037 00037
+		1 o p_00038 00038
+		2 o p_00039 00039
+	load ()V m_00018 00018
+	save ()V m_00019 00019
+	calcLightDepths (IIII)V m_00020 00020
+		0 o p_00040 00040
+		1 o p_00041 00041
+		2 o p_00042 00042
+		3 o p_00043 00043
+	addListener (Lcom/mojang/rubydung/level/LevelListener;)V m_00021 00021
+		0 o p_00044 00044
+	removeListener (Lcom/mojang/rubydung/level/LevelListener;)V m_00022 00022
+		0 o p_00045 00045
+	isTile (III)Z m_00023 00023
+		0 o p_00046 00046
+		1 o p_00047 00047
+		2 o p_00048 00048
+	isSolidTile (III)Z m_00024 00024
+		0 o p_00049 00049
+		1 o p_00050 00050
+		2 o p_00051 00051
+	isLightBlocker (III)Z m_00025 00025
+		0 o p_00052 00052
+		1 o p_00053 00053
+		2 o p_00054 00054
+	getCubes (Lcom/mojang/rubydung/phys/AABB;)Ljava/util/ArrayList; m_00026 00026
+		0 o p_00055 00055
+	getBrightness (III)F m_00027 00027
+		0 o p_00056 00056
+		1 o p_00057 00057
+		2 o p_00058 00058
+	setTile (IIII)V m_00028 00028
+		0 o p_00059 00059
+		1 o p_00060 00060
+		2 o p_00061 00061
+		3 o p_00062 00062
+com/mojang/rubydung/level/LevelListener com/mojang/rubydung/src/c_00005 00005
+	tileChanged (III)V m_00029 00029
+		0 o p_00063 00063
+		1 o p_00064 00064
+		2 o p_00065 00065
+	lightColumnChanged (IIII)V m_00030 00030
+		0 o p_00066 00066
+		1 o p_00067 00067
+		2 o p_00068 00068
+		3 o p_00069 00069
+	allChanged ()V m_00031 00031
+com/mojang/rubydung/level/LevelRenderer com/mojang/rubydung/src/c_00006 00006
+	CHUNK_SIZE f_00044 00044
+	level f_00045 00045
+	chunks f_00046 00046
+	xChunks f_00047 00047
+	yChunks f_00048 00048
+	zChunks f_00049 00049
+	t f_00050 00050
+	<init> (Lcom/mojang/rubydung/level/Level;)V <init> 00032
+		0 o p_00070 00070
+	render (Lcom/mojang/rubydung/Player;I)V m_00033 00033
+		0 o p_00071 00071
+		1 o p_00072 00072
+	pick (Lcom/mojang/rubydung/Player;)V m_00034 00034
+		0 o p_00073 00073
+	renderHit (Lcom/mojang/rubydung/HitResult;)V m_00035 00035
+		0 o p_00074 00074
+	setDirty (IIIIII)V m_00036 00036
+		0 o p_00075 00075
+		1 o p_00076 00076
+		2 o p_00077 00077
+		3 o p_00078 00078
+		4 o p_00079 00079
+		5 o p_00080 00080
+	tileChanged (III)V m_00029 00029
+		0 o p_00063 00063
+		1 o p_00064 00064
+		2 o p_00065 00065
+	lightColumnChanged (IIII)V m_00030 00030
+		0 o p_00066 00066
+		1 o p_00067 00067
+		2 o p_00068 00068
+		3 o p_00069 00069
+	allChanged ()V m_00031 00031
+com/mojang/rubydung/level/Tesselator com/mojang/rubydung/src/c_00007 00007
+	MAX_VERTICES f_00051 00051
+	vertexBuffer f_00052 00052
+	texCoordBuffer f_00053 00053
+	colorBuffer f_00054 00054
+	vertices f_00055 00055
+	u f_00056 00056
+	v f_00057 00057
+	r f_00058 00058
+	g f_00059 00059
+	b f_00060 00060
+	hasColor f_00061 00061
+	hasTexture f_00062 00062
+	<init> ()V <init> 00037
+	flush ()V m_00038 00038
+	clear ()V m_00039 00039
+	init ()V m_00040 00040
+	tex (FF)V m_00041 00041
+		0 o p_00081 00081
+		1 o p_00082 00082
+	color (FFF)V m_00042 00042
+		0 o p_00083 00083
+		1 o p_00084 00084
+		2 o p_00085 00085
+	vertex (FFF)V m_00043 00043
+		0 o p_00086 00086
+		1 o p_00087 00087
+		2 o p_00088 00088
+com/mojang/rubydung/level/Tile com/mojang/rubydung/src/c_00008 00008
+	rock f_00063 00063
+	grass f_00064 00064
+	tex f_00065 00065
+	<clinit> ()V <clinit> 00044
+	<init> (I)V <init> 00045
+		0 o p_00089 00089
+	render (Lcom/mojang/rubydung/level/Tesselator;Lcom/mojang/rubydung/level/Level;IIII)V m_00046 00046
+		0 o p_00090 00090
+		1 o p_00091 00091
+		2 o p_00092 00092
+		3 o p_00093 00093
+		4 o p_00094 00094
+		5 o p_00095 00095
+	renderFace (Lcom/mojang/rubydung/level/Tesselator;IIII)V m_00047 00047
+		0 o p_00096 00096
+		1 o p_00097 00097
+		2 o p_00098 00098
+		3 o p_00099 00099
+		4 o p_00100 00100
+com/mojang/rubydung/phys/AABB com/mojang/rubydung/src/c_00009 00009
+	epsilon f_00066 00066
+	x0 f_00067 00067
+	y0 f_00068 00068
+	z0 f_00069 00069
+	x1 f_00070 00070
+	y1 f_00071 00071
+	z1 f_00072 00072
+	<init> (FFFFFF)V <init> 00048
+		0 o p_00101 00101
+		1 o p_00102 00102
+		2 o p_00103 00103
+		3 o p_00104 00104
+		4 o p_00105 00105
+		5 o p_00106 00106
+	expand (FFF)Lcom/mojang/rubydung/phys/AABB; m_00049 00049
+		0 o p_00107 00107
+		1 o p_00108 00108
+		2 o p_00109 00109
+	grow (FFF)Lcom/mojang/rubydung/phys/AABB; m_00050 00050
+		0 o p_00110 00110
+		1 o p_00111 00111
+		2 o p_00112 00112
+	clipXCollide (Lcom/mojang/rubydung/phys/AABB;F)F m_00051 00051
+		0 o p_00113 00113
+		1 o p_00114 00114
+	clipYCollide (Lcom/mojang/rubydung/phys/AABB;F)F m_00052 00052
+		0 o p_00115 00115
+		1 o p_00116 00116
+	clipZCollide (Lcom/mojang/rubydung/phys/AABB;F)F m_00053 00053
+		0 o p_00117 00117
+		1 o p_00118 00118
+	intersects (Lcom/mojang/rubydung/phys/AABB;)Z m_00054 00054
+		0 o p_00119 00119
+	move (FFF)V m_00055 00055
+		0 o p_00120 00120
+		1 o p_00121 00121
+		2 o p_00122 00122
+com/mojang/rubydung/Player com/mojang/rubydung/src/c_00010 00010
+	level f_00073 00073
+	xo f_00074 00074
+	yo f_00075 00075
+	zo f_00076 00076
+	x f_00077 00077
+	y f_00078 00078
+	z f_00079 00079
+	xd f_00080 00080
+	yd f_00081 00081
+	zd f_00082 00082
+	yRot f_00083 00083
+	xRot f_00084 00084
+	bb f_00085 00085
+	onGround f_00086 00086
+	<init> (Lcom/mojang/rubydung/level/Level;)V <init> 00056
+		0 o p_00123 00123
+	resetPos ()V m_00057 00057
+	setPos (FFF)V m_00058 00058
+		0 o p_00124 00124
+		1 o p_00125 00125
+		2 o p_00126 00126
+	turn (FF)V m_00058 00059
+		0 o p_00127 00127
+		1 o p_00128 00128
+	tick ()V m_00060 00060
+	move (FFF)V m_00061 00061
+		0 o p_00129 00129
+		1 o p_00130 00130
+		2 o p_00131 00131
+	moveRelative (FFF)V m_00062 00062
+		0 o p_00132 00132
+		1 o p_00133 00133
+		2 o p_00134 00134
+com/mojang/rubydung/RubyDung com/mojang/rubydung/src/c_00011 00011
+	FULLSCREEN_MODE f_00087 00087
+	width f_00088 00088
+	height f_00089 00089
+	fogColor f_00090 00090
+	timer f_00091 00091
+	level f_00092 00092
+	levelRenderer f_00093 00093
+	player f_00094 00094
+	viewportBuffer f_00095 00095
+	selectBuffer f_00096 00096
+	hitResult f_00097 00097
+	<init> ()V <init> 00063
+	init ()V m_00064 00064
+	destroy ()V m_00065 00065
+	run ()V run 00066
+	tick ()V m_00067 00067
+	moveCameraToPlayer (F)V m_00068 00068
+		0 o p_00135 00135
+	setupCamera (F)V m_00069 00069
+		0 o p_00136 00136
+	setupPickCamera (FII)V m_00070 00070
+		0 o p_00137 00137
+		1 o p_00138 00138
+		2 o p_00139 00139
+	pick (F)V m_00071 00071
+		0 o p_00140 00140
+	render (F)V m_00072 00072
+		0 o p_00141 00141
+	checkError ()V m_00073 00073
+	main ([Ljava/lang/String;)V main 00074
+		0 o p_00142 00142
+com/mojang/rubydung/Textures com/mojang/rubydung/src/c_00012 00012
+	idMap f_00098 00098
+	lastId f_00099 00099
+	<clinit> ()V <clinit> 00075
+	<init> ()V <init> 00076
+	loadTexture (Ljava/lang/String;I)I m_00077 00077
+		0 o p_00143 00143
+		1 o p_00144 00144
+	bind (I)V m_00078 00078
+		0 o p_00145 00145
+com/mojang/rubydung/Timer com/mojang/rubydung/src/c_00013 00013
+	NS_PER_SECOND f_00100 00100
+	MAX_NS_PER_UPDATE f_00101 00101
+	MAX_TICKS_PER_UPDATE f_00102 00102
+	ticksPerSecond f_00103 00103
+	lastTime f_00104 00104
+	ticks f_00105 00105
+	a f_00106 00106
+	timeScale f_00107 00107
+	fps f_00108 00108
+	passedTime f_00109 00109
+	<init> (F)V <init> 00079
+		0 o p_00146 00146
+	advanceTime ()V m_00080 00080
