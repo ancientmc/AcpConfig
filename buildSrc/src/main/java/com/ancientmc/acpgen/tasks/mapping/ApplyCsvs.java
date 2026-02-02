@@ -1,4 +1,4 @@
-package com.ancientmc.acpgen.tasks.csv;
+package com.ancientmc.acpgen.tasks.mapping;
 
 import com.ancientmc.acpgen.util.Util;
 import org.apache.commons.io.FileUtils;
@@ -7,7 +7,6 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
-import org.gradle.api.provider.ListProperty;
 import org.gradle.api.tasks.*;
 
 import java.io.BufferedWriter;

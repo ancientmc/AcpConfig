@@ -1,4 +1,4 @@
-package com.ancientmc.acpgen.tasks.csv;
+package com.ancientmc.acpgen.tasks.mapping;
 
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.*;
 
+@Deprecated // set for possible removal after finalizing new update process
 public abstract class UpdateCsv extends DefaultTask {
     @TaskAction
     public void exec() {

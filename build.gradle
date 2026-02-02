@@ -5,7 +5,7 @@ plugins {
 }
 
 import com.ancientmc.acpgen.tasks.*
-import com.ancientmc.acpgen.tasks.csv.*
+import com.ancientmc.acpgen.tasks.mapping.*
 import com.ancientmc.acpgen.util.*
 import uk.jamierocks.propatcher.task.*
 
@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.minecraftforge:srgutils:0.5.4'
+    implementation 'net.neoforged:srgutils:1.0.11'
 }
 
 tasks.register('easyUpdate', EasyRun) { runName = 'update' }
@@ -50,6 +50,7 @@ subprojects {
 
     repositories {
         mavenCentral()
+        maven { url = 'https://maven.fabricmc.net' }
         maven { url = 'https://maven.neoforged.net' }
         maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven/' }
     }
@@ -58,20 +59,20 @@ subprojects {
         inheritance
         jarsplitter
         rosetta
+        enigma
         forgeart
         mcinjector
         fernflower
-        vineflower
     }
 
     dependencies {
         inheritance 'net.neoforged.installertools:installertools:3.0.2:fatjar'
         jarsplitter 'net.neoforged.installertools:jarsplitter:3.0.2:fatjar'
         rosetta "com.ancientmc:rosetta:$rosetta_version:all"
+        enigma "cuchaz:enigma-swing:4.0.2:all"
         forgeart 'net.neoforged:AutoRenamingTool:2.0.8:all'
         mcinjector 'de.oceanlabs.mcp:mcinjector:4.1-am'
         fernflower 'com.ancientmc:fernflower:1.0'
-        vineflower 'org.vineflower:vineflower:1.11.1'
     }
 
     tasks.register('downloadJson', Download) {
@@ -137,7 +138,7 @@ subprojects {
     }
 
     tasks.register('mcinject', JavaExec) {
-        dependsOn split
+        dependsOn (split, obfInject)
         mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
         classpath = files(project.configurations.named('mcinjector'))
         args('--in', Paths.SLIM_JAR, '--out', Paths.INJECT_JAR, '--lvt=LVT', '--acc', Paths.ACCESS, '--exc', Paths.EXCEPTIONS, '--blacklist', Paths.BLACKLIST)
@@ -150,17 +151,24 @@ subprojects {
         args('--input', Paths.INJECT_JAR, '--output', Paths.SRG_JAR, '--map', Paths.INTERMEDIATE_TSRG, '--src-fix', '--strip-sigs')
     }
 
-    tasks.register('writeCsvs', WriteCsvs) {
-        dependsOn (split, extractInheritance)
-        tsrg = file(Paths.INTERMEDIATE_TSRG)
-        classCsv = file('mappings/csv/classes.csv')
-        fieldCsv = file('mappings/csv/fields.csv')
-        methodCsv = file('mappings/csv/methods.csv')
-        paramCsv = file('mappings/csv/params.csv')
+    // The Enigma swing app lets you specify a mapping to apply on launch, but it only recognizes its own format (.mapping).
+    // Converting the int2cnf tsrg to the enigma format would be a good workaround, but parameter names get lost in translation, and we want to keep those.
+    // For now we have to launch Enigma and then apply the mapping manually. Sucks, but not the end of the world.
+    tasks.register('launchEnigma', JavaExec) {
+        dependsOn deobfIntermediate
+        mainClass = 'cuchaz.enigma.gui.Main'
+        classpath = files(project.configurations.named('enigma'))
+        args('-jar', file(Paths.SRG_JAR).absolutePath)
+    }
+
+    tasks.register('tsrg2csv', Tsrg2Csv) {
+        tsrg = file(Paths.SRG_2_CNF_TSRG)
+        csvDirectory = file('mappings/csv/')
     }
 
     tasks.register('applyCsvs', ApplyCsvs) {
-        csvDirectory = project.file('mappings/csv/')
+        dependsOn tsrg2csv
+        csvDirectory = file('mappings/csv/')
         inTsrg = file(Paths.INTERMEDIATE_TSRG)
         outTsrg = file(Paths.CUNEIFORM_TSRG)
     }

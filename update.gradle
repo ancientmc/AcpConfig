@@ -1,4 +1,4 @@
-import com.ancientmc.acpgen.tasks.csv.UpdateCsv
+import com.ancientmc.acpgen.tasks.mapping.UpdateCsv
 
 repositories {
     mavenCentral()

@@ -1,4 +1,4 @@
-package com.ancientmc.acpgen.tasks.csv;
+package com.ancientmc.acpgen.tasks.mapping;
 
 import com.ancientmc.acpgen.util.Util;
 import org.apache.commons.io.FileUtils;
