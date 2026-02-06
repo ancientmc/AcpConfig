@@ -114,11 +114,11 @@ com/mojang/rubydung/src/c_00004 com/mojang/rubydung/world/World
 		1 p_00046 x
 		2 p_00047 y
 		3 p_00048 z
-	m_00024 (III)Z isSolid
+	m_00024 (III)Z containsSolidBlock
 		1 p_00049 x
 		2 p_00050 y
 		3 p_00051 z
-	m_00025 (III)Z isOpaque
+	m_00025 (III)Z containsOpaqueBlock
 		1 p_00052 x
 		2 p_00053 y
 		3 p_00054 z
@@ -233,7 +233,7 @@ com/mojang/rubydung/src/c_00009 com/mojang/rubydung/world/phys/AABB
 		1 p_00107 xChange
 		2 p_00108 yChange
 		3 p_00109 zChange
-	m_00050 (FFF)Lcom/mojang/rubydung/src/c_00009; expandBothSides
+	m_00050 (FFF)Lcom/mojang/rubydung/src/c_00009; expandAllSides
 		1 p_00110 xChange
 		2 p_00111 yChange
 		3 p_00112 zChange
@@ -270,21 +270,21 @@ com/mojang/rubydung/src/c_00010 com/mojang/rubydung/world/Player
 	<init> (Lcom/mojang/rubydung/src/c_00004;)V <init>
 		1 p_00123 world
 	m_00057 ()V resetPos
-	m_00058 (FF)V turn
-		1 p_00127 pitchChange
-		2 p_00128 yawChange
 	m_00058 (FFF)V setPos
 		1 p_00124 x
 		2 p_00125 y
 		3 p_00126 z
+	m_00059 (FF)V turn
+		1 p_00127 xChange
+		2 p_00128 yChange
 	m_00060 ()V tick
 	m_00061 (FFF)V move
 		1 p_00129 xChange
 		2 p_00130 yChange
 		3 p_00131 zChange
-	m_00062 (FFF)V addMotion
-		1 p_00132 xMotion
-		2 p_00133 zMotion
+	m_00062 (FFF)V updateMotion
+		1 p_00132 xChange
+		2 p_00133 zChange
 		3 p_00134 speed
 com/mojang/rubydung/src/c_00011 com/mojang/rubydung/RubyDung
 	f_00087 Z FULLSCREEN

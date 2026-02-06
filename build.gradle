@@ -23,6 +23,7 @@ dependencies {
     implementation 'net.neoforged:srgutils:1.0.11'
 }
 
+// I have not been using these at all, consider scrapping?
 tasks.register('easyUpdate', EasyRun) { runName = 'update' }
 tasks.register('easyIntermediate', EasyRun) { runName = 'intermediate' }
 tasks.register('easyUnzip', EasyRun) { runName = 'unzip' }
@@ -152,7 +153,7 @@ subprojects {
     }
 
     // The Enigma swing app lets you specify a mapping to apply on launch, but it only recognizes its own format (.mapping).
-    // Converting the int2cnf tsrg to the enigma format would be a good workaround, but parameter names get lost in translation, and we want to keep those.
+    // Converting the srg2cnf tsrg to the enigma format would be a good workaround, but parameter names get lost in translation, and we want to keep those.
     // For now we have to launch Enigma and then apply the mapping manually. Sucks, but not the end of the world.
     tasks.register('launchEnigma', JavaExec) {
         dependsOn deobfIntermediate
@@ -203,7 +204,7 @@ subprojects {
         dependsOn unzip
         from zipTree(file(Paths.EXTRA_JAR))
         into file(Paths.DIR_RESOURCES)
-        exclude 'META-INF/*'
+        exclude ('META-INF/*', 'com/', 'paulscode/')
     }
 
     tasks.register('backupSrc', Copy) {

@@ -1,4 +1,4 @@
-package com.ancientmc.acpgen.tasks;
+package com.ancientmc.acpgen.tasks.mapping;
 
 import com.ancientmc.acpgen.util.Util;
 import net.minecraftforge.srgutils.IMappingFile;

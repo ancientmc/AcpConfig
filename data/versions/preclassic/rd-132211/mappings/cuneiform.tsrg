@@ -117,11 +117,11 @@ com/mojang/rubydung/level/Level com/mojang/rubydung/world/World 00004
 		0 o x 00046
 		1 o y 00047
 		2 o z 00048
-	isSolidTile (III)Z isSolid 00024
+	isSolidTile (III)Z containsSolidBlock 00024
 		0 o x 00049
 		1 o y 00050
 		2 o z 00051
-	isLightBlocker (III)Z isOpaque 00025
+	isLightBlocker (III)Z containsOpaqueBlock 00025
 		0 o x 00052
 		1 o y 00053
 		2 o z 00054
@@ -248,7 +248,7 @@ com/mojang/rubydung/phys/AABB com/mojang/rubydung/world/phys/AABB 00009
 		0 o xChange 00107
 		1 o yChange 00108
 		2 o zChange 00109
-	grow (FFF)Lcom/mojang/rubydung/phys/AABB; expandBothSides 00050
+	grow (FFF)Lcom/mojang/rubydung/phys/AABB; expandAllSides 00050
 		0 o xChange 00110
 		1 o yChange 00111
 		2 o zChange 00112
@@ -289,17 +289,17 @@ com/mojang/rubydung/Player com/mojang/rubydung/world/Player 00010
 		0 o x 00124
 		1 o y 00125
 		2 o z 00126
-	turn (FF)V setPos 00059
-		0 o pitchChange 00127
-		1 o yawChange 00128
+	turn (FF)V turn 00059
+		0 o xChange 00127
+		1 o yChange 00128
 	tick ()V tick 00060
 	move (FFF)V move 00061
 		0 o xChange 00129
 		1 o yChange 00130
 		2 o zChange 00131
-	moveRelative (FFF)V addMotion 00062
-		0 o xMotion 00132
-		1 o zMotion 00133
+	moveRelative (FFF)V updateMotion 00062
+		0 o xChange 00132
+		1 o zChange 00133
 		2 o speed 00134
 com/mojang/rubydung/RubyDung com/mojang/rubydung/RubyDung 00011
 	FULLSCREEN_MODE FULLSCREEN 00087

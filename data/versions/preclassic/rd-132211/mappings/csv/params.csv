@@ -125,13 +125,13 @@ p_00123,world
 p_00124,x
 p_00125,y
 p_00126,z
-p_00127,pitchChange
-p_00128,yawChange
+p_00127,xChange
+p_00128,yChange
 p_00129,xChange
 p_00130,yChange
 p_00131,zChange
-p_00132,xMotion
-p_00133,zMotion
+p_00132,xChange
+p_00133,zChange
 p_00134,speed
 p_00135,partialTicks
 p_00136,partialTicks

@@ -289,7 +289,7 @@ com/mojang/rubydung/Player com/mojang/rubydung/src/c_00010 00010
 		0 o p_00124 00124
 		1 o p_00125 00125
 		2 o p_00126 00126
-	turn (FF)V m_00058 00059
+	turn (FF)V m_00059 00059
 		0 o p_00127 00127
 		1 o p_00128 00128
 	tick ()V m_00060 00060

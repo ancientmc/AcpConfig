@@ -31,6 +31,7 @@ tasks.register('setupNewVersion', Copy) {
     group = 'update'
     destinationDir = file(NEW_DIR)
     from (OLD_DIR + '/game/jardep.json') { into ('/game/') }
+    from (OLD_DIR + '/mappings/srg2cnf.tsrg') { into ('/mappings/') }
     from (OLD_DIR + '/mappings/rosetta.cfg') { into ('/mappings/') }
     from (OLD_DIR + '/inject/intermediate/') { into ('/inject/intermediate/') }
     from (OLD_DIR + '/inject/blacklist.txt') { into ('/inject/') }
@@ -48,6 +49,8 @@ tasks.register('updateTsrg', JavaExec) {
     args('update', NEW_CFG, NEW_JAR, NEW_INHERITANCE, OLD_TSRG, OLD_IDS, MATCH, NEW_TSRG, NEW_IDS)
 }
 
+/** DEPRECATED
+
 def csvs = ['classes', 'fields', 'methods', 'params']
 csvs.each { table ->
     tasks.register("update${table.capitalize()}Csv", UpdateCsv) {
@@ -58,13 +61,12 @@ csvs.each { table ->
     }
 }
 
-/**
- * new_version version -> writeCsvs *before* running this!
- */
 tasks.register('updateAllCsvs') {
     group = 'update'
     dependsOn(updateClassesCsv, updateMethodsCsv, updateFieldsCsv, updateParamsCsv)
 }
+
+ */
 
 static def phase(String ver) {
     if (ver.startsWith('c')) return 'classic'
