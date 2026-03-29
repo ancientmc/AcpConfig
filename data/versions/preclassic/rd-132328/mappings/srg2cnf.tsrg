@@ -22,7 +22,6 @@ com/mojang/rubydung/src/c_00002 com/mojang/rubydung/level/Chunk
 	f_00013 I z1
 	f_00014 Z dirty
 	f_00015 I lists
-	f_00016 I texture
 	f_00017 Lcom/mojang/rubydung/src/c_00007; t
 	f_00018 I rebuiltThisFrame
 	f_00019 I updates
@@ -253,39 +252,8 @@ com/mojang/rubydung/src/c_00009 com/mojang/rubydung/phys/AABB
 		2 p_00121 ya
 		3 p_00122 za
 com/mojang/rubydung/src/c_00010 com/mojang/rubydung/Player
-	f_00073 Lcom/mojang/rubydung/src/c_00004; level
-	f_00074 F xo
-	f_00075 F yo
-	f_00076 F zo
-	f_00077 F x
-	f_00078 F y
-	f_00079 F z
-	f_00080 F xd
-	f_00081 F yd
-	f_00082 F zd
-	f_00083 F yRot
-	f_00084 F xRot
-	f_00085 Lcom/mojang/rubydung/src/c_00009; bb
-	f_00086 Z onGround
 	<init> (Lcom/mojang/rubydung/src/c_00004;)V <init>
 		1 p_00123 level
-	m_00057 ()V resetPos
-	m_00058 (FFF)V setPos
-		1 p_00124 x
-		2 p_00125 y
-		3 p_00126 z
-	m_00059 (FF)V turn
-		1 p_00127 xo
-		2 p_00128 yo
-	m_00060 ()V tick
-	m_00061 (FFF)V move
-		1 p_00129 xa
-		2 p_00130 ya
-		3 p_00131 za
-	m_00062 (FFF)V moveRelative
-		1 p_00132 xa
-		2 p_00133 za
-		3 p_00134 speed
 com/mojang/rubydung/src/c_00011 com/mojang/rubydung/RubyDung
 	f_00087 Z FULLSCREEN_MODE
 	f_00088 I width
@@ -298,6 +266,7 @@ com/mojang/rubydung/src/c_00011 com/mojang/rubydung/RubyDung
 	f_00095 Ljava/nio/IntBuffer; viewportBuffer
 	f_00096 Ljava/nio/IntBuffer; selectBuffer
 	f_00097 Lcom/mojang/rubydung/src/c_00001; hitResult
+	f_00153 Ljava/util/ArrayList; zombies
 	m_00064 ()V init
 	m_00065 ()V destroy
 	m_00067 ()V tick
@@ -323,8 +292,6 @@ com/mojang/rubydung/src/c_00012 com/mojang/rubydung/Textures
 	m_00077 (Ljava/lang/String;I)I loadTexture
 		0 p_00143 resourceName
 		1 p_00144 mode
-	m_00078 (I)V bind
-		0 p_00145 id
 com/mojang/rubydung/src/c_00013 com/mojang/rubydung/Timer
 	f_00100 J NS_PER_SECOND
 	f_00101 J MAX_NS_PER_UPDATE
@@ -339,3 +306,133 @@ com/mojang/rubydung/src/c_00013 com/mojang/rubydung/Timer
 	<init> (F)V <init>
 		1 p_00146 ticksPerSecond
 	m_00080 ()V advanceTime
+com/mojang/rubydung/src/c_00014 com/mojang/rubydung/character/Cube
+	f_00110 [Lcom/mojang/rubydung/src/c_00017; vertices
+	f_00111 [Lcom/mojang/rubydung/src/c_00015; polygons
+	f_00112 I xTexOffs
+	f_00113 I yTexOffs
+	f_00114 F x
+	f_00115 F y
+	f_00116 F z
+	f_00117 F xRot
+	f_00118 F yRot
+	f_00119 F zRot
+	<init> (II)V <init>
+		1 p_00147 xTexOffs
+		2 p_00148 yTexOffs
+	m_00082 (II)V setTexOffs
+		1 p_00149 xTexOffs
+		2 p_00150 yTexOffs
+	m_00083 (FFFIII)V addBox
+		1 p_00151 x0
+		2 p_00152 y0
+		3 p_00153 z0
+		4 p_00154 w
+		5 p_00155 h
+		6 p_00156 d
+	m_00084 (FFF)V setPos
+		1 p_00157 x
+		2 p_00158 y
+		3 p_00159 z
+	m_00085 ()V render
+com/mojang/rubydung/src/c_00015 com/mojang/rubydung/character/Polygon
+	f_00120 [Lcom/mojang/rubydung/src/c_00017; vertices
+	f_00121 I vertexCount
+	<init> ([Lcom/mojang/rubydung/src/c_00017;)V <init>
+		1 p_00160 vertices
+	<init> ([Lcom/mojang/rubydung/src/c_00017;IIII)V <init>
+		1 p_00161 vertices
+		2 p_00162 u0
+		3 p_00163 v0
+		4 p_00164 u1
+		5 p_00165 v1
+	m_00088 ()V render
+com/mojang/rubydung/src/c_00016 com/mojang/rubydung/character/Vec3
+	f_00122 F x
+	f_00123 F y
+	f_00124 F z
+	<init> (FFF)V <init>
+		1 p_00166 x
+		2 p_00167 y
+		3 p_00168 z
+	m_00090 (Lcom/mojang/rubydung/src/c_00016;F)Lcom/mojang/rubydung/src/c_00016; interpolateTo
+		1 p_00169 t
+		2 p_00170 p
+	m_00091 (FFF)V set
+		1 p_00171 x
+		2 p_00172 y
+		3 p_00173 z
+com/mojang/rubydung/src/c_00017 com/mojang/rubydung/character/Vertex
+	f_00125 Lcom/mojang/rubydung/src/c_00016; pos
+	f_00126 F u
+	f_00127 F v
+	<init> (FFFFF)V <init>
+		1 p_00174 x
+		2 p_00175 y
+		3 p_00176 z
+		4 p_00177 u
+		5 p_00178 v
+	<init> (Lcom/mojang/rubydung/src/c_00016;FF)V <init>
+		1 p_00184 pos
+		2 p_00185 u
+		3 p_00186 v
+	<init> (Lcom/mojang/rubydung/src/c_00017;FF)V <init>
+		1 p_00181 vertex
+		2 p_00182 u
+		3 p_00183 v
+	m_00093 (FF)Lcom/mojang/rubydung/src/c_00017; remap
+		1 p_00179 u
+		2 p_00180 v
+com/mojang/rubydung/src/c_00018 com/mojang/rubydung/character/Zombie
+	f_00128 Lcom/mojang/rubydung/src/c_00014; head
+	f_00129 Lcom/mojang/rubydung/src/c_00014; body
+	f_00130 Lcom/mojang/rubydung/src/c_00014; arm0
+	f_00131 Lcom/mojang/rubydung/src/c_00014; arm1
+	f_00132 Lcom/mojang/rubydung/src/c_00014; leg0
+	f_00133 Lcom/mojang/rubydung/src/c_00014; leg1
+	f_00134 F rot
+	f_00135 F timeOffs
+	f_00136 F speed
+	f_00137 F rotA
+	<init> (Lcom/mojang/rubydung/src/c_00004;FFF)V <init>
+		1 p_00187 level
+		2 p_00188 x
+		3 p_00189 y
+		4 p_00190 z
+	m_00097 (F)V render
+		1 p_00191 a
+com/mojang/rubydung/src/c_00019 com/mojang/rubydung/Entity
+	f_00138 Lcom/mojang/rubydung/src/c_00004; level
+	f_00139 F xo
+	f_00140 F yo
+	f_00141 F zo
+	f_00142 F x
+	f_00143 F y
+	f_00144 F z
+	f_00145 F xd
+	f_00146 F yd
+	f_00147 F zd
+	f_00148 F yRot
+	f_00149 F xRot
+	f_00150 Lcom/mojang/rubydung/src/c_00009; bb
+	f_00151 Z onGround
+	f_00152 F heightOffset
+	<init> (Lcom/mojang/rubydung/src/c_00004;)V <init>
+		1 p_00192 level
+	m_00099 ()V resetPos
+	m_00100 (FFF)V setPos
+		1 p_00193 x
+		2 p_00194 y
+		3 p_00195 z
+	m_00101 (FF)V turn
+		1 p_00196 xo
+		2 p_00197 yo
+	m_00102 ()V tick
+	m_00103 (FFF)V move
+		1 p_00198 xa
+		2 p_00199 ya
+		3 p_00200 za
+	m_00104 (FFF)V moveRelative
+		1 p_00201 xa
+		2 p_00202 za
+		3 p_00203 speed

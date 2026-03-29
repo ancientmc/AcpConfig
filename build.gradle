@@ -113,7 +113,10 @@ subprojects {
         dependsOn downloadClient
         mainClass = 'com.ancientmc.rosetta.Rosetta'
         classpath = files(project.configurations.named('rosetta'))
-        args('generate', Paths.ROSETTA_CFG, Paths.BASE_JAR, Paths.INHERITANCE, Paths.INTERMEDIATE_TSRG, Paths.IDS)
+        args('--generate', '--config', Paths.ROSETTA_JSON,
+                '--jar', Paths.BASE_JAR, '--inheritance', Paths.INHERITANCE,
+                '--tsrg', Paths.INTERMEDIATE_TSRG, '--ids', Paths.IDS
+        )
     }
 
     tasks.register('split', JavaExec) {
@@ -187,11 +190,26 @@ subprojects {
         args('--input', Paths.INJECT_JAR, '--output', Paths.CNF_JAR, '--map', Paths.CUNEIFORM_TSRG, '--src-fix=JAVA')
     }
 
+    // Test for comparing preclassic unobfuscated builds to ensure correct mappings. Will be removed later.
+    tasks.register('decompileUnmapped', JavaExec) {
+        dependsOn deobfMapped
+        mainClass = 'org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
+        classpath = files(project.configurations.named('fernflower'))
+        args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=0', '-jvn=1', '-ind=    ', Paths.BASE_JAR, "game/jars/decomp_un.jar")
+    }
+
     tasks.register('decompile', JavaExec) {
         dependsOn deobfMapped
         mainClass = 'org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
         classpath = files(project.configurations.named('fernflower'))
         args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=0', '-jvn=1', '-ind=    ', Paths.CNF_JAR, Paths.DECOMP_JAR)
+    }
+
+    // Test for comparing preclassic unobfuscated builds to ensure correct mappings. Will be removed later.
+    tasks.register('unzipUnmapped', Copy) {
+        dependsOn decompileUnmapped
+        from zipTree(file("game/jars/decomp_un.jar"))
+        into file("run/src_un/main/java")
     }
 
     tasks.register('unzip', Copy) {

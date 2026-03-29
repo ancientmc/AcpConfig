@@ -12,3 +12,9 @@ com/mojang/rubydung/src/c_00010,com/mojang/rubydung/Player
 com/mojang/rubydung/src/c_00011,com/mojang/rubydung/RubyDung
 com/mojang/rubydung/src/c_00012,com/mojang/rubydung/Textures
 com/mojang/rubydung/src/c_00013,com/mojang/rubydung/Timer
+com/mojang/rubydung/src/c_00014,com/mojang/rubydung/character/Cube
+com/mojang/rubydung/src/c_00015,com/mojang/rubydung/character/Polygon
+com/mojang/rubydung/src/c_00016,com/mojang/rubydung/character/Vec3
+com/mojang/rubydung/src/c_00017,com/mojang/rubydung/character/Vertex
+com/mojang/rubydung/src/c_00018,com/mojang/rubydung/character/Zombie
+com/mojang/rubydung/src/c_00019,com/mojang/rubydung/Entity

@@ -15,7 +15,7 @@ dependencies {
 ext {
     OLD_DIR = String.join('/', 'data/versions', phase(old_version as String), old_version)
     NEW_DIR = String.join('/', 'data/versions', phase(new_version as String), new_version)
-    NEW_CFG = String.join('/', NEW_DIR, 'mappings/rosetta.cfg')
+    NEW_CFG = String.join('/', NEW_DIR, 'mappings/rosetta.json')
     NEW_JAR = String.join('/', NEW_DIR, 'game/jars/client.jar')
     NEW_INHERITANCE = String.join('/', NEW_DIR, 'inheritance_map.json')
     OLD_TSRG = String.join('/', OLD_DIR, 'mappings/intermediate.tsrg')
@@ -46,7 +46,8 @@ tasks.register('updateTsrg', JavaExec) {
     group = 'update'
     mainClass = 'com.ancientmc.rosetta.Rosetta'
     classpath = files(project.configurations.named('rosetta'))
-    args('update', NEW_CFG, NEW_JAR, NEW_INHERITANCE, OLD_TSRG, OLD_IDS, MATCH, NEW_TSRG, NEW_IDS)
+    args('--update', '--config', NEW_CFG, '--jar', NEW_JAR, '--inheritance', NEW_INHERITANCE, '--match', MATCH,
+            '--old-tsrg', OLD_TSRG, '--old-ids', OLD_IDS, '--new-tsrg', NEW_TSRG, '--new-ids', NEW_IDS)
 }
 
 /** DEPRECATED
@@ -69,6 +70,7 @@ tasks.register('updateAllCsvs') {
  */
 
 static def phase(String ver) {
+    if (ver.startsWith('rd-')) return 'preclassic'
     if (ver.startsWith('c')) return 'classic'
     if (ver.startsWith('in-')) return 'indev'
     if (ver.startsWith('inf-')) return 'infdev'

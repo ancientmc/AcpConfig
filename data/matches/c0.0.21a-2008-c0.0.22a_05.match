@@ -1229,7 +1229,6 @@ c	Lcom/mojang/minecraft/level/a/k;	Lcom/mojang/minecraft/level/tile/f;
 	f	W;;I	Y;;I
 c	Lcom/mojang/minecraft/level/a;	Lcom/mojang/minecraft/level/a;
 	m	<init>(Lcom/mojang/minecraft/d;)V	<init>(Lcom/mojang/minecraft/g;)V
-		ma	0	0
 	m	a(Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	a(Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 		ma	0	0
 		ma	1	1

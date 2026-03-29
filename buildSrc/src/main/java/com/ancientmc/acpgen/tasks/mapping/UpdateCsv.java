@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.*;
 
-@Deprecated // set for possible removal after finalizing new update process
+@Deprecated(forRemoval = true) // set for possible removal after finalizing new update process
 public abstract class UpdateCsv extends DefaultTask {
     @TaskAction
     public void exec() {

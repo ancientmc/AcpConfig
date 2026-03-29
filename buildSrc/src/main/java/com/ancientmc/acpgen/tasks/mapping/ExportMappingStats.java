@@ -44,12 +44,14 @@ public abstract class ExportMappingStats extends DefaultTask {
 
     public int getCount(List<String> lines) {
         int count = 0;
+
         for (String line : lines) {
             String[] split = line.split(",");
             if (split[0].equals(split[1])) {
                 ++count;
             }
         }
+
         return count;
     }
 
