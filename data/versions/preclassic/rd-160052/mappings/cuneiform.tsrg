@@ -1,0 +1,629 @@
+tsrg2 obf cnf id
+com/mojang/rubydung/character/Cube com/mojang/rubydung/character/Cube 00014
+	vertices vertices 00110
+	polygons polygons 00111
+	xTexOffs xTexOffs 00112
+	yTexOffs yTexOffs 00113
+	x x 00114
+	y y 00115
+	z z 00116
+	xRot xRot 00117
+	yRot yRot 00118
+	zRot zRot 00119
+	compiled compiled 00154
+	list list 00155
+	<init> (II)V <init> 00081
+		0 o xTexOffs 00147
+		1 o yTexOffs 00148
+	setTexOffs (II)V setTexOffs 00082
+		0 o xTexOffs 00149
+		1 o yTexOffs 00150
+	addBox (FFFIII)V addBox 00083
+		0 o x0 00151
+		1 o y0 00152
+		2 o z0 00153
+		3 o w 00154
+		4 o h 00155
+		5 o d 00156
+	setPos (FFF)V setPos 00084
+		0 o x 00157
+		1 o y 00158
+		2 o z 00159
+	render ()V render 00085
+	compile ()V compile 00105
+com/mojang/rubydung/character/Polygon com/mojang/rubydung/character/Polygon 00015
+	vertices vertices 00120
+	vertexCount vertexCount 00121
+	<init> ([Lcom/mojang/rubydung/character/Vertex;)V <init> 00086
+		0 o vertices 00160
+	<init> ([Lcom/mojang/rubydung/character/Vertex;IIII)V <init> 00087
+		0 o vertices 00161
+		1 o u0 00162
+		2 o v0 00163
+		3 o u1 00164
+		4 o v1 00165
+	render ()V render 00088
+com/mojang/rubydung/character/Vec3 com/mojang/rubydung/character/Vec3 00016
+	x x 00122
+	y y 00123
+	z z 00124
+	<init> (FFF)V <init> 00089
+		0 o x 00166
+		1 o y 00167
+		2 o z 00168
+	interpolateTo (Lcom/mojang/rubydung/character/Vec3;F)Lcom/mojang/rubydung/character/Vec3; interpolateTo 00090
+		0 o t 00169
+		1 o p 00170
+	set (FFF)V set 00091
+		0 o x 00171
+		1 o y 00172
+		2 o z 00173
+com/mojang/rubydung/character/Vertex com/mojang/rubydung/character/Vertex 00017
+	pos pos 00125
+	u u 00126
+	v v 00127
+	<init> (FFFFF)V <init> 00092
+		0 o x 00174
+		1 o y 00175
+		2 o z 00176
+		3 o u 00177
+		4 o v 00178
+	remap (FF)Lcom/mojang/rubydung/character/Vertex; remap 00093
+		0 o u 00179
+		1 o v 00180
+	<init> (Lcom/mojang/rubydung/character/Vertex;FF)V <init> 00094
+		0 o vertex 00181
+		1 o u 00182
+		2 o v 00183
+	<init> (Lcom/mojang/rubydung/character/Vec3;FF)V <init> 00095
+		0 o pos 00184
+		1 o u 00185
+		2 o v 00186
+com/mojang/rubydung/character/Zombie com/mojang/rubydung/character/Zombie 00018
+	rot rot 00134
+	timeOffs timeOffs 00135
+	speed speed 00136
+	rotA rotA 00137
+	zombieModel zombieModel 00156
+	<clinit> ()V <clinit> 00106
+	<init> (Lcom/mojang/rubydung/level/Level;FFF)V <init> 00096
+		0 o level 00187
+		1 o x 00188
+		2 o y 00189
+		3 o z 00190
+	tick ()V tick 00102
+	render (F)V render 00097
+		0 o a 00191
+com/mojang/rubydung/character/ZombieModel com/mojang/rubydung/character/ZombieModel 00020
+	head head 00157
+	body body 00158
+	arm0 arm0 00159
+	arm1 arm1 00160
+	leg0 leg0 00161
+	leg1 leg1 00162
+	<init> ()V <init> 00107
+	render (F)V render 00108
+		0 o time 00204
+com/mojang/rubydung/Entity com/mojang/rubydung/Entity 00019
+	level level 00138
+	xo xo 00139
+	yo yo 00140
+	zo zo 00141
+	x x 00142
+	y y 00143
+	z z 00144
+	xd xd 00145
+	yd yd 00146
+	zd zd 00147
+	yRot yRot 00148
+	xRot xRot 00149
+	bb bb 00150
+	onGround onGround 00151
+	removed removed 00163
+	heightOffset heightOffset 00152
+	bbWidth bbWidth 00164
+	bbHeight bbHeight 00165
+	<init> (Lcom/mojang/rubydung/level/Level;)V <init> 00098
+		0 o level 00192
+	resetPos ()V resetPos 00099
+	remove ()V remove 00109
+	setSize (FF)V setSize 00110
+		0 o w 00205
+		1 o h 00206
+	setPos (FFF)V setPos 00100
+		0 o x 00193
+		1 o y 00194
+		2 o z 00195
+	turn (FF)V turn 00101
+		0 o xo 00196
+		1 o yo 00197
+	tick ()V tick 00102
+	move (FFF)V move 00103
+		0 o xa 00198
+		1 o ya 00199
+		2 o za 00200
+	moveRelative (FFF)V moveRelative 00104
+		0 o xa 00201
+		1 o za 00202
+		2 o speed 00203
+	isLit ()Z isLit 00111
+com/mojang/rubydung/HitResult com/mojang/rubydung/HitResult 00001
+	x x 00001
+	y y 00002
+	z z 00003
+	o o 00004
+	f f 00005
+	<init> (IIIII)V <init> 00001
+		0 o x 00001
+		1 o y 00002
+		2 o z 00003
+		3 o o 00004
+		4 o f 00005
+com/mojang/rubydung/level/Chunk com/mojang/rubydung/level/Chunk 00002
+	aabb aabb 00006
+	level level 00007
+	x0 x0 00008
+	y0 y0 00009
+	z0 z0 00010
+	x1 x1 00011
+	y1 y1 00012
+	z1 z1 00013
+	x x 00166
+	y y 00167
+	z z 00168
+	dirty dirty 00014
+	lists lists 00015
+	dirtiedTime dirtiedTime 00169
+	t t 00017
+	updates updates 00019
+	totalTime totalTime 00170
+	totalUpdates totalUpdates 00171
+	<clinit> ()V <clinit> 00002
+	<init> (Lcom/mojang/rubydung/level/Level;IIIIII)V <init> 00003
+		0 o level 00006
+		1 o x0 00007
+		2 o y0 00008
+		3 o z0 00009
+		4 o x1 00010
+		5 o y1 00011
+		6 o z1 00012
+	rebuild (I)V rebuild 00004
+		0 o layer 00013
+	rebuild ()V rebuild 00112
+	render (I)V render 00005
+		0 o layer 00014
+	setDirty ()V setDirty 00006
+	isDirty ()Z isDirty 00113
+	distanceToSqr (Lcom/mojang/rubydung/Player;)F distanceToSqr 00114
+		0 o player 00207
+com/mojang/rubydung/level/DirtyChunkSorter com/mojang/rubydung/level/DirtyChunkSorter 00021
+	player player 00172
+	frustum frustum 00173
+	now now 00174
+	<init> (Lcom/mojang/rubydung/Player;Lcom/mojang/rubydung/level/Frustum;)V <init> 00115
+		0 o player 00208
+		1 o frustum 00209
+	compare (Lcom/mojang/rubydung/level/Chunk;Lcom/mojang/rubydung/level/Chunk;)I compare 00116
+		0 o c0 00210
+		1 o c1 00211
+	compare (Ljava/lang/Object;Ljava/lang/Object;)I compare 00117
+		0 o c0 00212
+		1 o c1 00213
+com/mojang/rubydung/level/Frustum com/mojang/rubydung/level/Frustum 00003
+	m_Frustum m_Frustum 00020
+	RIGHT RIGHT 00021
+	LEFT LEFT 00022
+	BOTTOM BOTTOM 00023
+	TOP TOP 00024
+	BACK BACK 00025
+	FRONT FRONT 00026
+	A A 00027
+	B B 00028
+	C C 00029
+	D D 00030
+	frustum frustum 00031
+	_proj _proj 00032
+	_modl _modl 00033
+	_clip _clip 00034
+	proj proj 00035
+	modl modl 00036
+	clip clip 00037
+	<clinit> ()V <clinit> 00007
+	<init> ()V <init> 00008
+	getFrustum ()Lcom/mojang/rubydung/level/Frustum; getFrustum 00009
+	normalizePlane ([[FI)V normalizePlane 00010
+		0 o frustum 00015
+		1 o side 00016
+	calculateFrustum ()V calculateFrustum 00011
+	pointInFrustum (FFF)Z pointInFrustum 00012
+		0 o x 00017
+		1 o y 00018
+		2 o z 00019
+	sphereInFrustum (FFFF)Z sphereInFrustum 00013
+		0 o x 00020
+		1 o y 00021
+		2 o z 00022
+		3 o radius 00023
+	cubeFullyInFrustum (FFFFFF)Z cubeFullyInFrustum 00014
+		0 o x1 00024
+		1 o y1 00025
+		2 o z1 00026
+		3 o x2 00027
+		4 o y2 00028
+		5 o z2 00029
+	cubeInFrustum (FFFFFF)Z cubeInFrustum 00015
+		0 o x1 00030
+		1 o y1 00031
+		2 o z1 00032
+		3 o x2 00033
+		4 o y2 00034
+		5 o z2 00035
+	isVisible (Lcom/mojang/rubydung/phys/AABB;)Z isVisible 00016
+		0 o aabb 00036
+com/mojang/rubydung/level/Level com/mojang/rubydung/level/Level 00004
+	TILE_UPDATE_INTERVAL TILE_UPDATE_INTERVAL 00175
+	width width 00038
+	height height 00039
+	depth depth 00040
+	blocks blocks 00041
+	lightDepths lightDepths 00042
+	levelListeners levelListeners 00043
+	random random 00176
+	unprocessed unprocessed 00177
+	<init> (III)V <init> 00017
+		0 o w 00037
+		1 o h 00038
+		2 o d 00039
+	generateMap ()V generateMap 00118
+	load ()Z load 00018
+	save ()V save 00019
+	calcLightDepths (IIII)V calcLightDepths 00020
+		0 o x0 00040
+		1 o z0 00041
+		2 o x1 00042
+		3 o z1 00043
+	addListener (Lcom/mojang/rubydung/level/LevelListener;)V addListener 00021
+		0 o levelListener 00044
+	removeListener (Lcom/mojang/rubydung/level/LevelListener;)V removeListener 00022
+		0 o levelListener 00045
+	isLightBlocker (III)Z isLightBlocker 00025
+		0 o x 00052
+		1 o y 00053
+		2 o z 00054
+	getCubes (Lcom/mojang/rubydung/phys/AABB;)Ljava/util/ArrayList; getCubes 00026
+		0 o aABB 00055
+	setTile (IIII)Z setTile 00028
+		0 o x 00059
+		1 o y 00060
+		2 o z 00061
+		3 o type 00062
+	isLit (III)Z isLit 00119
+		0 o x 00214
+		1 o y 00215
+		2 o z 00216
+	getTile (III)I getTile 00120
+		0 o x 00217
+		1 o y 00218
+		2 o z 00219
+	isSolidTile (III)Z isSolidTile 00024
+		0 o x 00049
+		1 o y 00050
+		2 o z 00051
+	tick ()V tick 00121
+com/mojang/rubydung/level/LevelListener com/mojang/rubydung/level/LevelListener 00005
+	tileChanged (III)V tileChanged 00029
+		0 o x 00063
+		1 o y 00064
+		2 o z 00065
+	lightColumnChanged (IIII)V lightColumnChanged 00030
+		0 o x 00066
+		1 o z 00067
+		2 o y0 00068
+		3 o y1 00069
+	allChanged ()V allChanged 00031
+com/mojang/rubydung/level/LevelRenderer com/mojang/rubydung/level/LevelRenderer 00006
+	MAX_REBUILDS_PER_FRAME MAX_REBUILDS_PER_FRAME 00178
+	CHUNK_SIZE CHUNK_SIZE 00044
+	level level 00045
+	chunks chunks 00046
+	xChunks xChunks 00047
+	yChunks yChunks 00048
+	zChunks zChunks 00049
+	<init> (Lcom/mojang/rubydung/level/Level;)V <init> 00032
+		0 o level 00070
+	getAllDirtyChunks ()Ljava/util/List; getAllDirtyChunks 00122
+	render (Lcom/mojang/rubydung/Player;I)V render 00033
+		0 o player 00071
+		1 o layer 00072
+	updateDirtyChunks (Lcom/mojang/rubydung/Player;)V updateDirtyChunks 00123
+		0 o player 00220
+	pick (Lcom/mojang/rubydung/Player;)V pick 00034
+		0 o player 00073
+	renderHit (Lcom/mojang/rubydung/HitResult;)V renderHit 00035
+		0 o h 00074
+	setDirty (IIIIII)V setDirty 00036
+		0 o x0 00075
+		1 o y0 00076
+		2 o z0 00077
+		3 o x1 00078
+		4 o y1 00079
+		5 o z1 00080
+	tileChanged (III)V tileChanged 00029
+		0 o x 00063
+		1 o y 00064
+		2 o z 00065
+	lightColumnChanged (IIII)V lightColumnChanged 00030
+		0 o x 00066
+		1 o z 00067
+		2 o y0 00068
+		3 o y1 00069
+	allChanged ()V allChanged 00031
+com/mojang/rubydung/level/PerlinNoiseFilter com/mojang/rubydung/level/PerlinNoiseFilter 00022
+	random random 00179
+	seed seed 00180
+	levels levels 00181
+	fuzz fuzz 00182
+	<init> (I)V <init> 00124
+		0 o levels 00221
+	read (II)[I read 00125
+		0 o width 00222
+		1 o height 00223
+com/mojang/rubydung/level/Tesselator com/mojang/rubydung/level/Tesselator 00007
+	MAX_MEMORY_USE MAX_MEMORY_USE 00183
+	MAX_FLOATS MAX_FLOATS 00184
+	buffer buffer 00185
+	array array 00186
+	vertices vertices 00055
+	u u 00056
+	v v 00057
+	r r 00058
+	g g 00059
+	b b 00060
+	hasColor hasColor 00061
+	hasTexture hasTexture 00062
+	len len 00187
+	p p 00188
+	instance instance 00189
+	<clinit> ()V <clinit> 00126
+	<init> ()V <init> 00127
+	flush ()V flush 00038
+	clear ()V clear 00039
+	init ()V init 00040
+	tex (FF)V tex 00041
+		0 o u 00081
+		1 o v 00082
+	color (FFF)V color 00042
+		0 o r 00083
+		1 o g 00084
+		2 o b 00085
+	vertexUV (FFFFF)V vertexUV 00128
+		0 o x 00224
+		1 o y 00225
+		2 o z 00226
+		3 o u 00227
+		4 o v 00228
+	vertex (FFF)V vertex 00043
+		0 o x 00086
+		1 o y 00087
+		2 o z 00088
+com/mojang/rubydung/level/tile/DirtTile com/mojang/rubydung/level/tile/DirtTile 00023
+	<init> (II)V <init> 00129
+		0 o id 00229
+		1 o tex 00230
+com/mojang/rubydung/level/tile/GrassTile com/mojang/rubydung/level/tile/GrassTile 00024
+	<init> (I)V <init> 00130
+		0 o id 00231
+	getTexture (I)I getTexture 00133
+		0 o face 00239
+	tick (Lcom/mojang/rubydung/level/Level;IIILjava/util/Random;)V tick 00138
+		0 o level 00248
+		1 o x 00249
+		2 o y 00250
+		3 o z 00251
+		4 o random 00252
+com/mojang/rubydung/level/tile/Tile com/mojang/rubydung/level/tile/Tile 00008
+	tiles tiles 00190
+	empty empty 00191
+	rock rock 00063
+	grass grass 00064
+	dirt dirt 00192
+	stoneBrick stoneBrick 00193
+	wood wood 00194
+	tex tex 00065
+	id id 00195
+	<clinit> ()V <clinit> 00044
+	<init> (I)V <init> 00045
+		0 o id 00089
+	<init> (II)V <init> 00131
+		0 o id 00232
+		1 o tex 00233
+	render (Lcom/mojang/rubydung/level/Tesselator;Lcom/mojang/rubydung/level/Level;IIII)V render 00046
+		0 o t 00090
+		1 o level 00091
+		2 o layer 00092
+		3 o x 00093
+		4 o y 00094
+		5 o z 00095
+	shouldRenderFace (Lcom/mojang/rubydung/level/Level;IIII)Z shouldRenderFace 00132
+		0 o level 00234
+		1 o x 00235
+		2 o y 00236
+		3 o z 00237
+		4 o layer 00238
+	getTexture (I)I getTexture 00133
+		0 o face 00239
+	renderFace (Lcom/mojang/rubydung/level/Tesselator;IIII)V renderFace 00134
+		0 o t 00240
+		1 o x 00241
+		2 o y 00242
+		3 o z 00243
+		4 o face 00244
+	renderFaceNoTexture (Lcom/mojang/rubydung/level/Tesselator;IIII)V renderFaceNoTexture 00047
+		0 o t 00096
+		1 o x 00097
+		2 o y 00098
+		3 o z 00099
+		4 o face 00100
+	getAABB (III)Lcom/mojang/rubydung/phys/AABB; getAABB 00135
+		0 o x 00245
+		1 o y 00246
+		2 o z 00247
+	blocksLight ()Z blocksLight 00136
+	isSolid ()Z isSolid 00137
+	tick (Lcom/mojang/rubydung/level/Level;IIILjava/util/Random;)V tick 00138
+		0 o level 00248
+		1 o x 00249
+		2 o y 00250
+		3 o z 00251
+		4 o random 00252
+	destroy (Lcom/mojang/rubydung/level/Level;IIILcom/mojang/rubydung/particle/ParticleEngine;)V destroy 00139
+		0 o level 00253
+		1 o x 00254
+		2 o y 00255
+		3 o z 00256
+		4 o particleEngine 00257
+com/mojang/rubydung/particle/Particle com/mojang/rubydung/particle/Particle 00025
+	xd xd 00196
+	yd yd 00197
+	zd zd 00198
+	tex tex 00199
+	uo uo 00200
+	vo vo 00201
+	<init> (Lcom/mojang/rubydung/level/Level;FFFFFFI)V <init> 00140
+		0 o level 00258
+		1 o x 00259
+		2 o y 00260
+		3 o z 00261
+		4 o xa 00262
+		5 o ya 00263
+		6 o za 00264
+		7 o tex 00265
+	tick ()V tick 00102
+	render (Lcom/mojang/rubydung/level/Tesselator;FFFF)V render 00141
+		0 o t 00266
+		1 o a 00267
+		2 o xa 00268
+		3 o ya 00269
+		4 o za 00270
+com/mojang/rubydung/particle/ParticleEngine com/mojang/rubydung/particle/ParticleEngine 00026
+	level level 00202
+	particles particles 00203
+	<init> (Lcom/mojang/rubydung/level/Level;)V <init> 00142
+		0 o level 00271
+	add (Lcom/mojang/rubydung/particle/Particle;)V add 00143
+		0 o p 00272
+	tick ()V tick 00144
+	render (Lcom/mojang/rubydung/Player;FI)V render 00145
+		0 o player 00273
+		1 o a 00274
+		2 o layer 00275
+com/mojang/rubydung/phys/AABB com/mojang/rubydung/phys/AABB 00009
+	epsilon epsilon 00066
+	x0 x0 00067
+	y0 y0 00068
+	z0 z0 00069
+	x1 x1 00070
+	y1 y1 00071
+	z1 z1 00072
+	<init> (FFFFFF)V <init> 00048
+		0 o x0 00101
+		1 o y0 00102
+		2 o z0 00103
+		3 o x1 00104
+		4 o y1 00105
+		5 o z1 00106
+	expand (FFF)Lcom/mojang/rubydung/phys/AABB; expand 00049
+		0 o xa 00107
+		1 o ya 00108
+		2 o za 00109
+	grow (FFF)Lcom/mojang/rubydung/phys/AABB; grow 00050
+		0 o xa 00110
+		1 o ya 00111
+		2 o za 00112
+	clipXCollide (Lcom/mojang/rubydung/phys/AABB;F)F clipXCollide 00051
+		0 o c 00113
+		1 o xa 00114
+	clipYCollide (Lcom/mojang/rubydung/phys/AABB;F)F clipYCollide 00052
+		0 o c 00115
+		1 o ya 00116
+	clipZCollide (Lcom/mojang/rubydung/phys/AABB;F)F clipZCollide 00053
+		0 o c 00117
+		1 o za 00118
+	intersects (Lcom/mojang/rubydung/phys/AABB;)Z intersects 00054
+		0 o c 00119
+	move (FFF)V move 00055
+		0 o xa 00120
+		1 o ya 00121
+		2 o za 00122
+com/mojang/rubydung/Player com/mojang/rubydung/Player 00010
+	<init> (Lcom/mojang/rubydung/level/Level;)V <init> 00056
+		0 o level 00123
+	tick ()V tick 00102
+com/mojang/rubydung/RubyDung com/mojang/rubydung/RubyDung 00011
+	FULLSCREEN_MODE FULLSCREEN_MODE 00087
+	width width 00088
+	height height 00089
+	fogColor0 fogColor0 00090
+	fogColor1 fogColor1 00204
+	timer timer 00091
+	level level 00092
+	levelRenderer levelRenderer 00093
+	player player 00094
+	paintTexture paintTexture 00205
+	particleEngine particleEngine 00206
+	zombies zombies 00153
+	viewportBuffer viewportBuffer 00095
+	selectBuffer selectBuffer 00096
+	hitResult hitResult 00097
+	lb lb 00207
+	<init> ()V <init> 00063
+	init ()V init 00064
+	destroy ()V destroy 00065
+	run ()V run 00066
+	tick ()V tick 00067
+	moveCameraToPlayer (F)V moveCameraToPlayer 00068
+		0 o a 00135
+	setupCamera (F)V setupCamera 00069
+		0 o a 00136
+	setupOrthoCamera ()V setupOrthoCamera 00146
+	setupPickCamera (FII)V setupPickCamera 00070
+		0 o a 00137
+		1 o x 00138
+		2 o y 00139
+	pick (F)V pick 00071
+		0 o a 00140
+	render (F)V render 00072
+		0 o a 00141
+	drawGui (F)V drawGui 00147
+		0 o a 00276
+	setupFog (I)V setupFog 00148
+		0 o i 00277
+	getBuffer (FFFF)Ljava/nio/FloatBuffer; getBuffer 00149
+		0 o a 00278
+		1 o b 00279
+		2 o c 00280
+		3 o d 00281
+	checkError ()V checkError 00073
+	main ([Ljava/lang/String;)V main 00074
+		0 o args 00142
+com/mojang/rubydung/Textures com/mojang/rubydung/Textures 00012
+	idMap idMap 00098
+	<clinit> ()V <clinit> 00075
+	<init> ()V <init> 00076
+	loadTexture (Ljava/lang/String;I)I loadTexture 00077
+		0 o resourceName 00143
+		1 o mode 00144
+com/mojang/rubydung/Timer com/mojang/rubydung/Timer 00013
+	NS_PER_SECOND NS_PER_SECOND 00100
+	MAX_NS_PER_UPDATE MAX_NS_PER_UPDATE 00101
+	MAX_TICKS_PER_UPDATE MAX_TICKS_PER_UPDATE 00102
+	ticksPerSecond ticksPerSecond 00103
+	lastTime lastTime 00104
+	ticks ticks 00105
+	a a 00106
+	timeScale timeScale 00107
+	fps fps 00108
+	passedTime passedTime 00109
+	<init> (F)V <init> 00079
+		0 o ticksPerSecond 00146
+	advanceTime ()V advanceTime 00080

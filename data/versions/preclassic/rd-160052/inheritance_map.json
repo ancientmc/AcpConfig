@@ -1,0 +1,1415 @@
+{
+  "com/mojang/rubydung/RubyDung": {
+    "name": "com/mojang/rubydung/RubyDung",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/lang/Runnable"
+    ],
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "checkError ()V": {
+        "access": 9
+      },
+      "destroy ()V": {
+        "access": 1
+      },
+      "drawGui (F)V": {
+        "access": 2
+      },
+      "getBuffer (FFFF)Ljava/nio/FloatBuffer;": {
+        "access": 2
+      },
+      "init ()V": {
+        "access": 1,
+        "exceptions": [
+          "org/lwjgl/LWJGLException",
+          "java/io/IOException"
+        ]
+      },
+      "main ([Ljava/lang/String;)V": {
+        "access": 9,
+        "exceptions": [
+          "org/lwjgl/LWJGLException"
+        ]
+      },
+      "moveCameraToPlayer (F)V": {
+        "access": 2
+      },
+      "pick (F)V": {
+        "access": 2
+      },
+      "render (F)V": {
+        "access": 1
+      },
+      "run ()V": {
+        "access": 1,
+        "override": "java/lang/Runnable"
+      },
+      "setupCamera (F)V": {
+        "access": 2
+      },
+      "setupFog (I)V": {
+        "access": 2
+      },
+      "setupOrthoCamera ()V": {
+        "access": 2
+      },
+      "setupPickCamera (FII)V": {
+        "access": 2
+      },
+      "tick ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "FULLSCREEN_MODE": {
+        "desc": "Z",
+        "access": 26
+      },
+      "fogColor0": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "fogColor1": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "height": {
+        "desc": "I",
+        "access": 2
+      },
+      "hitResult": {
+        "desc": "Lcom/mojang/rubydung/HitResult;",
+        "access": 2
+      },
+      "lb": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 0
+      },
+      "level": {
+        "desc": "Lcom/mojang/rubydung/level/Level;",
+        "access": 2
+      },
+      "levelRenderer": {
+        "desc": "Lcom/mojang/rubydung/level/LevelRenderer;",
+        "access": 2
+      },
+      "paintTexture": {
+        "desc": "I",
+        "access": 2
+      },
+      "particleEngine": {
+        "desc": "Lcom/mojang/rubydung/particle/ParticleEngine;",
+        "access": 2
+      },
+      "player": {
+        "desc": "Lcom/mojang/rubydung/Player;",
+        "access": 2
+      },
+      "selectBuffer": {
+        "desc": "Ljava/nio/IntBuffer;",
+        "access": 2
+      },
+      "timer": {
+        "desc": "Lcom/mojang/rubydung/Timer;",
+        "access": 2
+      },
+      "viewportBuffer": {
+        "desc": "Ljava/nio/IntBuffer;",
+        "access": 2
+      },
+      "width": {
+        "desc": "I",
+        "access": 2
+      },
+      "zombies": {
+        "desc": "Ljava/util/ArrayList;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/rubydung/character/ZombieModel": {
+    "name": "com/mojang/rubydung/character/ZombieModel",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "render (F)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "arm0": {
+        "desc": "Lcom/mojang/rubydung/character/Cube;",
+        "access": 1
+      },
+      "arm1": {
+        "desc": "Lcom/mojang/rubydung/character/Cube;",
+        "access": 1
+      },
+      "body": {
+        "desc": "Lcom/mojang/rubydung/character/Cube;",
+        "access": 1
+      },
+      "head": {
+        "desc": "Lcom/mojang/rubydung/character/Cube;",
+        "access": 1
+      },
+      "leg0": {
+        "desc": "Lcom/mojang/rubydung/character/Cube;",
+        "access": 1
+      },
+      "leg1": {
+        "desc": "Lcom/mojang/rubydung/character/Cube;",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/particle/Particle": {
+    "name": "com/mojang/rubydung/particle/Particle",
+    "access": 33,
+    "superName": "com/mojang/rubydung/Entity",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;FFFFFFI)V": {
+        "access": 1
+      },
+      "render (Lcom/mojang/rubydung/level/Tesselator;FFFF)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/Entity"
+      }
+    },
+    "fields": {
+      "tex": {
+        "desc": "I",
+        "access": 1
+      },
+      "uo": {
+        "desc": "F",
+        "access": 2
+      },
+      "vo": {
+        "desc": "F",
+        "access": 2
+      },
+      "xd": {
+        "desc": "F",
+        "access": 2
+      },
+      "yd": {
+        "desc": "F",
+        "access": 2
+      },
+      "zd": {
+        "desc": "F",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/rubydung/particle/ParticleEngine": {
+    "name": "com/mojang/rubydung/particle/ParticleEngine",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;)V": {
+        "access": 1
+      },
+      "add (Lcom/mojang/rubydung/particle/Particle;)V": {
+        "access": 1
+      },
+      "render (Lcom/mojang/rubydung/Player;FI)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "level": {
+        "desc": "Lcom/mojang/rubydung/level/Level;",
+        "access": 4
+      },
+      "particles": {
+        "desc": "Ljava/util/List;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/rubydung/Textures": {
+    "name": "com/mojang/rubydung/Textures",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e ()V": {
+        "access": 1
+      },
+      "loadTexture (Ljava/lang/String;I)I": {
+        "access": 9
+      }
+    },
+    "fields": {
+      "idMap": {
+        "desc": "Ljava/util/HashMap;",
+        "access": 10
+      }
+    }
+  },
+  "com/mojang/rubydung/character/Zombie": {
+    "name": "com/mojang/rubydung/character/Zombie",
+    "access": 33,
+    "superName": "com/mojang/rubydung/Entity",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;FFF)V": {
+        "access": 1
+      },
+      "render (F)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/Entity"
+      }
+    },
+    "fields": {
+      "rot": {
+        "desc": "F",
+        "access": 1
+      },
+      "rotA": {
+        "desc": "F",
+        "access": 1
+      },
+      "speed": {
+        "desc": "F",
+        "access": 1
+      },
+      "timeOffs": {
+        "desc": "F",
+        "access": 1
+      },
+      "zombieModel": {
+        "desc": "Lcom/mojang/rubydung/character/ZombieModel;",
+        "access": 10
+      }
+    }
+  },
+  "com/mojang/rubydung/level/LevelRenderer": {
+    "name": "com/mojang/rubydung/level/LevelRenderer",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "com/mojang/rubydung/level/LevelListener"
+    ],
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;)V": {
+        "access": 1
+      },
+      "allChanged ()V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/level/LevelListener"
+      },
+      "getAllDirtyChunks ()Ljava/util/List;": {
+        "access": 1
+      },
+      "lightColumnChanged (IIII)V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/level/LevelListener"
+      },
+      "pick (Lcom/mojang/rubydung/Player;)V": {
+        "access": 1
+      },
+      "render (Lcom/mojang/rubydung/Player;I)V": {
+        "access": 1
+      },
+      "renderHit (Lcom/mojang/rubydung/HitResult;)V": {
+        "access": 1
+      },
+      "setDirty (IIIIII)V": {
+        "access": 1
+      },
+      "tileChanged (III)V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/level/LevelListener"
+      },
+      "updateDirtyChunks (Lcom/mojang/rubydung/Player;)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "CHUNK_SIZE": {
+        "desc": "I",
+        "access": 25
+      },
+      "MAX_REBUILDS_PER_FRAME": {
+        "desc": "I",
+        "access": 25
+      },
+      "chunks": {
+        "desc": "[Lcom/mojang/rubydung/level/Chunk;",
+        "access": 2
+      },
+      "level": {
+        "desc": "Lcom/mojang/rubydung/level/Level;",
+        "access": 2
+      },
+      "xChunks": {
+        "desc": "I",
+        "access": 2
+      },
+      "yChunks": {
+        "desc": "I",
+        "access": 2
+      },
+      "zChunks": {
+        "desc": "I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/rubydung/level/Tesselator": {
+    "name": "com/mojang/rubydung/level/Tesselator",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e ()V": {
+        "access": 2
+      },
+      "clear ()V": {
+        "access": 2
+      },
+      "color (FFF)V": {
+        "access": 1
+      },
+      "flush ()V": {
+        "access": 1
+      },
+      "init ()V": {
+        "access": 1
+      },
+      "tex (FF)V": {
+        "access": 1
+      },
+      "vertex (FFF)V": {
+        "access": 1
+      },
+      "vertexUV (FFFFF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "MAX_FLOATS": {
+        "desc": "I",
+        "access": 26
+      },
+      "MAX_MEMORY_USE": {
+        "desc": "I",
+        "access": 26
+      },
+      "array": {
+        "desc": "[F",
+        "access": 2
+      },
+      "b": {
+        "desc": "F",
+        "access": 2
+      },
+      "buffer": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "g": {
+        "desc": "F",
+        "access": 2
+      },
+      "hasColor": {
+        "desc": "Z",
+        "access": 2
+      },
+      "hasTexture": {
+        "desc": "Z",
+        "access": 2
+      },
+      "instance": {
+        "desc": "Lcom/mojang/rubydung/level/Tesselator;",
+        "access": 9
+      },
+      "len": {
+        "desc": "I",
+        "access": 2
+      },
+      "p": {
+        "desc": "I",
+        "access": 2
+      },
+      "r": {
+        "desc": "F",
+        "access": 2
+      },
+      "u": {
+        "desc": "F",
+        "access": 2
+      },
+      "v": {
+        "desc": "F",
+        "access": 2
+      },
+      "vertices": {
+        "desc": "I",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/rubydung/phys/AABB": {
+    "name": "com/mojang/rubydung/phys/AABB",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (FFFFFF)V": {
+        "access": 1
+      },
+      "clipXCollide (Lcom/mojang/rubydung/phys/AABB;F)F": {
+        "access": 1
+      },
+      "clipYCollide (Lcom/mojang/rubydung/phys/AABB;F)F": {
+        "access": 1
+      },
+      "clipZCollide (Lcom/mojang/rubydung/phys/AABB;F)F": {
+        "access": 1
+      },
+      "expand (FFF)Lcom/mojang/rubydung/phys/AABB;": {
+        "access": 1
+      },
+      "grow (FFF)Lcom/mojang/rubydung/phys/AABB;": {
+        "access": 1
+      },
+      "intersects (Lcom/mojang/rubydung/phys/AABB;)Z": {
+        "access": 1
+      },
+      "move (FFF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "epsilon": {
+        "desc": "F",
+        "access": 2
+      },
+      "x0": {
+        "desc": "F",
+        "access": 1
+      },
+      "x1": {
+        "desc": "F",
+        "access": 1
+      },
+      "y0": {
+        "desc": "F",
+        "access": 1
+      },
+      "y1": {
+        "desc": "F",
+        "access": 1
+      },
+      "z0": {
+        "desc": "F",
+        "access": 1
+      },
+      "z1": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/level/Frustum": {
+    "name": "com/mojang/rubydung/level/Frustum",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e ()V": {
+        "access": 2
+      },
+      "calculateFrustum ()V": {
+        "access": 2
+      },
+      "cubeFullyInFrustum (FFFFFF)Z": {
+        "access": 1
+      },
+      "cubeInFrustum (FFFFFF)Z": {
+        "access": 1
+      },
+      "getFrustum ()Lcom/mojang/rubydung/level/Frustum;": {
+        "access": 9
+      },
+      "isVisible (Lcom/mojang/rubydung/phys/AABB;)Z": {
+        "access": 1
+      },
+      "normalizePlane ([[FI)V": {
+        "access": 2
+      },
+      "pointInFrustum (FFF)Z": {
+        "access": 1
+      },
+      "sphereInFrustum (FFFF)Z": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "A": {
+        "desc": "I",
+        "access": 25
+      },
+      "B": {
+        "desc": "I",
+        "access": 25
+      },
+      "BACK": {
+        "desc": "I",
+        "access": 25
+      },
+      "BOTTOM": {
+        "desc": "I",
+        "access": 25
+      },
+      "C": {
+        "desc": "I",
+        "access": 25
+      },
+      "D": {
+        "desc": "I",
+        "access": 25
+      },
+      "FRONT": {
+        "desc": "I",
+        "access": 25
+      },
+      "LEFT": {
+        "desc": "I",
+        "access": 25
+      },
+      "RIGHT": {
+        "desc": "I",
+        "access": 25
+      },
+      "TOP": {
+        "desc": "I",
+        "access": 25
+      },
+      "_clip": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "_modl": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "_proj": {
+        "desc": "Ljava/nio/FloatBuffer;",
+        "access": 2
+      },
+      "clip": {
+        "desc": "[F",
+        "access": 0
+      },
+      "frustum": {
+        "desc": "Lcom/mojang/rubydung/level/Frustum;",
+        "access": 10
+      },
+      "m_Frustum": {
+        "desc": "[[F",
+        "access": 1
+      },
+      "modl": {
+        "desc": "[F",
+        "access": 0
+      },
+      "proj": {
+        "desc": "[F",
+        "access": 0
+      }
+    }
+  },
+  "com/mojang/rubydung/Entity": {
+    "name": "com/mojang/rubydung/Entity",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;)V": {
+        "access": 1
+      },
+      "isLit ()Z": {
+        "access": 1
+      },
+      "move (FFF)V": {
+        "access": 1
+      },
+      "moveRelative (FFF)V": {
+        "access": 1
+      },
+      "remove ()V": {
+        "access": 1
+      },
+      "resetPos ()V": {
+        "access": 4
+      },
+      "setPos (FFF)V": {
+        "access": 4
+      },
+      "setSize (FF)V": {
+        "access": 4
+      },
+      "tick ()V": {
+        "access": 1
+      },
+      "turn (FF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "bb": {
+        "desc": "Lcom/mojang/rubydung/phys/AABB;",
+        "access": 1
+      },
+      "bbHeight": {
+        "desc": "F",
+        "access": 4
+      },
+      "bbWidth": {
+        "desc": "F",
+        "access": 4
+      },
+      "heightOffset": {
+        "desc": "F",
+        "access": 4
+      },
+      "level": {
+        "desc": "Lcom/mojang/rubydung/level/Level;",
+        "access": 4
+      },
+      "onGround": {
+        "desc": "Z",
+        "access": 1
+      },
+      "removed": {
+        "desc": "Z",
+        "access": 1
+      },
+      "x": {
+        "desc": "F",
+        "access": 1
+      },
+      "xRot": {
+        "desc": "F",
+        "access": 1
+      },
+      "xd": {
+        "desc": "F",
+        "access": 1
+      },
+      "xo": {
+        "desc": "F",
+        "access": 1
+      },
+      "y": {
+        "desc": "F",
+        "access": 1
+      },
+      "yRot": {
+        "desc": "F",
+        "access": 1
+      },
+      "yd": {
+        "desc": "F",
+        "access": 1
+      },
+      "yo": {
+        "desc": "F",
+        "access": 1
+      },
+      "z": {
+        "desc": "F",
+        "access": 1
+      },
+      "zd": {
+        "desc": "F",
+        "access": 1
+      },
+      "zo": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/level/DirtyChunkSorter": {
+    "name": "com/mojang/rubydung/level/DirtyChunkSorter",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "interfaces": [
+      "java/util/Comparator"
+    ],
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/rubydung/Player;Lcom/mojang/rubydung/level/Frustum;)V": {
+        "access": 1
+      },
+      "compare (Lcom/mojang/rubydung/level/Chunk;Lcom/mojang/rubydung/level/Chunk;)I": {
+        "access": 1
+      },
+      "compare (Ljava/lang/Object;Ljava/lang/Object;)I": {
+        "access": 4161,
+        "bouncer": {
+          "name": "compare",
+          "desc": "(Lcom/mojang/rubydung/level/Chunk;Lcom/mojang/rubydung/level/Chunk;)I"
+        },
+        "override": "java/util/Comparator"
+      }
+    },
+    "fields": {
+      "frustum": {
+        "desc": "Lcom/mojang/rubydung/level/Frustum;",
+        "access": 2
+      },
+      "now": {
+        "desc": "J",
+        "access": 2
+      },
+      "player": {
+        "desc": "Lcom/mojang/rubydung/Player;",
+        "access": 2
+      }
+    }
+  },
+  "com/mojang/rubydung/character/Vertex": {
+    "name": "com/mojang/rubydung/character/Vertex",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (FFFFF)V": {
+        "access": 1
+      },
+      "\u003cinit\u003e (Lcom/mojang/rubydung/character/Vec3;FF)V": {
+        "access": 1
+      },
+      "\u003cinit\u003e (Lcom/mojang/rubydung/character/Vertex;FF)V": {
+        "access": 1
+      },
+      "remap (FF)Lcom/mojang/rubydung/character/Vertex;": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "pos": {
+        "desc": "Lcom/mojang/rubydung/character/Vec3;",
+        "access": 1
+      },
+      "u": {
+        "desc": "F",
+        "access": 1
+      },
+      "v": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/character/Vec3": {
+    "name": "com/mojang/rubydung/character/Vec3",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (FFF)V": {
+        "access": 1
+      },
+      "interpolateTo (Lcom/mojang/rubydung/character/Vec3;F)Lcom/mojang/rubydung/character/Vec3;": {
+        "access": 1
+      },
+      "set (FFF)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "x": {
+        "desc": "F",
+        "access": 1
+      },
+      "y": {
+        "desc": "F",
+        "access": 1
+      },
+      "z": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/level/tile/DirtTile": {
+    "name": "com/mojang/rubydung/level/tile/DirtTile",
+    "access": 33,
+    "superName": "com/mojang/rubydung/level/tile/Tile",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      }
+    }
+  },
+  "com/mojang/rubydung/level/Level": {
+    "name": "com/mojang/rubydung/level/Level",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (III)V": {
+        "access": 1
+      },
+      "addListener (Lcom/mojang/rubydung/level/LevelListener;)V": {
+        "access": 1
+      },
+      "calcLightDepths (IIII)V": {
+        "access": 1
+      },
+      "generateMap ()V": {
+        "access": 2
+      },
+      "getCubes (Lcom/mojang/rubydung/phys/AABB;)Ljava/util/ArrayList;": {
+        "access": 1
+      },
+      "getTile (III)I": {
+        "access": 1
+      },
+      "isLightBlocker (III)Z": {
+        "access": 1
+      },
+      "isLit (III)Z": {
+        "access": 1
+      },
+      "isSolidTile (III)Z": {
+        "access": 1
+      },
+      "load ()Z": {
+        "access": 1
+      },
+      "removeListener (Lcom/mojang/rubydung/level/LevelListener;)V": {
+        "access": 1
+      },
+      "save ()V": {
+        "access": 1
+      },
+      "setTile (IIII)Z": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "TILE_UPDATE_INTERVAL": {
+        "desc": "I",
+        "access": 26
+      },
+      "blocks": {
+        "desc": "[B",
+        "access": 2
+      },
+      "depth": {
+        "desc": "I",
+        "access": 17
+      },
+      "height": {
+        "desc": "I",
+        "access": 17
+      },
+      "levelListeners": {
+        "desc": "Ljava/util/ArrayList;",
+        "access": 2
+      },
+      "lightDepths": {
+        "desc": "[I",
+        "access": 2
+      },
+      "random": {
+        "desc": "Ljava/util/Random;",
+        "access": 2
+      },
+      "unprocessed": {
+        "desc": "I",
+        "access": 0
+      },
+      "width": {
+        "desc": "I",
+        "access": 17
+      }
+    }
+  },
+  "com/mojang/rubydung/level/Chunk": {
+    "name": "com/mojang/rubydung/level/Chunk",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;IIIIII)V": {
+        "access": 1
+      },
+      "distanceToSqr (Lcom/mojang/rubydung/Player;)F": {
+        "access": 1
+      },
+      "isDirty ()Z": {
+        "access": 1
+      },
+      "rebuild ()V": {
+        "access": 1
+      },
+      "rebuild (I)V": {
+        "access": 2
+      },
+      "render (I)V": {
+        "access": 1
+      },
+      "setDirty ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "aabb": {
+        "desc": "Lcom/mojang/rubydung/phys/AABB;",
+        "access": 1
+      },
+      "dirtiedTime": {
+        "desc": "J",
+        "access": 1
+      },
+      "dirty": {
+        "desc": "Z",
+        "access": 2
+      },
+      "level": {
+        "desc": "Lcom/mojang/rubydung/level/Level;",
+        "access": 17
+      },
+      "lists": {
+        "desc": "I",
+        "access": 2
+      },
+      "t": {
+        "desc": "Lcom/mojang/rubydung/level/Tesselator;",
+        "access": 10
+      },
+      "totalTime": {
+        "desc": "J",
+        "access": 10
+      },
+      "totalUpdates": {
+        "desc": "I",
+        "access": 10
+      },
+      "updates": {
+        "desc": "I",
+        "access": 9
+      },
+      "x": {
+        "desc": "F",
+        "access": 17
+      },
+      "x0": {
+        "desc": "I",
+        "access": 17
+      },
+      "x1": {
+        "desc": "I",
+        "access": 17
+      },
+      "y": {
+        "desc": "F",
+        "access": 17
+      },
+      "y0": {
+        "desc": "I",
+        "access": 17
+      },
+      "y1": {
+        "desc": "I",
+        "access": 17
+      },
+      "z": {
+        "desc": "F",
+        "access": 17
+      },
+      "z0": {
+        "desc": "I",
+        "access": 17
+      },
+      "z1": {
+        "desc": "I",
+        "access": 17
+      }
+    }
+  },
+  "com/mojang/rubydung/Timer": {
+    "name": "com/mojang/rubydung/Timer",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (F)V": {
+        "access": 1
+      },
+      "advanceTime ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "MAX_NS_PER_UPDATE": {
+        "desc": "J",
+        "access": 26
+      },
+      "MAX_TICKS_PER_UPDATE": {
+        "desc": "I",
+        "access": 26
+      },
+      "NS_PER_SECOND": {
+        "desc": "J",
+        "access": 26
+      },
+      "a": {
+        "desc": "F",
+        "access": 1
+      },
+      "fps": {
+        "desc": "F",
+        "access": 1
+      },
+      "lastTime": {
+        "desc": "J",
+        "access": 2
+      },
+      "passedTime": {
+        "desc": "F",
+        "access": 1
+      },
+      "ticks": {
+        "desc": "I",
+        "access": 1
+      },
+      "ticksPerSecond": {
+        "desc": "F",
+        "access": 2
+      },
+      "timeScale": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/level/LevelListener": {
+    "name": "com/mojang/rubydung/level/LevelListener",
+    "access": 1537,
+    "superName": "java/lang/Object",
+    "methods": {
+      "allChanged ()V": {
+        "access": 1025
+      },
+      "lightColumnChanged (IIII)V": {
+        "access": 1025
+      },
+      "tileChanged (III)V": {
+        "access": 1025
+      }
+    }
+  },
+  "com/mojang/rubydung/character/Cube": {
+    "name": "com/mojang/rubydung/character/Cube",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (II)V": {
+        "access": 1
+      },
+      "addBox (FFFIII)V": {
+        "access": 1
+      },
+      "compile ()V": {
+        "access": 2
+      },
+      "render ()V": {
+        "access": 1
+      },
+      "setPos (FFF)V": {
+        "access": 1
+      },
+      "setTexOffs (II)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "compiled": {
+        "desc": "Z",
+        "access": 2
+      },
+      "list": {
+        "desc": "I",
+        "access": 2
+      },
+      "polygons": {
+        "desc": "[Lcom/mojang/rubydung/character/Polygon;",
+        "access": 2
+      },
+      "vertices": {
+        "desc": "[Lcom/mojang/rubydung/character/Vertex;",
+        "access": 2
+      },
+      "x": {
+        "desc": "F",
+        "access": 1
+      },
+      "xRot": {
+        "desc": "F",
+        "access": 1
+      },
+      "xTexOffs": {
+        "desc": "I",
+        "access": 2
+      },
+      "y": {
+        "desc": "F",
+        "access": 1
+      },
+      "yRot": {
+        "desc": "F",
+        "access": 1
+      },
+      "yTexOffs": {
+        "desc": "I",
+        "access": 2
+      },
+      "z": {
+        "desc": "F",
+        "access": 1
+      },
+      "zRot": {
+        "desc": "F",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/HitResult": {
+    "name": "com/mojang/rubydung/HitResult",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (IIIII)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "f": {
+        "desc": "I",
+        "access": 1
+      },
+      "o": {
+        "desc": "I",
+        "access": 1
+      },
+      "x": {
+        "desc": "I",
+        "access": 1
+      },
+      "y": {
+        "desc": "I",
+        "access": 1
+      },
+      "z": {
+        "desc": "I",
+        "access": 1
+      }
+    }
+  },
+  "com/mojang/rubydung/level/PerlinNoiseFilter": {
+    "name": "com/mojang/rubydung/level/PerlinNoiseFilter",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e (I)V": {
+        "access": 1
+      },
+      "read (II)[I": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "fuzz": {
+        "desc": "I",
+        "access": 0
+      },
+      "levels": {
+        "desc": "I",
+        "access": 0
+      },
+      "random": {
+        "desc": "Ljava/util/Random;",
+        "access": 0
+      },
+      "seed": {
+        "desc": "I",
+        "access": 0
+      }
+    }
+  },
+  "com/mojang/rubydung/level/tile/Tile": {
+    "name": "com/mojang/rubydung/level/tile/Tile",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cclinit\u003e ()V": {
+        "access": 8
+      },
+      "\u003cinit\u003e (I)V": {
+        "access": 4
+      },
+      "\u003cinit\u003e (II)V": {
+        "access": 4
+      },
+      "blocksLight ()Z": {
+        "access": 1
+      },
+      "destroy (Lcom/mojang/rubydung/level/Level;IIILcom/mojang/rubydung/particle/ParticleEngine;)V": {
+        "access": 1
+      },
+      "getAABB (III)Lcom/mojang/rubydung/phys/AABB;": {
+        "access": 1
+      },
+      "getTexture (I)I": {
+        "access": 4
+      },
+      "isSolid ()Z": {
+        "access": 1
+      },
+      "render (Lcom/mojang/rubydung/level/Tesselator;Lcom/mojang/rubydung/level/Level;IIII)V": {
+        "access": 1
+      },
+      "renderFace (Lcom/mojang/rubydung/level/Tesselator;IIII)V": {
+        "access": 1
+      },
+      "renderFaceNoTexture (Lcom/mojang/rubydung/level/Tesselator;IIII)V": {
+        "access": 1
+      },
+      "shouldRenderFace (Lcom/mojang/rubydung/level/Level;IIII)Z": {
+        "access": 2
+      },
+      "tick (Lcom/mojang/rubydung/level/Level;IIILjava/util/Random;)V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "dirt": {
+        "desc": "Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      },
+      "empty": {
+        "desc": "Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      },
+      "grass": {
+        "desc": "Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      },
+      "id": {
+        "desc": "I",
+        "access": 17
+      },
+      "rock": {
+        "desc": "Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      },
+      "stoneBrick": {
+        "desc": "Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      },
+      "tex": {
+        "desc": "I",
+        "access": 1
+      },
+      "tiles": {
+        "desc": "[Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      },
+      "wood": {
+        "desc": "Lcom/mojang/rubydung/level/tile/Tile;",
+        "access": 25
+      }
+    }
+  },
+  "com/mojang/rubydung/level/tile/GrassTile": {
+    "name": "com/mojang/rubydung/level/tile/GrassTile",
+    "access": 33,
+    "superName": "com/mojang/rubydung/level/tile/Tile",
+    "methods": {
+      "\u003cinit\u003e (I)V": {
+        "access": 4
+      },
+      "getTexture (I)I": {
+        "access": 4,
+        "override": "com/mojang/rubydung/level/tile/Tile"
+      },
+      "tick (Lcom/mojang/rubydung/level/Level;IIILjava/util/Random;)V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/level/tile/Tile"
+      }
+    }
+  },
+  "com/mojang/rubydung/Player": {
+    "name": "com/mojang/rubydung/Player",
+    "access": 33,
+    "superName": "com/mojang/rubydung/Entity",
+    "methods": {
+      "\u003cinit\u003e (Lcom/mojang/rubydung/level/Level;)V": {
+        "access": 1
+      },
+      "tick ()V": {
+        "access": 1,
+        "override": "com/mojang/rubydung/Entity"
+      }
+    }
+  },
+  "com/mojang/rubydung/character/Polygon": {
+    "name": "com/mojang/rubydung/character/Polygon",
+    "access": 33,
+    "superName": "java/lang/Object",
+    "methods": {
+      "\u003cinit\u003e ([Lcom/mojang/rubydung/character/Vertex;)V": {
+        "access": 1
+      },
+      "\u003cinit\u003e ([Lcom/mojang/rubydung/character/Vertex;IIII)V": {
+        "access": 1
+      },
+      "render ()V": {
+        "access": 1
+      }
+    },
+    "fields": {
+      "vertexCount": {
+        "desc": "I",
+        "access": 1
+      },
+      "vertices": {
+        "desc": "[Lcom/mojang/rubydung/character/Vertex;",
+        "access": 1
+      }
+    }
+  }
+}
