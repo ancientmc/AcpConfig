@@ -1,0 +1,6 @@
+{
+  "excluded": [""],
+  "unobfuscated": [""],
+  "namespace": "com/mojang/minecraft/src/",
+  "max_obf_chars": 20
+}

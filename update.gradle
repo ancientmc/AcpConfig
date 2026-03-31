@@ -24,7 +24,7 @@ ext {
     NEW_IDS = String.join('/', NEW_DIR, 'mappings/ids.csv')
     OLD_CSV_DIR = String.join('/', OLD_DIR, 'mappings/csv/')
     NEW_CSV_DIR = String.join('/', NEW_DIR, 'mappings/csv/')
-    MATCH = 'data/matches/' + old_version + '-' + new_version + '.match'
+    MATCH = 'data/matches/' + phase(new_version as String) + "/" + old_version + '-' + new_version + '.match'
 }
 
 tasks.register('setupNewVersion', Copy) {
